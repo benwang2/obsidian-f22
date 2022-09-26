@@ -2,28 +2,30 @@
 
 
 # Semester Overview
+
 ## Enrolled courses
 - 01:198:210 - Data Management for Data Science
 - 01:198:336 - Principles of Information and Data Management
 - 01:198:352 - Internet Technology
 - 01:960:401 - Basic Statistics for Research
 - 01:988:101 - Introduction to Gender, Race, and Sexuality
-- 
-# Schedule
-## Assignments
+
+
+## Schedule
+### Assignments
 ```dataview
 TABLE
 	title, course, due
 FROM #Assignments 
 WHERE date(due) > date(now)
 SORT due DESC
-
+LIMIT 4
 ```
-## Relevant Dates
+### Relevant Dates
 ```dataview
 TABLE WITHOUT ID
 	course, title, due
-FROM csv("relevant_dates.csv")
+FROM csv("tables/relevant_dates.csv")
 WHERE date(due) > date(now)
 SORT due ASC
 LIMIT 10
@@ -41,4 +43,3 @@ LIMIT 10
 
 
 
-# 
