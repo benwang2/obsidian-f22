@@ -36,4 +36,4 @@ contact the course staff. We are here to help.
 
 # Questions
 1. Explain DeMorgan's law in a few sentences. **(3 points)**
-2. Why might we use a 
+2. Why might we use a list comprehension 
