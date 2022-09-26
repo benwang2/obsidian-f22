@@ -4,7 +4,13 @@
     "iconPacksPath": ".obsidian/plugins/obsidian-icon-folder/icons",
     "fontSize": 16,
     "iconColor": null,
-    "recentlyUsedIcons": [],
+    "recentlyUsedIcons": [
+      "DoTodoFill",
+      "DoFileTextLine",
+      "DoTodoLine",
+      "DoFilePaper2Line",
+      "BuCalendar2Line"
+    ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
     "extraMargin": {
@@ -13,5 +19,17 @@
       "bottom": 2,
       "left": 2
     }
-  }
+  },
+  "Rutgers": "DoBook2Line",
+  "Rutgers/2022 Fall/210": "EdTable2",
+  "Rutgers/2022 Fall/336": "DeDatabase2Fill",
+  "Rutgers/2022 Fall/352": "DeWifiFill",
+  "Rutgers/2022 Fall/tables": "DoFileTextFill",
+  "Rutgers/2022 Fall/Planner.md": "BuCalendar2Line",
+  "Templates": "DoFilePaper2Line",
+  "Templates/Assignment.md": "DoTodoLine",
+  "Templates/Lecture Notes.md": "DoFileTextLine",
+  "Rutgers/2022 Fall/352/Assignments/Problem Set 1.md": "DoTodoLine",
+  "Rutgers/2022 Fall/210/Assignments/Homework 1/hw1.md": "DoTodoLine",
+  "Rutgers/2022 Fall/210/Assignments": "DoTodoFill"
 }
