@@ -106,3 +106,30 @@ b. Could you think of an example where IPB and portB have the same values across
 
 7. **Client and server (2 points).** Explain one difference between a “client” and a “server” in
 an application
+
+8. **Domain Name System (2 * 6 = 12 points).****
+a. Why do we need the domain name system (DNS)? What problem does it solve?
+<br>
+<br>
+b. Explain how hierarchy helps DNS meet the scaling needs of serving Internet users.
+<br>
+<br>
+c. Explain how replication helps DNS meet the scaling needs of serving Internet users.
+<br>
+<br>
+
+d. Explain how caching helps DNS meet the scaling needs of serving Internet users.
+<br>
+<br>
+
+e. What is the purpose of the identification field on a DNS protocol message?
+<br>
+<br>
+
+f. What is an authoritative DNS server?
+<br>
+<br>
+9. **Finding authority (3 points)**. Can you list a set of authoritative DNS servers for cs.princeton.edu? Explain how you arrived at the answer.
+   <br>
+   <br>
+10. 
