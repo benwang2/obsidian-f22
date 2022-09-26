@@ -1,7 +1,7 @@
 {
-  "findText": "\\n",
-  "replaceText": " ",
-  "useRegEx": true,
+  "findText": "nmovies",
+  "replaceText": "**n** movies",
+  "useRegEx": false,
   "selOnly": false,
   "caseInsensitive": false,
   "processLineBreak": false,
