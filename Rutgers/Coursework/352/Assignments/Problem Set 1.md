@@ -1,8 +1,8 @@
 ---
 title: Problem Set 1
 course: CS352
-released: 9/26/2022
-due: 9/30/2022
+released: 2022-09-26
+due: 2022-09-30
 tags: Assignments
 ---
 <center><h1>Problem Set 1</h1></center>
@@ -24,6 +24,8 @@ Please read and follow these instructions carefully.
 
 # Questions
 1. **Layering** **(2 points)**. Why is Internet software/hardware arranged in layers?
+
+Internet software & hardware is arranged in layers because it provides modularity, meaning that each layer has a well-defined function and interfaces to layers above and below it. As a result, developers 
 <br>
 <br>
 
@@ -130,4 +132,4 @@ d. Suppose all local DNS resolvers cache the DNS responses they receive indefini
 problem set? What resources and references did you consult? Please also specify on what questions and aspects of the problem set you got help on. If you did not consult any resources other than the lecture slides and textbook, just say “no collaboration”.
 <br>
 <br>
-#Assignments 
+

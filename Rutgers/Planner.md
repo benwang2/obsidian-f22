@@ -3,12 +3,13 @@
 
 # Classes
 
+
 # Assignments
 ```dataview
 TABLE
 	title, course, due
 FROM #Assignments 
-WHERE date(str(due)) > date(now)
+WHERE date(due) > date(now)
 SORT due DESC
 ```
 
