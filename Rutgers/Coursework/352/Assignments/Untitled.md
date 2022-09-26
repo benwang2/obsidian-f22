@@ -1,7 +1,7 @@
 <center><h1>Problem Set 1</h1></center>
-<center><h3>Course name</h3></center>
+<center><h3>CS352 Internet Technology</h3></center>
 **Released**: 2022-09-26
-**Due**: 2022-09-26 at 11:59 PM EST
+**Due**: 2022-09-30 at 8:00 PM EST
 
 ## Instructions
 Please read and follow these instructions carefully.  
@@ -35,5 +35,58 @@ answer this question.
 contact the course staff. We are here to help.
 
 # Questions
-1. Explain DeMorgan's law in a few sentences. **(3 points)**
-2. Why might we use a list comprehension 
+1. **Layering** **(2 points)**. Why is Internet software/hardware arranged in layers?
+   <br>
+   <br>
+   
+2. **Modulation type (2 points)**. A digital signal contains the sequence of bits 0101100100100.  
+What modulation is being used in the physical signal (for example, voltage plotted against time)  
+below? Please explain how you arrived at your conclusion.
+<br>
+<br>
+3. Switching types (2 + 2 = 4 points). For each question below, your answer must be one of  
+“circuit”, “message”, or “packet”, along with a justification.<br>
+a. Suppose you’d like to design a network with routers that need to support application con-  
+versations that transfer a lot of data, but only between a few pairs of endpoints. Which kind of  
+switching would you use for the network’s routers? Please justify your answer (2 points).
+
+<br>
+<br>
+
+b. Suppose, instead, your network must support applications that move a small number of  
+application-level messages between a large number of pairs of endpoints. Each application-level  
+message may be very large. Further, even if the entire message isn’t received yet, it is helpful for  
+the applications to transfer smaller portions of the messages as early as possible to the receiving  
+endpoints. What kind of switching would you build into the network’s routers? Please justify your  
+answer (2 points).
+
+4. **Bandwidth and delay (2 + 2 + 1 + 1 = 6 points).**
+
+a. Is it possible for a link or network path to have high bandwidth and high propagation delay?  
+Why or why not? Justify.
+<br>
+<br>
+b. Is it possible for a link or network path to have low bandwidth and low propagation delay?
+Why or why not? Justify.
+<br>
+<br>
+c. If you need to transfer a large file very quickly, which kind of link would you rather prefer,
+one with a higher or lower bandwidth?
+<br>
+<br>
+d. If you need to support a highly interactive (real-time) voice call, which kind of link would
+you rather prefer, one with a higher or lower propagation delay?
+
+5. **Total delay (3 + 3 = 6 points).** An endpoint sends a packet of size 4000 Bytes (1 Byte =  
+8 bits) over a link with bandwidth 2 Mbit/s (1 M = 106). The link has a propagation delay of 10  
+milliseconds (1 milli = 10−3).  
+
+a. After how long since the sender pushed the first bit of the packet into the link does the final  
+bit of the packet arrive at the other end of the link? Explain your answer. (3 points)  
+<br>
+<br>
+b. At the other end of the link is a router which pushes the packet through another link that  
+is identical to the last one (described in question above). The packet encouters a small queue with  
+queueing delay 5 milliseconds before entering this second link. The router uses store and forward  
+packet switching. What is the total time it takes to move the packet end to end, i.e., first bit entering  
+the first link to last bit exiting the second link? Explain your answer (3 points).
