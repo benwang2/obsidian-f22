@@ -82,11 +82,21 @@ you rather prefer, one with a higher or lower propagation delay?
 milliseconds (1 milli = 10−3).  
 
 a. After how long since the sender pushed the first bit of the packet into the link does the final  
-bit of the packet arrive at the other end of the link? Explain your answer. (3 points)  
+bit of the packet arrive at the other end of the link? Explain your answer. **(3 points)**  
 <br>
 <br>
 b. At the other end of the link is a router which pushes the packet through another link that  
-is identical to the last one (described in question above). The packet encouters a small queue with  
-queueing delay 5 milliseconds before entering this second link. The router uses store and forward  
-packet switching. What is the total time it takes to move the packet end to end, i.e., first bit entering  
-the first link to last bit exiting the second link? Explain your answer (3 points).
+is identical to the last one (described in question above). The packet encouters a small queue with queueing delay 5 milliseconds before entering this second link. The router uses store and forward packet switching. What is the total time it takes to move the packet end to end, i.e., first bit entering the first link to last bit exiting the second link? Explain your answer. **(3 points)**
+
+6. **App-layer connection (6 points).**
+a. What are the components of the 4-tuple denoting an application-layer connection?
+<br>
+<br>
+
+b. Why could you not just use the 2-tuple (IPA,IPB) to denote an application-layer connection?
+<br>
+<br>
+b. Could you think of an example where IPB and portB have the same values across many application-layer connections?
+
+7. **Client and server (2 points).** Explain one difference between a “client” and a “server” in
+an application
