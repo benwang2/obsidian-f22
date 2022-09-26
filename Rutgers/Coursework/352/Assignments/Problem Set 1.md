@@ -25,12 +25,16 @@ Please read and follow these instructions carefully.
 # Questions
 1. **Layering** **(2 points)**. Why is Internet software/hardware arranged in layers?
 
+```
 Internet software & hardware is arranged in layers because it provides modularity, meaning that each layer has a well-defined function and interfaces to layers above and below it. As a result, each layer can modified and developed without affecting another layer.
-<br>
+```
 
 2. **Modulation type (2 points)**. A digital signal contains the sequence of bits 0101100100100. What modulation is being used in the physical signal (for example, voltage plotted against time) below? Please explain how you arrived at your conclusion.
-<br>
-<br>
+
+```
+Frequency modulation is being used in the physical signal plotted here. By observing the voltage vs. time plot below and the sequence of bits, I 
+```
+
 3. **Switching types (2 + 2 = 4 points).** For each question below, your answer must be one of “circuit”, “message”, or “packet”, along with a justification.<br>
 a. Suppose you’d like to design a network with routers that need to support application conversations that transfer a lot of data, but only between a few pairs of endpoints. Which kind of switching would you use for the network’s routers? Please justify your answer (2 points).
 
