@@ -38,4 +38,3 @@ contact the course staff. We are here to help.
 1. Explain DeMorgan's law in a few sentences. **(3 points)**
 2. Why might we use a list comprehension 
 
-#Assignments 

@@ -5,10 +5,14 @@
 
 # Assignments
 ```dataview
-table title, course, due
-from #Assignments 
-sort due desc
+TABLE
+	title, course, due
+FROM #Assignments 
+WHERE date(str(due)) > date(now)
+SORT due DESC
 ```
+
+
 
 
 
