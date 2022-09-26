@@ -1,7 +1,13 @@
+---
+title: Problem Set 1
+course: CS352
+released: 2022
+---
+
 <center><h1>Problem Set 1</h1></center>
 <center><h3>CS352 Internet Technology</h3></center>
-**Released**: 2022-09-26
-**Due**: 2022-09-30 at 8:00 PM EST
+**Released**: 9/26/2022
+**Due**: 9/30/2022 at 8:00 PM EST
 
 ## Instructions
 Please read and follow these instructions carefully.  
