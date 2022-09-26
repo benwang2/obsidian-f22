@@ -17,15 +17,18 @@ Next, let's upload your SSH key to GitHub. This will allow your system to direct
 GitHub has an excellent guide on how to do this, which you can find [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys). Go ahead and follow through this guide to set up your SSH key.
 
 ## Creating a GitHub repository
-Next, let's create your GitHub repository. You can use whatever settings you'd like, but the most important part is how you will clone the repository to your machine.
+Next, let's create your GitHub repository. You can use whatever settings you'd like, but the most important part is how you will clone the repository to your machine. 
 
-Once you've created your repository, create a folder where you'd like your Obsidian vault to be located. Following this, you're going to open a terminal in this directory. 
+Once you've created your repository, you should see a couple of options on your webpage: Set up in Desktop, HTTPS, and SSH. Select **SSH** and copy the URL (e.g. `git@github.com:username/repo.git`).
+
+ Next, create a folder where you'd like your Obsidian vault to be located. Following this, you're going to open a terminal in the folder you created a moment ago. 
 
 In this terminal, you will write the following command. You will keep this terminal open for the next step.
+
 ```git
 git init -b main
+git remote add origin git@github.com:username/repo.git
+git push -u origin main
 ```
-
-
-Go back to the repository page we made earlier (`https://github.com/<username>/<repository>`), you should see a green button labeled "**Code**". Go ahead and click this button, then from the list of options HTTPS, SSH, and GitHub CLI, we're going to select **SSH**.
-
+ 
+You should replace `git@github.com:username/repo.git` with the URL you copied earlier.
