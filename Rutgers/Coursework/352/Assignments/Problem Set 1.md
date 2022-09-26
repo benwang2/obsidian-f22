@@ -132,4 +132,28 @@ f. What is an authoritative DNS server?
 9. **Finding authority (3 points)**. Can you list a set of authoritative DNS servers for cs.princeton.edu? Explain how you arrived at the answer.
    <br>
    <br>
-10. 
+10. **Partitioning, caching, and DNS query load (7 points)**. Suppose there are N domain names available in the Internet, equally subdivided over T top-level domains (such as .com). Suppose there are C local DNS resolvers, each issuing N ∗k queries, i.e., k queries to each of the N  domains, where k >1. Assume that each of the N domains has a unique authoritative name server with an entry in the corresponding top-level DNS server. Further assume that queries are iterative from the point of view of the local DNS resolver. Now answer the questions below. Explain your reasoning clearly to receive partial credit. 
+
+a. Suppose there is no caching on any of the DNS servers. How many queries does the root  
+DNS server service? **(1 point)**  
+<br>
+<br>
+
+b. Suppose there is no caching on any of the DNS servers. How many queries does each  
+top-level DNS server service? **(2 points)**
+<br>
+<br>
+
+c. Suppose all local DNS resolvers cache the DNS responses they receive indefinitely. Now  
+how many queries does the root DNS server service? **(2 points)**  
+<br>
+<br>
+
+d. Suppose all local DNS resolvers cache the DNS responses they receive indefinitely. How  
+many queries does each top-level DNS server service? **(2 points)**
+<br>
+<br>
+11. **Collaboration and References (mandatory)**. Who did you collaborate with on this  
+problem set? What resources and references did you consult? Please also specify on what questions  
+and aspects of the problem set you got help on. If you did not consult any resources other than the  
+lecture slides and textbook, just say “no collaboration”.
