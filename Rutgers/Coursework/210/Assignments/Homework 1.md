@@ -2,7 +2,8 @@
 title: Homework 1
 course: CS210
 released: 2022/09/26
-due: 2022/10/07
+due: 2022-10-07
+tag: Assignments
 ---
 <center><h1>Homework 1</h1></center>
 
