@@ -3,5 +3,7 @@
   "obsidian-regex-replace",
   "obsidian-editor-shortcuts",
   "obsidian-multi-cursor",
-  "dataview"
+  "dataview",
+  "cm-editor-syntax-highlight-obsidian",
+  "templater-obsidian"
 ]
