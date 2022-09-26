@@ -21,14 +21,35 @@ Next, let's create your GitHub repository. You can use whatever settings you'd l
 
 Once you've created your repository, you should see a couple of options on your webpage: Set up in Desktop, HTTPS, and SSH. Select **SSH** and copy the URL (e.g. `git@github.com:username/repo.git`).
 
- Next, create a folder where you'd like your Obsidian vault to be located. Following this, you're going to open a terminal in the folder you created a moment ago. 
-
-In this terminal, you will write the following command. You will keep this terminal open for the next step.
+Next, open a terminal in the folder where your Obsidian vault is stored. In this terminal, you will write the following command.
 
 ```git
 git init -b main
 git remote add origin git@github.com:username/repo.git
-git push -u origin main
 ```
  
 You should replace `git@github.com:username/repo.git` with the URL you copied earlier.
+
+### Setting up the gitignore
+In a text editor of your choice, add a file named `.gitignore` to your vault. Then, copy and paste the following content into the file.
+
+```.gitignore
+.obsidian/app.json
+.obsidian/appearance.json
+.obsidian/hotkeys.json
+.obsidian/workspace
+```
+
+### Manual upload
+Still in the same terminal, you're going to run the following commands.
+
+```
+git add .
+git commit -m "Initial commit"
+git push
+```
+
+After running these commands, you should see that your GitHub repository has updated with all the files.
+
+## Install Obsidian Git
+Finally, you will install [Obsidian Git](obsidian://show-plugin?id=obsidian-git).
