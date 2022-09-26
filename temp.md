@@ -12,13 +12,9 @@ After you've installed Git, let's verify the installation by opening a terminal 
 For me, this outputs `git version 2.28.0.windows.1`. If instead, you receive a message indicating that `git` is not recognized by your system, you have installed **Git** incorrectly.
 
 ## Uploading your SSH Key to GitHub
-Next, let's upload your SSH key to GitHub. This will allow your system to directly update and read from your vault stored online.
+Next, let's upload your SSH key to GitHub. This will allow your system to directly update and read from your vault backed up on GitHub.
 
-GitHub has an excellent guide on how to do this, which you can find [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh).
-
-However, I'll break it down here because their guide is very verbose and can be confusing without technical knowledge.
-
-### 
+GitHub has an excellent guide on how to do this, which you can find [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys). Go ahead and follow through this guide to set up your SSH key.
 
 ## Creating a GitHub repository
 Next, let's create your GitHub repository. You can use whatever settings you'd like, but the most important part is how you will clone the repository to your machine.
