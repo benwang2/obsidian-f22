@@ -11,6 +11,14 @@
 # Schedule
 
 ## Relevant Dates
+```dataview
+TABLE
+	course, title, date, time
+FROM relevant_dates.csv
+WHERE date(date) > date(now)
+SORT due DESC
+```
+
 
 
 ## Assignments
