@@ -88,8 +88,8 @@ For example, an input of
 should generate  
 ```python
 {  
-"The Lion King (2019)": 6.2,  
-"Spider-Man (2002)": 3.5  
+	"The Lion King (2019)": 6.2,  
+	"Spider-Man (2002)": 3.5  
 }  
 ```
 
