@@ -32,7 +32,7 @@ Internet software & hardware is arranged in layers because it provides modularit
 2. **Modulation type (2 points)**. A digital signal contains the sequence of bits 0101100100100. What modulation is being used in the physical signal (for example, voltage plotted against time) below? Please explain how you arrived at your conclusion.
 
 ```
-Frequency modulation is being used in the physical signal plotted here. By observing the voltage vs. time plot below and the sequence of bits, I 
+Frequency modulation is being used in the physical signal plotted here. By observing the voltage vs. time plot below and the sequence of bits, I can determine that the higher frequency corresponds to 1 and the lower frequency corresponds to 0. Regions with more peaks correspond to a 1, while regions with fewer peaks correspond to a 0.
 ```
 
 3. **Switching types (2 + 2 = 4 points).** For each question below, your answer must be one of “circuit”, “message”, or “packet”, along with a justification.<br>
