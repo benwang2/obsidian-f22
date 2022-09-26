@@ -2,10 +2,11 @@
 
 
 # Classes
-- CS 210 - Data Management for Data Science
-- CS 336 - Principles of Information and Data Management
-- CS 352 - Internet Technology
-- 
+- 01:198:210 - Data Management for Data Science
+- 01:198:336 - Principles of Information and Data Management
+- 01:198:352 - Internet Technology
+- 01:960:401 - Basic Statistics for Research
+- 01:988:101 - Introduction to Gender, Race, and Sexuality
 
 # Assignments
 ```dataview
