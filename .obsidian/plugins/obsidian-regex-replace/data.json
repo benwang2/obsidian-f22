@@ -1,7 +1,7 @@
 {
-  "findText": "nmovies",
-  "replaceText": "**n** movies",
-  "useRegEx": false,
+  "findText": "\\t",
+  "replaceText": "|",
+  "useRegEx": true,
   "selOnly": false,
   "caseInsensitive": false,
   "processLineBreak": false,
