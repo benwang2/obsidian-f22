@@ -12,33 +12,14 @@ released: 2022
 ## Instructions
 Please read and follow these instructions carefully.  
 1. You must work on this problem set individually.  
-2. Please complete your answers to the questions below and upload your responses to Canvas  
-as a single PDF file.  
-3. Your answers (preferably typed up rather than handwritten) must be clear, legible, and con-  
-cise. If we cannot understand your answer with reasonable effort, you will get zero credit.  
-4. If you leave a question out or clearly state “I don’t know”, you will receive 25% of the points  
-for that question.  
-5. We care not just about your final answer, but also how you approach the questions. In  
-general, if you show us your reasoning for your answers, we will do our best to provide  
-partial credit even if your final answer is incorrect. However, if you provide no reasoning,  
-and your answer turns out to be incorrect, you will typically receive zero points. So, please  
-explain yourself.  
-6. You are free to discuss the problem set on Piazza or through other means with your peers  
-and the instructors. You may refer to the course materials, textbook, and resources on the  
-Internet for a deeper understanding of topics. However, you cannot lift solutions from other  
-students or from the web. Do not post these problems to question-answering services like  
-Chegg. All written solutions must be your own. We run sophisticated software to detect  
-plagiarism and carefully monitor student answers.  
-7. There is a due date/time but no “time limit” on problem sets. That is, you may take as long  
-as you need to work on problem sets, as long as you submit them on time. Further, you may  
-make an unlimited number of submissions on Canvas.  
-8. As a response to the last question of this problem set, please specify who you collaborated  
-with, and also include all the resources you consulted to answer questions in this problem set,  
-including URLs of pages you visited on the Internet. Also specify which question and aspect  
-you got help with. Please be as thorough and complete as possible here. It is mandatory to  
-answer this question.  
-9. If you have any questions or clarifications on the problem set, please post them on Piazza or  
-contact the course staff. We are here to help.
+2. Please complete your answers to the questions below and upload your responses to Canvas as a single PDF file.  
+3. Your answers (preferably typed up rather than handwritten) must be clear, legible, and concise. If we cannot understand your answer with reasonable effort, you will get zero credit. 
+4. If you leave a question out or clearly state “I don’t know”, you will receive 25% of the points for that question.  
+5. We care not just about your final answer, but also how you approach the questions. In  general, if you show us your reasoning for your answers, we will do our best to provide partial credit even if your final answer is incorrect. However, if you provide no reasoning, and your answer turns out to be incorrect, you will typically receive zero points. So, please explain yourself.  
+6. You are free to discuss the problem set on Piazza or through other means with your peers and the instructors. You may refer to the course materials, textbook, and resources on the Internet for a deeper understanding of topics. However, you cannot lift solutions from other students or from the web. Do not post these problems to question-answering services like Chegg. All written solutions must be your own. We run sophisticated software to detect plagiarism and carefully monitor student answers.  
+7. There is a due date/time but no “time limit” on problem sets. That is, you may take as long as you need to work on problem sets, as long as you submit them on time. Further, you may make an unlimited number of submissions on Canvas. 
+8. As a response to the last question of this problem set, please specify who you collaborated with, and also include all the resources you consulted to answer questions in this problem set, including URLs of pages you visited on the Internet. Also specify which question and aspect you got help with. Please be as thorough and complete as possible here. It is mandatory to answer this question.  
+9. If you have any questions or clarifications on the problem set, please post them on Piazza or contact the course staff. We are here to help.
 
 # Questions
 1. **Layering** **(2 points)**. Why is Internet software/hardware arranged in layers?
@@ -48,10 +29,8 @@ contact the course staff. We are here to help.
 2. **Modulation type (2 points)**. A digital signal contains the sequence of bits 0101100100100. What modulation is being used in the physical signal (for example, voltage plotted against time) below? Please explain how you arrived at your conclusion.
 <br>
 <br>
-3. Switching types (2 + 2 = 4 points). For each question below, your answer must be one of  “circuit”, “message”, or “packet”, along with a justification.<br>
-a. Suppose you’d like to design a network with routers that need to support application con-  
-versations that transfer a lot of data, but only between a few pairs of endpoints. Which kind of  
-switching would you use for the network’s routers? Please justify your answer (2 points).
+3. **Switching types (2 + 2 = 4 points).** For each question below, your answer must be one of “circuit”, “message”, or “packet”, along with a justification.<br>
+a. Suppose you’d like to design a network with routers that need to support application conversations that transfer a lot of data, but only between a few pairs of endpoints. Which kind of switching would you use for the network’s routers? Please justify your answer (2 points).
 
 <br>
 <br>
@@ -65,8 +44,7 @@ answer (2 points).
 
 4. **Bandwidth and delay (2 + 2 + 1 + 1 = 6 points).**
 
-a. Is it possible for a link or network path to have high bandwidth and high propagation delay?  
-Why or why not? Justify.
+a. Is it possible for a link or network path to have high bandwidth and high propagation delay? Why or why not? Justify.
 <br>
 <br>
 b. Is it possible for a link or network path to have low bandwidth and low propagation delay?
@@ -82,10 +60,12 @@ you rather prefer, one with a higher or lower propagation delay?
 
 5. **Total delay (3 + 3 = 6 points).** An endpoint sends a packet of size 4000 Bytes (1 Byte = 8 bits) over a link with bandwidth 2 Mbit/s (1 M = 106). The link has a propagation delay of 10 milliseconds (1 milli = 10−3).  
 
-	a. After how long since the sender pushed the first bit of the packet into the link does the final  bit of the packet arrive at the other end of the link? Explain your answer. **(3 points)**  
+a. After how long since the sender pushed the first bit of the packet into the link does the final 
+bit of the packet arrive at the other end of the link? Explain your answer. **(3 points)**  
 <br>
 <br>
-	b. At the other end of the link is a router which pushes the packet through another link that is identical to the last one (described in question above). The packet encouters a small queue with queueing delay 5 milliseconds before entering this second link. The router uses store and forward packet switching. What is the total time it takes to move the packet end to end, i.e., first bit entering the first link to last bit exiting the second link? Explain your answer. **(3 points)**
+b. At the other end of the link is a router which pushes the packet through another link that 
+is identical to the last one (described in question above). The packet encouters a small queue with queueing delay 5 milliseconds before entering this second link. The router uses store and forward packet switching. What is the total time it takes to move the packet end to end, i.e., first bit entering the first link to last bit exiting the second link? Explain your answer. **(3 points)**
 
 6. **App-layer connection (6 points).**
 a. What are the components of the 4-tuple denoting an application-layer connection?
