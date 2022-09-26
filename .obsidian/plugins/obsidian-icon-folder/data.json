@@ -5,11 +5,11 @@
     "fontSize": 16,
     "iconColor": null,
     "recentlyUsedIcons": [
+      "DoFilePaperFill",
       "DoTodoFill",
       "DoFileTextLine",
       "DoTodoLine",
-      "DoFilePaper2Line",
-      "BuCalendar2Line"
+      "DoFilePaper2Line"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -31,5 +31,9 @@
   "Templates/Lecture Notes.md": "DoFileTextLine",
   "Rutgers/2022 Fall/352/Assignments/Problem Set 1.md": "DoTodoLine",
   "Rutgers/2022 Fall/210/Assignments/Homework 1/hw1.md": "DoTodoLine",
-  "Rutgers/2022 Fall/210/Assignments": "DoTodoFill"
+  "Rutgers/2022 Fall/210/Assignments": "DoTodoFill",
+  "Rutgers/2022 Fall/336/Notes": "DoFilePaperFill",
+  "Rutgers/2022 Fall/352/Notes": "DoFilePaperFill",
+  "Rutgers/2022 Fall/210/Assignments/Homework 1": "DoTodoFill",
+  "Rutgers/2022 Fall/352/Assignments": "DoTodoFill"
 }
