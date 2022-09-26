@@ -3,6 +3,7 @@ title: Homework 1
 course: CS210
 released: 2022-09-26
 due: 2022-10-07
+tags: Assignments
 ---
 <center><h1>Homework 1</h1></center>
 
@@ -132,5 +133,3 @@ Write a function get_user_genre that takes as parameters a user id, the user-to-
 
 ### (10 points) User recommendations  
 Recommend 3 most popular (highest average rating) movies from the user’s top genre that the user has not yet rated. Write a function recommend_movies for this, that takes as parameters a user id, the user-to-movies dictionary (as created in Task 4.1 above), the movie-to-genre dictionary (as created in Task 1.2), and the movie-to-average rating dictionary (as created in Task 2.2). The function should return a dictionary of movie-to-average rating. If fewer than 3 movies make the cut, then return all the movies that make the cut in order of top average ratings.
-
-#Assignments 
