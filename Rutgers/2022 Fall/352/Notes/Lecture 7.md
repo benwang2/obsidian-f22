@@ -59,4 +59,12 @@ The message format for SMTP was standardized in [RFC 822](https://learn.microsof
 - Header lines (to, from, subject)
 - Body (message, ascii characters only)
 
-There is a blank space between the header and the body when the message is transmitted.
+There is a blank space between the header and the body when the message is transmitted. This format was stored on the **mail server**.
+
+#### MIME
+Multipurpose Internet mail extension ([MIME](https://en.wikipedia.org/wiki/MIME)) was established in [RFC 2045](https://www.rfc-editor.org/rfc/rfc2045) and [RFC 2046](https://www.rfc-editor.org/rfc/rfc2046)
+
+Additional headers in the data header specify the MIME content type and version. The message can have many parts.
+
+[[MIME]]
+
