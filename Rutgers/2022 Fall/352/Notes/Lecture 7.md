@@ -93,3 +93,11 @@ Both protocols have ASCII command/response interactions and status codes.
 [[base64]]
 [[ascii]]
 
+### Themes from app-layer protocols
+**Keep it simple until you need complexity**.
+- start with ASCII-based design, stateles servers
+- cookies for HTTP state
+- multimedia extensions (MIME) in e-mail
+
+Performance optimizations are often an after-thought. Headers can easily be upgraded without breaking old functionality.
+
