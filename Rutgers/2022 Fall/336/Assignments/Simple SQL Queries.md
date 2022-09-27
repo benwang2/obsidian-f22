@@ -131,10 +131,32 @@ WHERE f.bar = s.bar AND
 
 
 ### 8. Drinkers who like some beers sold by Caravan bar
+```sql
+SELECT DISTINCT l.drinker  
+FROM Likes l, Sells s  
+WHERE l.beer = s.beer AND s.bar = 'Caravan'  
+GROUP BY l.drinker HAVING count(*) > 1;
+```
+
+or…
+
+```sql
+SELECT DISTINCT l.drinker  
+FROM Likes l, (SELECT beer FROM Sells WHERE bar='Caravan') AS s  
+WHERE l.beer = s.beer  
+GROUP BY l.drinker HAVING count(*) > 1;
+```
+
+	# drinker
+	
+	John  
+	Mike  
+	Vince
 
 ### 9. Bars which sell Budweiser and are frequented by some drinkers who like Budweiser
 
-### 10.  Bars which are frequented by Mike  and Steve
+
+### 10.  Bars which are frequented by Mike and Steve
 
 ### 11. Drinker who like at least two beers that Mike likes
 
