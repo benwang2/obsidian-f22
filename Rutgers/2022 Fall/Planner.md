@@ -13,13 +13,14 @@
 # Schedule
 ### Assignments
 ```dataview
-TABLE
-	title, course, due
+TABLE WITHOUT ID
+	file.link as assignment, course, due
 FROM #Assignments 
 WHERE date(due) > date(now)
 SORT due DESC
 LIMIT 4
 ```
+
 ### Relevant Dates
 ```dataview
 TABLE WITHOUT ID
