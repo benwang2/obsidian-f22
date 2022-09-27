@@ -43,3 +43,20 @@ Mail servers are the **infrastructure** for email functionality and can act as b
 SMTP is **push-based**, meaning that everything is reliant on info being *pushed* from client to server.
 
 [[push-based]]
+
+### Mail Response Codes
+| code | description              |
+| ---- | ------------------------ |
+| 220  | Service ready            |
+| 250  | Request command complete |
+| 354  | Start mail input         |
+| 421  | Service not available    |
+| 500  | Unrecognized command     |
+
+
+### Message Format
+The message format for SMTP was standardized in [RFC 822](https://learn.microsoft.com/en-us/previous-versions/office/developer/exchange-server-2010/aa493918(v=exchg.140)). It as constructed as such:
+- Header lines (to, from, subject)
+- Body (message, ascii characters only)
+
+There is a blank space between the header and the body when the message is transmitted.
