@@ -10,6 +10,7 @@
 - 01:960:401 - Basic Statistics for Research
 - 01:988:101 - Introduction to Gender, Race, and Sexuality
 
+## RUMAD
 
 ## Schedule
 ### Assignments
@@ -24,12 +25,13 @@ LIMIT 4
 ### Relevant Dates
 ```dataview
 TABLE WITHOUT ID
-	course, title, date as 
+	course, title, due as date
 FROM csv("tables/relevant_dates.csv")
-WHERE date("date") > date(now)
+WHERE date(due) > date(now)
 SORT due ASC
 LIMIT 10
 ```
+
 
 
 
