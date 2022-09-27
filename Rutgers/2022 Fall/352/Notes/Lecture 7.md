@@ -76,7 +76,14 @@ Whereas SMTP is focused on pushing data, the mail access protocols are focused o
 - HTTP: Gmail, Outlook, etc.
 
 [[POP]], [[IMAP]], [[HTTP]]
-### Web-based email
-Web-based emails connect to mail servers via web browser - they make an HTTP request to the HTTP server, which then communicates to the SMTP server.
+### Web-based email (HTTP)
+Web-based emails connect to mail servers via web browser. Browsers work in HTTP requests, whereas email servers use SMTP. The browser makes a HTTP request to the HTTP server, which then communicates to the mail server in SMTP.
 
-SMTP server to 
+In some configurations, the HTTP server and SMTP server can be on the same machine.
+
+### SMTP vs. HTTP
+| HTTP                               | SMTP                                       |
+| ---------------------------------- | ------------------------------------------ |
+| pull                               | push                                       |
+| 1:1 object to message              | multiple objects sent in multipart message |
+| can put non-ascii data in response | need ascii-based encoding (base64)                                           |
