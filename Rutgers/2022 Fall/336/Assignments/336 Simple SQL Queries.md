@@ -161,3 +161,5 @@ GROUP BY l.drinker HAVING count(*) > 1;
 ### 11. Drinker who like at least two beers that Mike likes
 
 ### 12. Bars which sell at least 3 beers that Mike likes (do not use COUNT)
+
+[[self join]]
