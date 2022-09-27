@@ -1,6 +1,6 @@
 ---
 title: Simple SQL Queries
-course: CS_336
+course: CS336
 released: 2022-09-22
 due: 2022-10-07
 tags: Assignments
@@ -10,7 +10,7 @@ tags: Assignments
 
 Return SQL code as text file plus results which workbench gave you (you can include them in the same txt file). Query + answer. As long as it is readable by a grader, it is fine - text, word, screenshot....but text is easiest.   
 
-### 1.  Find all distinct drinkers whose phone numbers come from area code 917 and who like Budweiser or Bud (synonim!)
+### 1.  Find all distinct drinkers whose phone numbers come from area code 917 and who like Budweiser or Bud (synonym!)
 ```sql
 SELECT DISTINCT drinker  
 FROM Likes l, Drinkers d  
