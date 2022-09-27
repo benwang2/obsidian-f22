@@ -14,10 +14,10 @@ In this assignment, you’ll implement a prototype movie recommendation program 
 
 ## What to Submit
 Write all the required functions described below in the given template file named hw1.py, and submit your completed hw1.py. If you are working in a group, only one person should submit, and your hw1.py file should have a comment that gives the names and netIDs of everyone in your group.
+
 You can resubmit any number of times. The last submission will be graded. 
-You may also implement other helper functions as needed. Make sure you write all your test calls  
-in the main() function. Do not write any code outside of any of the functions. We’ll ignore your  
-main() function when grading.
+
+You may also implement other helper functions as needed. Make sure you write all your test calls in the main() function. Do not write any code outside of any of the functions. We’ll ignore your main() function when grading.
 
 ## How to test your code  
 You can test your program by calling your functions in the hw1.py file. All test code must be in the main() function. 

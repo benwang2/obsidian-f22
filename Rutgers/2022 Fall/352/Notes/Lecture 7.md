@@ -101,3 +101,7 @@ Both protocols have ASCII command/response interactions and status codes.
 
 Performance optimizations are often an after-thought. Headers can easily be upgraded without breaking old functionality.
 
+Utilize modularity by **partitioning functions based on what's best at each place**.
+For example,
+- leave content rendering to the user agent - why would the mail server need to see content?
+- rely on mail server for reliable delivery - client can be asleep or offline
