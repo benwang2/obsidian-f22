@@ -5,11 +5,11 @@
     "fontSize": 16,
     "iconColor": null,
     "recentlyUsedIcons": [
-      "DoFilePaperFill",
-      "DoTodoFill",
-      "DoFileTextLine",
-      "DoTodoLine",
-      "DoFilePaper2Line"
+      "RiFileTextLine",
+      "RiFilePaperFill",
+      "RiTodoLine",
+      "RiTodoFill",
+      "RiFilePaper2Fill"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -20,20 +20,20 @@
       "left": 2
     }
   },
-  "Rutgers": "DoBook2Line",
-  "Rutgers/2022 Fall/210": "EdTable2",
-  "Rutgers/2022 Fall/336": "DeDatabase2Fill",
-  "Rutgers/2022 Fall/352": "DeWifiFill",
-  "Rutgers/2022 Fall/tables": "DoFileTextFill",
-  "Rutgers/2022 Fall/Planner.md": "BuCalendar2Line",
-  "Templates": "DoFilePaper2Line",
-  "Templates/Assignment.md": "DoTodoLine",
-  "Templates/Lecture Notes.md": "DoFileTextLine",
-  "Rutgers/2022 Fall/352/Assignments/Problem Set 1.md": "DoTodoLine",
-  "Rutgers/2022 Fall/210/Assignments/Homework 1/hw1.md": "DoTodoLine",
-  "Rutgers/2022 Fall/210/Assignments": "DoTodoFill",
-  "Rutgers/2022 Fall/336/Notes": "DoFilePaperFill",
-  "Rutgers/2022 Fall/352/Notes": "DoFilePaperFill",
-  "Rutgers/2022 Fall/210/Assignments/Homework 1": "DoTodoFill",
-  "Rutgers/2022 Fall/352/Assignments": "DoTodoFill"
+  "Rutgers": "RiBook2Fill",
+  "Rutgers/2022 Fall/210": "RiTable2",
+  "Rutgers/2022 Fall/336": "RiDatabase2Fill",
+  "Rutgers/2022 Fall/352": "RiWifiFill",
+  "Rutgers/2022 Fall/tables": "RiFileTextFill",
+  "Rutgers/2022 Fall/Planner.md": "RiCalendar2Line",
+  "Templates": "RiFilePaper2Fill",
+  "Templates/Assignment.md": "RiTodoLine",
+  "Templates/Lecture Notes.md": "RiFileTextLine",
+  "Rutgers/2022 Fall/352/Assignments/Problem Set 1.md": "RiTodoLine",
+  "Rutgers/2022 Fall/210/Assignments/Homework 1/hw1.md": "RiTodoLine",
+  "Rutgers/2022 Fall/210/Assignments": "RiTodoFill",
+  "Rutgers/2022 Fall/336/Notes": "RiFilePaperFill",
+  "Rutgers/2022 Fall/352/Notes": "RiFilePaperFill",
+  "Rutgers/2022 Fall/210/Assignments/Homework 1": "RiTodoFill",
+  "Rutgers/2022 Fall/352/Assignments": "RiTodoFill"
 }
