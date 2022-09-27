@@ -5,11 +5,11 @@
     "fontSize": 16,
     "iconColor": null,
     "recentlyUsedIcons": [
+      "RiTodoFill",
       "RiFileTextFill",
       "RiStickyNoteFill",
       "RiCellphoneFill",
-      "RiSmartphoneFill",
-      "RiFileTextLine"
+      "RiSmartphoneFill"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -30,11 +30,12 @@
   "Templates/Assignment.md": "RiTodoLine",
   "Templates/Lecture Notes.md": "RiFileTextLine",
   "Rutgers/2022 Fall/210/Assignments": "RiTodoFill",
-  "Rutgers/2022 Fall/336/Notes": "RiFilePaperFill",
+  "Rutgers/2022 Fall/336/Notes": "RiFileTextFill",
   "Rutgers/2022 Fall/352/Notes": "RiFileTextFill",
   "Rutgers/2022 Fall/210/Assignments/Homework 1": "RiTodoFill",
   "Rutgers/2022 Fall/352/Assignments": "RiTodoFill",
   "Rutgers/2022 Fall/210/Assignments/Homework 1/210 Homework 1.md": "RiTodoLine",
   "Rutgers/2022 Fall/352/Assignments/352 Problem Set 1.md": "RiTodoLine",
-  "Rutgers/2022 Fall/352/Notes/Lecture 7.md": "RiFileTextLine"
+  "Rutgers/2022 Fall/352/Notes/Lecture 7.md": "RiFileTextLine",
+  "Rutgers/2022 Fall/336/Assignments": "RiTodoFill"
 }
