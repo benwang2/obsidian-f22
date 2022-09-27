@@ -24,12 +24,13 @@ LIMIT 4
 ### Relevant Dates
 ```dataview
 TABLE WITHOUT ID
-	course, title, due
+	course, title, date as 
 FROM csv("tables/relevant_dates.csv")
-WHERE date(due) > date(now)
+WHERE date("date") > date(now)
 SORT due ASC
 LIMIT 10
 ```
+
 
 
 
