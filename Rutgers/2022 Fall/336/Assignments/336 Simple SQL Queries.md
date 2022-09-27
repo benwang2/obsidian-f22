@@ -1,8 +1,8 @@
 ---
 title: Simple SQL Queries
 course: CS_336
-released: 2022/09/22
-due: 2022/10/07
+released: 2022-09-22
+due: 2022-10-07
 tags: Assignments
 ---
 <center><h1>Simple SQL Queries</h1></center>
