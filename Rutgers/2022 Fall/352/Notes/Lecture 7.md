@@ -21,6 +21,8 @@ SMTP is composed of 3 main components:
 #### User Agent
 A user agent is the client a user may use to access their mailbox. This may be an application like Outlook or Apple Mail. It could also be a web client, like Gmail or Yahoo Mail.
 
+[[user agent]]
+
 #### Mail Server
 The mail server contains a **mailbox** for incoming messages for a user. It also queues outgoing messages from a user. The sender's mail server makes a connection to the receiver's mail server on port 25.
 
@@ -35,4 +37,9 @@ The SMTP protocol is used to send messages from client to server. The client (ei
 5. **User 2**'s mail server places inbound message in mailbox
 6. **User 2** invokes client to read message
 
-### Sample Interaction
+### Observations
+Mail servers are the **infrastructure** for email functionality and can act as both the client or the server based on the context.
+
+SMTP is **push-based**, meaning that everything is reliant on info being *pushed* from client to server.
+
+[[push-based]]
