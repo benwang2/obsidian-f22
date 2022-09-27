@@ -40,23 +40,17 @@ a. Suppose you’d like to design a network with routers that need to support ap
 <br>
 
 b. Suppose, instead, your network must support applications that move a small number of  
-application-level messages between a large number of pairs of endpoints. Each application-level  
-message may be very large. Further, even if the entire message isn’t received yet, it is helpful for  
-the applications to transfer smaller portions of the messages as early as possible to the receiving  
-endpoints. What kind of switching would you build into the network’s routers? Please justify your  
-answer (2 points).
+application-level messages between a large number of pairs of endpoints. Each application-level message may be very large. Further, even if the entire message isn’t received yet, it is helpful for the applications to transfer smaller portions of the messages as early as possible to the receiving endpoints. What kind of switching would you build into the network’s routers? Please justify your answer (2 points).
 
 4. **Bandwidth and delay (2 + 2 + 1 + 1 = 6 points).**
 
 a. Is it possible for a link or network path to have high bandwidth and high propagation delay? Why or why not? Justify.
 <br>
 <br>
-b. Is it possible for a link or network path to have low bandwidth and low propagation delay?
-Why or why not? Justify.
+b. Is it possible for a link or network path to have low bandwidth and low propagation delay? Why or why not? Justify.
 <br>
 <br>
-c. If you need to transfer a large file very quickly, which kind of link would you rather prefer,
-one with a higher or lower bandwidth?
+c. If you need to transfer a large file very quickly, which kind of link would you rather prefer, one with a higher or lower bandwidth?
 <br>
 <br>
 d. If you need to support a highly interactive (real-time) voice call, which kind of link would
@@ -64,12 +58,10 @@ you rather prefer, one with a higher or lower propagation delay?
 
 5. **Total delay (3 + 3 = 6 points).** An endpoint sends a packet of size 4000 Bytes (1 Byte = 8 bits) over a link with bandwidth 2 Mbit/s (1 M = 106). The link has a propagation delay of 10 milliseconds (1 milli = 10−3).  
 
-a. After how long since the sender pushed the first bit of the packet into the link does the final 
-bit of the packet arrive at the other end of the link? Explain your answer. **(3 points)**  
+a. After how long since the sender pushed the first bit of the packet into the link does the final bit of the packet arrive at the other end of the link? Explain your answer. **(3 points)**  
 <br>
 <br>
-b. At the other end of the link is a router which pushes the packet through another link that 
-is identical to the last one (described in question above). The packet encouters a small queue with queueing delay 5 milliseconds before entering this second link. The router uses store and forward packet switching. What is the total time it takes to move the packet end to end, i.e., first bit entering the first link to last bit exiting the second link? Explain your answer. **(3 points)**
+b. At the other end of the link is a router which pushes the packet through another link that is identical to the last one (described in question above). The packet encouters a small queue with queueing delay 5 milliseconds before entering this second link. The router uses store and forward packet switching. What is the total time it takes to move the packet end to end, i.e., first bit entering the first link to last bit exiting the second link? Explain your answer. **(3 points)**
 
 6. **App-layer connection (6 points).**
 a. What are the components of the 4-tuple denoting an application-layer connection?
@@ -111,8 +103,7 @@ f. What is an authoritative DNS server?
 <br>
 10. **Partitioning, caching, and DNS query load (7 points)**. Suppose there are N domain names available in the Internet, equally subdivided over T top-level domains (such as .com). Suppose there are C local DNS resolvers, each issuing N ∗k queries, i.e., k queries to each of the N  domains, where k >1. Assume that each of the N domains has a unique authoritative name server with an entry in the corresponding top-level DNS server. Further assume that queries are iterative from the point of view of the local DNS resolver. Now answer the questions below. Explain your reasoning clearly to receive partial credit. 
 
-a. Suppose there is no caching on any of the DNS servers. How many queries does the root 
-DNS server service? **(1 point)**  
+a. Suppose there is no caching on any of the DNS servers. How many queries does the root DNS server service? **(1 point)**  
 <br>
 <br>
 
@@ -121,8 +112,7 @@ top-level DNS server service? **(2 points)**
 <br>
 <br>
 
-c. Suppose all local DNS resolvers cache the DNS responses they receive indefinitely. Now  
-how many queries does the root DNS server service? **(2 points)**  
+c. Suppose all local DNS resolvers cache the DNS responses they receive indefinitely. Now how many queries does the root DNS server service? **(2 points)**  
 <br>
 <br>
 
