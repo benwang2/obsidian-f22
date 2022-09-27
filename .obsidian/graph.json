@@ -1,6 +1,6 @@
 {
   "collapse-filter": false,
-  "search": "-path:Templates",
+  "search": "-path:Templates -file: Planner",
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": false,
@@ -14,9 +14,9 @@
   "lineSizeMultiplier": 1,
   "collapse-forces": false,
   "centerStrength": 0.51685393258427,
-  "repelStrength": 4.15730337078652,
-  "linkStrength": 1,
-  "linkDistance": 183,
+  "repelStrength": 7.41573033707865,
+  "linkStrength": 0.47752808988764,
+  "linkDistance": 173,
   "scale": 1,
   "close": false
 }
