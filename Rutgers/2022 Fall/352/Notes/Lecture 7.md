@@ -68,3 +68,15 @@ Additional headers in the data header specify the MIME content type and version.
 
 [[MIME]]
 
+## Mail Access Protocols
+### Access protocols
+Whereas SMTP is focused on pushing data, the mail access protocols are focused on pulling data.
+- POP: Post Office Protocol ([RFC 1939](https://www.rfc-editor.org/rfc/rfc1939))
+- IMAP: Internet Mail Access Protocol ([RFC 1730](https://www.rfc-editor.org/rfc/rfc1730))
+- HTTP: Gmail, Outlook, etc.
+
+[[POP]], [[IMAP]], [[HTTP]]
+### Web-based email
+Web-based emails connect to mail servers via web browser - they make an HTTP request to the HTTP server, which then communicates to the SMTP server.
+
+SMTP server to 
