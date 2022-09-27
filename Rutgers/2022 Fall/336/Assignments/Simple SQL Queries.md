@@ -61,15 +61,74 @@ WHERE d.name = f.drinker AND
     d.city = 'San Francisco';
 ```
 
-  
-'Blue Angel'  
-'Coconut Willie\'s Cocktail Lounge'  
-'The Blank Club'
+	# bar
+	'Blue Angel'  
+	'Coconut Willie\'s Cocktail Lounge'  
+	'The Blank Club'
+
 ### 5. Provide all bars which serve beers that Mike likes
+```sql
+SELECT DISTINCT s.bar  
+FROM Sells s, (SELECT beer FROM Likes WHERE drinker='Mike') AS b  
+WHERE s.beer = b.beer;
+```
+
+	# bar
+	
+	A.P. Stump's  
+	Blue Angel  
+	Blue Tattoo  
+	Britannia Arms  
+	Cabana  
+	Caravan  
+	Club 175  
+	Coconut Willie's Cocktail Lounge  
+	Gecko Grill  
+	Giza Hookah Lounge  
+	Hedley Club  
+	Seven Bamboo  
+	The Backbeat  
+	The Blank Club  
+	The Shark and Rose
+
 
 ### 6. Who likes at least one same beer that Joe or Mike like?
 
+```sql
+SELECT DISTINCT l.drinker  
+FROM Likes l, Likes l1, Likes l2  
+WHERE  
+    (l.beer = l1.beer OR l.beer = l2.beer)  
+    AND  l.drinker != 'Joe' AND l.drinker != 'Mike';
+```
+
+	# drinker
+	
+	John  
+	Justin  
+	Vince  
+	Jesse
+
+
 ### 7.  All bars which sell at least one beer which is liked by at least one drinker who frequents these bars
+```sql
+SELECT DISTINCT s.bar  
+FROM Sells s, Frequents f, Likes l  
+WHERE f.bar = s.bar AND  
+    s.beer = l.beer AND  
+    f.drinker = l.drinker;
+```
+
+	# bar
+	
+	A.P. Stump's  
+	Blue Angel  
+	Cabana  
+	Caravan  
+	Gecko Grill  
+	Seven Bamboo  
+	The Shark and Rose
+
 
 ### 8. Drinkers who like some beers sold by Caravan bar
 
