@@ -10,8 +10,6 @@
 - 01:960:401 - Basic Statistics for Research
 - 01:988:101 - Introduction to Gender, Race, and Sexuality
 
-## RUMAD
-
 ## Schedule
 ### Assignments
 ```dataview
