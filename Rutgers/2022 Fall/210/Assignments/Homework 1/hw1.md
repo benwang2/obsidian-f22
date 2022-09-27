@@ -49,6 +49,8 @@ Write a function read_ratings_data(f) that takes in a ratings file name, and ret
 }
 ```
 
+[[io]]
+
 ### (8 points) Movie genres  
 Write a function read_movie_genre(f) that takes in a movies file name and returns a dictionary  
 mapping from movie to genre. 
@@ -101,8 +103,12 @@ In services such as Netflix and Spotify, you often see recommendations with the 
 Write a function get_popular_movies that takes as parameters a dictionary of movie-to-average  
 rating (as created in Task 2.2), and an integer n(default should be 10). The function should return a dictionary (movie:average rating, same structure as input dictionary) of top *n* movies based on the average ratings. If there are fewer than n* movies, it should return all movies in order of top average ratings.
 
+[[sorting]]
+
 ### (8 points) Threshold rating  
 Write a function filter_movies that takes as parameters a dictionary of movie-to-average rating (same as for the popularity based function above), and a threshold rating with default value of 3. the function should filter movies based on the threshold rating, and return a dictionary with same structure as the input. For example, if the threshold rating is 3.5, the returned dictionary should have only those movies from the input whose average rating is equal to or greater than 3.5. 
+
+[[filtering]]
 
 ### (8 points) Popularity & genre based  
 In most recommendation systems, genre of the movie/song/book plays an important role. Often features like popularity, genre, artist are combined to present recommendations to a user. Write a function get_popular_in_genre that, given a genre, a genre-to-movies dictionary (as created in Task 2.1), a dictionary of movie:average rating (as created in Task 2.2), and an integer n (default 5), returns the top *n* most popular movies in that genre based on the average ratings. The return value should be a dictionary of movie-to-average rating of movies that make the cut. If there are fewer than *n* movies, it should return all movies in order of top average ratings. Genres will be from those in the movie:genre dictionary created in Task 1.2. The genre name will exactly match one of the genres in the dictionary, so you do not need to do any upper or lower case conversion.  
