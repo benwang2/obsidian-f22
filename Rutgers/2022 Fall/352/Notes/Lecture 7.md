@@ -86,4 +86,10 @@ In some configurations, the HTTP server and SMTP server can be on the same machi
 | ---------------------------------- | ------------------------------------------ |
 | pull                               | push                                       |
 | 1:1 object to message              | multiple objects sent in multipart message |
-| can put non-ascii data in response | need ascii-based encoding (base64)                                           |
+| can put non-ascii data in response | need ascii-based encoding (base64)
+
+Both protocols have ASCII command/response interactions and status codes.
+
+[[base64]]
+[[ascii]]
+
