@@ -6,13 +6,11 @@ tags: "Lecture Notes"
 ---
 
 # Lecture 5
-## Topic
-As the professor begins to explain the topic, use this space to write an overview of the topic being discussed.
+Imielinski doesn't really have a structure to his lectures, so notes here are from recording topics he covers and doing research on my own.
 
-### Subtopic 1
-Use this space to expand upon the topic.
+## Topics Covered
+- Outer join and left join
+- Conditionals
+	- Case statements
+	- If function
 
-
-## Next Week's quiz
-- Outer joins
-- 
