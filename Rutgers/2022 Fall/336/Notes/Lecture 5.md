@@ -125,7 +125,28 @@ IF(condition, value_if_true, value_if_false)
 ```
 
 The parameters are as following:
-| Parameter     | Description                                         |
-| ------------- | --------------------------------------------------- |
-| condition     | The value / expression to evaluate to true or false |
-| value_if_true | The value to return if                                                     |
+| Parameter        | Description                                         |
+| ---------------- | --------------------------------------------------- |
+| *condition*      | The value / expression to evaluate to true or false |
+| *value_if_true*  | The value to return if *condition* is **true**.     |
+| *value_if_false* | The value to return if *condition* is **false**.    |
+
+To extend the use of the IF function, we can use the **STRCMP** function. This lets us test whether two strings are the same.
+
+For example,
+```sql
+SELECT IF(STRCMP("hello","bye") = 0, "YES", "NO");
+```
+
+Furthermore, we can use the IF function to add an additional column to our returned records.
+
+For example:
+```sql
+SELECT s.id, s.name, IF(g.grade>=60, "PASSING", "FAILING")
+FROM Students s
+LEFT JOIN Grades g ON s.id = g.id
+```
+would return the following:
+| id  | name | IF(g.grade>=60, "PASSING", "FAILING") |
+| --- | ---- | ------------------------------------- |
+| 2   | sam  |                                       |
