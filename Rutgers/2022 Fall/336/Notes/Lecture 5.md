@@ -16,8 +16,7 @@ Imielinski doesn't really have a structure to his lectures, so notes here are fr
 	- Case statements
 	- If function
 
-## Joins
-### Example tables
+## Example tables
 **Students**
 | id  | name |
 | --- | ---- |
@@ -33,6 +32,7 @@ Imielinski doesn't really have a structure to his lectures, so notes here are fr
 | 4   | 99  |
 
 
+## Joins
 ### Natural join
 A **natural join** joins two tables based on same attribute name and data types. The table that results from this operation contains all the attributes of both tables, but keeps only one copy of each common column.
 
@@ -49,6 +49,7 @@ We would get the output:
 | 3   | meg  | 75      |
 
 The natural join requires that similar rows occur in both tables, and only then will it join the row in **Grades** to the row in **Students**.
+[[natural join]]
 
 ### Inner join
 An **inner join** joins two tables using the condition specified in the **ON** clause. The resulting table contains all attributes from both tables, including common columns.
@@ -65,6 +66,7 @@ We would get the output:
 | --- | ---- | --- | ----- |
 | 2   | sam  | 2   | 50    |
 | 3   | meg  | 2   | 75
+[[inner join]]
 
 ### Outer join
 Outer joins return all specified records when there's a match in the tables specified. It effectively **unions** two tables on the basis specified in the **ON** clause.
@@ -86,12 +88,15 @@ We would get the output
 | 2   | sam  | 50    |
 | 3   | meg  | 75    |
 | 4   | NULL | 99      |
+[[full outer join]]
 
 #### Left join
 A LEFT JOIN joins two tables and returns all records from the left table, and the matching records from the right table. In the event there are no matches in the right side, there will be 0 rows with columns from the right table.
+[[left join]]
 
 #### Right join
 A RIGHT JOIN joins two tables and returns all records from the right table, and the matching records from the left table. In the event there are no matches in the left side, there will be 0 rows with columns from the left table.
+[[right join]]
 
 ## Conditionals
 ### Case statement
@@ -117,6 +122,7 @@ We would get the output:
 | --- | ---- | ----- | ------ |
 | 2   | sam  | 50    | F      |
 | 3   | meg  | 75    | C      |
+[[case]]
 
 ### If-then statement
 The IF function takes 3 parameters and looks like this.
@@ -149,4 +155,7 @@ LEFT JOIN Grades g ON s.id = g.id
 would return the following:
 | id  | name | IF(g.grade>=60, "PASSING", "FAILING") |
 | --- | ---- | ------------------------------------- |
-| 2   | sam  |                                       |
+| 2   | sam  | FAILING                               |
+| 3   | meg  | PASSING                               |
+
+[[if-then]]
