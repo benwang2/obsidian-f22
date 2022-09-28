@@ -66,7 +66,7 @@ We would get the output:
 | 2   | sam  | 2   | 50    |
 | 3   | meg  | 2   | 75
 
-#### Outer join
+### Outer join
 Outer joins return all specified records when there's a match in the tables specified. It effectively **unions** two tables on the basis specified in the **ON** clause.
 
 #### Full outer join
@@ -92,3 +92,6 @@ A LEFT JOIN joins two tables and returns all records from the left table, and th
 
 #### Right join
 A RIGHT JOIN joins two tables and returns all records from the right table, and the matching records from the left table. In the event there are no matches in the left side, there will be 0 rows with columns from the left table.
+
+## Conditionals
+### Case statement
