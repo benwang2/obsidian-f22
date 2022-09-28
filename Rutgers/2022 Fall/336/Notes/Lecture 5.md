@@ -9,8 +9,13 @@ tags: "Lecture Notes"
 Imielinski doesn't really have a structure to his lectures, so notes here are from recording topics he covers and doing research on my own.
 
 ## Topics Covered
-- Outer join and left join
+- Joins
+	- Natural joins and outer joins
+	- Left join, right join
 - Conditionals
 	- Case statements
 	- If function
 
+## Joins
+### Natural join
+A **natural join** 
