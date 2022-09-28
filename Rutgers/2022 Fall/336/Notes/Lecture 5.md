@@ -90,5 +90,5 @@ We would get the output
 #### Left join
 A LEFT JOIN joins two tables and returns all records from the left table, and the matching records from the right table. In the event there are no matches in the right side, there will be 0 rows with columns from the right table.
 
-
 #### Right join
+A RIGHT JOIN joins two tables and returns all records from the right table, and the matching records from the left table. In the event there are no matches in the left side, there will be 0 rows with columns from the left table.
