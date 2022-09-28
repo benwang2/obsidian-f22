@@ -99,7 +99,17 @@ The CASE expression goes through conditions and returns a value when the first c
 
 Suppose we run the query:
 ```sql
-SELECT id, name, grade
-CASE
-	WHEN
+SELECT s.id, s.name, s.grade
+	CASE
+		WHEN s.grade > 90 THEN "A"
+		WHEN s.grade > 80 THEN "B"
+		WHEN s.grade > 70 THEN "C"
+		WHEN s.grade > 60 THEN "D"
+		ELSE "F"
+	END AS grade_letter
+FROM Students s
+LEFT JOIN Grades g
+WHERE s.id = g.id
 ```
+
+We wpi;
