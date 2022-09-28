@@ -66,8 +66,11 @@ We would get the output:
 | 2   | sam  | 2   | 50    |
 | 3   | meg  | 2   | 75
 
-### Full outer join
-There are multiple types of outer joins, however we will focus on the **full outer join**. Outer joins return all specified records when there's a match in the tables specified. It effectively **unions** two tables on the basis specified in the **ON** clause.
+#### Outer join
+Outer joins return all specified records when there's a match in the tables specified. It effectively **unions** two tables on the basis specified in the **ON** clause.
+
+#### Full outer join
+A full outer join will combine both tables completely.
 
 Suppose we run the following query on the example tables.
 ```sql
@@ -83,3 +86,9 @@ We would get the output
 | 2   | sam  | 50    |
 | 3   | meg  | 75    |
 | 4   | NULL | 99      |
+
+#### Left join
+A LEFT JOIN joins two tables and returns all records from the left table, and the matching records from the right table. In the event there are no matches in the right side, there will be 0 rows with columns from the right table.
+
+
+#### Right join
