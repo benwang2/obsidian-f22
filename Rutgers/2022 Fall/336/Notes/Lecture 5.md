@@ -66,3 +66,20 @@ We would get the output:
 | 2   | sam  | 2   | 50    |
 | 3   | meg  | 2   | 75
 
+### Full outer join
+There are multiple types of outer joins, however we will focus on the **full outer join**. Outer joins return all specified records when there's a match in the tables specified. It effectively **unions** two tables on the basis specified in the **ON** clause.
+
+Suppose we run the following query on the example tables.
+```sql
+SELECT S.id, S.name, G.grade
+FROM Students S
+FULL OUTER JOIN Grades G ON S.id=G.id
+```
+
+We would get the output
+| id  | name | grade |
+| --- | ---- | ----- |
+| 1   | john | NULL  |
+| 2   | sam  | 50    |
+| 3   | meg  | 75    |
+| 4   | NULL | 99      |
