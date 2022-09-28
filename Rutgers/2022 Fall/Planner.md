@@ -26,7 +26,7 @@ LIMIT 4
 TABLE WITHOUT ID
 	course, title, due as date
 FROM csv("tables/relevant_dates.csv")
-WHERE date(due) > date(now)
+WHERE date(now)-dur(1 day) < date(due)
 SORT due ASC
 LIMIT 10
 ```
