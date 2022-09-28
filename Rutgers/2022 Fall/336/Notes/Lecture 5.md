@@ -112,4 +112,20 @@ LEFT JOIN Grades g
 WHERE s.id = g.id
 ```
 
-We wpi;
+We would get the output:
+| id  | name | grade | letter |
+| --- | ---- | ----- | ------ |
+| 2   | sam  | 50    | F      |
+| 3   | meg  | 75    | C      |
+
+### If-then statement
+The IF function takes 3 parameters and looks like this.
+```sql
+IF(condition, value_if_true, value_if_false)
+```
+
+The parameters are as following:
+| Parameter     | Description                                         |
+| ------------- | --------------------------------------------------- |
+| condition     | The value / expression to evaluate to true or false |
+| value_if_true | The value to return if                                                     |
