@@ -9,3 +9,5 @@ In short: Medea falls in love with Jason and moves in with him. After ten years 
 ## Themes
 - Deviation from normative heterosexual gender roles
 - U.S. national press coverage relying on stereotypes to cut corners
+- Press focuses on creating a story as opposed to accurately reporting
+
