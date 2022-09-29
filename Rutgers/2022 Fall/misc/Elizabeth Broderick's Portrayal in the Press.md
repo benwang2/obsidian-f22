@@ -10,6 +10,7 @@ In short: Medea falls in love with Jason and moves in with him. After ten years 
 - Deviation from normative heterosexual gender roles
 - U.S. national press coverage relying on stereotypes to cut corners
 - Press focuses on creating a story as opposed to accurately reporting
+- Placing heavy emphasis on gender roles
 
 ## Notes
 The delivery of this information is written in such a way to draw attention to the relationship between Elizabeth and Daniel Broderick - a husband and his ex-wife. Despite that there are two murder victims, the media only describes Elizabeth and Daniel in depth, quickly glossing over Daniel's newlywed wife.
