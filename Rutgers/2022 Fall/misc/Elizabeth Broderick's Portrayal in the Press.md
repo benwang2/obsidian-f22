@@ -16,4 +16,6 @@ The delivery of this information is written in such a way to draw attention to t
 
 The story is not about the murder victims, but the murderer themselves. Linda is an afterthought, a "secondary element in the construction" of "this drama" (292).
 
-Linda is discussed only in relation to Daniel in the media; again and again she is portrayed as child-like
+Linda is discussed only in relation to Daniel in the media; again and again she is portrayed as a "supporting character", having emphasis placed on her innocence.
+
+By pitching this story as a *murderous ex-wife* targeting a picturesque husband-and-wife, the press easily plays into the demonization of Elizabeth Broderick. The way they pitch the story undeniably appeals to pathos, whether it's intentional or not.
