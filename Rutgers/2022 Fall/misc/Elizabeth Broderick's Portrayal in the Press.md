@@ -14,4 +14,6 @@ In short: Medea falls in love with Jason and moves in with him. After ten years 
 ## Notes
 The delivery of this information is written in such a way to draw attention to the relationship between Elizabeth and Daniel Broderick - a husband and his ex-wife. Despite that there are two murder victims, the media only describes Elizabeth and Daniel in depth, quickly glossing over Daniel's newlywed wife.
 
-The story is not about the murder victims, but the murderer themselves.
+The story is not about the murder victims, but the murderer themselves. Linda is an afterthought, a "secondary element in the construction" of "this drama" (292).
+
+Linda is discussed only in relation to Daniel in the media; again and again she is portrayed as child-like
