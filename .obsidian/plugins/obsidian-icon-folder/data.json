@@ -36,7 +36,18 @@
   "Rutgers/2022 Fall/352/Assignments": "RiTodoFill",
   "Rutgers/2022 Fall/210/Assignments/Homework 1/210 Homework 1.md": "RiTodoLine",
   "Rutgers/2022 Fall/352/Assignments/352 Problem Set 1.md": "RiTodoLine",
-  "Rutgers/2022 Fall/352/Notes/Lecture 7.md": "RiFileTextLine",
+  "Rutgers/2022 Fall/352/Notes/Lecture 7.md": {
+    "iconName": null,
+    "inheritanceIcon": "RiFileTextLine"
+  },
   "Rutgers/2022 Fall/336/Assignments": "RiTodoFill",
-  "Rutgers/2022 Fall/misc": "RiQuestionFill"
+  "Rutgers/2022 Fall/misc": "RiQuestionFill",
+  "Rutgers/2022 Fall/352/Notes/Lecture 8.md": {
+    "iconName": null,
+    "inheritanceIcon": "RiFileTextLine"
+  },
+  "Rutgers/2022 Fall/352/Notes/Lecture 9.md": {
+    "iconName": null,
+    "inheritanceIcon": "RiFileTextLine"
+  }
 }
