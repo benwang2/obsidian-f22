@@ -19,3 +19,5 @@ The story is not about the murder victims, but the murderer themselves. Linda is
 Linda is discussed only in relation to Daniel in the media; again and again she is portrayed as a "supporting character", having emphasis placed on her innocence.
 
 By pitching this story as a *murderous ex-wife* targeting a picturesque husband-and-wife, the press easily plays into the demonization of Elizabeth Broderick. The way they pitch the story undeniably appeals to pathos, whether it's intentional or not.
+
+Establishing the narrative in such a way portrays Elizabeth as a demon, a monster. After all the description of Daniel and Linda Broderick's relationship, the reader begins to forget that Elizabeth Broderick
