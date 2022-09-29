@@ -6,3 +6,6 @@ Medea plays the archetypal role of helper-maiden, aiding Jason in his search for
 
 In short: Medea falls in love with Jason and moves in with him. After ten years of marriage, Jason leaves her to wed Creon's daughter, Creusa. In revenge, Medea murders Creusa with poisoned gifts, and then goes on to kill her own sons. Following her spree of murders, she flees to Athens to marry king Aegeus.
 
+## Themes
+- Deviation from normative heterosexual gender roles
+- U.S. national press coverage relying on stereotypes to cut corners
