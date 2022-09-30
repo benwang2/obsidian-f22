@@ -102,7 +102,7 @@ A RIGHT JOIN joins two tables and returns all records from the right table, and 
 
 ## Conditionals
 ### Case statement
-The CASE expression goes through conditions and returns a value when the first condition is met, similarly to an if-then-else statement. Once a condition is true, it will stop reading and return the reuslt. If no conditions are true, it returns the value in the ELSE clause.
+The CASE expression goes through conditions and returns a value when the first condition is met, similarly to an if-then-else statement. Once a condition is true, it will stop reading and return the result. If no conditions are true, it returns the value in the ELSE clause.
 
 Suppose we run the query:
 ```sql
