@@ -198,6 +198,9 @@ $$\frac{C * N * k}{T}$$
 Similarly to 10a., there are a total of $C*N*k$ requests being made. However, these requests are evenly split among $T$ top-level DNS servers. Therefor, each top-level DNS server services $\frac{C*N*k}{T}$ queries.
 
 c. Suppose all local DNS resolvers cache the DNS responses they receive indefinitely. Now how many queries does the root DNS server service? **(2 points)**  
+$$T * C$$
+
+The local DNS resolver resolves and cache DNS responses from the top level DNS  servers. So, instead of each $C$ resolvers sending $N*k$ , each local resolver $C$ sends $1$ request. Given $T$ top level DNS servers and $C$ local DNS resolvers, we know that the root DNS server receives $
 
 d. Suppose all local DNS resolvers cache the DNS responses they receive indefinitely. How many queries does each top-level DNS server service? **(2 points)**
 
