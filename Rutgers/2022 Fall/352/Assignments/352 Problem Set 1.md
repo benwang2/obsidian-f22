@@ -44,11 +44,18 @@ I would use circuit switching because we only have a few endpoints and therefore
 b. Suppose, instead, your network must support applications that move a small number of  
 application-level messages between a large number of pairs of endpoints. Each application-level message may be very large. Further, even if the entire message isn’t received yet, it is helpful for the applications to transfer smaller portions of the messages as early as possible to the receiving endpoints. What kind of switching would you build into the network’s routers? Please justify your answer (2 points).
 
+```
+In this situation, I would use packet switching. One of packet switching's benefits is that it can send a message in smaller portions known as "packets", which suits this situation well. Additionally, packets are rapidly transmitted so endpoints will receive smaller portions of messages earlier than other switching methods.
+```
+
 4. **Bandwidth and delay (2 + 2 + 1 + 1 = 6 points).**
 
 a. Is it possible for a link or network path to have high bandwidth and high propagation delay? Why or why not? Justify.
-<br>
-<br>
+
+```
+Yes, it is possible. A link could have a high bandwidth but have a long length. Despite being able to transmit a lot of data at once, the long path would maxi
+```
+
 b. Is it possible for a link or network path to have low bandwidth and low propagation delay? Why or why not? Justify.
 <br>
 <br>
