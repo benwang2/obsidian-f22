@@ -13,7 +13,7 @@
 # Tasks
 ## Recent work
 ```dataview
-TABLE course as Course, file.mtime AS "Last modified"
+TABLE course as Course, dateformat(file.mtime, "cccc, h:mm a, MMM dd") AS "Last modified"
 FROM #lectureNotes
 WHERE course != "CS_XXX"
 SORT file.mtime DESC
@@ -25,7 +25,7 @@ LIMIT 5
 ### Assignments
 ```dataview
 TABLE WITHOUT ID
-	file.link as File, course as Course, dateformat(due,"cccc, MMMM/dd") as "Due date"
+	file.link as File, course as Course, dateformat(due,"cccc, MMM dd") as "Due date"
 FROM #Assignments 
 WHERE date(due)+dur(1 day) > date(now)
 SORT due ASC
@@ -38,7 +38,7 @@ LIMIT 4
 ### Relevant Dates
 ```dataview
 TABLE WITHOUT ID
-	course as Course, title as Title, due as Date
+	truncate(course,25) as Course, truncate(title,30) as Title, dateformat(due, "ccc, MMM dd") as Date
 FROM csv("tables/relevant_dates.csv")
 WHERE date(now)-dur(1 day) < date(due)
 SORT due ASC
