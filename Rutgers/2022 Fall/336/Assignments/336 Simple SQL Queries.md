@@ -156,11 +156,29 @@ GROUP BY l.drinker HAVING count(*) > 1;
 	Vince
 
 ### 9. Bars which sell Budweiser and are frequented by some drinkers who like Budweiser
-
+```sql
+SELECT DISTINCT b.bar
+FROM 
+	(SELECT DISTINCT bar FROM Sells WHERE Sells.beer = 'Budweiser') as b,
+    Frequents f,
+    Likes l
+WHERE
+	f.drinker = l.drinker
+    AND l.beer = 'Budweiser'
+    AND f.bar = b.bar
+```
+	
+	# bar
+	'Cabana'
+	'Caravan'
+	'Gecko Grill'
+	'Seven Bamboo'
+	'The Shark and Rose'
 
 ### 10.  Bars which are frequented by Mike and Steve
 
 ### 11. Drinker who like at least two beers that Mike likes
+
 
 ### 12. Bars which sell at least 3 beers that Mike likes (do not use COUNT)
 
