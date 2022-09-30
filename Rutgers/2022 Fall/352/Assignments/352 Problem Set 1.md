@@ -188,9 +188,14 @@ a. Suppose there is no caching on any of the DNS servers. How many queries does 
 
 $$C * n * k$$
 
-$N\*k$ queries are made by each local DNS resolver, and there are $C
+$N\*k$ queries are made by each local DNS resolver, and there are $C$ local DNS resolvers.
+therefore, there are $C*N*k$ requests made to the root DNS server.
+
 b. Suppose there is no caching on any of the DNS servers. How many queries does each  
 top-level DNS server service? **(2 points)**
+
+$$\frac{C * N * k}{T}$$
+Similarly to 10a., there are a total of $C*N*k$ requests being made. However, these requests are evenly split among $T$ top-level DNS servers. Therefor, each top-level DNS server services $\frac{C*N*k}{T}$ queries.
 
 c. Suppose all local DNS resolvers cache the DNS responses they receive indefinitely. Now how many queries does the root DNS server service? **(2 points)**  
 
