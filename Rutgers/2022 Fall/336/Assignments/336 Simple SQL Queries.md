@@ -178,8 +178,37 @@ WHERE
 ### 10.  Bars which are frequented by Mike and Steve
 
 ### 11. Drinker who like at least two beers that Mike likes
+```sql
+SELECT COUNT(*), drinker
+FROM Likes l1
+WHERE beer in (
+	SELECT beer
+    FROM Likes l
+    WHERE
+		l.drinker = 'Mike'
+        AND l1.drinker!=l.drinker
+	)
+GROUP BY l1.drinker
+HAVING COUNT(*)>1
+```
+	# COUNT(*), drinker
+	'5', 'John'
+	'2', 'Justin'
 
 
 ### 12. Bars which sell at least 3 beers that Mike likes (do not use COUNT)
 
-[[self join]]
+Bars
+| field   | type         | null |
+| ------- | ------------ | ---- |
+| name    | varchar(50)  | NO   |
+| license | varchar(7)   | YES  |
+| city    | varchar(50)  | YES  |
+| phone   | varchar(12)  | YES  |
+| addr    | varchar(200) | YES  |
+Sells
+| field | type | null 
+
+
+
+#self_join
