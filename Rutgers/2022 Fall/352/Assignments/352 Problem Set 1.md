@@ -160,12 +160,23 @@ The identification field on a DNS protocol message enables bidirectional communi
 ```
 f. What is an authoritative DNS server?
 ```
-An authoritative DNS server is a DNS server that handles all the DNS requests for a region. 
+An authoritative DNS server is a DNS server that handles all the DNS requests for a region. It responds to requests with information for that region.
 ```
 9. **Finding authority (3 points)**. Can you list a set of authoritative DNS servers for cs.princeton.edu? Explain how you arrived at the answer.
-<br>
-<br>
-10. **Partitioning, caching, and DNS query load (7 points)**. Suppose there are N domain names available in the Internet, equally subdivided over T top-level domains (such as .com). Suppose there are C local DNS resolvers, each issuing N ∗k queries, i.e., k queries to each of the N  domains, where k >1. Assume that each of the N domains has a unique authoritative name server with an entry in the corresponding top-level DNS server. Further assume that queries are iterative from the point of view of the local DNS resolver. Now answer the questions below. Explain your reasoning clearly to receive partial credit. 
+```
+dns1.cs.princeton.edu.
+ns6.dnsmadeeasy.com.
+dns2.cs.princeton.edu.
+ns5.dnsmadeeasy.com.
+ns7.dnsmadeeasy.com.
+```
+
+I used the following command to get this answer.
+```sh
+dig +short ns cs.princeton.edu
+```
+
+11. **Partitioning, caching, and DNS query load (7 points)**. Suppose there are N domain names available in the Internet, equally subdivided over T top-level domains (such as .com). Suppose there are C local DNS resolvers, each issuing N ∗k queries, i.e., k queries to each of the N  domains, where k >1. Assume that each of the N domains has a unique authoritative name server with an entry in the corresponding top-level DNS server. Further assume that queries are iterative from the point of view of the local DNS resolver. Now answer the questions below. Explain your reasoning clearly to receive partial credit. 
 
 a. Suppose there is no caching on any of the DNS servers. How many queries does the root DNS server service? **(1 point)**  
 <br>
@@ -185,7 +196,17 @@ d. Suppose all local DNS resolvers cache the DNS responses they receive indefini
 <br>
 11. **Collaboration and References (mandatory)**. Who did you collaborate with on this  
 problem set? What resources and references did you consult? Please also specify on what questions and aspects of the problem set you got help on. If you did not consult any resources other than the lecture slides and textbook, just say “no collaboration”.
-<br>
+```
+I worked my classmates
+- Akash Shah
+- Abhitej Bokka
+
+and consulted
+- my lecture notes
+- stack overflow
+
+I used StackOverflow to figure out the command to find authoritative DNS servers in problem 9.
+```
 
 #dns
 #modulation
