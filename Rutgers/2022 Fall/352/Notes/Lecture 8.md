@@ -6,3 +6,7 @@ tags: "Lecture Notes"
 ---
 
 # Lecture 8
+## Internet Multimedia and Video Streaming
+Many applications on the internet use audio or video.
+
+By 2022, 82% of all IP traffic will be IP video traffic,
