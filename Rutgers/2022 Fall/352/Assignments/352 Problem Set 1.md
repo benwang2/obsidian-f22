@@ -20,6 +20,7 @@ Please read and follow these instructions carefully.
 8. As a response to the last question of this problem set, please specify who you collaborated with, and also include all the resources you consulted to answer questions in this problem set, including URLs of pages you visited on the Internet. Also specify which question and aspect you got help with. Please be as thorough and complete as possible here. It is mandatory to answer this question.  
 9. If you have any questions or clarifications on the problem set, please post them on Piazza or contact the course staff. We are here to help.
 
+
 # Questions
 1. **Layering** **(2 points)**. Why is Internet software/hardware arranged in layers?
 
@@ -36,8 +37,9 @@ By observing the voltage vs. time plot below and the sequence of bits, I can det
 3. **Switching types (2 + 2 = 4 points).** For each question below, your answer must be one of “circuit”, “message”, or “packet”, along with a justification.<br>
 a. Suppose you’d like to design a network with routers that need to support application conversations that transfer a lot of data, but only between a few pairs of endpoints. Which kind of switching would you use for the network’s routers? Please justify your answer (2 points).
 
-<br>
-<br>
+```
+I would use circuit switching because we only have a few endpoints and therefore it becomes acceptable to allocate paths fully for a duration of time. Additionally, circuit switching allows for the transmission of a lot of data.
+```
 
 b. Suppose, instead, your network must support applications that move a small number of  
 application-level messages between a large number of pairs of endpoints. Each application-level message may be very large. Further, even if the entire message isn’t received yet, it is helpful for the applications to transfer smaller portions of the messages as early as possible to the receiving endpoints. What kind of switching would you build into the network’s routers? Please justify your answer (2 points).
