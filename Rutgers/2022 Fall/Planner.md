@@ -16,7 +16,7 @@
 TABLE WITHOUT ID
 	file.link as assignment, course, due
 FROM #Assignments 
-WHERE date(due) > date(now)
+WHERE date(due)+dur(1 day) > date(now)
 SORT due DESC
 LIMIT 4
 ```

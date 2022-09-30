@@ -186,8 +186,8 @@ d. Suppose all local DNS resolvers cache the DNS responses they receive indefini
 problem set? What resources and references did you consult? Please also specify on what questions and aspects of the problem set you got help on. If you did not consult any resources other than the lecture slides and textbook, just say “no collaboration”.
 <br>
 
-[[dns]]
-[[modulation]]
-[[bandwidth]]
-[[partitioning]]
-[[caching]]
+#dns
+#modulation
+#bandwidth
+#partitioning
+#caching

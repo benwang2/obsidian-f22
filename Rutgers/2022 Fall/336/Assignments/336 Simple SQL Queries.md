@@ -5,6 +5,7 @@ released: 2022-09-22
 due: 2022-10-07
 tags: 
 - Assignments
+- CS_336
 ---
 <center><h1>Simple SQL Queries</h1></center>
 <center><h3>CS 210 - Principles of Information and Data Management</h3></center>
