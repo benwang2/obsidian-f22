@@ -120,15 +120,20 @@ A server may handle many incoming connections, whereas a client will connect to 
 a. Why do we need the domain name system (DNS)? What problem does it solve?
 
 ```
-IP addresses are difficult to remember for the average human and the DNS allows for human-readable addresses to online destinations. The DNS solves the problem of delivering 
+IP addresses are difficult to remember for the average human and the DNS allows for human-readable addresses to online destinations. The DNS solves the problem of delivering a client to the correct IP address based on a client-specified domain name.
 ```
 
 b. Explain how hierarchy helps DNS meet the scaling needs of serving Internet users.
-<br>
-<br>
+
+```
+The DNS hierarchy has many benefits that work to serve a large sum of internet users. Having multiple DNS servers on different levels prevents any single server from becoming oversaturated and slowing down. Traffic directed to servers higher in the hierarchy is reduced.
+```
+
 c. Explain how replication helps DNS meet the scaling needs of serving Internet users.
-<br>
-<br>
+
+```
+The redundancy created by replication prevents any single server on a level from becoming over-saturated. 
+```
 
 d. Explain how caching helps DNS meet the scaling needs of serving Internet users.
 <br>
