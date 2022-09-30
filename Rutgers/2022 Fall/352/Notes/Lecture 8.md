@@ -103,6 +103,10 @@ Media is prerecorded at different qualities and these versions of the video are 
 The client should store and buffer the data it receives.
 e.g: Spotify, YouTube, Netflix
 
+The client downloads an initial portion of the video and starts viewing. The rest of the video is downloaded as time progresses. Therefore, the user does not need to wait for entire content to be downloaded.
+
+Quality of content can be changed and fetched mid-stream.
+
 #### Conversational voice or video over IP
 Interactive human-to-human communicatoin limits delay tolerance.
 e.g: Zoom, Google Stadia
