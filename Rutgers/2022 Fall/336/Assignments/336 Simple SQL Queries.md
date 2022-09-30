@@ -1,9 +1,11 @@
 ---
 title: Simple SQL Queries
-course: CS336
+course: CS_336
 released: 2022-09-22
 due: 2022-10-07
-tags: Assignments
+tags: 
+- Assignments
+- CS_336
 ---
 <center><h1>Simple SQL Queries</h1></center>
 <center><h3>CS 210 - Principles of Information and Data Management</h3></center>
@@ -154,12 +156,48 @@ GROUP BY l.drinker HAVING count(*) > 1;
 	Vince
 
 ### 9. Bars which sell Budweiser and are frequented by some drinkers who like Budweiser
-
+```sql
+SELECT DISTINCT b.bar
+FROM 
+	(SELECT DISTINCT bar FROM Sells WHERE Sells.beer = 'Budweiser') as b,
+    Frequents f,
+    Likes l
+WHERE
+	f.drinker = l.drinker
+    AND l.beer = 'Budweiser'
+    AND f.bar = b.bar
+```
+	
+	# bar
+	'Cabana'
+	'Caravan'
+	'Gecko Grill'
+	'Seven Bamboo'
+	'The Shark and Rose'
 
 ### 10.  Bars which are frequented by Mike and Steve
 
 ### 11. Drinker who like at least two beers that Mike likes
+```sql
+SELECT COUNT(*), drinker
+FROM Likes l1
+WHERE beer in (
+	SELECT beer
+    FROM Likes l
+    WHERE
+		l.drinker = 'Mike'
+        AND l1.drinker!=l.drinker
+	)
+GROUP BY l1.drinker
+HAVING COUNT(*)>1
+```
+	# COUNT(*), drinker
+	'5', 'John'
+	'2', 'Justin'
+
 
 ### 12. Bars which sell at least 3 beers that Mike likes (do not use COUNT)
 
-[[self join]]
+
+
+#self_join

@@ -1,9 +1,11 @@
 ---
 title: Problem Set 1
-course: CS352
+course: CS_352
 released: 2022-09-26
 due: 2022-09-30
-tags: Assignments
+tags:
+- Assignments
+- CS_352
 ---
 <center><h1>Problem Set 1</h1></center>
 <center><h3>CS352 Internet Technology</h3></center>
@@ -97,6 +99,12 @@ $$16ms + 10ms = 26ms$$
 
 b. At the other end of the link is a router which pushes the packet through another link that is identical to the last one (described in question above). The packet encouters a small queue with queueing delay 5 milliseconds before entering this second link. The router uses store and forward packet switching. What is the total time it takes to move the packet end to end, i.e., first bit entering the first link to last bit exiting the second link? Explain your answer. **(3 points)**
 
+```
+We know that it takes 26ms for the bits to reach the router, and that there's a 5ms queuing delay. We also know that the second link will take the same amount of time to propagate the data. Therefore, the total time elapsed will be: 57ms.
+```
+$$26ms + 26ms + 5ms = 57ms$$
+
+
 6. **App-layer connection (6 points).**
 a. What are the components of the 4-tuple denoting an application-layer connection?
 
@@ -153,35 +161,62 @@ Caching helps DNS meet the scaling needs by reducing the number of DNS requests 
 ```
 
 e. What is the purpose of the identification field on a DNS protocol message?
-<br>
-<br>
-
+```
+The identification field on a DNS protocol message enables bidirectional communication between the DNS and the client. The DNS uses the identificatoin field to respond to the any requests from the client.
+```
 f. What is an authoritative DNS server?
-<br>
-<br>
+```
+An authoritative DNS server is a DNS server that handles all the DNS requests for a region. It responds to requests with information for that region.
+```
 9. **Finding authority (3 points)**. Can you list a set of authoritative DNS servers for cs.princeton.edu? Explain how you arrived at the answer.
-<br>
-<br>
+```
+dns1.cs.princeton.edu.
+ns6.dnsmadeeasy.com.
+dns2.cs.princeton.edu.
+ns5.dnsmadeeasy.com.
+ns7.dnsmadeeasy.com.
+```
+
+I used the following command to get this answer.
+```sh
+dig +short ns cs.princeton.edu
+```
+
 10. **Partitioning, caching, and DNS query load (7 points)**. Suppose there are N domain names available in the Internet, equally subdivided over T top-level domains (such as .com). Suppose there are C local DNS resolvers, each issuing N ∗k queries, i.e., k queries to each of the N  domains, where k >1. Assume that each of the N domains has a unique authoritative name server with an entry in the corresponding top-level DNS server. Further assume that queries are iterative from the point of view of the local DNS resolver. Now answer the questions below. Explain your reasoning clearly to receive partial credit. 
 
 a. Suppose there is no caching on any of the DNS servers. How many queries does the root DNS server service? **(1 point)**  
-<br>
-<br>
 
+$$C * n * k$$
+
+```
+N*k queries are made by each local DNS resolver, and there are $C$ local DNS resolvers. Therefore, there are C*N*k requests made to the root DNS server.
+```
 b. Suppose there is no caching on any of the DNS servers. How many queries does each  
 top-level DNS server service? **(2 points)**
-<br>
-<br>
+
+$$\frac{C * N * k}{T}$$
+```
+Similarly to 10a., there are a total of $C*N*k$ requests being made. However, these requests are evenly split among $T$ top-level DNS servers. Therefore, each top-level DNS server services (C*N*k)/T queries.
+```
 
 c. Suppose all local DNS resolvers cache the DNS responses they receive indefinitely. Now how many queries does the root DNS server service? **(2 points)**  
-<br>
-<br>
+$$T * C$$
+
+```
+The local DNS resolver resolves and cache DNS responses from the top level DNS  servers. So, instead of each $C$ resolvers sending $N*k$ , each local resolver $C$ sends $1$ request. Given T top level DNS servers and $C$ local DNS resolvers, we know that the root DNS server receives T*C queries.
+```
 
 d. Suppose all local DNS resolvers cache the DNS responses they receive indefinitely. How many queries does each top-level DNS server service? **(2 points)**
-<br>
-<br>
+
+$$\frac{C*N}{T}$$
+
+```
+All local DNS resolvers only need to send one request to its respective top-level DNS server. So if each local DNS resolver sends N queries and then caches its response for subsequent queries, we have C*N queries distributed across the hierarchy. Then, we distribute the C*N queries evenly across the T top-level servers, to get the answer (C*N)/T.
+```
+
 11. **Collaboration and References (mandatory)**. Who did you collaborate with on this  
 problem set? What resources and references did you consult? Please also specify on what questions and aspects of the problem set you got help on. If you did not consult any resources other than the lecture slides and textbook, just say “no collaboration”.
+<<<<<<< HEAD
 
 ```
 I worked with the following students:
@@ -189,10 +224,19 @@ I worked with the following students:
 - Abhitej Bokka
 
 and I consulted the notes I took from attending lectures. I had trouble with calculating the amount of time in 5a., so I consulted my colleagues to get a better idea of how to solve the problem.
+=======
+```
+I worked my classmate Akash Shah and consulted
+- my lecture notes
+- stack overflow
+- TA
+
+I used dig -h so I could find the correct arguments to help me with problem 9.
+>>>>>>> origin/master
 ```
 
-[[dns]]
-[[modulation]]
-[[bandwidth]]
-[[partitioning]]
-[[caching]]
+#dns
+#modulation
+#bandwidth
+#partitioning
+#caching

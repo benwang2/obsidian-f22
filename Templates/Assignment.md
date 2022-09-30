@@ -3,7 +3,9 @@ title: Problem Set 1
 course: CS_XXX
 released: YYYY/MM/DD
 due: YYYY/MM/DD
-tags: Assignments
+tags: 
+- Assignments
+- CS_XXX
 ---
 <center><h1>Assignment Name</h1></center>
 <center><h3>Course name</h3></center>
