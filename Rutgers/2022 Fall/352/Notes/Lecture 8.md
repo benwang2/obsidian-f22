@@ -24,6 +24,22 @@ Real-time audio and video can be somewhat loss tolerant, but a delay of over 400
 ### Digital Representation of Audio
 Audio must be converted from an analog signal to a digital representation. Originally, it is a continuous time system, and the system takes samples at different time points in the audio.
 
+#### Sampling
 The standard is to sample the song $n=2*max(f)$, where $f$ is the frequencies in the signal.
 
-Another method is to quantize the audio. This creates a more accurat
+#### Quantize
+Following the sampling process, the samples are quantized to levels and bits. *what is quantizing?* This creates a more accurate representation of the signal. A higher accuracy representation results in 
+
+#### Compression
+With compression, create a compact representation of quantized values.
+
+#### Examples
+**Telephone:** 8,000 samples/sec
+Given 8,000 samples/sec...
+$$Bandwidth=8,000*8=64,000bps$$
+
+
+**CD music:** 44,100 samples/sec
+
+****
+
