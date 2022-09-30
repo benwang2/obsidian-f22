@@ -198,6 +198,9 @@ HAVING COUNT(*)>1
 
 ### 12. Bars which sell at least 3 beers that Mike likes (do not use COUNT)
 
+
+
+
 Bars
 | field   | type         | null |
 | ------- | ------------ | ---- |
