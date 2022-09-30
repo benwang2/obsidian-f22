@@ -186,7 +186,7 @@ dig +short ns cs.princeton.edu
 
 a. Suppose there is no caching on any of the DNS servers. How many queries does the root DNS server service? **(1 point)**  
 
-$$C * n * k$$
+$$C * N * k$$
 
 ```
 N*k queries are made by each local DNS resolver, and there are $C$ local DNS resolvers. Therefore, there are C*N*k requests made to the root DNS server.
