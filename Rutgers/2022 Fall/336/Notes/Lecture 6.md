@@ -14,4 +14,5 @@ Imielinski doesn't really have a structure to his lectures, so notes here are fr
 - String matching
 	- SUBSTRING_INDEX
 	- SUBSTRING
-- 
+- Election data queries
+	- 
