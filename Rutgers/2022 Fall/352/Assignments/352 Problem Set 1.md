@@ -93,13 +93,21 @@ a. What are the components of the 4-tuple denoting an application-layer connecti
 The four components of the 4-tuple are:
 - Source IP
 - Source port
-- Receiver 
+- Destination IP
+- Destination port
 ```
 
 b. Why could you not just use the 2-tuple (IPA,IPB) to denote an application-layer connection?
-<br>
-<br>
+
+```
+Every application uses a different port as to not conflict with other applications. Therefore, the port must be a part of the tuple.
+```
+
 b. Could you think of an example where IPB and portB have the same values across many application-layer connections?
+
+```
+Accessing a remote computer, for example, iLab. If the user is 
+```
 
 7. **Client and server (2 points).** Explain one difference between a “client” and a “server” in
 an application
