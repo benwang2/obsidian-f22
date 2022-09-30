@@ -156,11 +156,12 @@ Caching helps DNS meet the scaling needs by reducing the number of DNS requests 
 
 e. What is the purpose of the identification field on a DNS protocol message?
 ```
-The identification field on a DNS protocol message enables bidirectional communication between the DNS and the client. It allows for the DNS to respond 
+The identification field on a DNS protocol message enables bidirectional communication between the DNS and the client. The DNS uses the identificatoin field to respond to the any requests from the client.
 ```
 f. What is an authoritative DNS server?
-<br>
-<br>
+```
+
+```
 9. **Finding authority (3 points)**. Can you list a set of authoritative DNS servers for cs.princeton.edu? Explain how you arrived at the answer.
 <br>
 <br>
