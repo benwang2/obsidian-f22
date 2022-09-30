@@ -189,21 +189,21 @@ a. Suppose there is no caching on any of the DNS servers. How many queries does 
 $$C * N * k$$
 
 ```
-N*k queries are made by each local DNS resolver, and there are $C$ local DNS resolvers. Therefore, there are C*N*k requests made to the root DNS server.
+N*k queries are made by each local DNS resolver, and there are C local DNS resolvers. Therefore, there are C*N*k requests made to the root DNS server.
 ```
 b. Suppose there is no caching on any of the DNS servers. How many queries does each  
 top-level DNS server service? **(2 points)**
 
 $$\frac{C * N * k}{T}$$
 ```
-Similarly to 10a., there are a total of $C*N*k$ requests being made. However, these requests are evenly split among $T$ top-level DNS servers. Therefore, each top-level DNS server services (C*N*k)/T queries.
+Similarly to 10a., there are a total of C*N*k requests being made. However, these requests are evenly split among T top-level DNS servers. Therefore, each top-level DNS server services (C*N*k)/T queries.
 ```
 
 c. Suppose all local DNS resolvers cache the DNS responses they receive indefinitely. Now how many queries does the root DNS server service? **(2 points)**  
 $$C * N$$
 
 ```
-Given $C$ local DNS resolvers that make $N*k$ requests, we know that the DNS resolver will cache the result after the first of $k$ requests for $N$. This reduces the amount of requests sent by each individual DNS resolver to $N$. Therefore, each DNS resolver will only send $N$ queries.
+Given C local DNS resolvers that make N*k requests, we know that the DNS resolver will cache the result after the first of k requests for N. This reduces the amount of requests sent by each individual DNS resolver to N. Therefore, given C local DNS resolvers, we have C*N queries received by the root DNS.
 ```
 
 d. Suppose all local DNS resolvers cache the DNS responses they receive indefinitely. How many queries does each top-level DNS server service? **(2 points)**
@@ -211,7 +211,7 @@ d. Suppose all local DNS resolvers cache the DNS responses they receive indefini
 $$\frac{C*N}{T}$$
 
 ```
-All local DNS resolvers only need to send one request to its respective top-level DNS server. So if each local DNS resolver sends N queries and then caches its response for subsequent queries, we have C*N queries distributed across the hierarchy. Then, we distribute the C*N queries evenly across the T top-level servers, to get the answer (C*N)/T.
+Given $C$ local DNS resolvers that make N*k requests, we know that the DNS resolver will cache the result after the first of k requests for N. This reduces the amount of requests sent by each individual DNS resolver to $N$. Therefore, given C local DNS resolvers, we have C*N queries sent in total. Then, we distribute the C*N queries evenly across the T top-level servers, to get the answer (C*N)/T.
 ```
 
 11. **Collaboration and References (mandatory)**. Who did you collaborate with on this  
