@@ -222,7 +222,7 @@ I worked my classmate Akash Shah and consulted
 - stack overflow
 - TA
 
-I used the 
+I used dig -h so I could find the correct arguments to help me with problem 9.
 ```
 
 #dns
