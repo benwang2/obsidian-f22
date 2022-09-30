@@ -1,6 +1,6 @@
 {
-  "findText": "\\t",
-  "replaceText": "|",
+  "findText": "\\[\\[(\\w+)\\s*(\\w*)\\]\\]",
+  "replaceText": "#$1$2",
   "useRegEx": true,
   "selOnly": false,
   "caseInsensitive": false,

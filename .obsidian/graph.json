@@ -1,6 +1,6 @@
 {
   "collapse-filter": false,
-  "search": "-path:Templates -file: Planner",
+  "search": "-path:Templates -file: Planner tag:CS_352",
   "showTags": true,
   "showAttachments": false,
   "hideUnresolved": true,
