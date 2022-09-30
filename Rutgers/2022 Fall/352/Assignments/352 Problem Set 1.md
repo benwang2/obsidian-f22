@@ -211,21 +211,18 @@ d. Suppose all local DNS resolvers cache the DNS responses they receive indefini
 $$\frac{C*N}{T}$$
 
 ```
-All local DNS resolvers only need to send one request to its respective top level DNS server. S
+All local DNS resolvers only need to send one request to its respective top-level DNS server. So if each local DNS resolver sends N queries and then caches its response for subsequent queries, we have C*N queries distributed across the hierarchy. Then, we distribute the C*N queries evenly across the T top-level servers, to get the answer (C*N)/T.
 ```
 
 11. **Collaboration and References (mandatory)**. Who did you collaborate with on this  
 problem set? What resources and references did you consult? Please also specify on what questions and aspects of the problem set you got help on. If you did not consult any resources other than the lecture slides and textbook, just say “no collaboration”.
 ```
-I worked my classmates
-- Akash Shah
-- Abhitej Bokka
-
-and consulted
+I worked my classmate Akash Shah and consulted
 - my lecture notes
 - stack overflow
+- TA
 
-I used StackOverflow to figure out the command to find authoritative DNS servers in problem 9.
+I used the 
 ```
 
 #dns
