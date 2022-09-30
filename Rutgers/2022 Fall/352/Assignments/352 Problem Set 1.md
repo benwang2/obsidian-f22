@@ -71,11 +71,16 @@ In the event of transferring a large file quickly, a link with a higher bandwidt
 d. If you need to support a highly interactive (real-time) voice call, which kind of link would
 you rather prefer, one with a higher or lower propagation delay?
 
+```
+A link with a lower propagation delay would be better for a highly interactive voice call. With a lower propagation delay, voices would be transmitted from endpoint-to-endpoint more quickly. On the contrary, a higher propagation delay would result in more time between speaking and the other endpoint hearing.
+```
+
 5. **Total delay (3 + 3 = 6 points).** An endpoint sends a packet of size 4000 Bytes (1 Byte = 8 bits) over a link with bandwidth 2 Mbit/s (1 M = 106). The link has a propagation delay of 10 milliseconds (1 milli = 10−3).  
 
 a. After how long since the sender pushed the first bit of the packet into the link does the final bit of the packet arrive at the other end of the link? Explain your answer. **(3 points)**  
-<br>
-<br>
+
+$$4000bytes $$
+
 b. At the other end of the link is a router which pushes the packet through another link that is identical to the last one (described in question above). The packet encouters a small queue with queueing delay 5 milliseconds before entering this second link. The router uses store and forward packet switching. What is the total time it takes to move the packet end to end, i.e., first bit entering the first link to last bit exiting the second link? Explain your answer. **(3 points)**
 
 6. **App-layer connection (6 points).**
