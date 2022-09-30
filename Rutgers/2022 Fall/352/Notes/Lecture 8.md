@@ -109,6 +109,10 @@ Quality of content can be changed and fetched mid-stream.
 
 Video is broken up into multiple segments (ex: 4 second segments of videox)
 
+##### Playout Buffering
+Let average fill rate be $\overline{x}$ and playout rate be $r$.
+
+
 #### Conversational voice or video over IP
 Interactive human-to-human communicatoin limits delay tolerance.
 e.g: Zoom, Google Stadia
