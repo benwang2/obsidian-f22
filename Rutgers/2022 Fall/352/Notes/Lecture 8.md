@@ -1,8 +1,10 @@
 ---
 title: Lecture Notes 8
-course: CS 352
+course: CS_352
 date: 2022/09/30
-tags: "Lecture Notes"
+tags: 
+- Lecture Notes
+- CS_352
 ---
 
 # Lecture 8
@@ -34,8 +36,7 @@ Following the sampling process, the samples are quantized to levels and bits. *w
 With compression, create a compact representation of quantized values.
 
 #### Examples
-**Telephone:** 8,000 samples/sec
-Given 8,000 samples/sec...
+**Telephone:** 8,000 samples/sec or bytes/sec
 $$Bandwidth=8,000*8=64,000bps$$
 
 
