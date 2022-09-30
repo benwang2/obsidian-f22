@@ -19,3 +19,11 @@ Real-time audio and video can be somewhat loss tolerant, but a delay of over 400
 
 [[smtp]]
 [[http]]
+[[multimedia]]
+
+### Digital Representation of Audio
+Audio must be converted from an analog signal to a digital representation. Originally, it is a continuous time system, and the system takes samples at different time points in the audio.
+
+The standard is to sample the song $n=2*max(f)$, where $f$ is the frequencies in the signal.
+
+Another method is to quantize the audio. This creates a more accurat
