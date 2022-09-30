@@ -59,12 +59,15 @@ Yes, it is possible. A link could have a high bandwidth but have a long length. 
 b. Is it possible for a link or network path to have low bandwidth and low propagation delay? Why or why not? Justify.
 
 ```
-Yes, it is possible. If the link has a significantly short path, that would result in a low propagation delay. Even if the bandwidth
+Yes, it is possible. If the link has a significantly short path, that would result in a low propagation delay. Even if the bandwidth is low, a short path would allow the data to be propagated quite rapidly because the time spent on the path would be minimal.
 ```
 
 c. If you need to transfer a large file very quickly, which kind of link would you rather prefer, one with a higher or lower bandwidth?
-<br>
-<br>
+
+```
+In the event of transferring a large file quickly, a link with a higher bandwidth would be preferred. A higher bandwidth allows for more data to be transmitted at once.
+```
+
 d. If you need to support a highly interactive (real-time) voice call, which kind of link would
 you rather prefer, one with a higher or lower propagation delay?
 
