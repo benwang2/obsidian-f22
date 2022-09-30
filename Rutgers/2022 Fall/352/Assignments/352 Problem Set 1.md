@@ -160,7 +160,7 @@ The identification field on a DNS protocol message enables bidirectional communi
 ```
 f. What is an authoritative DNS server?
 ```
-
+An authoritative DNS server is a DNS server that handles all the DNS requests for a region. 
 ```
 9. **Finding authority (3 points)**. Can you list a set of authoritative DNS servers for cs.princeton.edu? Explain how you arrived at the answer.
 <br>
