@@ -30,21 +30,3 @@ WHERE date(now)-dur(1 day) < date(due)
 SORT due ASC
 LIMIT 10
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
