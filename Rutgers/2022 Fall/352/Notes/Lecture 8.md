@@ -79,3 +79,20 @@ The bit rate depends on many factors:
 - quality of overall compression in code
 
 The video bit rate is commonly correlated with the quality of perception.
+
+The bit-rate of a video changes over the duration of the video.
+
+**CBR** (constant bit rate): fixed bit-rate video
+**VBR** (variable bit rate): different parts of the video have different bit rates. (e.g. changes in color, motion, etc.)
+
+For VBR, there is an **average bit-rate** that can be computed over the video's duration. Some examples of this are...
+- MPEG 1 (CD-ROM) - 1.5 Mbps
+- MPEG 2 (DVD), 3-6 Mbps
+- MPEG 4 ,< 1 Mbps
+
+### Networking multimedia
+- On-demand streamed video/audio
+- ...
+- ...
+
+### On demand
