@@ -53,12 +53,15 @@ In this situation, I would use packet switching. One of packet switching's benef
 a. Is it possible for a link or network path to have high bandwidth and high propagation delay? Why or why not? Justify.
 
 ```
-Yes, it is possible. A link could have a high bandwidth but have a long length. Despite being able to transmit a lot of data at once, the long path would maxi
+Yes, it is possible. A link could have a high bandwidth but have a long length. Despite being able to transmit a lot of data at once, travelling the long path would cause a high propagation delay.
 ```
 
 b. Is it possible for a link or network path to have low bandwidth and low propagation delay? Why or why not? Justify.
-<br>
-<br>
+
+```
+Yes, it is possible. If the link has a significantly short path, that would result in a low propagation delay. Even if the bandwidth
+```
+
 c. If you need to transfer a large file very quickly, which kind of link would you rather prefer, one with a higher or lower bandwidth?
 <br>
 <br>
