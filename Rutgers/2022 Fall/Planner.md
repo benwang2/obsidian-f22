@@ -25,12 +25,14 @@ LIMIT 5
 ### Assignments
 ```dataview
 TABLE WITHOUT ID
-	file.link as File, course as Course, due as "Due date"
+	file.link as File, course as Course, dateformat(due,"cccc, MMMM/dd") as "Due date"
 FROM #Assignments 
 WHERE date(due)+dur(1 day) > date(now)
 SORT due ASC
 LIMIT 4
 ```
+
+
 
 
 ### Relevant Dates
