@@ -29,11 +29,15 @@ Audio must be converted from an analog signal to a digital representation. Origi
 #### Sampling
 The standard is to sample the song $n=2*max(f)$, where $f$ is the frequencies in the signal.
 
+#sampling
+
 #### Quantize
-Following the sampling process, the samples are quantized to levels and bits. *what is quantizing?* This creates a more accurate representation of the signal. A higher accuracy representation results in 
+Following the sampling process, the samples are quantized to levels and bits. *what is quantizing?* This creates a more accurate representation of the signal. A higher accuracy representation results in larger data.
+
+#quantize
 
 #### Compression
-With compression, create a compact representation of quantized values.
+With #compression, create a compact representation of quantized values.
 
 #### Examples
 **Telephone:** 8,000 samples/sec or bytes/sec
@@ -46,4 +50,21 @@ The receiver converts the bits back to an analog signal and the quaity is reduce
 **Internet telephony:** 5.3 Kbps and up
 
 ### Video Representation
-A digital image is represented as an array of pixels. Each pixel is represented by bits, with the number of pixels being the resolution. A higher amount 
+A digital image is represented as an array of pixels. Each pixel is represented by bits, with the number of pixels being the resolution. A higher amount of pixels results in higher quality, and a lower amount results in a lower quality. In each pixel, the luminance and color is encoded.
+
+Use redundancy within and between images to decrease numbe rof bits used to encode image.
+
+#### Spatial coding (within image)
+Instead of sending N values of same color, send only two values:
+- color value ( purple )
+- number of repeated values ( N )
+
+#spatial_coding
+
+#### Temporal coding (from one image to next)
+Instead of sending complete frame at $frame_{i+1}$, send only differences from frame $frame_i$ (motion vectors).
+
+#temporal_coding
+
+The coding/decoding algorithm used is often called a #codec.
+
