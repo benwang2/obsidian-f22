@@ -200,9 +200,12 @@ Similarly to 10a., there are a total of $C*N*k$ requests being made. However, th
 c. Suppose all local DNS resolvers cache the DNS responses they receive indefinitely. Now how many queries does the root DNS server service? **(2 points)**  
 $$T * C$$
 
-The local DNS resolver resolves and cache DNS responses from the top level DNS  servers. So, instead of each $C$ resolvers sending $N*k$ , each local resolver $C$ sends $1$ request. Given $T$ top level DNS servers and $C$ local DNS resolvers, we know that the root DNS server receives $
+The local DNS resolver resolves and cache DNS responses from the top level DNS  servers. So, instead of each $C$ resolvers sending $N*k$ , each local resolver $C$ sends $1$ request. Given $T$ top level DNS servers and $C$ local DNS resolvers, we know that the root DNS server receives $T*C$ queries.
 
 d. Suppose all local DNS resolvers cache the DNS responses they receive indefinitely. How many queries does each top-level DNS server service? **(2 points)**
+
+$$\frac{N*C}{T}$$
+
 
 11. **Collaboration and References (mandatory)**. Who did you collaborate with on this  
 problem set? What resources and references did you consult? Please also specify on what questions and aspects of the problem set you got help on. If you did not consult any resources other than the lecture slides and textbook, just say “no collaboration”.
