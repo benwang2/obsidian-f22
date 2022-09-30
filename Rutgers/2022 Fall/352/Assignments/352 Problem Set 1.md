@@ -182,7 +182,14 @@ d. Suppose all local DNS resolvers cache the DNS responses they receive indefini
 <br>
 11. **Collaboration and References (mandatory)**. Who did you collaborate with on this  
 problem set? What resources and references did you consult? Please also specify on what questions and aspects of the problem set you got help on. If you did not consult any resources other than the lecture slides and textbook, just say “no collaboration”.
-<br>
+
+```
+I worked with the following students:
+- Akash Shah
+- Abhitej Bokka
+
+and I consulted the notes I took from attending lectures. I had trouble with calculating the amount of time in 5a., so I consulted my colleagues to get a better idea of how to solve the problem.
+```
 
 [[dns]]
 [[modulation]]
