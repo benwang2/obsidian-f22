@@ -3,7 +3,9 @@ title: Problem Set 1
 course: CS352
 released: 2022-09-26
 due: 2022-09-30
-tags: Assignments
+tags:
+- Assignments
+- CS_352
 ---
 <center><h1>Problem Set 1</h1></center>
 <center><h3>CS352 Internet Technology</h3></center>

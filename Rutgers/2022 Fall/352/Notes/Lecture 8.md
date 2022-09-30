@@ -19,9 +19,9 @@ These kinds of applications often work in **real time** and therefore data deliv
 
 Real-time audio and video can be somewhat loss tolerant, but a delay of over 400 ms will result in a bad UX. (e.g. Zoom, Skype, Discord)
 
-[[smtp]]
-[[http]]
-[[multimedia]]
+#smtp
+#http
+#multimedia
 
 ### Digital Representation of Audio
 Audio must be converted from an analog signal to a digital representation. Originally, it is a continuous time system, and the system takes samples at different time points in the audio.
@@ -37,10 +37,13 @@ With compression, create a compact representation of quantized values.
 
 #### Examples
 **Telephone:** 8,000 samples/sec or bytes/sec
-$$Bandwidth=8,000*8=64,000bps$$
 
+$Bandwidth=8,000*8=64,000bps$
+The receiver converts the bits back to an analog signal and the quaity is reduced in the process.
 
-**CD music:** 44,100 samples/sec
+**CD music:** 44,100 samples/sec or 1.411 Mb/s
+**MP3:** 96, 128, 160 Kbps
+**Internet telephony:** 5.3 Kbps and up
 
-****
-
+### Video Representation
+A digital image is represented as an array of pixels. Each pixel is represented by bits, with the number of pixels being the resolution. A higher amount 

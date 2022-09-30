@@ -1,9 +1,9 @@
 {
   "collapse-filter": false,
   "search": "-path:Templates -file: Planner",
-  "showTags": false,
+  "showTags": true,
   "showAttachments": false,
-  "hideUnresolved": false,
+  "hideUnresolved": true,
   "showOrphans": true,
   "collapse-color-groups": false,
   "colorGroups": [
@@ -34,7 +34,7 @@
   "textFadeMultiplier": 0,
   "nodeSizeMultiplier": 1,
   "lineSizeMultiplier": 1,
-  "collapse-forces": false,
+  "collapse-forces": true,
   "centerStrength": 0.51685393258427,
   "repelStrength": 7.41573033707865,
   "linkStrength": 0.47752808988764,
