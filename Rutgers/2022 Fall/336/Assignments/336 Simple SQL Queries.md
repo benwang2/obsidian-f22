@@ -200,28 +200,4 @@ HAVING COUNT(*)>1
 
 
 
-
-Bars
-| field   | type         | null |
-| ------- | ------------ | ---- |
-| name    | varchar(50)  | NO   |
-| license | varchar(7)   | YES  |
-| city    | varchar(50)  | YES  |
-| phone   | varchar(12)  | YES  |
-| addr    | varchar(200) | YES  |
-Sells
-| field | type        | null |
-| ----- | ----------- | ---- |
-| bar   | varchar(50) | NO   |
-| beer  | varchar(50) | NO   |
-| price | decimal(9,2) | YES     |
-Likes
-| field   | type        | null |
-| ------- | ----------- | ---- |
-| drinker | varchar(50) | NO   |
-| beer    | varchar(50) | NO     |
-
-
-
-
 #self_join
