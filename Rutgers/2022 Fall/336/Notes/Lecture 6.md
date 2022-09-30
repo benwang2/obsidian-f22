@@ -12,4 +12,6 @@ Imielinski doesn't really have a structure to his lectures, so notes here are fr
 
 ## Topics Covered
 - String matching
+	- SUBSTRING_INDEX
+	- SUBSTRING
 - 
