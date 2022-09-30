@@ -198,4 +198,27 @@ HAVING COUNT(*)>1
 
 ### 12. Bars which sell at least 3 beers that Mike likes (do not use COUNT)
 
+Bars
+| field   | type         | null |
+| ------- | ------------ | ---- |
+| name    | varchar(50)  | NO   |
+| license | varchar(7)   | YES  |
+| city    | varchar(50)  | YES  |
+| phone   | varchar(12)  | YES  |
+| addr    | varchar(200) | YES  |
+Sells
+| field | type        | null |
+| ----- | ----------- | ---- |
+| bar   | varchar(50) | NO   |
+| beer  | varchar(50) | NO   |
+| price | decimal(9,2) | YES     |
+Likes
+| field   | type        | null |
+| ------- | ----------- | ---- |
+| drinker | varchar(50) | NO   |
+| beer    | varchar(50) | NO     |
+
+
+
+
 #self_join
