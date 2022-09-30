@@ -68,3 +68,14 @@ Instead of sending complete frame at $frame_{i+1}$, send only differences from f
 
 The coding/decoding algorithm used is often called a #codec.
 
+#### Terminology
+
+**Video bit rate** is the effective number of bits per second of the video after encoding.
+
+The bit rate depends on many factors:
+- resolution of each image: more pixels = more bits
+- detail per pixel: better luminance and color detail = more bits
+- amount of movement in video:  = more bits
+- quality of overall compression in code
+
+The video bit rate is commonly correlated with the quality of perception.
