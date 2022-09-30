@@ -1,6 +1,6 @@
 ---
 title: Simple SQL Queries
-course: CS336
+course: CS_336
 released: 2022-09-22
 due: 2022-10-07
 tags: 

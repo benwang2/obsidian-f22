@@ -3,7 +3,7 @@ title: Lecture Notes 8
 course: CS_352
 date: 2022/09/30
 tags: 
-- Lecture Notes
+- lectureNotes
 - CS_352
 ---
 

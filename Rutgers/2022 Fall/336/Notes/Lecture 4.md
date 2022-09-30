@@ -1,9 +1,9 @@
 ---
 title: Lecture Notes 4
-course: CS336
+course: CS_336
 date: 2022/09/23
 tags: 
-- Lecture Notes
+- lectureNotes
 - CS_336
 ---
 

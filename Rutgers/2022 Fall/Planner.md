@@ -10,6 +10,15 @@
 - 01:960:401 - Basic Statistics for Research
 - 01:988:101 - Introduction to Gender, Race, and Sexuality
 
+# Recent Work
+```dataview
+TABLE course, dateformat(file.mtime, "dd.MM.yyyy - HH:mm") AS "Last modified"
+FROM #lectureNotes
+WHERE course != "CS_XXX"
+SORT file.mtime DESC
+LIMIT 25
+```
+
 # Schedule
 ### Assignments
 ```dataview

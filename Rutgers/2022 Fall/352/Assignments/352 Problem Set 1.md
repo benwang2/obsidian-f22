@@ -1,6 +1,6 @@
 ---
 title: Problem Set 1
-course: CS352
+course: CS_352
 released: 2022-09-26
 due: 2022-09-30
 tags:
