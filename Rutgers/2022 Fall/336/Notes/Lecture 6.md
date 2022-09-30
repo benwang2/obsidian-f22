@@ -15,4 +15,8 @@ Imielinski doesn't really have a structure to his lectures, so notes here are fr
 	- SUBSTRING_INDEX
 	- SUBSTRING
 - Election data queries
-	- 
+	- sum
+	- timestamp
+	- conditions
+	- group by
+	- max
