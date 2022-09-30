@@ -106,16 +106,23 @@ Every application uses a different port as to not conflict with other applicatio
 b. Could you think of an example where IPB and portB have the same values across many application-layer connections?
 
 ```
-Accessing a remote computer, for example, iLab. If the user is 
+Accessing a remote computer via ssh/sftp. If the user is connected via an application like MobaXTerm, the application would use ssh and sftp, typically on port 22 with an unchanging IP address.
 ```
 
 7. **Client and server (2 points).** Explain one difference between a “client” and a “server” in
-an application
+an application.
+
+```
+A server may handle many incoming connections, whereas a client will connect to a single server.
+```
 
 8. **Domain Name System (2 * 6 = 12 points).****
 a. Why do we need the domain name system (DNS)? What problem does it solve?
-<br>
-<br>
+
+```
+IP addresses are difficult to remember for the average human and the DNS allows for human-readable addresses to online destinations. The DNS solves the problem of delivering 
+```
+
 b. Explain how hierarchy helps DNS meet the scaling needs of serving Internet users.
 <br>
 <br>
