@@ -79,14 +79,22 @@ A link with a lower propagation delay would be better for a highly interactive v
 
 a. After how long since the sender pushed the first bit of the packet into the link does the final bit of the packet arrive at the other end of the link? Explain your answer. **(3 points)**  
 
-$$4000bytes $$
+$4000bytes*\frac{8bits}{1byte}=32,000bits$
+$\frac{1s}{2Mbits} * 32,000 bits = 16ms$
+
+Therefore, the transmission delay computes to $16ms$. Considering that the link has a propagation delay of $10ms$, we add the two values to determine the amount of time it takes to receive the final bit after sending the first, $26ms$.
 
 b. At the other end of the link is a router which pushes the packet through another link that is identical to the last one (described in question above). The packet encouters a small queue with queueing delay 5 milliseconds before entering this second link. The router uses store and forward packet switching. What is the total time it takes to move the packet end to end, i.e., first bit entering the first link to last bit exiting the second link? Explain your answer. **(3 points)**
 
 6. **App-layer connection (6 points).**
 a. What are the components of the 4-tuple denoting an application-layer connection?
-<br>
-<br>
+
+```
+The four components of the 4-tuple are:
+- Source IP
+- Source port
+- Receiver 
+```
 
 b. Why could you not just use the 2-tuple (IPA,IPB) to denote an application-layer connection?
 <br>
