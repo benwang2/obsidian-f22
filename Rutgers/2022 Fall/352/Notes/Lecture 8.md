@@ -92,7 +92,22 @@ For VBR, there is an **average bit-rate** that can be computed over the video's 
 
 ### Networking multimedia
 - On-demand streamed video/audio
-- ...
-- ...
+- Conversational voice or video over IP
+- Live streamed audio / video
 
-### On demand
+#### On demand
+Can begin playout before downloading entire file: **streaming** data. Full video/audio is stored at the server and is usually transmitted faster than the content can be rendered by the client. 
+
+Media is prerecorded at different qualities and these versions of the video are stored on the server, made available for users.
+
+The client should store and buffer the data it receives.
+e.g: Spotify, YouTube, Netflix
+
+#### Conversational voice or video over IP
+Interactive human-to-human communicatoin limits delay tolerance.
+e.g: Zoom, Google Stadia
+
+#### Live streamed audio, video
+Data can be delayed a little but must be close to the live edge.
+
+e.g: Twitch.tv, sporting events live report.
