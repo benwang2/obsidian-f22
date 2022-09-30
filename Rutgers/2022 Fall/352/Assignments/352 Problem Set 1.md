@@ -19,6 +19,8 @@ Please read and follow these instructions carefully.
 7. There is a due date/time but no “time limit” on problem sets. That is, you may take as long as you need to work on problem sets, as long as you submit them on time. Further, you may make an unlimited number of submissions on Canvas. 
 8. As a response to the last question of this problem set, please specify who you collaborated with, and also include all the resources you consulted to answer questions in this problem set, including URLs of pages you visited on the Internet. Also specify which question and aspect you got help with. Please be as thorough and complete as possible here. It is mandatory to answer this question.  
 9. If you have any questions or clarifications on the problem set, please post them on Piazza or contact the course staff. We are here to help.
+<div style="page-break-after: always;"></div>
+<div style="page-break-after: always;"></div>
 
 
 # Questions
@@ -79,10 +81,19 @@ A link with a lower propagation delay would be better for a highly interactive v
 
 a. After how long since the sender pushed the first bit of the packet into the link does the final bit of the packet arrive at the other end of the link? Explain your answer. **(3 points)**  
 
-$4000bytes*\frac{8bits}{1byte}=32,000bits$
-$\frac{1s}{2Mbits} * 32,000 bits = 16ms$
+```
+We can compute this amount of time with the following calculations.
+```
 
-Therefore, the transmission delay computes to $16ms$. Considering that the link has a propagation delay of $10ms$, we add the two values to determine the amount of time it takes to receive the final bit after sending the first, $26ms$.
+$$4000bytes*\frac{8bits}{1byte}=32,000bits$$
+$$\frac{1s}{2Mbits} * 32,000 bits = 16ms$$
+
+```
+Therefore, the transmission delay computes to $16ms$. Considering that the link has a propagation delay of $10ms$, we add the two values to determine the amount of time it takes to receive the final bit, 26ms.
+```
+
+$$16ms + 10ms = 26ms$$
+
 
 b. At the other end of the link is a router which pushes the packet through another link that is identical to the last one (described in question above). The packet encouters a small queue with queueing delay 5 milliseconds before entering this second link. The router uses store and forward packet switching. What is the total time it takes to move the packet end to end, i.e., first bit entering the first link to last bit exiting the second link? Explain your answer. **(3 points)**
 
@@ -132,12 +143,14 @@ The DNS hierarchy has many benefits that work to serve a large sum of internet u
 c. Explain how replication helps DNS meet the scaling needs of serving Internet users.
 
 ```
-The redundancy created by replication prevents any single server on a level from becoming over-saturated. 
+The redundancy created by replication prevents any single server on a level from becoming over-saturated. Having many servers on a level allows for multiple servers to split the traffic so that no single server begins to run too slowly. Additionally, this also increases the bandwidth at that level of the hierarchy.
 ```
 
 d. Explain how caching helps DNS meet the scaling needs of serving Internet users.
-<br>
-<br>
+
+```
+Caching helps DNS meet the scaling needs by reducing the number of DNS requests made at every level it is implemented. By locally storing the resolved IP from the DNS request, an origin server / client will not need to resolve that domain name again. This reduces traffic to DNS servers.
+```
 
 e. What is the purpose of the identification field on a DNS protocol message?
 <br>
