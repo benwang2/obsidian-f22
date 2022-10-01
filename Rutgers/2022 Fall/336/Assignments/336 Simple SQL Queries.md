@@ -198,6 +198,19 @@ HAVING COUNT(*)>1
 
 ### 12. Bars which sell at least 3 beers that Mike likes (do not use COUNT)
 
+```sql
+SELECT DISTINCT s1.bar
+FROM 
+	Sells s1, Sells s2, Sells s3
+WHERE
+	s1.bar = s2.bar AND s2.bar = s3.bar
+    AND s1.beer IN (SELECT l.beer FROM Likes l WHERE l.drinker="Mike")
+    AND s2.beer IN (SELECT l.beer FROM Likes l WHERE l.drinker="Mike")
+    AND s3.beer IN (SELECT l.beer FROM Likes l WHERE l.drinker="Mike")
+    AND s1.beer != s2.beer AND s2.beer != s3.beer AND s3.beer != s1.beer;
+```
 
+	# bar
+	'Caravan'
 
 #self_join
