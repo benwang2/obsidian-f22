@@ -176,6 +176,13 @@ WHERE
 	'The Shark and Rose'
 
 ### 10.  Bars which are frequented by Mike and Steve
+```sql
+SELECT DISTINCT f1.bar
+FROM Frequents f1, Frequents f2
+WHERE
+	f1.bar = f2.bar
+	AND f1.drinker='Mike' AND f2.drinker='Steve'
+```
 
 ### 11. Drinker who like at least two beers that Mike likes
 ```sql
