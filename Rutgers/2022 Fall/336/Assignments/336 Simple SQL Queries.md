@@ -2,7 +2,7 @@
 title: Simple SQL Queries
 course: CS_336
 released: 2022-09-22
-due: 2022-10-07
+due: 2022-10-03
 tags: 
 - Assignments
 - CS_336
@@ -183,6 +183,10 @@ WHERE
 	f1.bar = f2.bar
 	AND f1.drinker='Mike' AND f2.drinker='Steve'
 ```
+
+	# bar
+	null
+
 
 ### 11. Drinker who like at least two beers that Mike likes
 ```sql
