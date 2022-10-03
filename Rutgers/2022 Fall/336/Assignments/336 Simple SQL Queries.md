@@ -13,6 +13,8 @@ tags:
 Return SQL code as text file plus results which workbench gave you (you can include them in the same txt file). Query + answer. As long as it is readable by a grader, it is fine - text, word, screenshot....but text is easiest.   
 
 ### 1.  Find all distinct drinkers whose phone numbers come from area code 917 and who like Budweiser or Bud (synonym!)
+**Interpretation**: All unique drinkers whose phone numbers start with 917 and like Bud / Budweiser.
+
 ```sql
 SELECT DISTINCT drinker  
 FROM Likes l, Drinkers d  
@@ -26,6 +28,7 @@ d.name = l.drinker
 
 
 ### 2. What beers does Mike like?
+**Interpretation**: Beers liked by Mike
 ```sql
 SELECT DISTINCT beer FROM Likes WHERE drinker='Mike'
 ```
@@ -43,6 +46,7 @@ SELECT DISTINCT beer FROM Likes WHERE drinker='Mike'
 	Killian's
 
 ### 3. Which town has the most drinkers?
+**Interpretation:** Return a single town that has no other towns with more drinkers
 ```sql
 SELECT city  
 FROM Drinkers  
@@ -52,23 +56,26 @@ LIMIT 1;
 ```
 
 	# city
-	
 	Edison
 
 ### 4. What bars are frequented by drinkers from that town (3)?
+**Interpretation:** As written in question
+
 ```sql
 SELECT DISTINCT bar  
 FROM Frequents f, Drinkers d  
 WHERE d.name = f.drinker AND  
-d.city = 'San Francisco';
+d.city = 'Edison';
 ```
 
 	# bar
-	'Blue Angel'  
-	'Coconut Willie\'s Cocktail Lounge'  
-	'The Blank Club'
+	'Gecko Grill'
+	'Cabana'
+	'Blue Angel'
+	'Seven Bamboo'
 
 ### 5. Provide all bars which serve beers that Mike likes
+**Interpretation:** As written in question
 ```sql
 SELECT DISTINCT s.bar  
 FROM Sells s, (SELECT beer FROM Likes WHERE drinker='Mike') AS b  
@@ -95,7 +102,7 @@ WHERE s.beer = b.beer;
 
 
 ### 6. Who likes at least one same beer that Joe or Mike like?
-
+**Interpretation:** Return all drinkers that like at least one beer that is also liked by Joe or Mike.
 ```sql
 SELECT DISTINCT l.drinker  
 FROM Likes l, Likes l1, Likes l2  
@@ -142,22 +149,12 @@ WHERE l.beer = s.beer AND s.bar = 'Caravan'
 GROUP BY l.drinker HAVING count(*) > 1;
 ```
 
-or…
-
-```sql
-SELECT DISTINCT l.drinker  
-FROM Likes l, (SELECT beer FROM Sells WHERE bar='Caravan') AS s  
-WHERE l.beer = s.beer  
-GROUP BY l.drinker HAVING count(*) > 1;
-```
-
 	# drinker
 	'John'
 	'Mike'
 	'Vince'
 	'Gunjan'
 	'Yuhan'
-
 
 ### 9. Bars which sell Budweiser and are frequented by some drinkers who like Budweiser
 ```sql
@@ -167,9 +164,9 @@ FROM
 Frequents f,
 Likes l
 WHERE
-	f.drinker = l.drinker
-    AND l.beer = 'Budweiser'
-    AND f.bar = b.bar
+f.drinker = l.drinker
+AND l.beer = 'Budweiser'
+AND f.bar = b.bar
 ```
 	
 	# bar
@@ -229,5 +226,3 @@ WHERE
 
 	# bar
 	'Caravan'
-
-#self_join
