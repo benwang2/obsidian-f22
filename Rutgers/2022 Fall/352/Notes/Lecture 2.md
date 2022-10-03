@@ -115,7 +115,8 @@ If messages are bigger than typical packets then packet switching is better than
 ## Layering and Protocols
 
 ### Software / Hardware organization
-The network is constructed in layers, each providing a different function to the network.
+
+Internet software and hardware is arranged in **layers**.
 - **Application**: useful user-level functions
 - **Transport**: provide guarantees to apps
 - **Network**: best-effort global packet delivery
@@ -123,8 +124,22 @@ The network is constructed in layers, each providing a different function to the
 
 Communication functions are broken up and "stacked". Each layer is dependent on the layer beneath it, and each layer supports the layer above it.
 
-The interfaces between 
+The interfaces between layers are well-defined and standardized.
 
- 
+**Layering** provides **modularity** to the internet, so that each individual layer has a well-defined function and interface.
+
+Functionality for layers is implemented in **protocols**, which are the "rules" for networking.
+
+### Protocol
+A protocol consists of two things
+- **message format**: structure of messages exchanged with an endpoint
+- **action**: operations upon receiving, or not receiving, messages
+
+Protocols are standardized by the **Internet Engineering Task Force** (IETF) through documents calls **RFCs** (Request for Comments).
+
+```mermaid
+graph
+
+```
 
  
