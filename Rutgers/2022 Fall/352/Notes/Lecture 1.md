@@ -58,4 +58,27 @@ Best effort delivery makes the network trivial to build because:
 - reliability not required
 - don't have to guarantee performance
 - don't have to maintain packet ordering
-- nearly any medium can deliver individual packets (RF)
+- nearly any medium can deliver individual packets [RFC 1149: A Standard for the Transmission of IP Datagrams on Avian Carriers](https://datatracker.ietf.org/doc/html/rfc1149)
+
+#best_effort_delivery
+
+Using best effort delivery, the early internet thrived because it was easy to engineer.
+
+#### Endpoints
+The endpoint can be considered part of the software / hardware stack in the modular design of a network.
+
+Due to best effort delivery, it's the responsiblity of the **endpoint** to provide guarantees to applications.
+
+**Transport software** on the endpoint oversees the implementing guarantees on top of unreliable networks. Transport software solves the **reliable data delivery problem**.
+
+Transport software resolves resource allegation (**congestion control**).
+
+The device solves the **congestion control problem**.
+
+The **packet scheduling problem** asks the question: "how do we transmit packets when network resources are scarce?"
+
+It is related to the **buffer management problem**.
+
+#reliable_data_delivery
+#congestion_control
+#resource_allegation
