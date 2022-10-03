@@ -31,3 +31,16 @@ There are three different types of modulation
 ![[Pasted image 20221003164128.png]]
 
 ## Switching
+The term **switching** is used to denote physically moving data from one linke to another.
+
+There are several different **switching schemes**.
+- Circuit switching
+- Message switching
+- Packet switching
+
+### Circuit Switching
+With circuit switching, the full path of connected links are allocated to the connection.
+
+An example of this is a telephone network.
+
+This method of switching works,f o
