@@ -75,10 +75,12 @@ Transport software resolves resource allegation (**congestion control**).
 
 The device solves the **congestion control problem**.
 
-The **packet scheduling problem** asks the question: "how do we transmit packets when network resources are scarce?"
+The **packet scheduling problem** asks the question: "how do we transmit packets when network resources are scarce?" Packet scheduling determines which packet to transmit over a constrained network link and when.
 
-It is related to the **buffer management problem**.
+It is related to the **buffer management problem**. 
 
 #reliable_data_delivery
 #congestion_control
 #resource_allegation
+
+# Questions
