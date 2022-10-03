@@ -41,3 +41,21 @@ Follows a "peer-to-peer" model, where each device is reaches another device with
 #medium_access_control
 
 ### Multi-link Network
+In a multi-link network, routers relay data across multiple links to it's destination endpoint.
+
+There are links from devices to devices, devices to routers, and routers to the ISP.
+
+In a multi-link network, we encounter the **routing problem** which asks the question: "How can we determine where to send packets"?
+
+#routing-problem
+#multi-link
+#isp
+
+## Data Transmission
+The network gives no guarantees, meaning that data can be lost, corrupted, or reordered on the way to the destination. This is called **best effort delivery**
+
+Best effort delivery makes the network trivial to build because:
+- reliability not required
+- don't have to guarantee performance
+- don't have to maintain packet ordering
+- nearly any medium can deliver individual packets (RF)

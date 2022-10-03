@@ -1,5 +1,5 @@
 {
-  "collapse-filter": false,
+  "collapse-filter": true,
   "search": "-path:Templates -file: Planner tag:CS_352",
   "showTags": true,
   "showAttachments": false,
@@ -34,11 +34,11 @@
   "textFadeMultiplier": 0,
   "nodeSizeMultiplier": 1,
   "lineSizeMultiplier": 1,
-  "collapse-forces": true,
-  "centerStrength": 0.51685393258427,
-  "repelStrength": 7.41573033707865,
-  "linkStrength": 0.47752808988764,
-  "linkDistance": 173,
-  "scale": 1,
-  "close": false
+  "collapse-forces": false,
+  "centerStrength": 0.0898876404494382,
+  "repelStrength": 5.84269662921348,
+  "linkStrength": 0.269662921348315,
+  "linkDistance": 347,
+  "scale": 0.3242333202184637,
+  "close": true
 }
