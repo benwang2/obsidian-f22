@@ -144,12 +144,12 @@ f.drinker = l.drinker;
 
 
 ### 8. Drinkers who like some beers sold by Caravan bar
-**Interpretation:** As written in title
+**Interpretation:** Drinkers who like some (two or more) beers sold by Caravan bar
 ```sql
 SELECT DISTINCT l.drinker  
 FROM Likes l, Sells s  
 WHERE l.beer = s.beer AND s.bar = 'Caravan'  
-GROUP BY l.drinker HAVING count(*) > 1;
+GROUP BY l.drinker HAVING count(*) >= 1;
 ```
 
 	# drinker
