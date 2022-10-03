@@ -128,8 +128,11 @@ The interfaces between layers are well-defined and standardized.
 
 **Layering** provides **modularity** to the internet, so that each individual layer has a well-defined function and interface.
 
+Breaking down the internet into layers simplifies understanding, testing, and maintaining the internet. It becomes easier to improve or replace a protocol at one layer without affecting the others.
+
 Functionality for layers is implemented in **protocols**, which are the "rules" for networking.
 
+#layering
 ### Protocol
 A protocol consists of two things
 - **message format**: structure of messages exchanged with an endpoint
@@ -160,5 +163,4 @@ Devices like laptops, phones, and servers are built with all four layers
 
 However, routers have only two layers: network and link layer.
 
-### Layering
-Breaking down the internet into layers simplifies understanding, testing, and maintaining the internet. It becomes easier to improve or replace a protocol at one layer without affecting the others.
+#protocols

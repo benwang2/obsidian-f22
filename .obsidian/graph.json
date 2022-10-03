@@ -1,5 +1,5 @@
 {
-  "collapse-filter": true,
+  "collapse-filter": false,
   "search": "-path:Templates -file: Planner tag:CS_352",
   "showTags": true,
   "showAttachments": false,
@@ -35,10 +35,10 @@
   "nodeSizeMultiplier": 1,
   "lineSizeMultiplier": 1,
   "collapse-forces": false,
-  "centerStrength": 0.0898876404494382,
+  "centerStrength": 0.410112359550562,
   "repelStrength": 5.84269662921348,
   "linkStrength": 0.269662921348315,
   "linkDistance": 347,
-  "scale": 0.3242333202184637,
+  "scale": 1.0000000000000022,
   "close": true
 }
