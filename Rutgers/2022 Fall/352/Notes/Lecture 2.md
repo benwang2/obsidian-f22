@@ -13,6 +13,8 @@ Machines communicate exclusively in binary, however the data that needs to be tr
 
 This is the **encoding and decoding problem**. The complex data types can be encoded and decoded on different entities in the network.
 
+#encoding, #decoding
+
 ### Physical transmission on a single link
 Physical signaling (light, AC, voltages) are often analog forms of transmission.
 
@@ -30,6 +32,8 @@ There are three different types of modulation
 - phase modulation
 ![[Pasted image 20221003164128.png]]
 
+#modulation
+
 ## Switching
 The term **switching** is used to denote physically moving data from one linke to another.
 
@@ -38,6 +42,7 @@ There are several different **switching schemes**.
 - Message switching
 - Packet switching
 
+#switching
 ### Circuit Switching
 With circuit switching, the full path of connected links are allocated to the connection.
 
@@ -50,10 +55,10 @@ This method of switching follows the certain steps.
 4. Entire path remains allocated to the transmission (whether used or not)
 5. Whether transmission is complete, source releases the circuit
 
-![[Pasted image 20221003172520.png|300|center]]
+![[Pasted image 20221003172520.png | center]]
 
 
-
+#circuit_switching
 ### Message Switching
 With message switching, each message is addressed to a destination. The message is addressed using the **header**.
 
@@ -66,3 +71,29 @@ When the entire message is received at a router, the next step and link in its j
 An analogy for this is a postal service.
 
 ![[Pasted image 20221003172506.png]]
+
+#message_switching
+### Packet Switching
+With packet switching, messages are split into smaller pieces called **packets**. Packets have the following properties:
+- max length
+- numbered and addressed
+- sent through network one at a time
+
+![[Pasted image 20221003173126.png]]
+#packet_switching
+
+### Store and forward switching
+With store and forward switching, the router waits for all bits to arrive on incoming link before sending the frist bit of the message on the outgoing link.
+
+Alternatively, **cut-through** switching sends bits *as they arrive*.
+
+#store_and_forward
+#cut-through
+
+### Pipelining
+With pipelining, different parts of a messsage concurrently transmitted over different links. Pipelining provides a higher utilization of link resources.
+
+It's similar to computing an operation using multithreading.
+
+#pipelining
+
