@@ -22,7 +22,7 @@ WHERE
 (l.beer='Budweiser' OR l.beer='Bud') AND  
 d.phone LIKE '917%' AND  
 d.name = l.drinker
-   ```
+```
 
 	# drinker
 
@@ -122,6 +122,8 @@ AND l.drinker != 'Joe' AND l.drinker != 'Mike';
 	'Jesse'
 
 ### 7.  All bars which sell at least one beer which is liked by at least one drinker who frequents these bars
+**Interpretation:** Return bars that sell a beer that is liked by someone who frequents their bar.
+
 ```sql
 SELECT DISTINCT s.bar  
 FROM Sells s, Frequents f, Likes l  
@@ -142,6 +144,7 @@ s.drinker = l.drinker;
 
 
 ### 8. Drinkers who like some beers sold by Caravan bar
+**Interpretation:** As written in title
 ```sql
 SELECT DISTINCT l.drinker  
 FROM Likes l, Sells s  
@@ -157,6 +160,7 @@ GROUP BY l.drinker HAVING count(*) > 1;
 	'Yuhan'
 
 ### 9. Bars which sell Budweiser and are frequented by some drinkers who like Budweiser
+**Interpretation:** As written in title
 ```sql
 SELECT DISTINCT b.bar
 FROM 
@@ -177,6 +181,7 @@ AND f.bar = b.bar
 	'The Shark and Rose'
 
 ### 10.  Bars which are frequented by Mike and Steve
+**Interpretation:** As written in title
 ```sql
 SELECT DISTINCT f1.bar
 FROM Frequents f1, Frequents f2
@@ -189,6 +194,7 @@ WHERE
 	null
 
 ### 11. Drinker who like at least two beers that Mike likes
+**Interpretation:** As written in title
 ```sql
 SELECT COUNT(*), drinker
 FROM Likes l1
@@ -211,6 +217,7 @@ HAVING COUNT(*)>1
 
 
 ### 12. Bars which sell at least 3 beers that Mike likes (do not use COUNT)
+**Interpretation:** As written in title
 
 ```sql
 SELECT DISTINCT s1.bar
