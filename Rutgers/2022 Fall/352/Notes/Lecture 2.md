@@ -113,3 +113,4 @@ For data that is a long, continuous stream, packet switching is better than circ
 If messages are bigger than typical packets then packet switching is better than message switching.
 
 ## Layering and Protocols
+ 
