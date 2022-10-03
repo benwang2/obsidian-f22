@@ -24,5 +24,10 @@ The receiving endpoint converts the signals back to digital by **decoding** phys
 
 There are three different types of modulation
 - amplitude modulation
+![[Pasted image 20221003163942.png]]
 - frequency modulation
+![[Pasted image 20221003164011.png]]
 - phase modulation
+![[Pasted image 20221003164128.png]]
+
+## Switching
