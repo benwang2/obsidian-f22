@@ -137,9 +137,22 @@ A protocol consists of two things
 
 Protocols are standardized by the **Internet Engineering Task Force** (IETF) through documents calls **RFCs** (Request for Comments).
 
+The layering of protocols look something like this.
 ```mermaid
-graph
-
+graph TD;  
+	SIP-->UDP;
+    RTSP-->UDP;
+    HTTPS-->TCP;
+    FTP-->TCP;
+    HTTP-->TCP;
+    UDP-->IP;
+    TCP-->IP;
+    IP-->802.11;
+    IP-->X.25;
+    IP-->ATM;
 ```
+
+
+
 
  
