@@ -50,6 +50,10 @@ This method of switching follows the certain steps.
 4. Entire path remains allocated to the transmission (whether used or not)
 5. Whether transmission is complete, source releases the circuit
 
+![[Pasted image 20221003172520.png|300|center]]
+
+
+
 ### Message Switching
 With message switching, each message is addressed to a destination. The message is addressed using the **header**.
 
@@ -57,7 +61,8 @@ The **header** includes metadata that denotes how to process a message, like a *
 
 The message "hops" from node to node through a network, **while allocating only one link at a time**, as opposed to circuit switching where all links are reserved at the same time (regardless of use).
 
-This method of switching follows the certain steps.
-1. **Setup:** 
+When the entire message is received at a router, the next step and link in its journey are selected (**routing**). If the selected link is busy, the message waits in a **queue** until the link is free.
 
 An analogy for this is a postal service.
+
+![[Pasted image 20221003172506.png]]
