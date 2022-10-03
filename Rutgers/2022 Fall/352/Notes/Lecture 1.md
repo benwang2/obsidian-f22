@@ -85,12 +85,13 @@ It is related to the **buffer management problem**.
 
 # Questions
 1. Your laptop is an example of a/an
-<input type="radio" id="1"> <label for="1">router</label>
-<input type="radio" id="1" value="router"> <label for="1">link</label>
-
+<input type="radio"> router
+<input type="radio"> link
+<input type="radio" > network
+<input type="radio" checked> endpoint
 
 2. What does "best effort" mean in the context of the Internet?
-- [ ] The network will carry messages in order.
-- [ ] The network maintains strict guarantees on the quality of service received.
-- [ ] The network delivers data reliably.
-- [x] The network does not provide any guarantees for data it carries.
+<input type="radio"> The network will carry messages in order.
+<input type="radio"> The network maintains strict guarantees on the quality of service received.
+<input type="radio"> The network delivers data reliably.
+<input type="radio" checked> The network does not provide any guarantees for data it carries.
