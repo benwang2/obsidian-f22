@@ -113,4 +113,18 @@ For data that is a long, continuous stream, packet switching is better than circ
 If messages are bigger than typical packets then packet switching is better than message switching.
 
 ## Layering and Protocols
+
+### Software / Hardware organization
+The network is constructed in layers, each providing a different function to the network.
+- **Application**: useful user-level functions
+- **Transport**: provide guarantees to apps
+- **Network**: best-effort global packet delivery
+- **Link**: best-effort local packet delivery
+
+Communication functions are broken up and "stacked". Each layer is dependent on the layer beneath it, and each layer supports the layer above it.
+
+The interfaces between 
+
+ 
+
  
