@@ -28,6 +28,8 @@ The interconnection between entities is any physical medium capable of carrying 
 ### Single Link Multiple Access Network
 In a single link multiple access network, data is sent in **packets** or **frames**.
 
+A **packet** is a unit of data transmission.
+
 Networks differentiate receivers using a link level address, called a **MAC address**
 
 On a link, digital data must be converted to physical signals over medium, using encoding and decoding.
