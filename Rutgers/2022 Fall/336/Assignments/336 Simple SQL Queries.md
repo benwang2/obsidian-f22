@@ -129,7 +129,7 @@ SELECT DISTINCT s.bar
 FROM Sells s, Frequents f, Likes l  
 WHERE f.bar = s.bar AND  
 s.beer = l.beer AND  
-s.drinker = l.drinker;
+f.drinker = l.drinker;
 ```
 
 	# bar
@@ -158,6 +158,7 @@ GROUP BY l.drinker HAVING count(*) > 1;
 	'Vince'
 	'Gunjan'
 	'Yuhan'
+<div style="page-break-after: always;"></div>
 
 ### 9. Bars which sell Budweiser and are frequented by some drinkers who like Budweiser
 **Interpretation:** As written in title
@@ -186,8 +187,8 @@ AND f.bar = b.bar
 SELECT DISTINCT f1.bar
 FROM Frequents f1, Frequents f2
 WHERE
-	f1.bar = f2.bar
-	AND f1.drinker='Mike' AND f2.drinker='Steve'
+f1.bar = f2.bar
+AND f1.drinker='Mike' AND f2.drinker='Steve'
 ```
 
 	# bar
@@ -199,12 +200,12 @@ WHERE
 SELECT COUNT(*), drinker
 FROM Likes l1
 WHERE beer in (
-	SELECT beer
-    FROM Likes l
-    WHERE
-		l.drinker = 'Mike'
-        AND l1.drinker!=l.drinker
-	)
+SELECT beer
+FROM Likes l
+WHERE
+l.drinker = 'Mike'
+AND l1.drinker!=l.drinker
+)
 GROUP BY l1.drinker
 HAVING COUNT(*)>1
 ```
@@ -222,13 +223,13 @@ HAVING COUNT(*)>1
 ```sql
 SELECT DISTINCT s1.bar
 FROM 
-	Sells s1, Sells s2, Sells s3
+Sells s1, Sells s2, Sells s3
 WHERE
-	s1.bar = s2.bar AND s2.bar = s3.bar
-    AND s1.beer IN (SELECT l.beer FROM Likes l WHERE l.drinker="Mike")
-    AND s2.beer IN (SELECT l.beer FROM Likes l WHERE l.drinker="Mike")
-    AND s3.beer IN (SELECT l.beer FROM Likes l WHERE l.drinker="Mike")
-    AND s1.beer != s2.beer AND s2.beer != s3.beer AND s3.beer != s1.beer;
+s1.bar = s2.bar AND s2.bar = s3.bar
+AND s1.beer IN (SELECT l.beer FROM Likes l WHERE l.drinker="Mike")
+AND s2.beer IN (SELECT l.beer FROM Likes l WHERE l.drinker="Mike")
+AND s3.beer IN (SELECT l.beer FROM Likes l WHERE l.drinker="Mike")
+AND s1.beer != s2.beer AND s2.beer != s3.beer AND s3.beer != s1.beer;
 ```
 
 	# bar
