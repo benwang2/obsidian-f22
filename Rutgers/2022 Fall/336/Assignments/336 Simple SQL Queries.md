@@ -17,9 +17,9 @@ Return SQL code as text file plus results which workbench gave you (you can incl
 SELECT DISTINCT drinker  
 FROM Likes l, Drinkers d  
 WHERE  
-    (l.beer='Budweiser' OR l.beer='Bud') AND  
-    d.phone LIKE '917%' AND  
-    d.name = l.drinker
+(l.beer='Budweiser' OR l.beer='Bud') AND  
+d.phone LIKE '917%' AND  
+d.name = l.drinker
    ```
 
 	# drinker
@@ -53,14 +53,14 @@ LIMIT 1;
 
 	# city
 	
-	San Francisco
+	Edison
 
 ### 4. What bars are frequented by drinkers from that town (3)?
 ```sql
 SELECT DISTINCT bar  
 FROM Frequents f, Drinkers d  
 WHERE d.name = f.drinker AND  
-    d.city = 'San Francisco';
+d.city = 'San Francisco';
 ```
 
 	# bar
@@ -100,36 +100,38 @@ WHERE s.beer = b.beer;
 SELECT DISTINCT l.drinker  
 FROM Likes l, Likes l1, Likes l2  
 WHERE  
-    (l.beer = l1.beer OR l.beer = l2.beer)  
-    AND  l.drinker != 'Joe' AND l.drinker != 'Mike';
+(l.beer = l1.beer OR l.beer = l2.beer)  
+AND l.drinker != 'Joe' AND l.drinker != 'Mike';
 ```
 
 	# drinker
-	
-	John  
-	Justin  
-	Vince  
-	Jesse
-
+	'John'
+	'Justin'
+	'Devarsh'
+	'Yuhan'
+	'Vince'
+	'Gunjan'
+	'Sahil'
+	'Jesse'
 
 ### 7.  All bars which sell at least one beer which is liked by at least one drinker who frequents these bars
 ```sql
 SELECT DISTINCT s.bar  
 FROM Sells s, Frequents f, Likes l  
 WHERE f.bar = s.bar AND  
-    s.beer = l.beer AND  
-    f.drinker = l.drinker;
+s.beer = l.beer AND  
+s.drinker = l.drinker;
 ```
 
 	# bar
-	
-	A.P. Stump's  
-	Blue Angel  
-	Cabana  
-	Caravan  
-	Gecko Grill  
-	Seven Bamboo  
-	The Shark and Rose
+	'The Shark and Rose'
+	'Seven Bamboo'
+	'Gecko Grill'
+	'Caravan'
+	'Cabana'
+	'Blue Angel'
+	'A.P. Stump\'s'
+
 
 
 ### 8. Drinkers who like some beers sold by Caravan bar
@@ -150,18 +152,20 @@ GROUP BY l.drinker HAVING count(*) > 1;
 ```
 
 	# drinker
-	
-	John  
-	Mike  
-	Vince
+	'John'
+	'Mike'
+	'Vince'
+	'Gunjan'
+	'Yuhan'
+
 
 ### 9. Bars which sell Budweiser and are frequented by some drinkers who like Budweiser
 ```sql
 SELECT DISTINCT b.bar
 FROM 
-	(SELECT DISTINCT bar FROM Sells WHERE Sells.beer = 'Budweiser') as b,
-    Frequents f,
-    Likes l
+(SELECT DISTINCT bar FROM Sells WHERE Sells.beer = 'Budweiser') as b,
+Frequents f,
+Likes l
 WHERE
 	f.drinker = l.drinker
     AND l.beer = 'Budweiser'
@@ -187,7 +191,6 @@ WHERE
 	# bar
 	null
 
-
 ### 11. Drinker who like at least two beers that Mike likes
 ```sql
 SELECT COUNT(*), drinker
@@ -205,6 +208,9 @@ HAVING COUNT(*)>1
 	# COUNT(*), drinker
 	'5', 'John'
 	'2', 'Justin'
+	'2', 'Gunjan'
+	'3', 'Yuhan'
+
 
 
 ### 12. Bars which sell at least 3 beers that Mike likes (do not use COUNT)
