@@ -97,3 +97,19 @@ It's similar to computing an operation using multithreading.
 
 #pipelining
 
+### Comparisons
+Circuit switching incurs an initial delay to set up the path, but packet and message switching can start transmitting data immediately.
+
+Packet switching doesn't reserver resources for the conversation, but circuit switching does (admission control). Packet switching makes resource reservation decisions per packet.
+
+The fewer guarantees, the easier the network is to build. Therefore, a telephone network is both more reliable and more difficult to build.
+
+#### Total delay
+For data that is of small size and to be transmitted quickly, circuit switching is better than packet switching.
+
+For data that is a long, continuous stream, packet switching is better than circuit switching.
+
+#### Overhead
+If messages are bigger than typical packets then packet switching is better than message switching.
+
+## Layering and Protocols
