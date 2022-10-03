@@ -43,4 +43,21 @@ With circuit switching, the full path of connected links are allocated to the co
 
 An example of this is a telephone network.
 
-This method of switching works,f o
+This method of switching follows the certain steps.
+1. **Setup:** Control message sets up path from origin to destination
+2. Accept signal informs source that data transmission may proceed
+3. **Data transmission** begins
+4. Entire path remains allocated to the transmission (whether used or not)
+5. Whether transmission is complete, source releases the circuit
+
+### Message Switching
+With message switching, each message is addressed to a destination. The message is addressed using the **header**.
+
+The **header** includes metadata that denotes how to process a message, like a *destination address*
+
+The message "hops" from node to node through a network, **while allocating only one link at a time**, as opposed to circuit switching where all links are reserved at the same time (regardless of use).
+
+This method of switching follows the certain steps.
+1. **Setup:** 
+
+An analogy for this is a postal service.
