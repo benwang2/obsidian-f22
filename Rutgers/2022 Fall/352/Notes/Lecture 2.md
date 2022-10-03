@@ -137,7 +137,7 @@ A protocol consists of two things
 
 Protocols are standardized by the **Internet Engineering Task Force** (IETF) through documents calls **RFCs** (Request for Comments).
 
-The layering of protocols look something like this.
+The **layering of protocols** look something like this.
 ```mermaid
 graph TD;  
 	SIP-->UDP;
@@ -152,7 +152,13 @@ graph TD;
     IP-->ATM;
 ```
 
+Devices like laptops, phones, and servers are built with all four layers
+- Applications
+- Transport
+- Network
+- Link layer
 
+However, routers have only two layers: network and link layer.
 
-
- 
+### Layering
+Breaking down the internet into layers simplifies understanding, testing, and maintaining the internet. It becomes easier to improve or replace a protocol at one layer without affecting the others.
