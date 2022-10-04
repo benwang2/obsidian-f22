@@ -71,4 +71,9 @@ From an adaptation set, we can access a representation. The representation tells
 - frame rate
 - scan type
 
-In each representation, attributes for multiple segments are included. 
+In each representation, attributes for multiple segments are included. The segment itself is not downloaded, but a resource URL is provided for each media segment.
+
+Byte ranges per segment are provided (HTTP header for a **range segment**)
+
+%%What's a range segment?%%
+
