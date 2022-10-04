@@ -77,3 +77,4 @@ Byte ranges per segment are provided (HTTP header for a **range segment**)
 
 %%What's a range segment?%%
 
+## Transport
