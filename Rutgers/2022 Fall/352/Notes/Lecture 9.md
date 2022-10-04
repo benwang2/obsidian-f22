@@ -34,6 +34,8 @@ The DASH video server is just a standard HTTP server that provides video/audio c
 
 DASH allows for very large videos to be rendered by clients, taking advantage of CDNs.
 
+#DASH
+
 #### Key ideas
 The video, audio, and transcript content are divided into segments (**time**).
 
@@ -50,11 +52,23 @@ Using the manifest, the HTTP client makes requests based on time, and then picks
 
 ### Manifest
 Fundamentally, the manifest contains:
-- periods
+- periods (Media Presentation Duration: **MPD**)
 - adaptation set
 - representations
 - functional equivalent: representation set of adaptation set
 
+[dash example](https://reference.dashif.org/dash.js/latest/samples/dash-if-reference-player/index.html)
+
 The forward-most portion of the manifest contains the periods (durations of contents). 
 
-From a period, we may access an adaptation set, which is functionally equivalent content. It
+From a period, we may access a list of adaptation sets, which is functionally equivalent content. It contains various adaptation sets. Eah adaptation set indicates what the media type is, and other attributes about the set.
+
+From an adaptation set, we can access a representation. The representation tells you about the attributes:
+- codecs
+- bandwidth
+- width
+- height
+- frame rate
+- scan type
+
+In each representation, attributes for multiple segments are included. 
