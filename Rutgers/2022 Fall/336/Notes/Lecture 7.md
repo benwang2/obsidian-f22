@@ -10,4 +10,5 @@ tags:
 # Lecture 7
 ## Topics Covered
 - CREATE INDEX
-- 
+- PRIMARY Keyword
+- FULLTEXT Keyword
