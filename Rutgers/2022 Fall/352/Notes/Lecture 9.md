@@ -34,3 +34,17 @@ The DASH video server is just a standard HTTP server that provides video/audio c
 
 DASH allows for very large videos to be rendered by clients, taking advantage of CDNs.
 
+#### Key ideas
+The video, audio, and transcript content are divided into segments (**time**).
+
+There must be algorithms to determine and request varying attributes for each segment (bitrate, language, resolution).
+
+The goal of dash is to ensure good quality of service and to match user preferences.
+
+### Example
+The browser has a media player and is an HTTP client, so it can make and receive HTTP requests.
+
+Before streaming, the server must inform the client of the **media presentation description (manifest)**.
+
+Using the manifest, the HTTP client makes requests based on time, and then picks attributes for each segment of content.
+
