@@ -77,4 +77,15 @@ Byte ranges per segment are provided (HTTP header for a **range segment**)
 
 %%What's a range segment?%%
 
-## Transport
+## Transport layer
+The transport layer contains the UDP and TCP protocol. It is a communication abstractoin between proccesses and delivers packets to the process.
+
+### Transport services and protocols
+The services and protocols provide a communication abstraction between application processes.
+
+Transport protocols run endpoints. On the *send side*, app messages are broken into **segments** and then passed to the network layer. On the *recv side*, segments are reassembled into messages, and then passed to the app layer.
+
+TCP and UDP are very popular transport protocols.
+
+## Network layer
+The network layer is an abstraction to communicate between **endpoints**. The network layer provides best effort packet delivery to a remote endpoint.
