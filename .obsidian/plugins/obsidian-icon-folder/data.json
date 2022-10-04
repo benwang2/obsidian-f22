@@ -5,11 +5,11 @@
     "fontSize": 16,
     "iconColor": null,
     "recentlyUsedIcons": [
+      "RiFileTextFill",
       "RiImageFill",
       "RiTodoLine",
       "RiQuestionFill",
-      "RiFileTextLine",
-      "RiTodoFill"
+      "RiFileTextLine"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -39,10 +39,7 @@
   "Rutgers/2022 Fall/336/Assignments": "RiTodoFill",
   "Rutgers/2022 Fall/misc": "RiQuestionFill",
   "Rutgers/2022 Fall/352/Notes/Lecture 8.md": "RiFileTextLine",
-  "Rutgers/2022 Fall/352/Notes/Lecture 9.md": {
-    "iconName": null,
-    "inheritanceIcon": "RiFileTextLine"
-  },
+  "Rutgers/2022 Fall/352/Notes/Lecture 9.md": "RiFileTextLine",
   "Rutgers/2022 Fall/352/Notes/Lecture 7.md": "RiFileTextLine",
   "Rutgers/2022 Fall/336/Notes/Lecture 5.md": "RiFileTextLine",
   "Rutgers/2022 Fall/336/Notes/Lecture 6.md": "RiFileTextLine",
