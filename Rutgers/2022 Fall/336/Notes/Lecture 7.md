@@ -12,3 +12,5 @@ tags:
 - CREATE INDEX
 - PRIMARY Keyword
 - FULLTEXT Keyword
+- Indexing selectivity
+	- primary, unique: selectivity = 1
