@@ -9,5 +9,5 @@ tags:
 
 # Lecture 7
 ## Topics Covered
-- Indexes
-- INDNEW
+- CREATE INDEX
+- 
