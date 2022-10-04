@@ -1,11 +1,16 @@
 ---
-title: Problem Set 1
+title: Lecture Notes X
 course: CS_XXX
-released: YYYY/MM/DD
-due: YYYY/MM/DD
+date: YYYY/MM/DD
 tags: 
-- Assignments
+- lectureNotes
 - CS_XXX
 ---
-<center><h1>Assignment Name</h1></center>
-<center><h3>Course name</h3></center>
+
+# Lecture X
+## Topic
+As the professor begins to explain the topic, use this space to write an overview of the topic being discussed.
+
+### Subtopic 1
+Use this space to expand upon the topic.
+
