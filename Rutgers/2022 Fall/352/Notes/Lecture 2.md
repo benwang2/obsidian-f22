@@ -143,8 +143,9 @@ Protocols are standardized by the **Internet Engineering Task Force** (IETF) thr
 The **layering of protocols** look something like this.
 ```mermaid
 graph TD;  
-	SIP-->UDP;
     RTSP-->UDP;
+    SIP-->UDP;
+	SIP-.->TCP;
     HTTPS-->TCP;
     FTP-->TCP;
     HTTP-->TCP;

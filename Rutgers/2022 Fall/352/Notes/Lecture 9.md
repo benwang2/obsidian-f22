@@ -48,3 +48,13 @@ Before streaming, the server must inform the client of the **media presentation 
 
 Using the manifest, the HTTP client makes requests based on time, and then picks attributes for each segment of content.
 
+### Manifest
+Fundamentally, the manifest contains:
+- periods
+- adaptation set
+- representations
+- functional equivalent: representation set of adaptation set
+
+The forward-most portion of the manifest contains the periods (durations of contents). 
+
+From a period, we may access an adaptation set, which is functionally equivalent content. It
