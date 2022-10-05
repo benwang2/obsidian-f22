@@ -57,3 +57,24 @@ By distributing data throughout a hierarchy, the DNS is able to scale well. The 
 - fault tolerance
 - improved performance
 
+Different DNS servers service resolve domain names for its own extension. For example, there are DNS servers for .com, .org, .edu, and so on.
+
+When a domain name becomes too saturated, we can add additional DNS servers to help resolve names to addresses.
+
+### DNS Protocol
+The DNS protocol is used in the client-server application and will always occupy port 53 on the server.
+
+There are two types of messages - queries and responses.
+
+##### Query
+A query is a request made to the DNS server, which asks for an IP address given a domain name.
+
+A query has an OPCODE of 0x0.
+
+##### Response
+The DNS server responds with a resolved IP address for the domain name provided.
+
+Each message is sent with a message header. The message header includes...
+| QR  | OPCODE     | Identification | Flags |
+| --- | ---------- | -------------- | ----- |
+| 0/1 | 0x0 or 0x5 | n=16                |       |
