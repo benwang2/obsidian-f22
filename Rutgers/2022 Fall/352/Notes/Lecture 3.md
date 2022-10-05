@@ -41,3 +41,23 @@ So, each of these endpoints is assigned an **Internet Protocol (IP) address**.
 Different applications communicate on different **port numbers**, using **sockets**.
 
 **Sockets** are an abstraction of the Internet for applications. In other words, applications utilize sockets to connect to the internet.
+
+## Questions
+1. Suppose two endpoints are communicating with each other. Suppose: 
+   (1) It takes 50 milliseconds for a single bit to move from the source to the destination over the network path between them. 
+   (2) The transmission delay to push a single packet over this path is 25 milliseconds.
+   (3) The packet waits in a queue along the path for 10 milliseconds.
+   Then, the total delay experienced by the packet (from the start of transmission at the source up to finishing reception of the complete packet at the destination) is how many milliseconds?
+
+85ms
+
+2. Choose the most appropriate answer. What API does application software use to communicate with another endpoint in the Internet?
+   <input type="radio"> Docket
+   <input type="radio"> Sprocket
+   <input type="radio"> Rocket
+   <input type="radio" checked> Socket
+   
+3. What problem does the domain name system solve?
+```
+This DNS resolves IP addresses to names so people can more easily remember destinations.
+```
