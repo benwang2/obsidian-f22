@@ -22,4 +22,6 @@ One common way to index a table is by adding a **primary index** on a set of fie
 
 Another way to index a table is to use secondary indexes. Secondary indexes are normal, non-unique indexes.
 
+Primary and secondary indexes are typically implemented internally by using b-trees, which allow for selecting and sorting ranges, or hash tables.
+
 Finally, there are FULLTEXT indexes. These indexes are useful only for full text searches done with MATCH() and AGAINST() clauses.
