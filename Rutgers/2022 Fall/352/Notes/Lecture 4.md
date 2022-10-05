@@ -74,7 +74,37 @@ A query has an OPCODE of 0x0.
 ##### Response
 The DNS server responds with a resolved IP address for the domain name provided.
 
+#### Message Format
 Each message is sent with a message header. The message header includes...
-| QR  | OPCODE     | Identification | Flags |
-| --- | ---------- | -------------- | ----- |
-| 0/1 | 0x0 or 0x5 | n=16                |       |
+- QR: QR=0 if Query, QR=1 if response
+- OPCODE = 0
+- ID: 16 bit # to identify query and respond with
+- Flags
+	- Authoritative answer?
+	- Recursion desired
+	- Recursion available
+	- Reply is authoritative
+
+The header is 12 bytes in size.
+
+The body contains the following:
+- Name, type fields
+- Resource records
+- Records for authoritative servers
+- Additional "helpful" info
+
+All of these may return a variable amount of data.
+
+#### Actions
+When a client wants to know an IP address for a host name, it sends a query to the authoritative name server.
+
+In the situation that the authoritative name server doesn't have the mapping, the name server will forwards the request to the root server.
+
+The root server will resolve the IP address for the authoritative name server, then respond to the originating name server.
+
+The request works its way down from the root server until it reaches a naem server with a mapping for the requested domain name.
+
+```mermaid
+flowchart
+local["Local DNS Server"] -> root["Root DNS Server"]
+```
