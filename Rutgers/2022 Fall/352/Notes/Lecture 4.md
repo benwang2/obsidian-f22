@@ -32,4 +32,6 @@ Each device can be reached by accessing it's IP address. However, an IP address 
 
 In an expensive network with many different services and names, we use alphanumeric names to refer to hosts.
 
-These are called **host names** or **domain names**
+These are called **host names** or **domain names**, which the DNS resolves to an IP address.
+
+The DNS uses a **directory** to map alphanumeric host names to binary IP addresses, which is called **Address Resolution**.
