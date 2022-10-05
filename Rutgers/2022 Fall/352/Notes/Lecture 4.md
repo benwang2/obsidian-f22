@@ -28,4 +28,8 @@ For example, WebRTC, Google Meet, and Facebook Messenger.
 #client-server
 
 ## Domain Name System
-Each device is 
+Each device can be reached by accessing it's IP address. However, an IP address has 12 digits on address, whereas the average brain can remember 7 digits for a few names.
+
+In an expensive network with many different services and names, we use alphanumeric names to refer to hosts.
+
+These are called **host names** or **domain names**
