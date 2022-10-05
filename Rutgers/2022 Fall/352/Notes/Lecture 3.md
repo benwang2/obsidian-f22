@@ -19,6 +19,7 @@ tags:
 	- determined by contention for the link (variable)
 - **Total packet delay**: time from first bit@sender to last bit@receiver
 
+## Delay
 We can compute total packet delay with the following formula:
 
 $d_p$ = propagation delay
@@ -30,3 +31,9 @@ $d = d_p + d_q +d_t$
 The delay is modeled in the image below.
 ![[Pasted image 20221005004852.png]]
 
+## Application-layer communication
+The internet applications reside on multiple endpoints. We use **addresses** to identify the communicating endpoints.
+
+So, each of these endpoints is assigned an **Internet Protocol (IP) address**.
+- IPv4: 128.6.24.78
+- IPv6: 2001:4000:A000:C000:6000:B001:412A:8000
