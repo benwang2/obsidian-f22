@@ -37,3 +37,5 @@ The internet applications reside on multiple endpoints. We use **addresses** to 
 So, each of these endpoints is assigned an **Internet Protocol (IP) address**.
 - IPv4: 128.6.24.78
 - IPv6: 2001:4000:A000:C000:6000:B001:412A:8000
+
+Different applications can use different ports to communicate information.
