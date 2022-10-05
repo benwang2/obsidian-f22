@@ -16,3 +16,4 @@ tags:
 	- primary, unique: selectivity = 1
 
 # Indexes
+An SQL index is used to retrieve data from a database very quickly. Indexing a table or view helps to improve the performance 
