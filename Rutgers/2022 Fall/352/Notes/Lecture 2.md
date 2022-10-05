@@ -174,7 +174,13 @@ However, routers have only two layers: network and link layer.
    <input type="radio" checked> store and forward packet switching
 
 2. A long conveyor belt takes 20 seconds to move a box dropped on one end to the other end. Further, for safety reasons, one can only load a box on to the end of the belt once every 5 seconds. What is the "bandwidth" of the conveyor belt in boxes/minute?
-      <input type="radio"> store and forward circuit switching
-   <input type="radio"> context switching
-   <input type="radio"> cut-through and message switching
-   <input type="radio" checked> store and forward packet switching
+   <input type="radio"> 5
+   <input type="radio"> 3
+   <input type="radio"> 20
+   <input type="radio" checked> 12
+
+3. Internet software and hardware are arranged modularly. That is, the complex problem of enabling applications to communicate over the Internet is achieved by breaking it down into several well-defined problems, each of which is solved by a layer. Can you think of another example from real life where a complex problem is solved through modularity? Please be as specific and detailed as possible. 
+
+```
+Cars are solved with modularity. Cars have a lot of different components and each of those components are operated individually. The keys control access to the car, the engine provides power to the vehicle, and there are many "modules" of the vehicle that control the drivetrain (e.g. wheels & tires facilitate movement, axles direct the wheels).
+```
