@@ -107,3 +107,27 @@ Utilize modularity by **partitioning functions based on what's best at each plac
 For example,
 - leave content rendering to the user agent - why would the mail server need to see content?
 - rely on mail server for reliable delivery - client can be asleep or offline
+
+## Question
+1. When you read email on your browser (e.g. by visiting mail.google.com), which protocol is being used by your browser?
+   <input type="radio"> MAILP
+   <input type="radio"> SMTP
+   <input type="radio"> IMAP
+   <input type="radio" checked> HTTP
+
+2. Could you share any experiences you have had (as a user, programmer, etc.) on any of the concepts on email that we covered in the lecture today? Example response: "I have configured IMAP settings for my mail client on my laptop to receive Rutgers email." (Note: You cannot provide the response above.)
+```
+I have completed projects in web development and I often have to configure web pages to properly recieve different MIME content types.
+```
+
+3. When you receive email through the desktop mail client (e.g., AppleMail), which protocol may be used?
+   <input type="radio"> MAILP
+   <input type="radio"> SMTP
+   <input type="radio" checked> IMAP
+   <input type="radio"> HTTP
+
+4. When you send email from the desktop mail client (e.g., AppleMail), which protocol is being used?
+   <input type="radio"> MAILP
+   <input type="radio" checked> SMTP
+   <input type="radio"> IMAP
+   <input type="radio"> HTTP
