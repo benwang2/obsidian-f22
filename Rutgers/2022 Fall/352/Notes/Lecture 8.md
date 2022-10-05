@@ -121,3 +121,21 @@ e.g: Zoom, Google Stadia
 Data can be delayed a little but must be close to the live edge.
 
 e.g: Twitch.tv, sporting events live report.
+
+## Question
+1. When you read email on your browser (e.g. by visiting mail.google.com), which protocol is being used by your browser?
+   <input type="radio"> MAILP
+   <input type="radio"> SMTP
+   <input type="radio"> IMAP
+   <input type="radio" checked> HTTP
+
+2. Could you share any experiences you have had (as a user, programmer, etc.) on any of the concepts on email that we covered in the lecture today? Example response: "I have configured IMAP settings for my mail client on my laptop to receive Rutgers email." (Note: You cannot provide the response above.)
+```
+I have completed projects in web development and I often have to configure web pages to properly recieve different MIME content types.
+```
+
+3. When you receive email through the desktop mail client (e.g., AppleMail), which protocol may be used?
+   <input type="radio"> MAILP
+   <input type="radio"> SMTP
+   <input type="radio"> IMAP
+   <input type="radio" checked> HTTP
