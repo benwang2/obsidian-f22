@@ -16,4 +16,6 @@ tags:
 	- primary, unique: selectivity = 1
 
 # Indexes
-An SQL index is used to retrieve data from a database very quickly. Indexing a table or view helps to improve the performance for databases. There are several kinds of indexes: PRIMARY, UNIQUE, FULL TEXT.
+An SQL index is used to retrieve data from a database very quickly. Indexing a table or view helps to improve the performance for databases. There are many different ways to index a table.
+
+One common way to index a table is by adding a ****
