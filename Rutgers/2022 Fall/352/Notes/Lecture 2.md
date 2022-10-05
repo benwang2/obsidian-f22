@@ -165,3 +165,16 @@ Devices like laptops, phones, and servers are built with all four layers
 However, routers have only two layers: network and link layer.
 
 #protocols
+
+## Questions
+1. Please choose the most appropriate response below. The routers in the Internet use:
+   <input type="radio"> store and forward circuit switching
+   <input type="radio"> context switching
+   <input type="radio"> cut-through and message switching
+   <input type="radio" checked> store and forward packet switching
+
+2. A long conveyor belt takes 20 seconds to move a box dropped on one end to the other end. Further, for safety reasons, one can only load a box on to the end of the belt once every 5 seconds. What is the "bandwidth" of the conveyor belt in boxes/minute?
+      <input type="radio"> store and forward circuit switching
+   <input type="radio"> context switching
+   <input type="radio"> cut-through and message switching
+   <input type="radio" checked> store and forward packet switching

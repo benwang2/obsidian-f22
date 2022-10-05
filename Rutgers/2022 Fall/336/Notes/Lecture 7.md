@@ -7,7 +7,7 @@ tags:
 - CS_336
 ---
 
-# Lecture 7
+<center><h1>Lecture 7</h1></center>
 ## Topics Covered
 - CREATE INDEX
 - PRIMARY Keyword

@@ -91,3 +91,19 @@ TCP and UDP are very popular transport protocols.
 The network layer is an abstraction to communicate between **endpoints**. The network layer provides best effort packet delivery to a remote endpoint.
 
 ## Questions
+1.  DASH video servers use the \_\_\_\_ protocol to serve video files to clients.
+   <input type="radio"> DNS
+   <input type="radio" checked> HTTP
+   <input type="radio"> FTP
+   <input type="radio"> SMTP
+
+2. Choose the most appropriate response: The transport layer connects two:
+   <input type="radio"> Endpoints
+   <input type="radio"> Post offices
+   <input type="radio"> Routers
+   <input type="radio" checked> Application processes
+
+3. Why is it useful to store multiple representations of a piece of content at a video streaming server? (for example, different versions of a video segment with different bit rates).
+```
+The user can select different attributes to personalize their viewing experience. They can select different languages, resolutions, and audio bitrate.
+```
