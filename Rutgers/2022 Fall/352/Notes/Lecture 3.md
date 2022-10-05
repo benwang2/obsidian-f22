@@ -27,8 +27,6 @@ $d_t$ = transmission delay
 
 $d = d_p + d_q +d_t$
 
-We can model the delay as with the following flowchart.
-```mermaid
-flowchart LR
-A("Device A") -->|"First link"| B("Router") -->|"Second link"| C("Second device")
-```
+The delay is modeled in the image below.
+![[Pasted image 20221005004852.png]]
+
