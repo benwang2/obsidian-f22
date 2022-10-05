@@ -14,3 +14,5 @@ tags:
 - FULLTEXT Keyword
 - Indexing selectivity
 	- primary, unique: selectivity = 1
+
+# Indexes
