@@ -8,6 +8,7 @@ tags:
 ---
 
 <center><h1>Lecture 4</h1></center>
+
 ## Application Architectures
 ### Client-server architecture
 #### Server
@@ -15,3 +16,14 @@ Always-on endpoint that provides a "service" to the world. It is typically a per
 
 #### Clients
 A client acts as a "customer" of the server - it is serviced by the server and may be intermittently connected. Clients might also have dynamic IP addresses. Typically, clients don't communicate with other clients.
+
+### Peer-to-peer architecture
+Peers are intermittently connected hosts that directly speak to eachothers. Eahc peer is a client. With this architecture, there is little-to-no reliance on always-up servers.
+
+Many applications today use a hybrid model (between p2p and client-server).
+
+For example, WebRTC, Google Meet, and Facebook Messenger.
+
+#p2p
+#client-server
+## Domain Name System
