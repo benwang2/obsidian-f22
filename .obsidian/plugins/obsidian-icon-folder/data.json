@@ -5,11 +5,11 @@
     "fontSize": 16,
     "iconColor": null,
     "recentlyUsedIcons": [
+      "RiTodoFill",
       "RiFileTextFill",
       "RiImageFill",
       "RiTodoLine",
-      "RiQuestionFill",
-      "RiFileTextLine"
+      "RiQuestionFill"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],

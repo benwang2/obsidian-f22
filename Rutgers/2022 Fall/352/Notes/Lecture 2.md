@@ -7,7 +7,7 @@ tags:
 - CS_352
 ---
 
-# Lecture 2
+<center><h1>Lecture 1</h1></center>
 ## Transmitting data
 Machines communicate exclusively in binary, however the data that needs to be transmitted is often a much more complex data type than binary.
 

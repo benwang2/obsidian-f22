@@ -7,7 +7,7 @@ tags:
 - CS_336
 ---
 
-# Lecture 6
+<center><h1>Lecture 1</h1></center>
 Imielinski doesn't really have a structure to his lectures, so notes here are from recording topics he covers and doing research on my own.
 
 ## Topics Covered

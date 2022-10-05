@@ -7,7 +7,7 @@ tags:
 - CS_352
 ---
 
-# Lecture 9
+<center><h1>Lecture 9</h1></center>
 
 ## On-demand Video Streaming
 The processof streaming a stored video has a couple of challenges:
@@ -89,3 +89,5 @@ TCP and UDP are very popular transport protocols.
 
 ## Network layer
 The network layer is an abstraction to communicate between **endpoints**. The network layer provides best effort packet delivery to a remote endpoint.
+
+## Questions

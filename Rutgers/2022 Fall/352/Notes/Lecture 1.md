@@ -7,7 +7,7 @@ tags:
 - CS_352
 ---
 
-# Lecture 1
+<center><h1>Lecture 1</h1></center>
 ## Network
 A network is a carrier of information between two or more entities.
 

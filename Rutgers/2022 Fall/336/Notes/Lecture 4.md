@@ -7,7 +7,7 @@ tags:
 - CS_336
 ---
 
-# Lecture 4
+<center><h1>Lecture 4</h1></center>
 ## Topic
 As the professor begins to explain the topic, use this space to write an overview of the topic being discussed.
 

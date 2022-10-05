@@ -7,7 +7,7 @@ tags:
 - CS_352
 ---
 
-# Lecture 8
+<center><h1>Lecture 8</h1></center>
 ## Internet Multimedia Applications
 Many applications on the internet use audio or video. By 2022, 82% of all IP traffic will be IP video traffic, up from 75% in 2017.
 
