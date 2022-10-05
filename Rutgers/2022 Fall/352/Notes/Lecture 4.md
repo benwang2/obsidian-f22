@@ -26,4 +26,6 @@ For example, WebRTC, Google Meet, and Facebook Messenger.
 
 #p2p
 #client-server
+
 ## Domain Name System
+Each device is 
