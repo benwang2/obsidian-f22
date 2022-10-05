@@ -104,7 +104,25 @@ The root server will resolve the IP address for the authoritative name server, t
 
 The request works its way down from the root server until it reaches a naem server with a mapping for the requested domain name.
 
+Let's say a host at cs.rutgers.edu wants the IP address for `gaia.cs.umass.edu`.
 ```mermaid
-flowchart
-local["Local DNS Server"] -> root["Root DNS Server"]
+flowchart LR
+host["Requesting Host"] -->|1| local
+local["Local DNS Server"] -->|2| root["Root DNS Server"]
+root -->|3| local
+local -->|4| edu[".edu DNS Server"]
+edu -->|5| local
+local -->|6| umass["umass.edu DNS Server"] 
+umass -->|7| local
+local -->|8| host
 ```
+The query reaches many different DNS servers.
+
+### Query types
+When DNS servers interact with other DNS servers in the hierarchy, there are different ways to query.
+
+#### Iterative Query
+With an iterative query, the contacted server replies with name of server to contact. Therefore, no single DNS can answer all requests. The client must query the name server to find the domain.
+
+#### Recursive Query
+With a recursive query, the burden of name resolution is on the contacted name server. The local DNS server resolves the the
