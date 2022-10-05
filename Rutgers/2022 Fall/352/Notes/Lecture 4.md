@@ -11,4 +11,8 @@ tags:
 ## Application Architectures
 ### Client-server architecture
 #### Server
-Always-on endpoint that provides a "service" to the world. It is typically a permanent IP address. Has compute clusters to scale to many users
+Always-on endpoint that provides a "service" to the world. It is typically a permanent IP address. The sever may have compute clusters to scale to many users.
+
+#### Clients
+A client acts as a "customer" of t
+
