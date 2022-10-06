@@ -36,4 +36,14 @@ Cookies can be used to intrude on a user's privacy. Third party cookies that are
 ## Web caching
 Web caches are machines that remember web responses for a network.
 
-They reduce 
+They reduce the response time for client requests and reduce traffic on an institution's access link.
+
+Devices can be configured to use an HTTP proxy. If a proxy for a device is set, all HTTP requests will be sent to the proxy (cache).
+
+On a cache hit, the cache returns the object.
+On a cache miss, the cache obtains the object from the originating web server (**origin server**) and returns the object to client. It also caches it locally.
+
+```mermaid
+flowchart
+client1 
+```
