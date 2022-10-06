@@ -33,5 +33,23 @@ Type=CNAME
 - **value** is canonical name
 
 Type=MX
-- **value** is name of
+- **value** is name of mailserver associated with name
 
+### Example
+An example DNS record example might look like the following:
+
+A resource record in response to query
+| NAME    | design.cs.rutgers.edu |
+| ------- | --------------------- |
+| TYPE    | A                     |
+| CLASS   | IN                    |
+| TTL     | 1 day (86400s)        |
+| ADDRESS | 192.26.92.30          |
+
+Records for authoritative servers information about nameserver
+| NAME    | cs.rutgers.edu      |
+| ------- | ------------------- |
+| TYPE    | NS                  |
+| CLASS   | IN                  |
+| TTL     | 1 day (86400s)      |
+| NSDNAME | ns-lcsr.rutgers.edu |
