@@ -45,5 +45,10 @@ On a cache miss, the cache obtains the object from the originating web server (*
 
 ```mermaid
 flowchart
-client1 
+client1("Laptop") -->|1| proxy("Proxy server")
+proxy -->|2| origin("Origin server")
+origin -->|3| proxy
+proxy -->|4| client1
+client2("Tablet") -->|5| proxy
+proxy >
 ```
