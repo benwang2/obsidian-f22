@@ -44,11 +44,20 @@ On a cache hit, the cache returns the object.
 On a cache miss, the cache obtains the object from the originating web server (**origin server**) and returns the object to client. It also caches it locally.
 
 ```mermaid
-flowchart
-client1("Laptop") -->|1| proxy("Proxy server")
-proxy -->|2| origin("Origin server")
+flowchart RL
 origin -->|3| proxy
 proxy -->|4| client1
 client2("Tablet") -->|5| proxy
-proxy >
+proxy -->|6| client2
+client1("Laptop") -->|1| proxy("Proxy server")
+proxy -->|2| origin("Origin server")
 ```
+In the diagram above, the following events occur.
+1. Laptop asks for `foo.html`, cache miss on object
+2. Proxy server asks for object from origin server
+3. Origin server transmits object to proxy server
+4. Proxy server obtains and transmits object to laptop, caches object locally
+5. Tablet asks for `foo.html`, cache hit
+6. Proxy server returns object
+
+###
