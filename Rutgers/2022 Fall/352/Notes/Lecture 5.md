@@ -53,3 +53,6 @@ Records for authoritative servers information about nameserver
 | CLASS   | IN                  |
 | TTL     | 1 day (86400s)      |
 | NSDNAME | ns-lcsr.rutgers.edu |
+
+## HTTP
+	HTTP stands
