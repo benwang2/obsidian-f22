@@ -124,10 +124,14 @@ When DNS servers interact with other DNS servers in the hierarchy, there are dif
 #### Iterative Query
 With an iterative query, the contacted server replies with name of server to contact. Therefore, no single DNS can answer all requests. The client must query the name server to find the domain.
 
+#recursive_query
 #### Recursive Query
 With a recursive query, the burden of name resolution is on the contacted name server. The local DNS server resolves the name by contacting other servers until it discovers the correct response.
 
+#recursive_query
 ### DNS Caching
 Once a name server learns a name to an IP address, it **caches** the mapping. The next time an endpoint queries this name, the name server will have the name cached and can quickly respond without having to resolve the name. However, cache entries do eventually time out.
 
 Caching typically occurs in local name servers. 
+
+#caching

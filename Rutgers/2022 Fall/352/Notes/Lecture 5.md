@@ -35,6 +35,8 @@ Type=CNAME
 Type=MX
 - **value** is name of mailserver associated with name
 
+#a, #aaaa, #ns, #cname, #mx
+
 ### Example
 An example DNS record example might look like the following:
 
@@ -54,6 +56,7 @@ Records for authoritative servers information about nameserver
 | TTL     | 1 day (86400s)      |
 | NSDNAME | ns-lcsr.rutgers.edu |
 
+#resource_record
 ## HTTP
 HTTP stands for "HyperText Transfer Protocol". Every web page is made up of many **objects**.
 
@@ -63,10 +66,12 @@ An object can be:
 - Video Stream chunk
 - Audio file
 
+#http
 Web pages consist of **base HTML-file** which includes several referenced objects.
 
 Each object is addressable by a **uniform resource locator (URL)**, which is also sometimes referred to as a **uniform resource identifier (URI)**.
 
+#url #uri
 ### HTTP Protocol
 The HTTP application is typically associated port 80. 
 
@@ -91,6 +96,7 @@ Following the header lines is a carriage return, which indicates the end of head
 - **PUT** - Update a resource at the requested URL with the new entity specified in the entity body
 - **DELETE** - Deletes file specified in URL
 
+#get #post #head #put #delete
 #### Form Input: GET and POST
 The POST method is often implemented in a form iput. The input is uploaded to the server **in entity body**, but the posted content is not visible in URL.
 
