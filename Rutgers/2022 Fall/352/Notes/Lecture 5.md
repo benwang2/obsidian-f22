@@ -8,13 +8,13 @@ tags:
 ---
 
 <center><h1>Lecture 5</h1></center>
+
 ## DNS Resource Records
 DNS is a distributed database that stores **resource records (RRs**)
 
 Each resource record contains a class, type, name, value, and time to live.
 
-There are different types of DNS records.
-
+### Types of Records
 Type=A
 - **name** is hostname
 - **value** is IPv4 address
@@ -67,4 +67,25 @@ Web pages consist of **base HTML-file** which includes several referenced object
 
 Each object is addressable by a **uniform resource locator (URL)**, which is also sometimes referred to as a **uniform resource identifier (URI)**.
 
-### HTTP Protoc
+### HTTP Protocol
+The HTTP application is typically associated port 80. 
+
+![[Pasted image 20221006003504.png]]
+
+An HTTP request message appears as such
+```
+GET /352/syllabus.html HTTP/1.1
+Host: www.cs.rutgers.edu
+User-agent: Mozilla/4.0
+Connection: close
+Accept-language: en
+```
+The first line of the message is the request line.
+The lines following are the header lines. 
+Following the header lines is a carriage return, which indicates the end of header.
+
+### Method Types
+- **GET** - Get the resource specified in the requested URL (could be a process)
+- **POST** - Send entities (specified in the entity body) to a data-handlig process at the requested URL
+- **HEAD** - Asks server to leave requested object out of response, but then send the rest of the response
+- 
