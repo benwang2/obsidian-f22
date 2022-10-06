@@ -91,3 +91,17 @@ Following the header lines is a carriage return, which indicates the end of head
 - **PUT** - Update a resource at the requested URL with the new entity specified in the entity body
 - **DELETE** - Deletes file specified in URL
 
+#### Form Input: GET and POST
+The POST method is often implemented in a form iput. The input is uploaded to the server **in entity body**, but the posted content is not visible in URL.
+
+With the GET method, the entity body is empty and the input is uploaded in **URL field of request line.** The URL must conform to a restricted set of characters.
+
+#### POST vs PUT
+In a POST request, the URL of the request identifies the resource that **processes** the entity body.
+
+In a PUT request, the URL of the request identifies the resource that is **contained in** the entity body.
+
+#### HEAD vs GET
+With a GET request, the requested resource is returned in the entity body of the response along with the response headers.
+
+With a HEAD request, return all the response headers in the GET response, but **without the resource** in the entity body.
