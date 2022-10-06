@@ -55,4 +55,16 @@ Records for authoritative servers information about nameserver
 | NSDNAME | ns-lcsr.rutgers.edu |
 
 ## HTTP
-	HTTP stands
+HTTP stands for "HyperText Transfer Protocol". Every web page is made up of many **objects**.
+
+An object can be:
+- HTML file
+- JPEG image
+- Video Stream chunk
+- Audio file
+
+Web pages consist of **base HTML-file** which includes several referenced objects.
+
+Each object is addressable by a **uniform resource locator (URL)**, which is also sometimes referred to as a **uniform resource identifier (URI)**.
+
+### HTTP Protoc
