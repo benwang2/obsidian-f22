@@ -10,3 +10,5 @@ tags:
 <center><h1>Lecture 6</h1></center>
 
 ## HTTP Cookies
+
+HTTP mechanisms are **stateless** - each request is processed independently
