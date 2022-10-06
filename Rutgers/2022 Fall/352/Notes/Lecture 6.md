@@ -34,3 +34,6 @@ Some uses of cookies are bad. They unnecessarily record activities across the si
 Cookies can be used to intrude on a user's privacy. Third party cookies that are played by ads and tracking networks can track activities across the internet. This usage of cookies leads to potentially personally identifiable information being contained in cookies.
 
 ## Web caching
+Web caches are machines that remember web responses for a network.
+
+They reduce 
