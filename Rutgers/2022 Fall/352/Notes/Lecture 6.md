@@ -78,5 +78,4 @@ It has many uses and the benefits overlap with that of web caching.
 - reduce bandwidth requirements on content provider
 - reduce money spent on maintaining origin server
 
-
-
+page 14

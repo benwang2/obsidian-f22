@@ -52,6 +52,8 @@ When an endpoint changed addresses, the endpoint would query the DNS server with
 The four components of the tuple were ($IP_A$, $Port_A$, $IP_B$, $Port_B$), where $IP_A$ and $Port_A$ described the source address and port.
 $IP_B$ and $Port_B$ described the destination adress and port.
 
+#4tuple
+
 By distributing data throughout a hierarchy, the DNS is able to scale well. The hierarchy also has other benefits including but not limited to:
 - better security (have to hack many servers instead of one)
 - fault tolerance
@@ -62,7 +64,7 @@ Different DNS servers service resolve domain names for its own extension. For ex
 When a domain name becomes too saturated, we can add additional DNS servers to help resolve names to addresses.
 
 ### DNS Protocol
-The DNS protocol is used in the client-server application and will always occupy port 53 on the server.
+The DNS protocuol is used in the client-server application and will always occupy port 53 on the server.
 
 There are two types of messages - queries and responses.
 
@@ -102,7 +104,7 @@ In the situation that the authoritative name server doesn't have the mapping, th
 
 The root server will resolve the IP address for the authoritative name server, then respond to the originating name server.
 
-The request works its way down from the root server until it reaches a naem server with a mapping for the requested domain name.
+The request works its way down from the root server until it reaches a name server with a mapping for the requested domain name.
 
 Let's say a host at cs.rutgers.edu wants the IP address for `gaia.cs.umass.edu`.
 ```mermaid
@@ -124,7 +126,7 @@ When DNS servers interact with other DNS servers in the hierarchy, there are dif
 #### Iterative Query
 With an iterative query, the contacted server replies with name of server to contact. Therefore, no single DNS can answer all requests. The client must query the name server to find the domain.
 
-#recursive_query
+#iterative_query
 #### Recursive Query
 With a recursive query, the burden of name resolution is on the contacted name server. The local DNS server resolves the name by contacting other servers until it discovers the correct response.
 
