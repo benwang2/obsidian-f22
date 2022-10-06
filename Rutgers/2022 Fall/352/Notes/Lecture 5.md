@@ -90,3 +90,4 @@ Following the header lines is a carriage return, which indicates the end of head
 - **HEAD** - Asks server to leave requested object out of response, but then send the rest of the response (useful for debugging)
 - **PUT** - Update a resource at the requested URL with the new entity specified in the entity body
 - **DELETE** - Deletes file specified in URL
+
