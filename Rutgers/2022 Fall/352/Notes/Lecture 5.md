@@ -87,5 +87,6 @@ Following the header lines is a carriage return, which indicates the end of head
 ### Method Types
 - **GET** - Get the resource specified in the requested URL (could be a process)
 - **POST** - Send entities (specified in the entity body) to a data-handlig process at the requested URL
-- **HEAD** - Asks server to leave requested object out of response, but then send the rest of the response
-- 
+- **HEAD** - Asks server to leave requested object out of response, but then send the rest of the response (useful for debugging)
+- **PUT** - Update a resource at the requested URL with the new entity specified in the entity body
+- **DELETE** - Deletes file specified in URL
