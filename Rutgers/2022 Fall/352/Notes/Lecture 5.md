@@ -105,3 +105,12 @@ In a PUT request, the URL of the request identifies the resource that is **conta
 With a GET request, the requested resource is returned in the entity body of the response along with the response headers.
 
 With a HEAD request, return all the response headers in the GET response, but **without the resource** in the entity body.
+
+### HTTP Response Status Codes
+| CODE | NAME                       | DESC                                        |
+| ---- | -------------------------- | ------------------------------------------- |
+| 200  | OK                         | Request succeeded                           |
+| 301  | Moved Permanently          | Requested objected moved to new location    |
+| 403  | Forbidden                  | Insufficient permissions to access resource |
+| 404  | Not Found                  | Requested resource not found on this server |
+| 505  | HTTP Version Not Supported |                                             |
