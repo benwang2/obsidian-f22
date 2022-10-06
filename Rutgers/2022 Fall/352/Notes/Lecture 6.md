@@ -60,4 +60,9 @@ In the diagram above, the following events occur.
 5. Tablet asks for `foo.html`, cache hit
 6. Proxy server returns object
 
-###
+### Conditional GET
+With caching. it's possible for information to be cached then updated later. resulting in the cached content to become out-of-date.
+
+The **conditional GET** guarantees that cache content stays up-to-date while still saving traffic and response time when possible.
+
+When a client requests a resource from a server, it will include a field `If-modified-since: <date> `. If the object has been modified since `<date>`, then the server will return the HTTP status code 200, along with a field `Last-modified`
