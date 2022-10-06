@@ -65,4 +65,17 @@ With caching. it's possible for information to be cached then updated later. res
 
 The **conditional GET** guarantees that cache content stays up-to-date while still saving traffic and response time when possible.
 
-When a client requests a resource from a server, it will include a field `If-modified-since: <date> `. If the object has been modified since `<date>`, then the server will return the HTTP status code 200, along with a field `Last-modified`
+When a client requests a resource from a server, it will include a field `If-modified-since: <date> `. 
+- If the object has been modified since `<date>`, then the server will return the new object, the HTTP status code 200, and  `Last-modified: <date>` in the body.
+- If the object hasn't been modified, the server will return the cached object and the HTTP status code 304 Not Modified
+
+## Content Distribution Networks (CDN)
+A content distribution network is a global network of web caches that is provisioned by ISPs, network operators, or content providers like Netflix and Google.
+
+It has many uses and the benefits overlap with that of web caching.
+- reduce traffic on a network's internet connection
+- improve response time for users: CDN nodes are closer to users than origin servers
+- reduce bandwidth requirements on content provider
+- reduce money spent on maintaining origin server
+
+
