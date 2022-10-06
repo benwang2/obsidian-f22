@@ -11,4 +11,10 @@ tags:
 
 ## HTTP Cookies
 
-HTTP mechanisms are **stateless** - each request is processed independently
+HTTP mechanisms are **stateless** - each request is processed independently and the server maintains no memory about past client requests.
+
+#stateless, #states
+
+**State** is essential in servicing users. Using states, we are able to implement features such as user authentication, shopping carts, video recommendations, and any user session state in general.
+
+### How it works
