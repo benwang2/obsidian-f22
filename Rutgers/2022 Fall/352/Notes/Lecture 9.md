@@ -9,6 +9,8 @@ tags:
 
 <center><h1>Lecture 9</h1></center>
 
+
+
 ## On-demand Video Streaming
 The processof streaming a stored video has a couple of challenges:
 - continuous playout constraint
@@ -75,7 +77,6 @@ In each representation, attributes for multiple segments are included. The segme
 
 Byte ranges per segment are provided (HTTP header for a **range segment**)
 
-%%What's a range segment?%%
 
 ## Transport layer
 The transport layer contains the UDP and TCP protocol. It is a communication abstractoin between proccesses and delivers packets to the process.

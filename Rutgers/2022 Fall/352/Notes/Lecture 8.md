@@ -52,7 +52,7 @@ The receiver converts the bits back to an analog signal and the quaity is reduce
 ### Video Representation
 A digital image is represented as an array of pixels. Each pixel is represented by bits, with the number of pixels being the resolution. A higher amount of pixels results in higher quality, and a lower amount results in a lower quality. In each pixel, the luminance and color is encoded.
 
-Use redundancy within and between images to decrease numbe rof bits used to encode image.
+Use redundancy within and between images to decrease number of bits used to encode image.
 
 #### Spatial coding (within image)
 Instead of sending N values of same color, send only two values:
