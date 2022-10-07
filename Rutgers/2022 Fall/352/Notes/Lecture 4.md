@@ -38,7 +38,7 @@ The DNS uses a **directory** to map alphanumeric host names to binary IP address
 
 ### Types of Directories
 A directory maps a name to an address. There are different designs of directories.
-| Simplstic | Scalable distributed   |
+| Simplistic | Scalable distributed   |
 | --------- | ---------------------- |
 | Central   | Hierarchical namespace |
 | Flooding  | Flat name space        | 
