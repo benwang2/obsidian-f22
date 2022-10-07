@@ -35,7 +35,7 @@ There are three different types of modulation
 #modulation
 
 ## Switching
-The term **switching** is used to denote physically moving data from one linke to another.
+The term **switching** is used to denote physically moving data from one link to another.
 
 There are several different **switching schemes**.
 - Circuit switching
