@@ -75,6 +75,23 @@ WHERE f.bar = c.bar;
 	'Yuhan'
 
 ### 5. Precinct(s) which collected the least number of  total votes by end of day of November 5th 2020
+```sql
+SELECT p1.precinct, SUM(p1.totalvotes) as t
+FROM Penna p1
+WHERE p1.Timestamp LIKE '2020-11-05 %'
+GROUP BY precinct
+HAVING t=(
+    SELECT SUM(totalvotes) as t2
+	From Penna as p
+	WHERE p.Timestamp LIKE '2020-11-05 %'
+	GROUP BY p.precinct
+	ORDER BY t2 ASC
+	LIMIT 1
+);
+```
+	# precinct, t
+	'Franconia 2', '204'
+
 
 ### 6. Which precincts did Trump win by more than 100 votes in 2020
 
