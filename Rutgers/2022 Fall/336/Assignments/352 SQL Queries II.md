@@ -23,7 +23,19 @@ HAVING count(*)=(SELECT count(*) as c1 FROM Likes
 	# drinker
 	'Mike'
 
-### 2. Bars which sell most expensive Blue Moon and are not frequented by Gunjan
+### 2. Bars which sell most expensive Budweiser and are not frequented by Gunjan
+```sql
+SELECT DISTINCT s.bar
+FROM 
+	Sells s,
+    Frequents f,
+    (SELECT MAX(price) as MaxPrice FROM Sells WHERE beer='Budweiser') as mp
+WHERE
+	s.beer='Budweiser'
+    AND s.price=mp.MaxPrice
+    AND f.drinker='Gunjan'
+    AND f.bar=s.bar
+```
 
 ### 3. Drinkers who frequent only bars which serve all beers they like
 
