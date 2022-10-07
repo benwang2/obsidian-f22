@@ -78,4 +78,12 @@ It has many uses and the benefits overlap with that of web caching.
 - reduce bandwidth requirements on content provider
 - reduce money spent on maintaining origin server
 
-page 14
+#cdn
+### Uses for CDN
+CDN can distribute content of the origin server over geographically distributed CDN servers.
+
+The CDN runs their own DNS server that directs user to their "closest" CDN web servers. With CDN, the NS record delegates the choice of IP address to the CDN name server.
+
+Custom logic is used to map ONE domain name to one of many available IP addresses.
+
+#dns
