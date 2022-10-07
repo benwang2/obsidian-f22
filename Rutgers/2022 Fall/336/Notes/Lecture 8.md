@@ -10,9 +10,9 @@ tags:
 <center><h1>Lecture 8</h1></center>
 
 ## Topics Covered
-- update
-- insert
-- delete
+- update/insert/delete
+- stored procedure
+- triggers
 
 ### Subtopic 1
 Use this space to expand upon the topic.
