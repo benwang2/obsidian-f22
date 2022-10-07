@@ -9,8 +9,10 @@ tags:
 
 <center><h1>Lecture 8</h1></center>
 
-## Topic
-As the professor begins to explain the topic, use this space to write an overview of the topic being discussed.
+## Topics Covered
+- update
+- insert
+- delete
 
 ### Subtopic 1
 Use this space to expand upon the topic.
