@@ -34,8 +34,11 @@ WHERE
 	s.beer='Budweiser'
     AND s.price=mp.MaxPrice
     AND f.drinker='Gunjan'
-    AND f.bar=s.bar
+    AND f.bar=s.bar;
 ```
+
+	# bar
+
 
 ### 3. Drinkers who frequent only bars which serve all beers they like
 
