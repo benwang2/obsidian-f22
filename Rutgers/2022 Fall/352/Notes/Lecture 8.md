@@ -43,7 +43,7 @@ With #compression, create a compact representation of quantized values.
 
 #### Examples
 **Telephone:** 8,000 samples/sec or bytes/sec
-
+Let there be a quantization value of $256$, which is $2^8$. We use the exponent of $2$ to calculate the bandwidth.
 $Bandwidth=8,000*8=64,000bps$
 The receiver converts the bits back to an analog signal and the quaity is reduced in the process.
 
