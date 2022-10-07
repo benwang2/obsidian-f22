@@ -9,7 +9,7 @@ tags:
 
 <center><h1>Lecture 7</h1></center>
 ## Simple Mail Transfer Protocol
-Simple Mail Transfer Protocol (SMTP ) allosw us to send and receive messages fr ka aj, server.
+Simple Mail Transfer Protocol (SMTP ) allosw us to send and receive messages from a server.
 
 #smtp
 #mail_server
