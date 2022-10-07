@@ -32,7 +32,9 @@ The standard is to sample the song $n=2*max(f)$, where $f$ is the frequencies in
 #sampling
 
 #### Quantize
-Following the sampling process, the samples are quantized to levels and bits. *what is quantizing?* This creates a more accurate representation of the signal. A higher accuracy representation results in larger data.
+Following the sampling process, the samples are quantized to levels and bits. While sampling records information about audio at given points, quantizing fills in the space between samples.
+
+This creates a more accurate representation of the signal. A higher accuracy representation results in larger data.
 
 #quantize
 
