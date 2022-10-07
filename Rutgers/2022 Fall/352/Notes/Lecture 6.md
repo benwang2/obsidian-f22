@@ -23,7 +23,7 @@ Cookies keep a users memory. The **client and server collaborate** to track user
 There are four components of a cookie:
 1. Cookie header line of **HTTP response message**
 2. Cookie header line in **HTTP response message**
-3. Cookie file kept on userd endpoint, managed by user's browser
+3. Cookie file kept on user endpoint, managed by user's browser
 4. Back-end database maps cookie to user data at Web endpoint
 
 ### Cookie usage
