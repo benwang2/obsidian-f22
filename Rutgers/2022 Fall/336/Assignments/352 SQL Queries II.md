@@ -11,8 +11,17 @@ tags:
 <center><h3>CS 210 - Principles of Information and Data Management</h3></center>
 ### 1. Drinkers who like the most beers (highest number of beers)
 ```sql
-
+SELECT DISTINCT drinker
+FROM Likes
+GROUP BY drinker
+HAVING count(*)=(SELECT count(*) as c1 FROM Likes
+	GROUP BY drinker
+    ORDER BY c1 DESC
+    LIMIT 1
 ```
+
+	# drinker
+	'Mike'
 
 ### 2. Bars which sell most expensive Blue Moon and are not frequented by Gunjan
 
