@@ -64,7 +64,7 @@ Different DNS servers service resolve domain names for its own extension. For ex
 When a domain name becomes too saturated, we can add additional DNS servers to help resolve names to addresses.
 
 ### DNS Protocol
-The DNS protocuol is used in the client-server application and will always occupy port 53 on the server.
+The DNS protocol is used in the client-server application and will always occupy port 53 on the server.
 
 There are two types of messages - queries and responses.
 
