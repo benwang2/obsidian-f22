@@ -100,7 +100,7 @@ It's similar to computing an operation using multithreading.
 ### Comparisons
 Circuit switching incurs an initial delay to set up the path, but packet and message switching can start transmitting data immediately.
 
-Packet switching doesn't reserver resources for the conversation, but circuit switching does (admission control). Packet switching makes resource reservation decisions per packet.
+Packet switching doesn't reserve resources for the conversation, but circuit switching does (admission control). Packet switching makes resource reservation decisions per packet.
 
 The fewer guarantees, the easier the network is to build. Therefore, a telephone network is both more reliable and more difficult to build.
 
