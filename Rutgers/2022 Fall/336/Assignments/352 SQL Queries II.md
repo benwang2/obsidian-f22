@@ -174,3 +174,17 @@ HAVING Result != 0
 
 
 ### 7. Has Trump ever led the total vote (for any of the timestamps)?  (Return "Yes he did on \<timestamp>" or "No he never did".
+```sql
+SELECT 
+	CONCAT(
+		IF(Trump>Biden, "Yes he did on ","No he never did"),
+		IF(Trump>Biden, Timestamp, "")
+	)
+FROM Penna1
+LIMIT 1;
+```
+	# CONCAT(
+			IF(Trump>Biden, "Yes he did on ","No he never did"),
+			IF(Trump>Biden, Timestamp, "")
+		)
+	'Yes he did on 2020-11-04 03:58:36'
