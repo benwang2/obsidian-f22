@@ -5,11 +5,11 @@
     "fontSize": 16,
     "iconColor": null,
     "recentlyUsedIcons": [
-      "RiDatabaseFill",
-      "RiDatabase2Fill",
       "RiFileTextLine",
       "RiTodoFill",
-      "RiFileTextFill"
+      "RiFileTextFill",
+      "RiImageFill",
+      "RiTodoLine"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -48,12 +48,11 @@
   "Rutgers/2022 Fall/352/Notes/Lecture 1.md": "RiFileTextLine",
   "Attachments": "RiImageFill",
   "Rutgers/2022 Fall/352/Notes/Lecture 2.md": "RiFileTextLine",
-  "Rutgers/2022 Fall/336/Assignments/352 SQL Queries II.md": "RiTodoLine",
   "Rutgers/2022 Fall/336/Notes/Lecture 7.md": "RiFileTextLine",
   "Rutgers/2022 Fall/352/Notes/Lecture 3.md": "RiFileTextLine",
   "Rutgers/2022 Fall/352/Notes/Lecture 4.md": "RiFileTextLine",
   "Rutgers/2022 Fall/352/Notes/Lecture 5.md": "RiFileTextLine",
   "Rutgers/2022 Fall/352/Notes/Lecture 6.md": "RiFileTextLine",
   "Rutgers/2022 Fall/336/Notes/Lecture 8.md": "RiFileTextLine",
-  "Rutgers/2022 Fall/RUMAD": "RiDatabaseFill"
+  "Rutgers/2022 Fall/336/Assignments/336 SQL Queries II.md": "RiTodoLine"
 }
