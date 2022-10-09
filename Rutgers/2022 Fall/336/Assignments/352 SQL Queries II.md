@@ -1,8 +1,8 @@
 ---
 title: 352 SQL Queries II
 course: CS_336
-released: 2022/10/04
-due: 2022/10/10
+released: 2022-10-04
+due: 2022-10-10
 tags: 
 - Assignments
 - CS_336
