@@ -34,8 +34,7 @@ FROM
 WHERE
 	s.beer='Budweiser'
     AND s.price=mp.MaxPrice
-    AND f.drinker!='Gunjan'
-    AND f.bar=s.bar;
+    AND f.bar NOT IN (SELECT DISTINCT bar FROM Frequents WHERE drinker='Gunjan');
 ```
 
 	# bar
