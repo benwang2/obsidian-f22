@@ -101,7 +101,14 @@ SELECT
         precinct,
         0) Result
 FROM
-    Penna
+    Penna,
+    (SELECT 
+		    precinct,
+            MAX(Timestamp) as t
+        FROM
+            Penna) p
+WHERE
+    Timestamp = p.Timestamp
 GROUP BY precinct
 HAVING Result != 0
 ```
