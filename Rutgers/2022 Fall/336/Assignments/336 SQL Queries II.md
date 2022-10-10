@@ -43,6 +43,23 @@ WHERE
 
 
 ### 3. Drinkers who frequent only bars which serve all beers they like
+```sql
+SELECT DISTINCT l.drinker
+FROM Likes l
+WHERE l.drinker NOT IN (
+	SELECT l1.drinker
+	FROM Likes l1 WHERE
+		NOT EXISTS (
+			SELECT f.drinker
+			FROM Frequents f, Sells s
+            WHERE
+				l.beer = s.beer
+				AND f.drinker = l.drinker
+                AND f.bar = s.bar
+		)
+)
+```
+
 
 ### 4. Drinkers who frequent most popular bar (the one with highest count of drinkers)
 
