@@ -53,20 +53,15 @@ WHERE l.drinker NOT IN (
 			SELECT f.drinker
 			FROM Frequents f, Sells s
             WHERE
-				l.beer = s.beer
-				AND f.drinker = l.drinker
+				l1.beer = s.beer
+				AND f.drinker = l1.drinker
                 AND f.bar = s.bar
 		)
 )
 ```
 
 	# drinker
-	'Gunjan'
 	'Jesse'
-	'John'
-	'Justin'
-	'Mike'
-	'Sahil'
 
 ### 4. Drinkers who frequent most popular bar (the one with highest count of drinkers)
 
