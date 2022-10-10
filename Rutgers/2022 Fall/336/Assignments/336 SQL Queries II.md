@@ -9,6 +9,7 @@ tags:
 ---
 <center><h1>SQL Queries II</h1></center>
 <center><h3>CS 210 - Principles of Information and Data Management</h3></center>
+
 ### 1. Drinkers who like the most beers (highest number of beers)
 ```sql
 SELECT DISTINCT drinker
@@ -33,11 +34,12 @@ FROM
 WHERE
 	s.beer='Budweiser'
     AND s.price=mp.MaxPrice
-    AND f.drinker='Gunjan'
+    AND f.drinker!='Gunjan'
     AND f.bar=s.bar;
 ```
 
 	# bar
+	'Caravan'
 
 
 ### 3. Drinkers who frequent only bars which serve all beers they like
@@ -101,14 +103,7 @@ SELECT
         precinct,
         0) Result
 FROM
-    Penna,
-    (SELECT 
-		    precinct,
-            MAX(Timestamp) as t
-        FROM
-            Penna) p
-WHERE
-    Timestamp = p.Timestamp
+    Penna
 GROUP BY precinct
 HAVING Result != 0
 ```
