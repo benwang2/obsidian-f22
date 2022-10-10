@@ -101,14 +101,7 @@ SELECT
         precinct,
         0) Result
 FROM
-    Penna,
-    (SELECT 
-		    precinct,
-            MAX(Timestamp) as t
-        FROM
-            Penna) p
-WHERE
-    Timestamp = 
+    Penna
 GROUP BY precinct
 HAVING Result != 0
 ```
