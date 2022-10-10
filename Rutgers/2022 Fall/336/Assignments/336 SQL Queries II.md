@@ -83,7 +83,7 @@ FROM Penna p1
 WHERE p1.Timestamp LIKE '2020-11-05 %'
 GROUP BY precinct
 HAVING MAX(p1.totalvotes)=(
-    SELECT MAX(totalvotes) as t2
+	    SELECT MAX(totalvotes) as t2
 	From Penna as p
 	WHERE p.Timestamp LIKE '2020-11-05 %'
 	GROUP BY p.precinct
