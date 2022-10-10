@@ -19,6 +19,7 @@ HAVING count(*)=(SELECT count(*) as c1 FROM Likes
 	GROUP BY drinker
     ORDER BY c1 DESC
     LIMIT 1
+)
 ```
 
 	# drinker
