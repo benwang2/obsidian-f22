@@ -104,7 +104,7 @@ SELECT
         0) Result
 FROM
     Penna
-GROUP BY precinct
+	GROUP BY precinct
 HAVING Result != 0
 ```
 
