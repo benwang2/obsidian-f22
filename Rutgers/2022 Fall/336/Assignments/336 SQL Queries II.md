@@ -116,6 +116,8 @@ HAVING MAX(p1.totalvotes)=(
 );
 ```
 
+Please note that this query was run on the remote database at 209.xx.xx...
+
 	# precinct
 	'Franconia 2'
 
@@ -327,6 +329,7 @@ SELECT
 FROM Penna1
 LIMIT 1;
 ```
+
 	# CONCAT(
 			IF(Trump>Biden, "Yes he did on ","No he never did"),
 			IF(Trump>Biden, Timestamp, "")
