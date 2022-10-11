@@ -315,12 +315,21 @@ Please note that this query was ran on a local database including only 1000 quer
 
 
 ### 7. Has Trump ever led the total vote (for any of the timestamps)?  (Return "Yes he did on \<timestamp>" or "No he never did".
+
 ```sql
-SELECT IF(SUM(trump)>SUM(biden), CONCAT("Yes, he did on ",Timestamp), "No, he never did.") as result
+SELECT
+	IF(
+		SUM(trump)>SUM(biden),
+		CONCAT("Yes, he did on ",Timestamp),
+		"No, he never did."
+	) as result
 FROM Penna
 GROUP BY Timestamp
 ORDER BY result DESC
 LIMIT 1;
 ```
 
-	# re
+Please note that this query was ran on a local database including only 1000 queries.
+
+	# result
+	'Yes, he did on 2020-11-04 04:07:12'
