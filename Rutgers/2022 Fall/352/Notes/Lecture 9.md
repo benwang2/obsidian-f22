@@ -10,7 +10,6 @@ tags:
 <center><h1>Lecture 9</h1></center>
 
 
-
 ## On-demand Video Streaming
 The processof streaming a stored video has a couple of challenges:
 - continuous playout constraint

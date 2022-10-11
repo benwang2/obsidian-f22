@@ -28,7 +28,7 @@ Each packet has a source IP and destination IP, with the source port and destina
 
 When a packet is received by a device, the machine does a lookup on a table contained by the machine. Ports are mapped in a table, and the machine does a **connection lookup** to find the correct destination.
 
-Demultiplexing allows for the machine to recei
+Demultiplexing allows for the machine to receive input from multiple sources at once, and then direct them to their respective port.
 
 # Sockets
 ## TCP Sockets
@@ -46,6 +46,11 @@ TCP sockets have different states and types:
 A socket that is **listening** (bound but unconnected) has no specific source that it is associated with, but it actively listening for inbound traffic.
 
 A socket that is connected (**established**) has information containing the source and the destination address and are ready to communicate. In this situation, a socket will give a **csockid**.
+
+### Lookup
+When a TCP packet is received, the operating system:
+1. looks up a table of existing connections using 4-tuple, then sends to the established socket if possible
+2. if failed to find socket,
 
 ## UDP Sockets
 **UDP sockets**, on the other hand only contain a destination IP and a destination port. So, all packets directed to a UDP socket will end up in one destination. There is no memory of which device is being communicated with. These sockets are often shared across many sources.
