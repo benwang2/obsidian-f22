@@ -47,10 +47,11 @@ A socket that is **listening** (bound but unconnected) has no specific source th
 
 A socket that is connected (**established**) has information containing the source and the destination address and are ready to communicate. In this situation, a socket will give a **csockid**.
 
-### Lookup
+### Demultiplexing TCP
 When a TCP packet is received, the operating system:
 1. looks up a table of existing connections using 4-tuple, then sends to the established socket if possible
-2. if failed to find socket,
+2. if failed to find socket, look up list of listening connections with the destination IP and port. If this succeeds, send to the corresponding port
+3. if both steps have failed, send an error to the client
 
 ## UDP Sockets
 **UDP sockets**, on the other hand only contain a destination IP and a destination port. So, all packets directed to a UDP socket will end up in one destination. There is no memory of which device is being communicated with. These sockets are often shared across many sources.
