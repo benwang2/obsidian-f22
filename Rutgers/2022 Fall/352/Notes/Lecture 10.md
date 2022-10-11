@@ -1,10 +1,10 @@
 ---
 title: Lecture Notes 10
 course: CS_352
-date: YYYY/MM/DD
+date: 2022/10/1
 tags: 
 - lectureNotes
-- CS_XXX
+- CS_352
 ---
 
 <center><h1>Lecture 10</h1></center>
