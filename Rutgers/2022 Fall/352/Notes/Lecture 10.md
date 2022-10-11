@@ -24,5 +24,16 @@ Multiplexing is a way of sending multiple signals or streams of information over
 # Demultiplexing
 Demultiplexing is the process of reconverting a signal containing multiple analog or digital signal streams back into the original separate and unrelated signals
 
-Each packet has a source IP and destination IP, with the source port and destination port. The transport layer utilizes demultiplexing to obtain this information and deliver the packet to its destinatoin effectively.
+Each packet has a source IP and destination IP, with the source port and destination port. The transport layer utilizes demultiplexing to obtain this information and deliver the packet to its destination effectively. 
+
+When a packet is received by a device, the machine does a lookup on a table contained by the machine. Ports are mapped in a table, and the machine does a **connection lookup** to find the correct destination.
+
+**TCP sockets** are used to received and send packets. These sockets have the following components to identify them:
+- Source IP
+- Destination IP
+- Source port
+- Destination port
+
+**UDP sockets**, on the other hand only contain a destination IP and a destination port. So, all packets directed to a UDP socket will end up in one destination. There is no memory of which device is being communicated with. These sockets are often shared across many sources.
+
 #demultiplexing
