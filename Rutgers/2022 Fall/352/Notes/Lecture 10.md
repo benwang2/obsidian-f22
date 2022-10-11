@@ -73,5 +73,4 @@ When a UDP packet comes in, the operating system:
 2. If fails, send an error to the client
 
 
-
 #demultiplexing
