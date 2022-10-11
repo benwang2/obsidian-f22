@@ -10,11 +10,11 @@ tags:
 <center><h1>Lecture 10</h1></center>
 
 # Transport Layer Protocols
-## UDP
-Fill after lecture
+## User Datagram Protocol (UDP)
+UDP functions as a simple wrapper around packet delivrey.
 
-## TCP
-Fill after lecture
+## Transmission Control Protocol (TCP)
+TCP provides delivery guarantees for ordering, efficiency, and fair bandwidth use.
 
 #tcp #udp
 # Multiplexing
@@ -22,5 +22,7 @@ Multiplexing is a way of sending multiple signals or streams of information over
 
 #multiplexing
 # Demultiplexing
+Demultiplexing is the process of reconverting a signal containing multiple analog or digital signal streams back into the original separate and unrelated signals
 
-Each packet has a source IP and destination IP, with the source port and destination port.
+Each packet has a source IP and destination IP, with the source port and destination port. The transport layer utilizes demultiplexing to obtain this information and deliver the packet to its destinatoin effectively.
+#demultiplexing
