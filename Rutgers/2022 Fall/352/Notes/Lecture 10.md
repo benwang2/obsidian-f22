@@ -56,4 +56,12 @@ When a TCP packet is received, the operating system:
 ## UDP Sockets
 **UDP sockets**, on the other hand only contain a destination IP and a destination port. So, all packets directed to a UDP socket will end up in one destination. There is no memory of which device is being communicated with. These sockets are often shared across many sources.
 
+### UDP Demultiplexing
+When a UDP packet comes in, the operating system:
+1. Look up table of listening UDP sockets using (destination IP, destination port)
+	- If success, send packet to corresponding socket
+2. If fails, send an error to the client
+
+
+
 #demultiplexing
