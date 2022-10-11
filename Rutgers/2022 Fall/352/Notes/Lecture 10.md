@@ -11,7 +11,9 @@ tags:
 
 # Transport Layer Protocols
 ## User Datagram Protocol (UDP)
-UDP functions as a simple wrapper around packet delivrey.
+UDP functions as a simple wrapper around packet delivery. UDP provides a **best effort service** and as a result, UDP segments may be lost, corrupted, or reordered.
+
+UDP is **connectionless**, meaning that each UDP segment is handled independently of others (no memory acros)
 
 ## Transmission Control Protocol (TCP)
 TCP provides delivery guarantees for ordering, efficiency, and fair bandwidth use.
