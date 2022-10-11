@@ -121,10 +121,10 @@ Please note that this query was run on the remote database at 209.xx.xx...
 ```sql
 SELECT DISTINCT precinct
 FROM
-	penna p1,
+	Penna p1,
 	(
 		SELECT precinct as p, MAX(Timestamp) as t
-		FROM penna
+		FROM Penna
 		GROUP BY precinct
 	) p2
 WHERE
