@@ -13,7 +13,15 @@ tags:
 ## User Datagram Protocol (UDP)
 UDP functions as a simple wrapper around packet delivery. UDP provides a **best effort service** and as a result, UDP segments may be lost, corrupted, or reordered.
 
-UDP is **connectionless**, meaning that each UDP segment is handled independently of others (no memory acros)
+UDP is **connectionless**, meaning that each UDP segment is handled independently of others (no memory across packets). This makes it an excellent match for one-off req/resp connections like DNS queries.
+
+It is used in loss-tolerant and delay-sensitive applications.
+
+Compared to TCP, UDP has simple and low overhead compared to TCP, making UDP's guarantees acceptable.
+
+There are no delays due to "connection establishment", which TCP does have.
+
+It can be used to broadcast data without control.
 
 ## Transmission Control Protocol (TCP)
 TCP provides delivery guarantees for ordering, efficiency, and fair bandwidth use.
