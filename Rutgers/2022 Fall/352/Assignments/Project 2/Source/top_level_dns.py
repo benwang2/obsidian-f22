@@ -34,4 +34,12 @@ class DNS():
         print("[S]: DNS host name is {}".format(hostname))
         print("[S]: Server IP address is {}".format(socket.gethostbyname(hostname)))
 
-        csockid, addr = self.socket.accept()
+        lsid, addr = self.socket.accept()
+
+        while True:
+            data = self.socket.recv(4096)
+
+            if not data:
+                break
+
+            data = data.decode('utf-8')
