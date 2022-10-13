@@ -4,21 +4,30 @@ import time
 import socket
 
 class Record():
-    def __init__(self):
-        pass
+    def __init__(self, name, type, value):
+        self.name = name
+        self.type = type
+        self.value = value
 
 class DNS():
-    def __init__(self, records):
-        pass
+    def __init__(self, hostname, records):
+        self.hostname = hostname
+        self.map = {}
+        self.socket = None
 
-def ts1():
-    try:
-        ss = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        print("[S]: Server socket created")
-    except socket.error as err:
-        print('socket open error: {}\n'.format(err))
-        exit()
+        for record in records:
+            self.map[record.name] = record.value
 
-    server_binding = ('', 53)
-    ss.bind(server_binding)
-    ss.listen(1)
+    def listen(self):
+        try:
+            self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            print("[S]: Server socket created")
+        except socket.error as err:
+            print('socket open error: {}\n'.format(err))
+            exit()
+
+        server_binding = ('', 53)
+        self.socket.bind(server_binding)
+        self.socket.listen(1)
+
+        print("[S]: DNS host name is {}".format(socket.gethostname()))
