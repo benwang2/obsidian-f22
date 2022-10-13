@@ -11,12 +11,12 @@ class Record():
 
 class DNS():
     def __init__(self, hostname, records):
-        self.hostname = hostname
+        self.hostname = hostname.lower()
         self.map = {}
         self.socket = None
 
         for record in records:
-            self.map[record.name] = record.value
+            self.map[record.name.lower()] = record.value
 
     def listen(self):
         try:
@@ -30,16 +30,25 @@ class DNS():
         self.socket.bind(server_binding)
         self.socket.listen(1)
 
-        hostname = socket.gethostname()
-        print("[S]: DNS host name is {}".format(hostname))
-        print("[S]: Server IP address is {}".format(socket.gethostbyname(hostname)))
+        dns_hostname = socket.gethostname()
+        print("[S]: DNS host name is {}".format(dns_hostname))
+        print("[S]: Server IP address is {}".format(socket.gethostbyname(dns_hostname)))
 
         lsid, addr = self.socket.accept()
 
         while True:
-            data = self.socket.recv(4096)
+            received = self.socket.recv(4096)
 
-            if not data:
+            hostname = received.strip().lower()
+
+            if hostname in self.map:
+                record = self.map[hostname]
+                response = " ".join(hostname, record.name, "A", "IN")
+                self.socket.send()
+            else:
+                pass
+
+            if not received:
                 break
 
-            data = data.decode('utf-8')
+            data = received.decode('utf-8')
