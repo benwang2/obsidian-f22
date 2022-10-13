@@ -30,4 +30,8 @@ class DNS():
         self.socket.bind(server_binding)
         self.socket.listen(1)
 
-        print("[S]: DNS host name is {}".format(socket.gethostname()))
+        hostname = socket.gethostname()
+        print("[S]: DNS host name is {}".format(hostname))
+        print("[S]: Server IP address is {}".format(socket.gethostbyname(hostname)))
+
+        csockid, addr = self.socket.accept()
