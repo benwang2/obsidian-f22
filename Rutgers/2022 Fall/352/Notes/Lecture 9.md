@@ -1,7 +1,7 @@
 ---
 title: Lecture Notes 9
 course: CS_352
-date: 2022/10/04
+date: 2022-10-04
 tags: 
 - lectureNotes
 - CS_352

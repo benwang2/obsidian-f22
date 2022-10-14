@@ -1,13 +1,13 @@
 ---
-title: Lecture Notes X
-course: CS_XXX
-date: YYYY-MM-DD
+title: Lecture Notes 11
+course: CS_352
+date: 2022-10-14
 tags: 
 - lectureNotes
-- CS_XXX
+- CS_352
 ---
 
-<center><h1>Lecture X</h1></center>
+<center><h1>Lecture 11</h1></center>
 
 ## Topic
 As the professor begins to explain the topic, use this space to write an overview of the topic being discussed.
