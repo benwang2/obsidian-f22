@@ -18,4 +18,7 @@ A key is a minimal subset of attributes which uniquely determine the whole tuple
 
 The key is declared in the CREATE TABLE statement,
 
-Foreign keys
+Key constraints can be violated.
+e.g. key is beer, and two bars sell the same beer at different princes
+
+A constraint that requires a beer to in Sells be a beer in Beers is called a **foreign key**.
