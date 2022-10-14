@@ -7,8 +7,7 @@ class Record():
         self.type = type
 
 class DNS():
-    def __init__(self, hostname, query_type, records_file):
-        self.hostname = hostname.lower()
+    def __init__(self, query_type, records_file):
         self.query_type = query_type
         self.map = {}
         self.socket = None
@@ -49,3 +48,5 @@ class DNS():
 
             if not received:
                 break
+
+t1 = DNS()

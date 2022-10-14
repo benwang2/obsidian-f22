@@ -39,3 +39,12 @@ The checksum is an **effective and lightweight method** that works in most cases
 UDP and TCP share the same checksum function, but TCP also uses the lightweight error detection capability.
 
 [RFC 768](https://www.rfc-editor.org/rfc/rfc768)
+
+## UDP
+UDP is a **simple transport protocol**, it simply sends or receives a single packet from/to the correct application process.
+
+It's a thin shim around network layer's beset-effort delivery. There's no connection building and sa a result, there's also no latency.
+
+UDP works best fowith:
+- one-off request/response messages
+	- loss-tolerant but delay-sensitive applications
