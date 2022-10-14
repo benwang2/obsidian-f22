@@ -22,3 +22,5 @@ Key constraints can be violated.
 e.g. key is beer, and two bars sell the same beer at different princes
 
 A constraint that requires a beer to in Sells be a beer in Beers is called a **foreign key**.
+
+A foreign key is to be shared by a relation R and a relation S.
