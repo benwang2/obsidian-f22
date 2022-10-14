@@ -14,6 +14,7 @@ tags:
 - REFERENCES keyword
 - FOREIGN KEY
 - CHECK
+- ASSERTION
 
 
 ## Keys
@@ -46,3 +47,7 @@ FOREIGN KEY(beer)
 	ON UPDATE CASCADE
 
 ## Policies
+...
+
+## Assertions
+We must check every assertion after each modification to the database
