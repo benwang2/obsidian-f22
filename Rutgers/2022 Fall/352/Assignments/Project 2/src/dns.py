@@ -21,6 +21,9 @@ class DNS():
             hostname, ip_address, record_type = record.strip().split(" ")
             self.map[hostname.lower()] = Record(hostname, ip_address, record_type)
 
+    def resolve(self, hostname):
+        pass
+
     def listen(self):
         try:
             self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -44,15 +47,18 @@ class DNS():
             data = received.decode('utf-8').strip()
             hostname = data.lower()
 
-            if hostname in self.map:
-                record = self.map[hostname]
-                response = " ".join(record.name, record.value, "A", "IN")
-                recipient.send(response.encode("utf-8"))
+            record = self.resolve(hostname)
+            if record != None:
+                response = " ".join(hostname, record.value, "A", "IN")
             else:
-                pass
+                response = " ".join(hostname,"- TIMED OUT")
+
+            recipient.send(response.encode("utf-8"))
 
             if not received:
                 break
 
 t1 = DNS(None, "PROJ2-DNSTS1.txt")
 t2 = DNS(None, "PROJ2-DNSTS2.txt")
+
+print({k:v.__str__() for (k,v) in t2.map.items()})

@@ -53,6 +53,8 @@ UDP works best fowith:
 
 To cope with packet loss, the receiver will return an **ACK** (acknowledgement) per packet, which indicates that the receiver has received the packet correctly. When the sender receives the ACK, the sender knows the receiver has received it.
 
-On the flip side, the receiver could send a
+On the flip side, the receiver could send a **NAK**, indicating that it has received a corrupted packet.
+
+If a packet is dropped, wait for a duration of time (**retransmisssion timeout**) before re-sending the packet.
 
 #ack
