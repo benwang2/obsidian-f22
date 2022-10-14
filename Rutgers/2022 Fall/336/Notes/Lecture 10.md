@@ -34,4 +34,14 @@ Two violations are possible
 - an inseret or update to R introduces values not found in S
 - a deletion or update to S causes some tuple of R to "dangle"
 
-Actions taken for 
+Actions taken for violation
+- reject
+- delete tuple
+- set null
+
+FOREIGN KEY(beer)
+	REFERENCES Beers(name)
+	ON DELETE SET NULL
+	ON UPDATE CASCADE
+
+## Policies
