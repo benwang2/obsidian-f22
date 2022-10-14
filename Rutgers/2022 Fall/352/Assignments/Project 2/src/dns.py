@@ -1,10 +1,15 @@
 import socket
 
+used_ports = []
+
 class Record():
     def __init__(self, name, value, type):
         self.name = name
         self.value = value
         self.type = type
+
+    def __str__(self):
+        return f"[{self.name}, {self.value}, {self.type}]"
 
 class DNS():
     def __init__(self, query_type, records_file):
@@ -13,8 +18,8 @@ class DNS():
         self.socket = None
 
         for record in open(records_file, "r"):
-            hostname, ip_address, record_type = record.split(" ")
-            self.map[record.name.lower()] = Record(hostname, ip_address, record_type)
+            hostname, ip_address, record_type = record.strip().split(" ")
+            self.map[hostname.lower()] = Record(hostname, ip_address, record_type)
 
     def listen(self):
         try:
@@ -24,7 +29,7 @@ class DNS():
             print('socket open error: {}\n'.format(err))
             exit()
 
-        server_binding = ('', 53)
+        server_binding = ('', 50007)
         self.socket.bind(server_binding)
         self.socket.listen(1)
 
@@ -49,4 +54,5 @@ class DNS():
             if not received:
                 break
 
-t1 = DNS()
+t1 = DNS(None, "PROJ2-DNSTS1.txt")
+t2 = DNS(None, "PROJ2-DNSTS2.txt")

@@ -48,3 +48,11 @@ It's a thin shim around network layer's beset-effort delivery. There's no connec
 UDP works best fowith:
 - one-off request/response messages
 	- loss-tolerant but delay-sensitive applications
+
+## Reliable Data Delivery
+
+To cope with packet loss, the receiver will return an **ACK** (acknowledgement) per packet, which indicates that the receiver has received the packet correctly. When the sender receives the ACK, the sender knows the receiver has received it.
+
+On the flip side, the receiver could send a
+
+#ack
