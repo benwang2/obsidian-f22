@@ -9,9 +9,10 @@ tags:
 
 <center><h1>Lecture 10</h1></center>
 
-## Topic
-As the professor begins to explain the topic, use this space to write an overview of the topic being discussed.
+## Topics Covered
+- keys
+- 
 
-### Subtopic 1
-Use this space to expand upon the topic.
+## Keys
+A key is a minimal subset of attributes which uniquely determine the whole tuple. One of these subsets is selected as a primary key. A primary key does not allow NULLs.
 
