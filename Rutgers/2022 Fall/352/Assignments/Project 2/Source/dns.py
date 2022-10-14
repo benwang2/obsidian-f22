@@ -1,6 +1,3 @@
-from symbol import pass_stmt
-import threading
-import time
 import socket
 
 class Record():
@@ -34,21 +31,19 @@ class DNS():
         print("[S]: DNS host name is {}".format(dns_hostname))
         print("[S]: Server IP address is {}".format(socket.gethostbyname(dns_hostname)))
 
-        lsid, addr = self.socket.accept()
+        recipient, _ = self.socket.accept()
 
         while True:
             received = self.socket.recv(4096)
-
-            hostname = received.strip().lower()
+            data = received.decode('utf-8').strip()
+            hostname = data.lower()
 
             if hostname in self.map:
                 record = self.map[hostname]
-                response = " ".join(hostname, record.name, "A", "IN")
-                self.socket.send()
+                response = " ".join(record.name, record.value, "A", "IN")
+                recipient.send(response.encode("utf-8"))
             else:
                 pass
 
             if not received:
                 break
-
-            data = received.decode('utf-8')

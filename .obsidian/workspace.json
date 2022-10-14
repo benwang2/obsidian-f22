@@ -1,0 +1,187 @@
+{
+  "main": {
+    "id": "ff58c1fb0d0d8736",
+    "type": "split",
+    "children": [
+      {
+        "id": "c655c53f2a150ff4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1b106adabe6629fa",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Rutgers/2022 Fall/352/Notes/Lecture 5.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "47f2efd4ee2553b9",
+    "type": "split",
+    "children": [
+      {
+        "id": "86f7d9c375e92bd6",
+        "type": "tabs",
+        "dimension": 71.34559535333979,
+        "children": [
+          {
+            "id": "f976e1bf72752504",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "8f88c6ad00d72727",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": true,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "56ccc51c6ecb4aac",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      },
+      {
+        "id": "c07e8180475e7854",
+        "type": "tabs",
+        "dimension": 28.654404646660215,
+        "children": [
+          {
+            "id": "811f124edc097df4",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Rutgers/2022 Fall/352/Notes/Lecture 5.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "right": {
+    "id": "8c82c0911c63f35b",
+    "type": "split",
+    "children": [
+      {
+        "id": "792bf92b5eddb0fb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9ac1d9b82afea98d",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "0bd939b149fb3639",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {}
+            }
+          },
+          {
+            "id": "2be8db57e18614d5",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Rutgers/2022 Fall/352/Notes/Lecture 5.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "f7f69d0477e00429",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Rutgers/2022 Fall/352/Notes/Lecture 5.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      },
+      {
+        "id": "0522fb316263b21a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "91613425c499b458",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 284.5,
+    "collapsed": true
+  },
+  "ribbon": {
+    "mostRecentAction": ""
+  },
+  "active": "1b106adabe6629fa",
+  "lastOpenFiles": [
+    "Rutgers/2022 Fall/352/Notes/Lecture 5.md",
+    "Rutgers/2022 Fall/352/Notes/Lecture 4.md",
+    "Rutgers/2022 Fall/352/Notes/Lecture 3.md",
+    "Rutgers/2022 Fall/352/Notes/Lecture 6.md",
+    "Rutgers/2022 Fall/352/Notes/Lecture 10.md",
+    "Rutgers/2022 Fall/352/Notes/Lecture 9.md",
+    "Rutgers/2022 Fall/352/Assignments/Project 2/instructions.pdf",
+    "Rutgers/2022 Fall/352/Assignments/Project 2/interactions.pdf",
+    "Rutgers/2022 Fall/210/Assignments/Homework 1/210 Homework 1.md",
+    "Rutgers/2022 Fall/Planner.md"
+  ]
+}
