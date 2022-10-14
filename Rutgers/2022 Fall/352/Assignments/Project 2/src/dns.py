@@ -49,11 +49,8 @@ class DNS():
 
             record = self.resolve(hostname)
             if record != None:
-                response = " ".join(hostname, record.value, "A", "IN")
-            else:
-                response = " ".join(hostname,"- TIMED OUT")
-
-            recipient.send(response.encode("utf-8"))
+                response = " ".join(record.name, record.value, "A", "IN")
+                recipient.send(response.encode("utf-8"))
 
             if not received:
                 break

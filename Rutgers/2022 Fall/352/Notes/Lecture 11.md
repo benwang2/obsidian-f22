@@ -57,4 +57,6 @@ On the flip side, the receiver could send a **NAK**, indicating that it has rece
 
 If a packet is dropped, wait for a duration of time (**retransmisssion timeout**) before re-sending the packet.
 
+In TCP, the **onus** is on the sender to retransmit lost data when ACKS are not received.
+
 #ack
