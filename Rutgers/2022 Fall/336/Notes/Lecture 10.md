@@ -13,6 +13,7 @@ tags:
 - keys
 - REFERENCES keyword
 - FOREIGN KEY
+- CHECK
 
 
 ## Keys
