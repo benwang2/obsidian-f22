@@ -11,7 +11,9 @@ tags:
 
 ## Topics Covered
 - keys
-- 
+- REFERENCES keyword
+- FOREIGN KEY
+
 
 ## Keys
 A key is a minimal subset of attributes which uniquely determine the whole tuple. One of these subsets is selected as a primary key. A primary key does not allow NULLs.
@@ -24,3 +26,10 @@ e.g. key is beer, and two bars sell the same beer at different princes
 A constraint that requires a beer to in Sells be a beer in Beers is called a **foreign key**.
 
 A foreign key is to be shared by a relation R and a relation S.
+
+Any attributes referenced by forein keys must be declared as PRIMRY KEY or UNIQUE
+
+### Foreign-Key Constraints
+Two violations are possible
+- an inseret or update to R introduces values not found in S
+- a deletion or update to S causes some tuple of R to "dangle"
