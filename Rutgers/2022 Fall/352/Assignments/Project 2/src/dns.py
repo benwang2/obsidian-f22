@@ -1,20 +1,21 @@
 import socket
 
 class Record():
-    def __init__(self, name, type, value):
+    def __init__(self, name, value, type):
         self.name = name
-        self.type = type
         self.value = value
+        self.type = type
 
 class DNS():
-    def __init__(self, hostname, query_type, records):
+    def __init__(self, hostname, query_type, records_file):
         self.hostname = hostname.lower()
         self.query_type = query_type
         self.map = {}
         self.socket = None
 
-        for record in records:
-            self.map[record.name.lower()] = record.value
+        for record in open(records_file, "r"):
+            hostname, ip_address, record_type = record.split(" ")
+            self.map[record.name.lower()] = Record(hostname, ip_address, record_type)
 
     def listen(self):
         try:
