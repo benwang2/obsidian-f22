@@ -34,6 +34,8 @@ The pseudo header conceptually prefixed to the UDP header contains the source ad
 
 Checksums are not the end-all-be-all; they don't detect all bit errors.
 *analogy*: "you can't assume the package hasn't been meddled with if it's weight matches the one on the stamp"
-The checksum is an effective and lightweight method to validate packet accuracy
+The checksum is an **effective and lightweight method** that works in most cases. However, if it **insufficient for checking reliable data delivery**.
+
+UDP and TCP share the same checksum function, but TCP also uses the lightweight error detection capability.
 
 [RFC 768](https://www.rfc-editor.org/rfc/rfc768)
