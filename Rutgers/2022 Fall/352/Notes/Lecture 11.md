@@ -27,3 +27,5 @@ We can use a computing function to verify that the packet has be transmitted cor
 | sender puts checksum value into UDP/TCP checksum field   | NO - an error is detected                                                 |
 |                                                          | YES - assume no error                                                     |
 
+
+C
