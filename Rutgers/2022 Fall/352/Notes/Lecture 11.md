@@ -10,3 +10,13 @@ tags:
 <center><h1>Lecture 11</h1></center>
 
 ## Error Detection
+We implement error detection because the network provides no guarantees for correctness.
+
+We can use a computing function to verify that the packet has be transmitted correctly. This function is called the **checksum** and it must:
+- be easy to compute
+- change if the packet changes
+- be easy to verify
+
+#checksum
+
+### Checksum
