@@ -7,8 +7,9 @@ class Record():
         self.value = value
 
 class DNS():
-    def __init__(self, hostname, records):
+    def __init__(self, hostname, query_type, records):
         self.hostname = hostname.lower()
+        self.query_type = query_type
         self.map = {}
         self.socket = None
 

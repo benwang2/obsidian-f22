@@ -20,3 +20,10 @@ We can use a computing function to verify that the packet has be transmitted cor
 #checksum
 
 ### Checksum
+| sender                                                   | receiver                                                                  |
+| -------------------------------------------------------- | ------------------------------------------------------------------------- |
+| treat segment contents as sequences of 16-bit integers   | compute checksum of received segment, inclduing checksum in packet itself |
+| check: addition (1's complement sum) of segment contents | check if resulting checksum is 0                                          |
+| sender puts checksum value into UDP/TCP checksum field   | NO - an error is detected                                                 |
+|                                                          | YES - assume no error                                                     |
+
