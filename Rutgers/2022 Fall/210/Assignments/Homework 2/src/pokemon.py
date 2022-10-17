@@ -6,7 +6,7 @@ weaknesses = {
     "water":    ["fire","ground","rock"],
     "electric": ["water","flying"],
     "grass":    ["water","ground","rock"],
-    "ice":      ["grass","ground","flying"],
+    "ice":      ["grass","ground","flying","dragon"],
     "fighting": ["normal","ice","rock","dark","steel"],
     "poison":   ["grass","fairy"],
     "ground":   ["fire","electric","poison","rock","steel"],
@@ -20,6 +20,9 @@ weaknesses = {
     "steel":    ["ice","rock","fairy"],
     "fairy":    ["fighting","dragon","dark"]
 }
+
+for w, t in weaknesses.items():
+    weaknesses[w] = list(sorted(t))[0]
 
 @dataclass()
 class Pokemon:
