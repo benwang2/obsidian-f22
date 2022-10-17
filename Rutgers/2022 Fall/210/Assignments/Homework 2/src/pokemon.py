@@ -21,7 +21,7 @@ class Pokemon:
         # id,name,level,personality,type,weakness,atk,def,hp,stage
         return f"{self.id},{self.name},{self.level},{self.personality},{self.type},{self.weakness},{self.atk},{self.defense},{self.hp},{self.stage}"
 
-def count_percent_fire_type_geq_level_n(list_of_pokemon, n):
+def count_percent_fire_type_geq_level_n(list_of_pokemon: List[Pokemon], n):
     num_fire = 0
     num_geq_n = 0
 
@@ -33,7 +33,8 @@ def count_percent_fire_type_geq_level_n(list_of_pokemon, n):
 
     return round((num_geq_n/num_fire)*100)
 
-def get_weakness_freq(list_of_pokemon):
+def get_weakness_freq(list_of_pokemon: List[Pokemon]):
+    freq = {}
 
 
 def main():
