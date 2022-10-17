@@ -15,6 +15,7 @@ tags:
 - FOREIGN KEY
 - CHECK
 - ASSERTION
+- TRIGGERS
 
 
 ## Keys
