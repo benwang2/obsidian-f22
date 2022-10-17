@@ -1,29 +1,6 @@
 from dataclasses import dataclass
 from typing import List
 
-weaknesses = {
-    "fire":     ["grass","ice","bug","steel"],
-    "water":    ["fire","ground","rock"],
-    "electric": ["water","flying"],
-    "grass":    ["water","ground","rock"],
-    "ice":      ["grass","ground","flying","dragon"],
-    "fighting": ["normal","ice","rock","dark","steel"],
-    "poison":   ["grass","fairy"],
-    "ground":   ["fire","electric","poison","rock","steel"],
-    "flying":   ["grass","fighting","bug"],
-    "psychic":  ["fighting","poison"],
-    "bug":      ["grass","psychic","dark"],
-    "rock":     ["fire","ice","flying","bug"],
-    "ghost":    ["psychic","ghost"],
-    "dragon":   ["dragon"],
-    "dark":     ["psychic","ghost"],
-    "steel":    ["ice","rock","fairy"],
-    "fairy":    ["fighting","dragon","dark"]
-}
-
-for w, t in weaknesses.items():
-    weaknesses[w] = list(sorted(t))[0]
-
 @dataclass()
 class Pokemon:
     id: int
@@ -40,11 +17,9 @@ class Pokemon:
     def __init__(self, args):
         self.id,self.name,self.level,self.personality,self.type,self.weakness,self.atk,self.defense,self.hp,self.stage = args
 
-    def get_type_by_weakness(self):
-        pass
-
-    def as_csv(self):
-        return f"{self.id}"
+    def csv(self):
+        # id,name,level,personality,type,weakness,atk,def,hp,stage
+        return f"{self.id},{self.name},{self.level},{self.personality},{self.type},{self.weakness},{self.atk},{self.defense},{self.hp},{self.stage}"
 
 def count_percent_fire_type_geq_level_n(list_of_pokemon, n):
     num_fire = 0
@@ -57,6 +32,9 @@ def count_percent_fire_type_geq_level_n(list_of_pokemon, n):
                 num_geq_n += 1
 
     return round((num_geq_n/num_fire)*100)
+
+def get_weakness_freq(list_of_pokemon):
+
 
 def main():
     list_of_pokemon: List[Pokemon] = []
