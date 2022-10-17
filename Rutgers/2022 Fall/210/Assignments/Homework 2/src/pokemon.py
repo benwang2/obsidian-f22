@@ -35,7 +35,9 @@ def count_percent_fire_type_geq_level_n(list_of_pokemon: List[Pokemon], n):
 
 def get_weakness_freq(list_of_pokemon: List[Pokemon]):
     freq = {}
-
+    for pokemon in list_of_pokemon:
+        if pokemon.type != "NaN":
+            pass
 
 def main():
     list_of_pokemon: List[Pokemon] = []
