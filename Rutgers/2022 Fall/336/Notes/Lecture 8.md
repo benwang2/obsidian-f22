@@ -1,7 +1,7 @@
 ---
 title: Lecture Notes 8
 course: CS_336
-date: 2022/10/07
+date: 2022-10-07
 tags: 
 - lectureNotes
 - CS_336

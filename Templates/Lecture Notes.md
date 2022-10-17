@@ -1,7 +1,7 @@
----
+--
 title: Lecture Notes X
 course: CS_XXX
-date: YYYY/MM/DD
+date: YYYY-MM-DD
 tags: 
 - lectureNotes
 - CS_XXX

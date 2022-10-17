@@ -1,10 +1,11 @@
 import socket
 
 
+used_ports = []
+
 class Record():
     def __init__(self, name, value, type):
         self.name = name
-        self.type = type
         self.value = value
 
     def __repr__(self):

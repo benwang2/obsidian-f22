@@ -1,7 +1,7 @@
 ---
 title: Lecture Notes 6
 course: CS_336
-date: 2022/09/30
+date: 2022-09-30
 tags: 
 - lectureNotes
 - CS_336
