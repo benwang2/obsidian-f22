@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from typing import List
+from typing import Dict, List
 
 @dataclass()
 class Pokemon:
@@ -34,10 +34,16 @@ def count_percent_fire_type_geq_level_n(list_of_pokemon: List[Pokemon], n):
     return round((num_geq_n/num_fire)*100)
 
 def get_weakness_freq(list_of_pokemon: List[Pokemon]):
-    freq = {}
-    for pokemon in list_of_pokemon:
+    freq: Dict[Dict[str]] = {}
+    missed = []
+    for i, pokemon in enumerate(list_of_pokemon):
         if pokemon.type != "NaN":
-            pass
+            if pokemon.weakness not in freq:
+                freq[pokemon.weakness] = {}
+            freq[pokemon.weakness][pokemon.type] = freq[pokemon.weakness].get(pokemon.type, 0)+1
+        else:
+            missed.append(i)
+    print(freq)
 
 def main():
     list_of_pokemon: List[Pokemon] = []
