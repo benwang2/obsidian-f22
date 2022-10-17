@@ -44,7 +44,13 @@ def get_weakness_freq(list_of_pokemon: List[Pokemon]):
             freq[pokemon.weakness][pokemon.type] = freq[pokemon.weakness].get(pokemon.type, 0)+1
         else:
             missed.append(i)
+    
+    most_common = {
+        k:sorted(v,key=lambda x: x[1],reverse=True)[0] for (k,v) in freq.items()
+    }
     print(freq)
+    print(most_common)
+
 
 def main():
     list_of_pokemon: List[Pokemon] = []
