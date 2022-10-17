@@ -13,7 +13,7 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Assignments/Project 2/instructions.pdf"
+                "file": "Rutgers/2022 Fall/210/Assignments/Homework 2/hw2.pdf"
               }
             }
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Assignments/Project 2/instructions.pdf"
+                "file": "Rutgers/2022 Fall/210/Assignments/Homework 2/hw2.pdf"
               }
             }
           }
@@ -120,7 +120,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Assignments/Project 2/instructions.pdf",
+                "file": "Rutgers/2022 Fall/210/Assignments/Homework 2/hw2.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -137,7 +137,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Assignments/Project 2/instructions.pdf",
+                "file": "Rutgers/2022 Fall/210/Assignments/Homework 2/hw2.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -169,6 +169,7 @@
   },
   "active": "1792fca557b7f5e0",
   "lastOpenFiles": [
+    "Rutgers/2022 Fall/352/Assignments/Project 2/instructions.pdf",
     "Rutgers/2022 Fall/352/Notes/Lecture 10.md",
     "Rutgers/2022 Fall/352/Notes/Lecture 11.md",
     "Rutgers/2022 Fall/352/Notes/Lecture 9.md",
@@ -177,7 +178,6 @@
     "Rutgers/2022 Fall/336/Notes/Lecture 5.md",
     "Rutgers/2022 Fall/336/Notes/Lecture 4.md",
     "Rutgers/2022 Fall/336/Notes/Lecture 7.md",
-    "Rutgers/2022 Fall/336/Notes/Lecture 6.md",
-    "Rutgers/2022 Fall/336/Notes/Lecture 8.md"
+    "Rutgers/2022 Fall/336/Notes/Lecture 6.md"
   ]
 }

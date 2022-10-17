@@ -18,7 +18,7 @@ class Pokemon:
     def __init__(self, args):
         self.id,self.name,self.level,self.personality,self.type,self.weakness,self.atk,self.defense,self.hp,self.stage = args
 
-    def csv(self):
+    def __repr__(self):
         # id,name,level,personality,type,weakness,atk,def,hp,stage
         return f"{self.id},{self.name},{self.level},{self.personality},{self.type},{self.weakness},{self.atk},{self.defense},{self.hp},{self.stage}"
 
@@ -47,10 +47,12 @@ def get_weakness_mapping(list_of_pokemon: List[Pokemon]):
     for (ptype,weak_to) in freq.items():
         sorted_by_freq = sorted(weak_to.items(),key=lambda x: x[1],reverse=True)
         max_occurences = sorted_by_freq[0][1]
+
         max_occ_only = [i for i in sorted_by_freq if i[1] == max_occurences]
-        mode_type = sorted(max_occ_only,key=lambda x: x[0])
-        print(mode_type)
-        most_common[ptype] = mode_type
+
+        mode_types = sorted(max_occ_only,key=lambda x: x[0])
+
+        most_common[ptype] = mode_types[0][0]
 
     return most_common
 
@@ -63,15 +65,12 @@ def main():
             pokemon = Pokemon(line.strip().split(","))
             list_of_pokemon.append(pokemon)
 
-    # p1_1 = count_percent_fire_type_geq_level_n(list_of_pokemon, 40)
-    
-    # with open("./output/pokemon1.txt","w") as f:
-    #     f.write(f"Percentage of fire type pokemon at or above level 40 = {p1_1}")
-
     weakness_map = get_weakness_mapping(list_of_pokemon)
-    for i, pokemon in enumerate(list_of_pokemon):
+    print("id,name,level,personality,type,weakness,atk,def,hp,stage")
+    for pokemon in list_of_pokemon:
         if pokemon.type == "NaN":
             pokemon.type = weakness_map[pokemon.weakness]
+        print(pokemon)
 
 if __name__ == "__main__":
     main()
