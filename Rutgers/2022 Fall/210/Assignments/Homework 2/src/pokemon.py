@@ -43,6 +43,9 @@ class Pokemon:
     def get_type_by_weakness(self):
         pass
 
+    def as_csv(self):
+        return f"{self.id}"
+
 def count_percent_fire_type_geq_level_n(list_of_pokemon, n):
     num_fire = 0
     num_geq_n = 0
