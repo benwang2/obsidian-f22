@@ -34,22 +34,21 @@ def count_percent_fire_type_geq_level_n(list_of_pokemon: List[Pokemon], n):
 
     return round((num_geq_n/num_fire)*100)
 
-def get_weakness_freq(list_of_pokemon: List[Pokemon]):
+def get_weakness_mapping(list_of_pokemon: List[Pokemon]):
     freq: Dict[Dict[str]] = {}
-    missed = []
     for i, pokemon in enumerate(list_of_pokemon):
         if pokemon.type != "NaN":
             if pokemon.weakness not in freq:
                 freq[pokemon.weakness] = {}
             freq[pokemon.weakness][pokemon.type] = freq[pokemon.weakness].get(pokemon.type, 0)+1
-        else:
-            missed.append(i)
     
-    most_common = {
-        k:sorted(v,key=lambda x: x[1],reverse=True)[0] for (k,v) in freq.items()
-    }
-    print(freq)
-    print(most_common)
+    most_common = {}
+
+    for (ptype,weak_to) in freq.items():
+        sorted_by_freq = sorted(weak_to.items(),key=lambda x: x[1],reverse=True)[0]
+        most_common[ptype] = sorted_by_freq[0]
+
+    return most_common
 
 
 def main():
@@ -65,7 +64,7 @@ def main():
     # with open("./output/pokemon1.txt","w") as f:
     #     f.write(f"Percentage of fire type pokemon at or above level 40 = {p1_1}")
 
-    get_weakness_freq(list_of_pokemon)
+    weakness_map = get_weakness_mapping(list_of_pokemon)
 
 if __name__ == "__main__":
     main()
