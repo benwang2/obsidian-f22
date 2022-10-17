@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+from re import L
 from typing import Dict, List
 
 @dataclass()
@@ -53,10 +54,12 @@ def main():
             pokemon = Pokemon(line.strip().split(","))
             list_of_pokemon.append(pokemon)
 
-    p1_1 = count_percent_fire_type_geq_level_n(list_of_pokemon, 40)
+    # p1_1 = count_percent_fire_type_geq_level_n(list_of_pokemon, 40)
     
-    with open("./output/pokemon1.txt","w") as f:
-        f.write(f"Percentage of fire type pokemon at or above level 40 = {p1_1}")
+    # with open("./output/pokemon1.txt","w") as f:
+    #     f.write(f"Percentage of fire type pokemon at or above level 40 = {p1_1}")
+
+    get_weakness_freq(list_of_pokemon)
 
 if __name__ == "__main__":
     main()
