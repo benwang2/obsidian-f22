@@ -32,3 +32,4 @@ The sender sends a single packet. then waits for an ACK. If an ACK is not receiv
 Disambiguate duplicate vs. fresh packets using sequence numbers that change on "adjacent" packets.
 
 ### Efficiency problem
+Sending one packet at a time causes data transfer rate to be limited by time between endpoints rather than bandwidth.
