@@ -11,8 +11,12 @@
             "id": "451e1ed95c8b7f5a",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Rutgers/2022 Fall/336/Notes/Lecture 11.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -82,7 +86,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Rutgers/2022 Fall/336/Notes/Lecture 11.md"
+              }
             }
           }
         ]
@@ -116,6 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Rutgers/2022 Fall/336/Notes/Lecture 11.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -132,6 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Rutgers/2022 Fall/336/Notes/Lecture 11.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
