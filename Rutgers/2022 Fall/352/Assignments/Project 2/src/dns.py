@@ -1,5 +1,5 @@
 import socket
-
+import sys
 
 class Record():
     def __init__(self, name, value, type):
@@ -10,9 +10,10 @@ class Record():
         return "<Record name='{}' value='{}' type='{}'>".format(self.name, self.value, self.type)
 
 class DNS():
-    def __init__(self, records):
+    def __init__(self, records, port):
         self.map = {}
         self.socket = None
+        self.port = port
 
         for record in records:
             self.map[record.name.lower()] = record
@@ -25,7 +26,7 @@ class DNS():
             print('socket open error: {}\n'.format(err))
             exit()
 
-        server_binding = ('', 50053)
+        server_binding = ('', self.port)
         self.socket.bind(server_binding)
         self.socket.listen(1)
 
@@ -55,12 +56,12 @@ class DNS():
 
 def main():
     ts1 = []
-    with open("PROJ2-DNSTS1.txt","r") as f:
+    with open(sys.argv[1],"r") as f:
         for line in f.readlines():
             line = line.strip().split(" ")
             ts1.append(Record(*line))
 
-    dns1 = DNS(ts1)
+    dns1 = DNS(ts1, int(sys.argv[2]))
     dns1.listen()
 
 if __name__ == "__main__":

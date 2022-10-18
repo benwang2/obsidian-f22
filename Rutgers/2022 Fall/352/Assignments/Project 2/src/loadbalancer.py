@@ -33,14 +33,19 @@ class LoadBalancer():
 
         server_binding1 = ('', 50000) # binding with itself
         self.socket1.bind(server_binding1)
+    
+
         server_binding2 = (self.ts1HostName, self.ts1ListenPort)
-        server_binding3 = (self.ts2HostName, self.ts2ListenPort)
         self.socket2.connect(server_binding2) # connecting to TS1
+        self.socket2.setblocking(0)
+
+        server_binding3 = (self.ts2HostName, self.ts2ListenPort)
         self.socket3.connect(server_binding3) # connecting to TS2
+        self.socket3.setblocking(0)
 
         self.socket1.listen(1) #listening to incoming connections from client
 
-        csockid, addr = self.socket1.accept()
+        csockid, _ = self.socket1.accept()
 
         while True:
             readable, writable, err = select([self.socket2, self.socket3], [], [], 5)
