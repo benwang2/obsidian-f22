@@ -53,11 +53,15 @@ class DNS():
                 print("stop")
                 break
 
-ts1 = []
-with open("PROJ2-DNSTS1.txt","r") as f:
-    for line in f.readlines():
-        line = line.strip().split(" ")
-        ts1.append(Record(*line))
+def main():
+    ts1 = []
+    with open("PROJ2-DNSTS1.txt","r") as f:
+        for line in f.readlines():
+            line = line.strip().split(" ")
+            ts1.append(Record(*line))
 
-dns1 = DNS(ts1)
-dns1.listen()
+    dns1 = DNS(ts1)
+    dns1.listen()
+
+if __name__ == "__main__":
+    main()

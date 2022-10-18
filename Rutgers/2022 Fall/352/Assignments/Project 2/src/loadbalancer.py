@@ -43,9 +43,21 @@ class LoadBalancer():
         csockid, addr = self.socket1.accept()
 
         while True:
-            readable, writable, err = select([self.socket2, self.socket3], [], [], 7)
+            readable, writable, err = select([self.socket2, self.socket3], [], [], 5)
 
             url = csockid.recv(4096).decode("utf-8")
             if readable or writable:
                 for socket in writable:
                     socket.send(url.encode("utf-8"))
+
+                output = []
+                for socket in readable:
+                    output.append(socket.recv(4096).decode("utf-8"))
+                
+                print(output)
+
+def main():
+    pass
+
+if __name__ == "__main__":
+    main()
