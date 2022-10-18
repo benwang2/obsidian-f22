@@ -1,8 +1,6 @@
 import socket
 
 
-used_ports = []
-
 class Record():
     def __init__(self, name, value, type):
         self.name = name

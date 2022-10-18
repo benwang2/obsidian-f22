@@ -68,4 +68,4 @@ Using the sliding window algorithm, the sender and receiver can keep several pac
 The windows slide forward as packets are ACKed (at receiver) and ACKs are received (at sender).
 
 ### Identifying dropped packets
-The sendercan infer which data was received sucessfully using the ACK #s.
+The sendercan infer which data was received sucessfully using the ACK sequence numbers.
