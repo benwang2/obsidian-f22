@@ -60,4 +60,9 @@ Upon receiving an ACK for $i$, the sender can transmit the sequence $i+n$ where 
 #### Receiver
 Between the sender and receiver, window of in-flight packets can look different.
 
-The receivre only accepts sequence numbers allowed by the current receiver window. Any sequence numbers outside of this window will be dropped.
+The receiver only accepts sequence numbers allowed by the current receiver window. Any sequence numbers outside of this window will be dropped.
+
+#### Summary
+Using the sliding window algorithm, the sender and receiver can keep several packets of in-flight data.
+
+The windows slide forward as packets are ACKed (at receiver) and ACKs are received (at sender).
