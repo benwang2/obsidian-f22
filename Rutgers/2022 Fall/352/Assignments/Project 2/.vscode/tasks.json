@@ -7,24 +7,24 @@
             "label": "Start DNS Servers",
             "type": "shell",
             "command": "py dns.py PROJ2-DNSTS1.txt ${input:port1} & py dns.py PROJ2-DNSTS2.txt ${input:port2} &",
-
         },
-        // {
-        //     "label": "Start Load Balancer",
-        //     "type": "shell"
-        // }
+        {
+            "label": "Start Load Balancer",
+            "type": "shell",
+            "command": "py loadbalancer.py ${input:port1}",
+        }
     ],
     "inputs": [
         {
             "id": "port1",
             "type": "promptString",
-            "description": "Select a port for the first DNS server."
+            "description": "Select a port."
             // type specific configuration attributes
         },
         {
             "id": "port2",
             "type": "promptString",
-            "description": "Select a port for the second DNS server."
+            "description": "Select a port."
             // type specific configuration attributes
         },
     ]

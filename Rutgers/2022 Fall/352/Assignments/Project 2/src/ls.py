@@ -2,7 +2,8 @@ import socket
 from select import select
 
 class LoadBalancer():
-    def _init_(self, ts1HostName, ts1ListenPort, ts2HostName, ts2ListenPort):
+    def _init_(self, lsPort, ts1HostName, ts1ListenPort, ts2HostName, ts2ListenPort):
+       self.lsPort = lsPort
        self.ts1HostName = ts1HostName
        self.ts1ListenPort = ts1ListenPort
        self.ts2HostName = ts2HostName
@@ -31,7 +32,7 @@ class LoadBalancer():
             print('socket open error: {}\n'.format(err))
             exit
 
-        server_binding1 = ('', 50000) # binding with itself
+        server_binding1 = ('', self.lsPort) # binding with itself
         self.socket1.bind(server_binding1)
     
 

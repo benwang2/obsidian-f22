@@ -53,16 +53,3 @@ class DNS():
             if received == "\0":
                 print("stop")
                 break
-
-def main():
-    ts1 = []
-    with open(sys.argv[1],"r") as f:
-        for line in f.readlines():
-            line = line.strip().split(" ")
-            ts1.append(Record(*line))
-
-    dns1 = DNS(ts1, int(sys.argv[2]))
-    dns1.listen()
-
-if __name__ == "__main__":
-    main()
