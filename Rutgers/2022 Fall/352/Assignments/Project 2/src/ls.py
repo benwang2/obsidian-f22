@@ -1,3 +1,4 @@
+import socket
 import sys
 from select import select
 
@@ -13,7 +14,6 @@ class LoadBalancer():
         return "<LoadBalancer port='{}' ts1='{}:{}' ts2='{}:{}'>".format(self.lsPort, self.ts1HostName, self.ts1ListenPort, self.ts2HostName, self.ts2ListenPort)
     
     def listen(self):
-        import socket
         try:        # Socket 1
             self.socket1 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             print("[S]: Server socket created")
@@ -59,12 +59,14 @@ class LoadBalancer():
             url = data.decode("utf-8")
             print("[LS]: Resolving hostname:",url)
             if readable or writable:
-                for socket in writable:
-                    socket.send(url.encode("utf-8"))
+                for sock in writable:
+                    print("[LS]: Forward to",sock.getpeername())
+                    sock.send(url.encode("utf-8"))
 
                 output = []
-                for socket in readable:
-                    output.append(socket.recv(4096).decode("utf-8"))
+                for sock in readable:
+                    out = sock.recv(4096).decode("utf-8")
+                    print("[LS]: Received data from",sock.getpeername(),":",out)
                 
                 print(output)
 

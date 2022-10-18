@@ -109,9 +109,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Rutgers/2022 Fall/352/Assignments/Project 2/instructions.pdf"
-              }
+              "state": {}
             }
           }
         ]
@@ -146,7 +144,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Assignments/Project 2/instructions.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -163,7 +160,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Assignments/Project 2/instructions.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -182,6 +178,7 @@
   },
   "active": "4f89b3ad1614c8d3",
   "lastOpenFiles": [
+    "Rutgers/2022 Fall/352/Assignments/Project 2/instructions.pdf",
     "Rutgers/2022 Fall/352/Notes/Lecture 12.md",
     "Rutgers/2022 Fall/352/Notes/Lecture 11.md",
     "Rutgers/2022 Fall/352/Notes/Lecture 10.md",
@@ -190,7 +187,6 @@
     "Untitled.md",
     "Lecture 10.md",
     "Templates/Lecture Notes.md",
-    "Rutgers/2022 Fall/336/Notes/Lecture 9.md",
-    "Rutgers/2022 Fall/336/Notes/Lecture 8.md"
+    "Rutgers/2022 Fall/336/Notes/Lecture 9.md"
   ]
 }

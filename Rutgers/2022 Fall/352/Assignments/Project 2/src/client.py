@@ -21,6 +21,7 @@ def client():
                 try:
                     cs.send(line.strip().encode("utf-8"))
                     data = cs.recv(4096).decode("utf-8")
+                    print("[C]: Received",data)
                     out.write(data)
                 except socket.timeout as e:
                     print("TIMED OUT FOR",line)
