@@ -17,8 +17,9 @@ class Pokemon:
 
     def __init__(self, args):
         self.id,self.name,self.level,self.personality,self.type,self.weakness,self.atk,self.defense,self.hp,self.stage = args
+        self.level = float(self.level)
 
-    def __repr__(self):
+    def repr(self):
         # id,name,level,personality,type,weakness,atk,def,hp,stage
         return f"{self.id},{self.name},{self.level},{self.personality},{self.type},{self.weakness},{self.atk},{self.defense},{self.hp},{self.stage}"
 
@@ -67,18 +68,21 @@ def part2(list_of_pokemon):
         if pokemon.type == "NaN":
             pokemon.type = weakness_map[pokemon.weakness]
 
-    group1 = [pokemon for pokemon in list_of_pokemon if pokemon.level > 40 and "NaN" not in (pokemon.atk,pokemon.defense, pokemon.hp)]
+    group1 = [pokemon for pokemon in list_of_pokemon if pokemon.level > 40 and "nan" not in (pokemon.atk,pokemon.defense, pokemon.hp)]
     group1_statsum = {}
 
     for pokemon in group1:
         group1_statsum["atk"] = group1_statsum.get("atk",0) + pokemon.atk
         group1_statsum["defense"] = group1_statsum.get("defense",0) + pokemon.defense
         group1_statsum["hp"] = group1_statsum.get("hp",0) + pokemon.hp
+        print(pokemon.atk)
+
+    print(group1_statsum)
 
     for key in group1_statsum:
         group1_statsum[key] /= len(group1)
 
-    group2 = [pokemon for pokemon in list_of_pokemon if pokemon.level <= 40 and "NaN" not in (pokemon.atk,pokemon.defense, pokemon.hp)]
+    group2 = [pokemon for pokemon in list_of_pokemon if pokemon.level <= 40 and "nan" not in (pokemon.atk,pokemon.defense, pokemon.hp)]
     group2_statsum = {}
     
     for pokemon in group2:
@@ -103,6 +107,9 @@ def part2(list_of_pokemon):
             pokemon.defense = updated_stats['defense']
         if pokemon.hp == 'NaN':
             pokemon.hp = updated_stats['hp']
+
+    with open("./output/pokemonResult.csv", "w") as f:
+        f.writelines([ p.repr()+"\n" for p in list_of_pokemon])
 
 
 def main():
