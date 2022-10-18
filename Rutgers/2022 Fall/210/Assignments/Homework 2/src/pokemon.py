@@ -68,38 +68,40 @@ def part2(list_of_pokemon):
         if pokemon.type == "NaN":
             pokemon.type = weakness_map[pokemon.weakness]
 
-    group1 = [pokemon for pokemon in list_of_pokemon if pokemon.level > 40 and "nan" not in (pokemon.atk,pokemon.defense, pokemon.hp)]
-    group1_statsum = {}
+    group1 = [pokemon for pokemon in list_of_pokemon if pokemon.level > 40 and "NaN" not in (pokemon.atk,pokemon.defense, pokemon.hp)]
+    group1_avg = {}
 
     for pokemon in group1:
-        group1_statsum["atk"] = group1_statsum.get("atk",0) + pokemon.atk
-        group1_statsum["defense"] = group1_statsum.get("defense",0) + pokemon.defense
-        group1_statsum["hp"] = group1_statsum.get("hp",0) + pokemon.hp
-        print(pokemon.atk)
+        group1_avg["atk"] = group1_avg.get("atk",0) + float(pokemon.atk)
+        group1_avg["defense"] = group1_avg.get("defense",0) + float(pokemon.defense)
+        group1_avg["hp"] = group1_avg.get("hp",0) + float(pokemon.hp)
 
-    print(group1_statsum)
+    print(group1_avg)
 
-    for key in group1_statsum:
-        group1_statsum[key] /= len(group1)
+    for key in group1_avg:
+        group1_avg[key] = round(group1_avg[key]/len(group1),1)
 
+    print(group1_avg)
     group2 = [pokemon for pokemon in list_of_pokemon if pokemon.level <= 40 and "nan" not in (pokemon.atk,pokemon.defense, pokemon.hp)]
-    group2_statsum = {}
+    group2_avg = {}
     
     for pokemon in group2:
-        group2_statsum["atk"] = group2_statsum.get("atk",0) + pokemon.atk
-        group2_statsum["defense"] = group2_statsum.get("defense",0) + pokemon.defense
-        group2_statsum["hp"] = group2_statsum.get("hp",0) + pokemon.hp
+        group2_avg["atk"] = group2_avg.get("atk",0) + float(pokemon.atk)
+        group2_avg["defense"] = group2_avg.get("defense",0) + float(pokemon.defense)
+        group2_avg["hp"] = group2_avg.get("hp",0) + float(pokemon.hp)
 
-    for key in group2_statsum:
-        group2_statsum[key] /= len(group2)
+    for key in group2_avg:
+        group2_avg[key] = round(group2_avg[key]/len(group2),1)
+
+    print(group2_avg)
 
     for pokemon in list_of_pokemon:
         if "NaN" not in (pokemon.atk,pokemon.defense, pokemon.hp): continue
         updated_stats = {}
         if pokemon.level > 40:
-            updated_stats = group1_statsum
+            updated_stats = group1_avg
         else:
-            updated_stats = group2_statsum
+            updated_stats = group2_avg
 
         if pokemon.atk == 'NaN':
             pokemon.atk = updated_stats['atk']
