@@ -9,9 +9,7 @@ tags:
 
 <center><h1>Lecture 12</h1></center>
 
-## Topic
-As the professor begins to explain the topic, use this space to write an overview of the topic being discussed.
+## RTO
+A good RTO predict the round-trip time (RTT) between sender and receiver. 
 
-### Subtopic 1
-Use this space to expand upon the topic.
-
+If an ACK hasn't been returned within our estimated RTT, the packet was likely dropped. RTT can be measured directly at sender - no receiver or router help is needed. 
