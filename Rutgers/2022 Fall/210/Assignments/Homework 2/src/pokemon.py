@@ -67,6 +67,27 @@ def part2(list_of_pokemon):
         if pokemon.type == "NaN":
             pokemon.type = weakness_map[pokemon.weakness]
 
+    group1 = [pokemon for pokemon in list_of_pokemon if pokemon.level > 40 and "NaN" not in (pokemon.atk,pokemon.defense, pokemon.hp)]
+    group1_statsum = {}
+
+    for pokemon in group1:
+        group1_statsum["atk"] = group1_statsum.get("atk",0) + pokemon.atk
+        group1_statsum["defense"] = group1_statsum.get("defense",0) + pokemon.defense
+        group1_statsum["hp"] = group1_statsum.get("hp",0) + pokemon.hp
+
+    group2 = [pokemon for pokemon in list_of_pokemon if pokemon.level <= 40 and "NaN" not in (pokemon.atk,pokemon.defense, pokemon.hp)]
+    group2_statsum = {}
+    
+    for pokemon in group2:
+        group2_statsum["atk"] = group2_statsum.get("atk",0) + pokemon.atk
+        group2_statsum["defense"] = group2_statsum.get("defense",0) + pokemon.defense
+        group2_statsum["hp"] = group2_statsum.get("hp",0) + pokemon.hp
+
+    for pokemon in list_of_pokemon:
+        if "NaN" not in (pokemon.atk,pokemon.defense, pokemon.hp): continue
+        if pokemon.level > 40:
+
+        else:
 
 def main():
     list_of_pokemon: List[Pokemon] = []
