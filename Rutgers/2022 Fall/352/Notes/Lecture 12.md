@@ -46,3 +46,18 @@ If there are N packets in flight, **throughput** improves by N times.
 #throughput
 
 ### Sliding Window
+The sender and receiver use a sliding window algorithm to more effectively transmit data.
+
+- **Window**: sequence numbers of in-flight data
+- **Window size**: the amount of in-flight data (unACKed)
+
+#### Sender
+The sender utilizes a sliding window to keep more data in flight at once.
+
+Sequence numbers restart from 0 after they've exceeded the space on the header.
+Upon receiving an ACK for $i$, the sender can transmit the sequence $i+n$ where $n$ is the size of the sliding window.
+
+#### Receiver
+Between the sender and receiver, window of in-flight packets can look different.
+
+The receivre only accepts sequence numbers allowed by the current receiver window. Any sequence numbers outside of this window will be dropped.
