@@ -41,7 +41,7 @@ class DNS():
             data = received.decode('utf-8').strip()
             hostname = data.lower()
 
-            print("Resolving query:",hostname)
+            print("Resolving query:",f"-{repr(hostname)}-, {len(hostname)}")
             if hostname in self.map:
                 record = self.map[hostname]
                 print(record)
@@ -50,6 +50,6 @@ class DNS():
             else:
                 continue
 
-            if received == "\0":
+            if received == "\0" or hostname == "":
                 print("stop")
                 break

@@ -1,19 +1,19 @@
 import sys
 from select import select
-import socket as socket
 
 class LoadBalancer():
     def __init__(self, lsPort, ts1HostName, ts1ListenPort, ts2HostName, ts2ListenPort):
-        self.lsPort = lsPort
+        self.lsPort = int(lsPort)
         self.ts1HostName = ts1HostName
-        self.ts1ListenPort = ts1ListenPort
+        self.ts1ListenPort = int(ts1ListenPort)
         self.ts2HostName = ts2HostName
-        self.ts2ListenPort = ts2ListenPort
+        self.ts2ListenPort = int(ts2ListenPort)
     
     def __repr__(self):
         return "<LoadBalancer port='{}' ts1='{}:{}' ts2='{}:{}'>".format(self.lsPort, self.ts1HostName, self.ts1ListenPort, self.ts2HostName, self.ts2ListenPort)
     
     def listen(self):
+        import socket
         try:        # Socket 1
             self.socket1 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             print("[S]: Server socket created")
@@ -41,11 +41,11 @@ class LoadBalancer():
 
         server_binding2 = (self.ts1HostName, self.ts1ListenPort)
         self.socket2.connect(server_binding2) # connecting to TS1
-        self.socket2.setblocking(0)
+        # self.socket2.setblocking(0)
 
         server_binding3 = (self.ts2HostName, self.ts2ListenPort)
         self.socket3.connect(server_binding3) # connecting to TS2
-        self.socket3.setblocking(0)
+        # self.socket3.setblocking(0)
 
         self.socket1.listen(1) #listening to incoming connections from client
 
