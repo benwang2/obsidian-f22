@@ -1,0 +1,31 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Start DNS Servers",
+            "type": "shell",
+            "command": "py dns.py PROJ2-DNSTS1.txt ${input:port1} & py dns.py PROJ2-DNSTS2.txt ${input:port2} &",
+
+        },
+        // {
+        //     "label": "Start Load Balancer",
+        //     "type": "shell"
+        // }
+    ],
+    "inputs": [
+        {
+            "id": "port1",
+            "type": "promptString",
+            "description": "Select a port for the first DNS server."
+            // type specific configuration attributes
+        },
+        {
+            "id": "port2",
+            "type": "promptString",
+            "description": "Select a port for the second DNS server."
+            // type specific configuration attributes
+        },
+    ]
+}
