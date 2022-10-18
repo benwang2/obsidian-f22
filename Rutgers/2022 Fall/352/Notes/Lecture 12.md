@@ -1,4 +1,4 @@
---
+---
 title: Lecture Notes 12
 course: CS_352
 date: 2022-10-18

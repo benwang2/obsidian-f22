@@ -1,4 +1,4 @@
---
+---
 title: Lecture Notes 11
 course: CS_336
 date: 2022-10-18

@@ -4,31 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "14e922cb07191944",
+        "id": "5394e896bb9f491b",
         "type": "tabs",
         "children": [
           {
-            "id": "47232d49cefd1ed6",
+            "id": "451e1ed95c8b7f5a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Rutgers/2022 Fall/336/Notes/Lecture 10.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "701fe83203811c3f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Rutgers/2022 Fall/336/Notes/Lecture 11.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -98,9 +82,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Rutgers/2022 Fall/336/Notes/Lecture 10.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -134,7 +116,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Rutgers/2022 Fall/336/Notes/Lecture 10.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +132,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Rutgers/2022 Fall/336/Notes/Lecture 10.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -168,17 +148,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "47232d49cefd1ed6",
+  "active": "451e1ed95c8b7f5a",
   "lastOpenFiles": [
+    "Rutgers/2022 Fall/336/Notes/Lecture 11.md",
+    "Rutgers/2022 Fall/352/Notes/Lecture 9.md",
+    "Rutgers/2022 Fall/352/Notes/Lecture 10.md",
+    "Rutgers/2022 Fall/352/Notes/Lecture 11.md",
+    "Rutgers/2022 Fall/352/Notes/Lecture 12.md",
+    "Templates/Lecture Notes.md",
     "Rutgers/2022 Fall/336/Notes/Lecture 8.md",
     "Rutgers/2022 Fall/336/Notes/Lecture 9.md",
     "Rutgers/2022 Fall/336/Notes/Lecture 10.md",
-    "Rutgers/2022 Fall/336/Notes/Lecture 11.md",
-    "Rutgers/2022 Fall/352/Assignments/Project 2/instructions.pdf",
-    "Rutgers/2022 Fall/352/Notes/Lecture 12.md",
-    "Rutgers/2022 Fall/352/Notes/Lecture 11.md",
-    "Rutgers/2022 Fall/352/Notes/Lecture 10.md",
-    "conflict-files-obsidian-git.md",
-    "Untitled.md"
+    "Rutgers/2022 Fall/352/Assignments/Project 2/instructions.pdf"
   ]
 }
