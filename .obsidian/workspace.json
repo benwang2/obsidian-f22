@@ -11,11 +11,9 @@
             "id": "451e1ed95c8b7f5a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Rutgers/2022 Fall/336/Notes/Lecture 10.md",
-                "mode": "source",
-                "source": false
+                "file": "Rutgers/2022 Fall/210/Assignments/Homework 2/hw2.pdf"
               }
             }
           }
@@ -87,7 +85,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Rutgers/2022 Fall/336/Notes/Lecture 10.md"
+                "file": "Rutgers/2022 Fall/210/Assignments/Homework 2/hw2.pdf"
               }
             }
           }
@@ -95,7 +93,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "8c82c0911c63f35b",
@@ -122,7 +121,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Rutgers/2022 Fall/336/Notes/Lecture 10.md",
+                "file": "Rutgers/2022 Fall/210/Assignments/Homework 2/hw2.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +138,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Rutgers/2022 Fall/336/Notes/Lecture 10.md",
+                "file": "Rutgers/2022 Fall/210/Assignments/Homework 2/hw2.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -158,6 +157,7 @@
   },
   "active": "451e1ed95c8b7f5a",
   "lastOpenFiles": [
+    "Rutgers/2022 Fall/336/Notes/Lecture 10.md",
     "Rutgers/2022 Fall/336/Notes/Lecture 11.md",
     "Rutgers/2022 Fall/352/Notes/Lecture 12.md",
     "Rutgers/2022 Fall/352/Notes/Lecture 11.md",
@@ -166,7 +166,6 @@
     "Templates/Lecture Notes.md",
     "Rutgers/2022 Fall/336/Notes/Lecture 8.md",
     "Rutgers/2022 Fall/336/Notes/Lecture 9.md",
-    "Rutgers/2022 Fall/336/Notes/Lecture 10.md",
     "Rutgers/2022 Fall/352/Assignments/Project 2/instructions.pdf"
   ]
 }
