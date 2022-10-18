@@ -6,7 +6,7 @@
         {
             "label": "Start servers",
             "type": "shell",
-            "command": "python3 ./src/ls.py ${input:lsPort} 127.0.1.1 ${input:ts1Port} 127.0.1.1 ${input:ts2Port}",//"py ts1.py ${input:ts1Port} & py ts2.py ${input:ts2Port}",
+            "command": "python3 ./src/ts1.py ${input:ts1Port} & python3 ./src/ts2.py ${input:ts2Port} & python3 ./src/ls.py ${input:lsPort} 127.0.1.1 ${input:ts1Port} 127.0.1.1 ${input:ts2Port}",
         },
     ],
     "inputs": [

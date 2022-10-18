@@ -1,7 +1,6 @@
-import socket
 import sys
-
 from select import select
+import socket as socket
 
 class LoadBalancer():
     def __init__(self, lsPort, ts1HostName, ts1ListenPort, ts2HostName, ts2ListenPort):
@@ -69,7 +68,7 @@ class LoadBalancer():
 def main():
     # lsListenerPort, ts1Hostname, ts1ListenPort, ts2Hostname, ts2ListenPort = sys.argv[1:]
     ls = LoadBalancer(*sys.argv[1:])
-    print(ls)
+    ls.listen()
 
 if __name__ == "__main__":
     main()
