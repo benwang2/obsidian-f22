@@ -32,4 +32,15 @@ The sender sends a single packet. then waits for an ACK. If an ACK is not receiv
 Disambiguate duplicate vs. fresh packets using sequence numbers that change on "adjacent" packets.
 
 ### Efficiency problem
-Sending one packet at a time causes data transfer rate to be limited by time between endpoints rather than bandwidth.
+Sending one packet at a time causes data transfer rate to be limited by **time** between endpoints rather than **bandwidth**.
+
+## Pipelined Reliability
+**Data in flight:** data that has been sent, but sender hasn't yet received ACKS from the receiver.
+
+### Key ideas
+- New packets can be sent at the same time as older ones still in flight.
+- New packets sent at the same time as ACKs are returning.
+
+If there are N packets in flight, **throughput** improves by N times.
+
+#throughput
