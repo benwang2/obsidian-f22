@@ -4,28 +4,30 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Start DNS Servers",
+            "label": "Start servers",
             "type": "shell",
-            "command": "py dns.py PROJ2-DNSTS1.txt ${input:port1} & py dns.py PROJ2-DNSTS2.txt ${input:port2} &",
+            "command": "python3 ./src/ls.py ${input:lsPort} 127.0.1.1 ${input:ts1Port} 127.0.1.1 ${input:ts2Port}",//"py ts1.py ${input:ts1Port} & py ts2.py ${input:ts2Port}",
         },
-        {
-            "label": "Start Load Balancer",
-            "type": "shell",
-            "command": "py loadbalancer.py ${input:port1}",
-        }
     ],
     "inputs": [
         {
-            "id": "port1",
+            "id": "ts1Port",
             "type": "promptString",
-            "description": "Select a port."
+            "description": "Select a port for ts1."
             // type specific configuration attributes
         },
         {
-            "id": "port2",
+            "id": "ts2Port",
             "type": "promptString",
-            "description": "Select a port."
+            "description": "Select a port for ts2."
             // type specific configuration attributes
         },
+        {
+            "id": "lsPort",
+            "type": "promptString",
+            "description": "Select a port for load balancer."
+            // type specific configuration attributes
+        },
+        
     ]
 }
