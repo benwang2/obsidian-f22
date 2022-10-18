@@ -34,7 +34,7 @@ Any attributes referenced by forein keys must be declared as PRIMRY KEY or UNIQU
 
 ### Foreign-Key Constraints
 Two violations are possible
-- an inseret or update to R introduces values not found in S
+- an insert or update to R introduces values not found in S
 - a deletion or update to S causes some tuple of R to "dangle"
 
 Actions taken for violation
