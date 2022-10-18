@@ -26,3 +26,9 @@ These identifiers are known as **sequence numbers**.
 A sequence number helps disambiguate a fresh transmission from a retransmission.
 
 ## Stop-and-Wait Reliability
+
+The sender sends a single packet. then waits for an ACK. If an ACK is not received until RTO, then retransmit the packet.
+
+Disambiguate duplicate vs. fresh packets using sequence numbers that change on "adjacent" packets.
+
+### Efficiency problem
