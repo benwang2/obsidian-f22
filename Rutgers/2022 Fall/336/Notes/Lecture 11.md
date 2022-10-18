@@ -14,11 +14,16 @@ tags:
 
 # Entity/Relation model
 
-## Entity Sets
+## Vocabulary
 - **entity**: a "thing" or object.
 - **entity set**: a collection of similar entities.
 - **attribute**: a property of the entities within an entity set.
 - **relationship**: an attribute/attributes that connect two entities
+- **subclass** - special case = fewer entities = more properties
+
+### Subclasses
+A subclass might be "ales", since an ale is a kind of beer.
+An ISA triangl represents a subclass.
 
 ## E/R Diagrams
 - A rectangle represents an entity
@@ -28,3 +33,4 @@ tags:
 ## Relationship Set
 - A value is a tuple of the values that are in the relationship
 - Some binary relationships are many-one from one entity set to another
+
