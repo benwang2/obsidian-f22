@@ -4,15 +4,15 @@ course: CS_336
 date: 2022-10-11
 tags: 
 - lectureNotes
-- CS_XXX
+- CS_336
 ---
 
 <center><h1>Lecture 9</h1></center>
 
 ## Topics
-DELIMITER
-CREATE_PROCEDURE
-CALL
-IN, OUT, INOUT
-SET VARIABLE
+- DELIMITER
+- CREATE_PROCEDURE
+- CALL
+- IN, OUT, INOUT
+- SET VARIABLE
 
