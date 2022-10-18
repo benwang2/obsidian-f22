@@ -49,12 +49,15 @@ class LoadBalancer():
 
         self.socket1.listen(1) #listening to incoming connections from client
 
-        csockid, _ = self.socket1.accept()
+        csockid, addr = self.socket1.accept()
+        print("[LS]: Got connection to",addr)
 
         while True:
             readable, writable, err = select([self.socket2, self.socket3], [], [], 5)
 
-            url = csockid.recv(4096).decode("utf-8")
+            data = csockid.recv(4096)
+            url = data.decode("utf-8")
+            print("[LS]: Resolving hostname:",url)
             if readable or writable:
                 for socket in writable:
                     socket.send(url.encode("utf-8"))

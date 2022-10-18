@@ -17,6 +17,7 @@ def client():
         with open('PROJ2-HNS.txt', 'r') as input:
             lines = input.readlines()
             for line in lines:
+                print("[C]: Query",line)
                 try:
                     cs.send(line.strip().encode("utf-8"))
                     data = cs.recv(4096).decode("utf-8")
