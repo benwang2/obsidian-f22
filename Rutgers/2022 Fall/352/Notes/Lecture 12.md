@@ -25,3 +25,4 @@ These identifiers are known as **sequence numbers**.
 
 A sequence number helps disambiguate a fresh transmission from a retransmission.
 
+## Stop-and-Wait Reliability
