@@ -1,14 +1,18 @@
 import socket
+import sys
+
 from select import select
 
 class LoadBalancer():
-    def _init_(self, lsPort, ts1HostName, ts1ListenPort, ts2HostName, ts2ListenPort):
-       self.lsPort = lsPort
-       self.ts1HostName = ts1HostName
-       self.ts1ListenPort = ts1ListenPort
-       self.ts2HostName = ts2HostName
-       self.ts2ListenPort = ts2ListenPort
-
+    def __init__(self, lsPort, ts1HostName, ts1ListenPort, ts2HostName, ts2ListenPort):
+        self.lsPort = lsPort
+        self.ts1HostName = ts1HostName
+        self.ts1ListenPort = ts1ListenPort
+        self.ts2HostName = ts2HostName
+        self.ts2ListenPort = ts2ListenPort
+    
+    def __repr__(self):
+        return "<LoadBalancer port='{}' ts1='{}:{}' ts2='{}:{}'>".format(self.lsPort, self.ts1HostName, self.ts1ListenPort, self.ts2HostName, self.ts2ListenPort)
     
     def listen(self):
         try:        # Socket 1
@@ -63,7 +67,9 @@ class LoadBalancer():
                 print(output)
 
 def main():
-    pass
+    # lsListenerPort, ts1Hostname, ts1ListenPort, ts2Hostname, ts2ListenPort = sys.argv[1:]
+    ls = LoadBalancer(*sys.argv[1:])
+    print(ls)
 
 if __name__ == "__main__":
     main()
