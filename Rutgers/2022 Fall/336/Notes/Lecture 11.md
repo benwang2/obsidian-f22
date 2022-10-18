@@ -28,4 +28,3 @@ tags:
 ## Relationship Set
 - A value is a tuple of the values that are in the relationship
 - Some binary relationships are many-one from one entity set to another
-- 
