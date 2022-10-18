@@ -11,3 +11,17 @@ tags:
 
 ## Topics Covered
 - Entity-relationship model
+
+# Entity/Relation model
+
+## Entity Sets
+- **entity**: a "thing" or object.
+- **entity set**: a collection of similar entities.
+- **attribute**: a property of the entities within an entity set.
+- **relationship**: an attribute/attributes that connect two entities
+
+## E/R Diagrams
+- A rectangle represents an entity
+- A ellipse represents a property
+- A diamond represents a property that relates two
+
