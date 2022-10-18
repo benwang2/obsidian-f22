@@ -75,6 +75,9 @@ def part2(list_of_pokemon):
         group1_statsum["defense"] = group1_statsum.get("defense",0) + pokemon.defense
         group1_statsum["hp"] = group1_statsum.get("hp",0) + pokemon.hp
 
+    for key in group1_statsum:
+        group1_statsum[key] /= len(group1)
+
     group2 = [pokemon for pokemon in list_of_pokemon if pokemon.level <= 40 and "NaN" not in (pokemon.atk,pokemon.defense, pokemon.hp)]
     group2_statsum = {}
     
@@ -83,11 +86,24 @@ def part2(list_of_pokemon):
         group2_statsum["defense"] = group2_statsum.get("defense",0) + pokemon.defense
         group2_statsum["hp"] = group2_statsum.get("hp",0) + pokemon.hp
 
+    for key in group2_statsum:
+        group2_statsum[key] /= len(group2)
+
     for pokemon in list_of_pokemon:
         if "NaN" not in (pokemon.atk,pokemon.defense, pokemon.hp): continue
+        updated_stats = {}
         if pokemon.level > 40:
-
+            updated_stats = group1_statsum
         else:
+            updated_stats = group2_statsum
+
+        if pokemon.atk == 'NaN':
+            pokemon.atk = updated_stats['atk']
+        if pokemon.defense == 'NaN':
+            pokemon.defense = updated_stats['defense']
+        if pokemon.hp == 'NaN':
+            pokemon.hp = updated_stats['hp']
+
 
 def main():
     list_of_pokemon: List[Pokemon] = []
