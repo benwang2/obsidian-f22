@@ -1,5 +1,6 @@
 import socket
 import sys
+from timeit import default_timer as timer
 from select import select
 
 class LoadBalancer():
@@ -62,13 +63,23 @@ class LoadBalancer():
             print("[LS]: Resolving hostname:",url)
             record = None
 
+            recipients = {}
+            time_sent = {}
+
             while True:
-                readable, writable, err = select(inputs, outputs, inputs, 1)
+                readable, writable, err = select(inputs, outputs, inputs)
                 # print(readable, writable)
+
+                for 
+
                 if readable or writable:
                     for sock in writable:
+                        identifier = "{}:{}".format(sock.getpeername(),sock.getsockname()[1])
+                        if identifier in recipients: continue
                         print("[LS]: Forward to",sock.getpeername())
                         sock.send(url.encode("utf-8"))
+                        recipients[identifier] = True
+                        time_sent[identifier] = timer()
 
                     for sock in readable:
                         out = sock.recv(4096)
