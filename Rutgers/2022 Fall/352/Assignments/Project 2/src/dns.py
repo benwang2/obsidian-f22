@@ -44,13 +44,16 @@ class DNS():
             if not received: break
 
             data = received.decode('utf-8').strip()
+
             hostname = data.lower()
 
-            print("Resolving query:",hostname)
+            print("Resolving query:",hostname,"=",hostname in self.map)
             if hostname in self.map:
                 record = self.map[hostname]
-                print(record)
                 response = " ".join([record.name, record.value, "A", "IN"])
                 client.send(response.encode("utf-8"))
+                
+                received = None
+                data = None
             else:
                 continue
