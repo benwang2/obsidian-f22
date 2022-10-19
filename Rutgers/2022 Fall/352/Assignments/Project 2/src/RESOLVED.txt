@@ -1,1 +1,0 @@
-www.princeton.edu 128.1.1.4 A INrutgers.edu 172.34.4.6 A IN

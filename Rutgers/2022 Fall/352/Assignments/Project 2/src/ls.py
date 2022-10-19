@@ -4,6 +4,9 @@ from timeit import default_timer as timer
 from select import select
 
 class LoadBalancer():
+    timeout_delay = 5
+    timeout_msg = "{} - TIMED OUT"
+
     def __init__(self, lsPort, ts1HostName, ts1ListenPort, ts2HostName, ts2ListenPort):
         self.lsPort = int(lsPort)
         self.ts1HostName = ts1HostName
@@ -42,6 +45,7 @@ class LoadBalancer():
 
         server_binding2 = (self.ts1HostName, self.ts1ListenPort)
         self.socket2.connect(server_binding2) # connecting to TS1
+    
         # self.socket2.setblocking(0)
 
         server_binding3 = (self.ts2HostName, self.ts2ListenPort)
@@ -65,12 +69,16 @@ class LoadBalancer():
 
             recipients = {}
             time_sent = {}
+            timed_out = False
 
-            while True:
+            while not timed_out:
                 readable, writable, err = select(inputs, outputs, inputs)
                 # print(readable, writable)
 
-                for 
+                for identifier in time_sent:
+                    if timer() - time_sent[identifier] > self.timeout_delay:
+                        timed_out = True
+                        break
 
                 if readable or writable:
                     for sock in writable:
@@ -89,8 +97,13 @@ class LoadBalancer():
                     
                     if record:
                         break
+
+            if timed_out:
+                csockid.send(self.timeout_msg.format(url).encode("utf-8"))
+            elif not timed_out and record:
+                csockid.send(record.encode("utf-8"))
+
                     
-            csockid.send(record.encode("utf-8"))
 
 def main():
     # lsListenerPort, ts1Hostname, ts1ListenPort, ts2Hostname, ts2ListenPort = sys.argv[1:]
