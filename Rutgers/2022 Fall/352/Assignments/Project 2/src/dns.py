@@ -50,7 +50,7 @@ class DNS():
             print("Resolving query:",hostname,"=",hostname in self.map)
             if hostname in self.map:
                 record = self.map[hostname]
-                response = " ".join([record.name, record.value, "A", "IN"])
+                response = " ".join([record.name, record.value, record.type, "IN"])
                 client.send(response.encode("utf-8"))
                 
                 received = None
