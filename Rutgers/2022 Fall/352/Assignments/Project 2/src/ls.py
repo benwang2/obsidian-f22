@@ -52,23 +52,28 @@ class LoadBalancer():
         csockid, addr = self.socket1.accept()
         print("[LS]: Got connection to",addr)
 
-        while True:
-            readable, writable, err = select([self.socket2, self.socket3], [], [], 5)
+        inputs = [self.socket2, self.socket3]
+        outputs = [self.socket2, self.socket3]
 
+        while True:
             data = csockid.recv(4096)
             url = data.decode("utf-8")
             print("[LS]: Resolving hostname:",url)
-            if readable or writable:
-                for sock in writable:
-                    print("[LS]: Forward to",sock.getpeername())
-                    sock.send(url.encode("utf-8"))
 
-                output = []
-                for sock in readable:
-                    out = sock.recv(4096).decode("utf-8")
-                    print("[LS]: Received data from",sock.getpeername(),":",out)
-                
-                print(output)
+            while True:
+                readable, writable, err = select(inputs, outputs, inputs, 1)
+                # print(readable, writable)
+                if readable or writable:
+                    for sock in writable:
+                        print("[LS]: Forward to",sock.getpeername())
+                        sock.send(url.encode("utf-8"))
+
+                    output = []
+                    for sock in readable:
+                        out = sock.recv(4096).decode("utf-8")
+                        print("[LS]: Received data from",sock.getpeername(),":",out)
+                    
+                    print(output)
 
 def main():
     # lsListenerPort, ts1Hostname, ts1ListenPort, ts2Hostname, ts2ListenPort = sys.argv[1:]

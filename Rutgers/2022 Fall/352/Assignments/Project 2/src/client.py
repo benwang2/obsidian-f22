@@ -28,7 +28,6 @@ def client():
                 except socket.error as e:
                     print(e)
 
-            cs.send("\0")
         out.close()
 
     cs.close()

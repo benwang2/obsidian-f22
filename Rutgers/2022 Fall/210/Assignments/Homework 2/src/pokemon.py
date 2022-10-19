@@ -35,7 +35,7 @@ def count_percent_fire_type_geq_level_n(list_of_pokemon: List[Pokemon], n):
     return round((num_geq_n/num_fire)*100)
 
 def part1(list_of_pokemon):
-    result = count_percent_fire_type_geq_level_n(40)
+    result = count_percent_fire_type_geq_level_n(list_of_pokemon,40)
     with open("./output/pokemon1.txt","w") as f:
         f.write(f"Percentage of fire type pokemon at or above level 40 = {result}")
 
@@ -67,11 +67,10 @@ def part2(list_of_pokemon):
         if pokemon.type == "NaN":
             pokemon.type = weakness_map[pokemon.weakness]
 
-
 def main():
     list_of_pokemon: List[Pokemon] = []
     with open("./data/pokemonTrain.csv","r") as f:
-        columns = f.readline()
+        columns = f.readline().split(",")
         for line in f.readlines():
             pokemon = Pokemon(line.strip().split(","))
             list_of_pokemon.append(pokemon)

@@ -5,6 +5,7 @@ class Record():
     def __init__(self, name, value, type):
         self.name = name
         self.value = value
+        self.type = type
 
     def __repr__(self):
         return "<Record name='{}' value='{}' type='{}'>".format(self.name, self.value, self.type)
@@ -35,15 +36,15 @@ class DNS():
         print("[S]: Server IP address is {}:{}".format(socket.gethostbyname(dns_hostname),self.socket.getsockname()[1]))
 
         client, _ = self.socket.accept()
+        print("[S]: Established connection with",client.getpeername())
 
         while True:
             received = client.recv(4096)
+
+            if not received: break
+
             data = received.decode('utf-8').strip()
             hostname = data.lower()
-
-            if received == b"\0" or received == b'':
-                print("stop")
-                break
 
             print("Resolving query:",hostname)
             if hostname in self.map:
