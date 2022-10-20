@@ -11,13 +11,24 @@
             "id": "451e1ed95c8b7f5a",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Assignments/Project 2/instructions.pdf"
+                "file": "Rutgers/2022 Fall/Planner.md",
+                "mode": "source",
+                "source": false
               }
             }
+          },
+          {
+            "id": "3c291f72f56e6d08",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -84,9 +95,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Rutgers/2022 Fall/352/Assignments/Project 2/instructions.pdf"
-              }
+              "state": {}
             }
           }
         ]
@@ -120,7 +129,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Assignments/Project 2/instructions.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -137,7 +145,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Assignments/Project 2/instructions.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -154,8 +161,10 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "451e1ed95c8b7f5a",
+  "active": "3c291f72f56e6d08",
   "lastOpenFiles": [
+    "Rutgers/2022 Fall/Planner.md",
+    "Rutgers/2022 Fall/352/Assignments/Project 2/instructions.pdf",
     "Rutgers/2022 Fall/352/Assignments/Project 2/interactions.pdf",
     "Rutgers/2022 Fall/352/Assignments/352 Problem Set 1.md",
     "Rutgers/2022 Fall/352/Assignments/352 Problem Set 1.pdf",
@@ -163,8 +172,6 @@
     "Rutgers/2022 Fall/336/Notes/Lecture 11.md",
     "Rutgers/2022 Fall/352/Notes/Lecture 12.md",
     "Rutgers/2022 Fall/352/Notes/Lecture 11.md",
-    "Rutgers/2022 Fall/352/Notes/Lecture 9.md",
-    "Rutgers/2022 Fall/352/Notes/Lecture 10.md",
-    "Templates/Lecture Notes.md"
+    "Rutgers/2022 Fall/352/Notes/Lecture 9.md"
   ]
 }
