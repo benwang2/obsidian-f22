@@ -66,3 +66,8 @@ DROP PROCEDURE [IF EXISTS] procedureName;
 ```
 
 ## Triggers
+A trigger is a database object that will fire when an event occurs within the database.
+There are three groups of triggers:
+- Data Manipulation Language (DML)
+- Data Definition Language (DDL)
+- Log on
