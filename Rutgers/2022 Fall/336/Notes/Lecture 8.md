@@ -66,4 +66,3 @@ DROP PROCEDURE [IF EXISTS] procedureName;
 ```
 
 ## Triggers
-.
