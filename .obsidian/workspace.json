@@ -4,14 +4,14 @@
     "type": "split",
     "children": [
       {
-        "id": "5394e896bb9f491b",
+        "id": "f0936b05d1a8daad",
         "type": "tabs",
         "children": [
           {
-            "id": "451e1ed95c8b7f5a",
+            "id": "88fcf27103e17d14",
             "type": "leaf",
             "state": {
-              "type": "graph",
+              "type": "empty",
               "state": {}
             }
           }
@@ -148,7 +148,7 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "0bd939b149fb3639",
+  "active": "88fcf27103e17d14",
   "lastOpenFiles": [
     "Rutgers/2022 Fall/210/Assignments/Homework 2/hw2.pdf",
     "conflict-files-obsidian-git.md",
