@@ -7,11 +7,17 @@ tags:
 - CS_336
 ---
 
-<center><h1>Lecture X</h1></center>
+<center><h1>Lecture 12</h1></center>
 
-## Topic
-As the professor begins to explain the topic, use this space to write an overview of the topic being discussed.
+## Topics covered
+- attributes
+
 
 ### Subtopic 1
 Use this space to expand upon the topic.
+
+
+What is the difference between attributes and entities?
+- attributes don't exist independently
+- attributes exist because entities do
 
