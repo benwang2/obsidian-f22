@@ -90,6 +90,8 @@ def part2(list_of_pokemon):
         group2_avg["defense"] = group2_avg.get("defense",0) + float(pokemon.defense)
         group2_avg["hp"] = group2_avg.get("hp",0) + float(pokemon.hp)
 
+    print(group2_avg)
+
     for key in group2_avg:
         group2_avg[key] = round(group2_avg[key]/len(group2),1)
 
