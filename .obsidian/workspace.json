@@ -11,10 +11,8 @@
             "id": "451e1ed95c8b7f5a",
             "type": "leaf",
             "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Rutgers/2022 Fall/210/Assignments/Homework 2/hw2.pdf"
-              }
+              "type": "graph",
+              "state": {}
             }
           }
         ]
@@ -72,7 +70,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 3
       },
       {
         "id": "c07e8180475e7854",
@@ -84,17 +83,14 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Rutgers/2022 Fall/210/Assignments/Homework 2/hw2.pdf"
-              }
+              "state": {}
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "8c82c0911c63f35b",
@@ -121,7 +117,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Rutgers/2022 Fall/210/Assignments/Homework 2/hw2.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -138,7 +133,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Rutgers/2022 Fall/210/Assignments/Homework 2/hw2.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,16 +143,15 @@
       }
     ],
     "direction": "horizontal",
-    "width": 282.5,
-    "collapsed": true
+    "width": 282.5
   },
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "451e1ed95c8b7f5a",
+  "active": "0bd939b149fb3639",
   "lastOpenFiles": [
-    "conflict-files-obsidian-git.md",
     "Rutgers/2022 Fall/210/Assignments/Homework 2/hw2.pdf",
+    "conflict-files-obsidian-git.md",
     "Rutgers/2022 Fall/336/Notes/Lecture 10.md",
     "Rutgers/2022 Fall/336/Notes/Lecture 11.md",
     "Rutgers/2022 Fall/352/Notes/Lecture 12.md",
