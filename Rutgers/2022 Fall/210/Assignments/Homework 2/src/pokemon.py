@@ -17,8 +17,9 @@ class Pokemon:
 
     def __init__(self, args):
         self.id,self.name,self.level,self.personality,self.type,self.weakness,self.atk,self.defense,self.hp,self.stage = args
+        self.level = float(self.level)
 
-    def __repr__(self):
+    def repr(self):
         # id,name,level,personality,type,weakness,atk,def,hp,stage
         return f"{self.id},{self.name},{self.level},{self.personality},{self.type},{self.weakness},{self.atk},{self.defense},{self.hp},{self.stage}"
 
@@ -66,6 +67,54 @@ def part2(list_of_pokemon):
     for pokemon in list_of_pokemon:
         if pokemon.type == "NaN":
             pokemon.type = weakness_map[pokemon.weakness]
+
+    group1 = [pokemon for pokemon in list_of_pokemon if pokemon.level > 40 and "NaN" not in (pokemon.atk,pokemon.defense, pokemon.hp)]
+    group1_avg = {}
+
+    for pokemon in group1:
+        group1_avg["atk"] = group1_avg.get("atk",0) + float(pokemon.atk)
+        group1_avg["defense"] = group1_avg.get("defense",0) + float(pokemon.defense)
+        group1_avg["hp"] = group1_avg.get("hp",0) + float(pokemon.hp)
+
+    print(group1_avg)
+
+    for key in group1_avg:
+        group1_avg[key] = round(group1_avg[key]/len(group1),1)
+
+    print(group1_avg)
+    group2 = [pokemon for pokemon in list_of_pokemon if pokemon.level <= 40 and "nan" not in (pokemon.atk,pokemon.defense, pokemon.hp)]
+    group2_avg = {}
+    
+    for pokemon in group2:
+        group2_avg["atk"] = group2_avg.get("atk",0) + float(pokemon.atk)
+        group2_avg["defense"] = group2_avg.get("defense",0) + float(pokemon.defense)
+        group2_avg["hp"] = group2_avg.get("hp",0) + float(pokemon.hp)
+
+    print(group2_avg)
+
+    for key in group2_avg:
+        group2_avg[key] = round(group2_avg[key]/len(group2),1)
+
+    print(group2_avg)
+
+    for pokemon in list_of_pokemon:
+        if "NaN" not in (pokemon.atk,pokemon.defense, pokemon.hp): continue
+        updated_stats = {}
+        if pokemon.level > 40:
+            updated_stats = group1_avg
+        else:
+            updated_stats = group2_avg
+
+        if pokemon.atk == 'NaN':
+            pokemon.atk = updated_stats['atk']
+        if pokemon.defense == 'NaN':
+            pokemon.defense = updated_stats['defense']
+        if pokemon.hp == 'NaN':
+            pokemon.hp = updated_stats['hp']
+
+    with open("./output/pokemonResult.csv", "w") as f:
+        f.writelines([ p.repr()+"\n" for p in list_of_pokemon])
+
 
 def main():
     list_of_pokemon: List[Pokemon] = []

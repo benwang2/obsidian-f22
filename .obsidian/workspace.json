@@ -25,8 +25,8 @@
             "state": {
               "type": "diff-view",
               "state": {
-                "file": ".obsidian/workspace.json",
-                "staged": false
+                "file": "Rutgers/2022 Fall/210/Assignments/Homework 2/src/pokemon.py",
+                "staged": true
               }
             }
           }
@@ -166,6 +166,8 @@
   },
   "active": "3c291f72f56e6d08",
   "lastOpenFiles": [
+    "Untitled.md",
+    "conflict-files-obsidian-git.md",
     "Rutgers/2022 Fall/Planner.md",
     "Rutgers/2022 Fall/352/Assignments/Project 2/instructions.pdf",
     "Rutgers/2022 Fall/352/Assignments/Project 2/interactions.pdf",
@@ -173,8 +175,6 @@
     "Rutgers/2022 Fall/352/Assignments/352 Problem Set 1.pdf",
     "Rutgers/2022 Fall/336/Notes/Lecture 10.md",
     "Rutgers/2022 Fall/336/Notes/Lecture 11.md",
-    "Rutgers/2022 Fall/352/Notes/Lecture 12.md",
-    "Rutgers/2022 Fall/352/Notes/Lecture 11.md",
-    "Rutgers/2022 Fall/352/Notes/Lecture 9.md"
+    "Rutgers/2022 Fall/352/Notes/Lecture 12.md"
   ]
 }
