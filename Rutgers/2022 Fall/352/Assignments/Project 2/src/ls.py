@@ -1,8 +1,12 @@
 import socket
 import sys
+from timeit import default_timer as timer
 from select import select
 
 class LoadBalancer():
+    timeout_delay = 5
+    timeout_msg = "{} - TIMED OUT"
+
     def __init__(self, lsPort, ts1HostName, ts1ListenPort, ts2HostName, ts2ListenPort):
         self.lsPort = int(lsPort)
         self.ts1HostName = ts1HostName
@@ -37,38 +41,65 @@ class LoadBalancer():
 
         server_binding1 = ('', self.lsPort) # binding with itself
         self.socket1.bind(server_binding1)
-    
 
         server_binding2 = (self.ts1HostName, self.ts1ListenPort)
         self.socket2.connect(server_binding2) # connecting to TS1
-        # self.socket2.setblocking(0)
 
         server_binding3 = (self.ts2HostName, self.ts2ListenPort)
         self.socket3.connect(server_binding3) # connecting to TS2
-        # self.socket3.setblocking(0)
 
         self.socket1.listen(1) #listening to incoming connections from client
 
         csockid, addr = self.socket1.accept()
         print("[LS]: Got connection to",addr)
 
-        while True:
-            readable, writable, err = select([self.socket2, self.socket3], [], [], 5)
+        inputs = [self.socket2, self.socket3]
+        outputs = [self.socket2, self.socket3]
 
+        while True:
             data = csockid.recv(4096)
             url = data.decode("utf-8")
+            
             print("[LS]: Resolving hostname:",url)
-            if readable or writable:
-                for sock in writable:
-                    print("[LS]: Forward to",sock.getpeername())
-                    sock.send(url.encode("utf-8"))
+            record = None
 
-                output = []
-                for sock in readable:
-                    out = sock.recv(4096).decode("utf-8")
-                    print("[LS]: Received data from",sock.getpeername(),":",out)
-                
-                print(output)
+            recipients = {}
+            time_sent = {}
+            timed_out = False
+
+            while not timed_out:
+                readable, writable, err = select(inputs, outputs, inputs)
+                # print(readable, writable)
+
+                for identifier in time_sent:
+                    if timer() - time_sent[identifier] > self.timeout_delay:
+                        timed_out = True
+                        break
+
+                if readable or writable:
+                    for sock in writable:
+                        identifier = "{}:{}".format(sock.getpeername(),sock.getsockname()[1])
+                        if identifier in recipients: continue
+                        print("[LS]: Forward to",sock.getpeername())
+                        sock.send(url.encode("utf-8"))
+                        recipients[identifier] = True
+                        time_sent[identifier] = timer()
+
+                    for sock in readable:
+                        out = sock.recv(4096)
+                        if not out: continue
+                        record = out.decode("utf-8")
+                        print("[LS]: Received data from",sock.getpeername(),":",record)
+                    
+                    if record:
+                        break
+
+            if timed_out:
+                csockid.send(self.timeout_msg.format(url).encode("utf-8"))
+            elif not timed_out and record:
+                csockid.send(record.encode("utf-8"))
+
+                    
 
 def main():
     # lsListenerPort, ts1Hostname, ts1ListenPort, ts2Hostname, ts2ListenPort = sys.argv[1:]

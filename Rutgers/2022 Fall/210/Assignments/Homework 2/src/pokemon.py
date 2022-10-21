@@ -119,7 +119,7 @@ def part2(list_of_pokemon):
 def main():
     list_of_pokemon: List[Pokemon] = []
     with open("./data/pokemonTrain.csv","r") as f:
-        columns = f.readline()
+        columns = f.readline().split(",")
         for line in f.readlines():
             pokemon = Pokemon(line.strip().split(","))
             list_of_pokemon.append(pokemon)

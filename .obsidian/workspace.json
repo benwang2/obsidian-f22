@@ -16,8 +16,21 @@
                 "file": "Rutgers/2022 Fall/210/Assignments/Homework 2/hw2.pdf"
               }
             }
+          },
+          {
+            "id": "60dfc2f71778c2fe",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "conflict-files-obsidian-git.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Rutgers/2022 Fall/210/Assignments/Homework 2/hw2.pdf"
+                "file": "conflict-files-obsidian-git.md"
               }
             }
           }
@@ -121,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Rutgers/2022 Fall/210/Assignments/Homework 2/hw2.pdf",
+                "file": "conflict-files-obsidian-git.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -138,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Rutgers/2022 Fall/210/Assignments/Homework 2/hw2.pdf",
+                "file": "conflict-files-obsidian-git.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -155,8 +168,9 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "451e1ed95c8b7f5a",
+  "active": "60dfc2f71778c2fe",
   "lastOpenFiles": [
+    "Rutgers/2022 Fall/210/Assignments/Homework 2/hw2.pdf",
     "Rutgers/2022 Fall/336/Notes/Lecture 10.md",
     "Rutgers/2022 Fall/336/Notes/Lecture 11.md",
     "Rutgers/2022 Fall/352/Notes/Lecture 12.md",
@@ -165,7 +179,6 @@
     "Rutgers/2022 Fall/352/Notes/Lecture 10.md",
     "Templates/Lecture Notes.md",
     "Rutgers/2022 Fall/336/Notes/Lecture 8.md",
-    "Rutgers/2022 Fall/336/Notes/Lecture 9.md",
-    "Rutgers/2022 Fall/352/Assignments/Project 2/instructions.pdf"
+    "Rutgers/2022 Fall/336/Notes/Lecture 9.md"
   ]
 }

@@ -13,23 +13,23 @@ def client():
     server_binding = (lsHostName, lsListenPort)
     cs.connect(server_binding)
 
-    with open("RESOLVED.txt", "w") as out:
-        with open('PROJ2-HNS.txt', 'r') as input:
-            lines = input.readlines()
-            for line in lines:
-                print("[C]: Query",line)
-                try:
-                    cs.send(line.strip().encode("utf-8"))
-                    data = cs.recv(4096).decode("utf-8")
-                    print("[C]: Received",data)
-                    out.write(data)
-                except socket.timeout as e:
-                    print("TIMED OUT FOR",line)
-                except socket.error as e:
-                    print(e)
+    responses = []
+    with open('PROJ2-HNS.txt', 'r') as input:
+        lines = input.readlines()
+        for line in lines:
+            print("[C]: Query",line)
+            try:
+                cs.send(line.strip().encode("utf-8"))
+                data = cs.recv(4096).decode("utf-8")
+                responses.append(data)
+                print("[C]: Received",data)
+            except socket.timeout as e:
+                print("TIMED OUT FOR",line)
+            except socket.error as e:
+                print(e)
 
-            cs.send("\0")
-        out.close()
+    with open("RESOLVED.txt", "w") as out:
+        out.write("\n".join(responses))
 
     cs.close()
 
