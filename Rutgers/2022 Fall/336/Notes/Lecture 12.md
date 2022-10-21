@@ -24,3 +24,4 @@ What is the difference between attributes and entities?
 - attributes don't exist independently
 - attributes exist because entities do
 
+Avoid redundance in tables
