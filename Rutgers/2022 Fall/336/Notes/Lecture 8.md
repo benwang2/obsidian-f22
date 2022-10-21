@@ -50,7 +50,20 @@ WHERE columnName = 'valueToMatch'
 ## Stored Procedures
 A stored procedure is SQL's equivalent of a user defined function.
 
-We can create a simple stored 
+We can create a simple stored procedure with the following query:
+```SQL
+DELIMITER $$
+CREATE PROCEDURE procedureName()
+BEGIN
+	[sql_query]
+END$$
+DELIMITER ;
+```
+
+and we can **delete** a stored procedure with the comman
+```sql
+DROP PROCEDURE [IF EXISTS] procedureName;
+```
 
 ## Triggers
 .
