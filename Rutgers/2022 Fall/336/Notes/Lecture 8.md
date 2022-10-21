@@ -71,3 +71,24 @@ There are three groups of triggers:
 - Data Manipulation Language (DML)
 - Data Definition Language (DDL)
 - Log on
+
+### DML Trigger
+A DML Trigger can be defined with the syntax
+```SQL
+CREATE TRIGGER schemaName.triggerName
+[BEFORE | AFTER]
+{INSERT | UPDATE | DELETE}
+ON tableName
+[FOR EACH ROW | NULL]
+[triggerbody]
+```
+
+An example could be...
+```sql
+CREATE TRIGGER stud_marks 
+BEFORE INSERT 
+ON
+Student 
+FOR EACH ROW
+SET Student.total = Student.subj1 + Student.subj2 + Student.subj3, Student.per = Student.total * 60 / 100;
+```
