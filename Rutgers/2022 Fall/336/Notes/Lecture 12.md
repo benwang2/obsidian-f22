@@ -11,6 +11,8 @@ tags:
 
 ## Topics covered
 - attributes
+- one-to-one
+- many-
 
 
 ### Subtopic 1

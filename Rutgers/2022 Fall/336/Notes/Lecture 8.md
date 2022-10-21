@@ -20,7 +20,7 @@ The `UPDATE` command isused to modify existing rows in a table. It follows the s
 ```sql
 UPDATE tableName
 SET columnName = 'newValue', column2Name = 'newValue2'
-WHERE columName = 'valueToMatch';
+WHERE columnName = 'valueToMatch';
 ```
 
 You can combine N number of conditions using the AND or the OR operators.
@@ -34,14 +34,23 @@ VALUES (value1, value2, value3)
 
 Using the select statement, you can populate one table using another table. For example, we could write
 ```SQL
-INSERT INTO destinationTable []
+INSERT INTO destinationTable (column1, column2, ..., columnN)
+	SELECT column1, column2, ..., columN
+	FROM sourceTable
+	WHERE condition;
 ```
 
 ## DELETE keyword
-...
+The `DELETE` command is used to delete existing records from a table.
+```sql
+DELETE FROM tableName
+WHERE columnName = 'valueToMatch'
+```
 
 ## Stored Procedures
-...
+A stored procedure is SQL's equivalent of a user defined function.
+
+We can create a simple stored 
 
 ## Triggers
 .
