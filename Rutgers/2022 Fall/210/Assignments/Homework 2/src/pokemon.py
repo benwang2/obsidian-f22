@@ -1,8 +1,5 @@
-from dataclasses import dataclass
-from re import L
-from typing import Dict, List
+from collections import defaultdict
 
-@dataclass()
 class Pokemon:
     id: int
     name: str
@@ -23,7 +20,7 @@ class Pokemon:
         # id,name,level,personality,type,weakness,atk,def,hp,stage
         return f"{self.id},{self.name},{self.level},{self.personality},{self.type},{self.weakness},{self.atk},{self.defense},{self.hp},{self.stage}"
 
-def count_percent_fire_type_geq_level_n(list_of_pokemon: List[Pokemon], n):
+def count_percent_fire_type_geq_level_n(list_of_pokemon, n):
     num_fire = 0
     num_geq_n = 0
 
@@ -37,12 +34,12 @@ def count_percent_fire_type_geq_level_n(list_of_pokemon: List[Pokemon], n):
 
 def part1(list_of_pokemon):
     result = count_percent_fire_type_geq_level_n(list_of_pokemon,40)
-    with open("./output/pokemon1.txt","w") as f:
+    with open("./pokemon1.txt","w") as f:
         f.write(f"Percentage of fire type pokemon at or above level 40 = {result}")
 
-def get_weakness_mapping(list_of_pokemon: List[Pokemon]):
-    freq: Dict[Dict[str]] = {}
-    for i, pokemon in enumerate(list_of_pokemon):
+def get_weakness_mapping(list_of_pokemon):
+    freq = {}
+    for pokemon in list_of_pokemon:
         if pokemon.type != "NaN":
             if pokemon.weakness not in freq:
                 freq[pokemon.weakness] = {}
@@ -62,70 +59,85 @@ def get_weakness_mapping(list_of_pokemon: List[Pokemon]):
 
     return most_common
 
+def get_avg_stats(list_of_pokemon):
+    atk_values = [float(pokemon.atk) for pokemon in list_of_pokemon if pokemon.atk != "NaN"]
+    def_values = [float(pokemon.defense) for pokemon in list_of_pokemon if pokemon.defense != "NaN"]
+    hp_values = [float(pokemon.hp) for pokemon in list_of_pokemon if pokemon.hp != "NaN"]
+
+    return {
+        "atk":  round(sum(atk_values)/len(atk_values),1),
+        "def":  round(sum(def_values)/len(def_values),1),
+        "hp":   round(sum(hp_values)/len(hp_values),1),
+    }
+
 def part2(list_of_pokemon):
     weakness_map = get_weakness_mapping(list_of_pokemon)
     for pokemon in list_of_pokemon:
         if pokemon.type == "NaN":
             pokemon.type = weakness_map[pokemon.weakness]
 
-    group1 = [pokemon for pokemon in list_of_pokemon if pokemon.level > 40 and "NaN" not in (pokemon.atk,pokemon.defense, pokemon.hp)]
-    group1_avg = {}
+def part3(list_of_pokemon):
+    group1 = [pokemon for pokemon in list_of_pokemon if pokemon.level > 40]
 
-    for pokemon in group1:
-        group1_avg["atk"] = group1_avg.get("atk",0) + float(pokemon.atk)
-        group1_avg["defense"] = group1_avg.get("defense",0) + float(pokemon.defense)
-        group1_avg["hp"] = group1_avg.get("hp",0) + float(pokemon.hp)
+    g1_avgstats = get_avg_stats(group1)
 
-    print(group1_avg)
-
-    for key in group1_avg:
-        group1_avg[key] = round(group1_avg[key]/len(group1),1)
-
-    print(group1_avg)
-    group2 = [pokemon for pokemon in list_of_pokemon if pokemon.level <= 40 and "nan" not in (pokemon.atk,pokemon.defense, pokemon.hp)]
-    group2_avg = {}
-    
-    for pokemon in group2:
-        group2_avg["atk"] = group2_avg.get("atk",0) + float(pokemon.atk)
-        group2_avg["defense"] = group2_avg.get("defense",0) + float(pokemon.defense)
-        group2_avg["hp"] = group2_avg.get("hp",0) + float(pokemon.hp)
-
-    print(group2_avg)
-
-    for key in group2_avg:
-        group2_avg[key] = round(group2_avg[key]/len(group2),1)
-
-    print(group2_avg)
+    group2 = [pokemon for pokemon in list_of_pokemon if pokemon.level <= 40]
+    g2_avgstats = get_avg_stats(group2)
 
     for pokemon in list_of_pokemon:
         if "NaN" not in (pokemon.atk,pokemon.defense, pokemon.hp): continue
         updated_stats = {}
         if pokemon.level > 40:
-            updated_stats = group1_avg
+            updated_stats = g1_avgstats
         else:
-            updated_stats = group2_avg
+            updated_stats = g2_avgstats
 
         if pokemon.atk == 'NaN':
             pokemon.atk = updated_stats['atk']
         if pokemon.defense == 'NaN':
-            pokemon.defense = updated_stats['defense']
+            pokemon.defense = updated_stats['def']
         if pokemon.hp == 'NaN':
             pokemon.hp = updated_stats['hp']
 
-    with open("./output/pokemonResult.csv", "w") as f:
-        f.writelines([ p.repr()+"\n" for p in list_of_pokemon])
+def part4(list_of_pokemon):
+    type_to_personality = defaultdict(list)
 
+    for pokemon in list_of_pokemon:
+        type_to_personality[pokemon.type].append(pokemon.personality)
+
+    for p_type, values in type_to_personality.items():
+        type_to_personality[p_type] = sorted(values)
+
+    with open("./pokemon4.txt","w") as f:
+        for p_type in (sorted(type_to_personality,key=lambda x: x[0])):
+            f.write(f'{p_type}: {", ".join(type_to_personality[p_type])}\n')
+
+def part5(list_of_pokemon):
+    hp_for_stage3 = [float(pokemon.hp) for pokemon in list_of_pokemon if pokemon.stage == "3.0"]
+    avg_hp = round(sum(hp_for_stage3)/len(hp_for_stage3),1)
+
+    with open("./pokemon5.txt","w") as f:
+        f.write(f"Average hit point for pokemon of stage 3.0 = {avg_hp}")
 
 def main():
-    list_of_pokemon: List[Pokemon] = []
-    with open("./data/pokemonTrain.csv","r") as f:
-        columns = f.readline().split(",")
+    list_of_pokemon = []
+    with open("./pokemonTrain.csv","r") as f:
+        columns = f.readline()
         for line in f.readlines():
             pokemon = Pokemon(line.strip().split(","))
             list_of_pokemon.append(pokemon)
 
     part1(list_of_pokemon)
     part2(list_of_pokemon)
+    part3(list_of_pokemon)
+
+    with open("./pokemonResult.csv", "w") as f:
+        f.write(columns)
+        f.writelines([ p.repr()+"\n" for p in list_of_pokemon])
+
+    part4(list_of_pokemon)
+    part5(list_of_pokemon)
+
 
 if __name__ == "__main__":
     main()
