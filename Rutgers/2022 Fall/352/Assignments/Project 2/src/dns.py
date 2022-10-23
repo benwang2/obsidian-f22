@@ -1,5 +1,4 @@
 import socket
-import sys
 
 class Record():
     def __init__(self, name, value, type):
@@ -40,19 +39,14 @@ class DNS():
 
         while True:
             received = client.recv(4096)
-
             if not received: break
-
             data = received.decode('utf-8').strip()
-
             hostname = data.lower()
-
             print("Resolving query:",hostname,"=",hostname in self.map)
+
             if hostname in self.map:
                 record = self.map[hostname]
-
                 response = " ".join([record.name, record.value, record.type, "IN"])
-                
                 client.send(response.encode("utf-8"))
                 
                 received = None
