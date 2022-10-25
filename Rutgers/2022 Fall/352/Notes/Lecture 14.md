@@ -26,3 +26,4 @@ Individual packets can be dropped in transmission such that a retransmitted pack
 
 #tcp_reassembly
 
+The receiver-side socket buffre can only contain so much out-of-o
