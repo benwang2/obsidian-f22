@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Rutgers/2022 Fall/336/Assignments/336 SQL Queries II.md",
+                "file": "Rutgers/2022 Fall/336/Notes/Lecture 12.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "12d95313b103b99f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Rutgers/2022 Fall/336/Notes/Lecture 13.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -87,7 +100,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Rutgers/2022 Fall/336/Assignments/336 SQL Queries II.md"
+                "file": "Rutgers/2022 Fall/336/Notes/Lecture 13.md"
               }
             }
           }
@@ -122,7 +135,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Rutgers/2022 Fall/336/Assignments/336 SQL Queries II.md",
+                "file": "Rutgers/2022 Fall/336/Notes/Lecture 13.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +152,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Rutgers/2022 Fall/336/Assignments/336 SQL Queries II.md",
+                "file": "Rutgers/2022 Fall/336/Notes/Lecture 13.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -156,17 +169,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "f2d7fd2f0a670c17",
+  "active": "12d95313b103b99f",
   "lastOpenFiles": [
+    "Rutgers/2022 Fall/336/Notes/Lecture 12.md",
+    "Rutgers/2022 Fall/336/Notes/Lecture 11.md",
+    "Rutgers/2022 Fall/336/Assignments/336 SQL Queries II.md",
     "Rutgers/2022 Fall/352/Notes/Lecture 14.md",
     "Rutgers/2022 Fall/Planner.md",
     "Rutgers/2022 Fall/210/Assignments/Homework 2/210 Homework 2.md",
     "Rutgers/2022 Fall/210/Assignments/Homework 2/hw2.pdf",
     "Templates/Assignment.md",
     "Templates/Lecture Notes.md",
-    "Rutgers/2022 Fall/210/Assignments/Homework 1/210 Homework 1.md",
-    "Rutgers/2022 Fall/352/Notes/Lecture 13.md",
-    "Rutgers/2022 Fall/352/Notes/Lecture 12.md",
-    "Untitled.md"
+    "Rutgers/2022 Fall/210/Assignments/Homework 1/210 Homework 1.md"
   ]
 }

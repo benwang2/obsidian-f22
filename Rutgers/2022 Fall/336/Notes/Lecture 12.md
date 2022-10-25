@@ -13,8 +13,6 @@ tags:
 - attributes
 - one-to-one
 - many-to-one
-- 
-
 
 ### Subtopic 1
 Use this space to expand upon the topic.
