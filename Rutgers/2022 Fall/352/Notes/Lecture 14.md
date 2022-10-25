@@ -18,7 +18,7 @@ However, applications do not always read from the socket immediately.
 
 The receiver's TCP stack deposits the data in the receive-side socket buffer. Some TCP code from the sender deposits data within the TCP socket receiver buffer, which the application process can then receive with `sock.recv()`.
 
-Data can not be immediately discarded from the sender once transmitted. This is because of the possibility of packet retransmission.
+Data can not be immediately discarded from the sender once transmitted. This is because of the possibility of packet re-transmission.
 
 TCP receiver software only releases data from receive-side socket buffer once the data is in order relative to all other data read by application.
 
