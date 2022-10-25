@@ -13,11 +13,9 @@ tags:
 - Functional dependencies
 - BCNF
 
-###  Functional Dependencies
-...
-
-### Boyce-Codd Normal Form (BCNF)
-...
-
+### Functional Dependencies and Boyce-Codd Normal Form (BCNF)
+If $X \rightarrow A$ is a **functional dependency** satisfied by csheme R, then X is a superkey.
+A **functional dependency** is a $X \rightarrow A$ reads as "X determin"
+A **superkey** is a ..
 
 ### Quiz Questions
