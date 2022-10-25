@@ -13,7 +13,7 @@ tags:
 - Functional dependencies
 - BCNF
 
-### Functional Dependencies and Boyce-Codd Normal Form (BCNF)
+## Functional Dependencies and Boyce-Codd Normal Form (BCNF)
 If $X \rightarrow A$ is a **functional dependency** satisfied by scheme R, then X is a superkey.
 
 A **functional dependency** is a constraint that defines a relation such that $X \rightarrow A$ , or "X determines A".
@@ -53,7 +53,12 @@ A closure test is a recursive algorithm that recursively computes the closure of
 
 We know if something is a superkey if we test the closure and all attributes are functional dependencies.
 
-### Quiz Questions
+## Relational Schema Design
+**Update anomaly**: Update of one value causes multiple tuples to be updated
+**Deletion anomaly**: Unintended loss of a piece of information as result of unrelated or weak related deletion
+**Redundancy**: Repeating the same info
+
+## Quiz Questions
 - A **functional dependency** is either many-to-one, or one-to-one
 - A **superkey** is a subset which determines all attributes.
 - What is a closure of the set of attributes? The set of all attributes determined by that set

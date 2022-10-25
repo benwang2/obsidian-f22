@@ -20,7 +20,7 @@
             }
           },
           {
-            "id": "12d95313b103b99f",
+            "id": "f15d95c25d12b150",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -169,9 +169,10 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "12d95313b103b99f",
+  "active": "f15d95c25d12b150",
   "lastOpenFiles": [
     "Rutgers/2022 Fall/336/Notes/Lecture 12.md",
+    "Rutgers/2022 Fall/336/Notes/Lecture 13.md",
     "Rutgers/2022 Fall/336/Notes/Lecture 11.md",
     "Rutgers/2022 Fall/336/Assignments/336 SQL Queries II.md",
     "Rutgers/2022 Fall/352/Notes/Lecture 14.md",
@@ -179,7 +180,6 @@
     "Rutgers/2022 Fall/210/Assignments/Homework 2/210 Homework 2.md",
     "Rutgers/2022 Fall/210/Assignments/Homework 2/hw2.pdf",
     "Templates/Assignment.md",
-    "Templates/Lecture Notes.md",
-    "Rutgers/2022 Fall/210/Assignments/Homework 1/210 Homework 1.md"
+    "Templates/Lecture Notes.md"
   ]
 }
