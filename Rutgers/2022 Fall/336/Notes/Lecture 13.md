@@ -61,4 +61,4 @@ We know if something is a superkey if we test the closure and all attributes are
 ## Quiz Questions
 - A **functional dependency** is either many-to-one, or one-to-one
 - A **superkey** is a subset which determines all attributes.
-- What is a closure of the set of attributes? The set of all attributes determined by that set
+- What is a closure of the set of attributes? The set of all attributes determined by that setIs Penna table in BCNF?
