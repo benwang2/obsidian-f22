@@ -57,9 +57,7 @@ def part2(docs):
     def compute_idf(dataset):
         idf = {}
 
-        terms = set()
-        for data in dataset:
-            terms.update(data.get_terms())
+        terms = set([data.get_terms() for data in dataset])
 
         for term in terms:
             occ = 0
@@ -70,7 +68,7 @@ def part2(docs):
 
         return idf
 
-    dataset: DocData = [compute_tf(doc) for doc in docs]
+    dataset = [compute_tf(doc) for doc in docs]
     idf_scores = compute_idf(dataset)
     
     for data in dataset:
