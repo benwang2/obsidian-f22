@@ -28,6 +28,8 @@ Functional dependencies are constraints that databases much satisfy.
 A one-to-many relationship implies a functional dependency from the many-to-one side.
 A one-to-one relationship implies a bidirectional functional dependency.
 
+Another example is: "no two courses can meet in the same room at the same time" (hour, room -> course)
+
 ### Keys of Relations
 Key $K$ is a **superkey** if for relation $R$ if $K$ functionally determines all of $R$.
 Key $K$ is a **key** for $R$ if $K$ is a *superkey*, but no proper subset of K is a superkey.
@@ -38,7 +40,15 @@ For a schema, $Drinkers(name, addr, beersLike, manf, favBeer)$
 	- $name \rightarrow addr, favBeer$
 	- $beersLiked \rightarrow manf$
 
+### Key
+For the same schema, $\{name, beersLiked\}$ is a key.
+
+To add a key, we can simply assert a key $K$. Alternatively, we can assert functional dependencies and deduce keys by systematic exploration.
+
+## Closure Test
+
 
 ### Quiz Questions
+- A **functional dependency** is either many-to-one, or one-to-one
 - A **superkey** is a subset which determines all attributes.
 - 
