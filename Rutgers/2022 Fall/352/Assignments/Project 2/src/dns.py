@@ -26,7 +26,7 @@ class DNS():
             print('socket open error: {}\n'.format(err))
             exit()
 
-        server_binding = ('', self.port)
+        server_binding = ('0.0.0.0', self.port)
         self.socket.bind(server_binding)
         self.socket.listen(1)
 
