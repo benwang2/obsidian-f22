@@ -30,6 +30,15 @@ A one-to-one relationship implies a bidirectional functional dependency.
 
 ### Keys of Relations
 Key $K$ is a **superkey** if for relation $R$ if $K$ functionally determines all of $R$.
-Key is a 
+Key $K$ is a **key** for $R$ if $K$ is a *superkey*, but no proper subset of K is a superkey.
+
+### Superkey
+For a schema, $Drinkers(name, addr, beersLike, manf, favBeer)$
+- $\{name, beersLiked\}$ is a superkey because together these attributes determine all other attributes
+	- $name \rightarrow addr, favBeer$
+	- $beersLiked \rightarrow manf$
+
 
 ### Quiz Questions
+- A **superkey** is a subset which determines all attributes.
+- 
