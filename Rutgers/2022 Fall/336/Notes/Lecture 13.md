@@ -46,9 +46,14 @@ For the same schema, $\{name, beersLiked\}$ is a key.
 To add a key, we can simply assert a key $K$. Alternatively, we can assert functional dependencies and deduce keys by systematic exploration.
 
 ## Closure Test
+A closure test is a recursive algorithm that recursively computes the closure of $Y$, which is denoted as $Y^+$.
 
+**Basis**: Let $Y^+=Y$
+**Induction:** Look for a functional dependency's left side $X$ such that it is a subset of the current $Y+$. If the FD is $X \rightarrow A$, we add $A$ to $Y^+$
+
+We know if something is a superkey if we test the closure and all attributes are functional dependencies.
 
 ### Quiz Questions
 - A **functional dependency** is either many-to-one, or one-to-one
 - A **superkey** is a subset which determines all attributes.
-- 
+- What is a closure of the set of attributes? The set of all attributes determined by that set
