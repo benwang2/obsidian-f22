@@ -26,4 +26,7 @@ Individual packets can be dropped in transmission such that a retransmitted pack
 
 #tcp_reassembly
 
-The receiver-side socket buffre can only contain so much out-of-o
+The receiver-side socket buffer can only contain so much out-of-order data. As a consequence, any subsequent out-of-order packets are dropped. Additionally, if there is too much packet reordering, the TCP application-level throughput will suffer.
+
+## Stream-Oriented Data Transfer
+TCP is a stream-oriented data transfer, meaning that a TCP socket will receive data in a continuous stream. When `sock.recv(n)`
