@@ -46,11 +46,11 @@ success_page = """
 #### Helper functions
 # Printing.
 def print_value(tag, value):
-    print "Here is the", tag
-    print "\"\"\""
-    print value
-    print "\"\"\""
-    print
+    print( "Here is the", tag)
+    print( "\"\"\"")
+    print( value)
+    print( "\"\"\"")
+    print()
 
 # Signal handler for graceful exit
 def sigint_handler(sig, frame):
@@ -74,7 +74,7 @@ while True:
     req = client.recv(1024)
 
     # Let's pick the headers and entity body apart
-    header_body = req.split('\r\n\r\n')
+    header_body = req.decode("utf-8").split('\r\n\r\n')
     headers = header_body[0]
     body = '' if len(header_body) == 1 else header_body[1]
     print_value('headers', headers)
@@ -104,10 +104,10 @@ while True:
     response += 'Content-Type: text/html\r\n\r\n'
     response += html_content_to_send
     print_value('response', response)    
-    client.send(response)
+    client.send(response.encode("utf-8"))
     client.close()
     
-    print "Served one request/connection!"
+    print("Served one request/connection!")
     print
 
 # We will never actually get here.

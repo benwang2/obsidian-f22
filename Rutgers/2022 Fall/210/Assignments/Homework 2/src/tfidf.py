@@ -57,7 +57,11 @@ def part2(docs):
     def compute_idf(dataset):
         idf = {}
 
-        terms = set([data.get_terms() for data in dataset])
+        terms = set()
+
+        for data in dataset:
+            terms |= data.get_terms()
+        # terms |= [data.get_terms() for data in dataset]
 
         for term in terms:
             occ = 0

@@ -30,9 +30,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "b823470edca477f6",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.0.3"
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -167,10 +177,7 @@
     "width": 282.5,
     "collapsed": true
   },
-  "ribbon": {
-    "mostRecentAction": ""
-  },
-  "active": "f15d95c25d12b150",
+  "active": "b823470edca477f6",
   "lastOpenFiles": [
     "Rutgers/2022 Fall/336/Notes/Lecture 12.md",
     "Rutgers/2022 Fall/336/Notes/Lecture 13.md",
