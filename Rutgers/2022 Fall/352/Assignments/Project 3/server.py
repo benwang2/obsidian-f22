@@ -16,6 +16,10 @@ sock = socket.socket()
 sock.bind(('', port))
 sock.listen(2)
 
+logins = {k:v.strip() for (k,v) in [line.split(" ")  for line in open("passwords.txt").readlines()]}
+secrets = {k:v.strip() for (k,v) in [line.split(" ")  for line in open("secrets.txt").readlines()]}
+sessions = {}
+
 ### Contents of pages we will serve.
 # Login form
 login_form = """
@@ -83,11 +87,31 @@ while True:
     # TODO: Put your application logic here!
     # Parse headers and body and perform various actions
 
+    if headers == "": continue
+
+    header_lines = headers.split("\n")
+    (method, route, _t) = header_lines[0].split(" ")
+    print(method, route, _t)
+    header_data = {}
+
+    for line in header_lines[1:]:
+        (key, val) = line.split(":",1)
+        val = val.strip()
+        header_data[key] = val
+
+    args = {}
+    for line in body.split("&"):
+        arg = line.split("=")
+        args[arg[0]] = arg[1] if len(arg) > 1 else ""
+    
+    html_content_to_send = login_page
+    headers_to_send = ''
+
+
     # You need to set the variables:
     # (1) `html_content_to_send` => add the HTML content you'd
     # like to send to the client.
     # Right now, we just send the default login page.
-    html_content_to_send = login_page
     # But other possibilities exist, including
     # html_content_to_send = success_page + <secret>
     # html_content_to_send = bad_creds_page
@@ -96,7 +120,33 @@ while True:
     # (2) `headers_to_send` => add any additional headers
     # you'd like to send the client?
     # Right now, we don't send any extra headers.
-    headers_to_send = ''
+    if method == "POST":
+        if route == "/":
+            if "username" in args and "password" in args:
+                user, pw = args["username"], args["password"]
+                if user in logins and logins[user] == pw:
+                    html_content_to_send = success_page+secrets[user]
+                    rand_val = random.getrandbits(64)
+                    headers_to_send = 'Set-Cookie: token=' + str(rand_val) + '\r\n'
+                    sessions[rand_val] = user
+                else:
+                    html_content_to_send = bad_creds_page
+            elif "action" in args:
+                action = args["action"]
+                if action == "logout":
+                    if "Cookie" in header_data:
+                        sessions[header_data["Cookie"]] = None
+    elif method == "GET":
+        if "Cookie" in header_data:
+            cookie = sessions[header_data["Cookie"]]
+            if sessions[cookie]:
+                html_content_to_send = success_page+secrets[sessions[cookie]]
+            else:
+                html_content_to_send = bad_creds_page
+        else:
+            pass
+
+
 
     # Construct and send the final response
     response  = 'HTTP/1.1 200 OK\r\n'
