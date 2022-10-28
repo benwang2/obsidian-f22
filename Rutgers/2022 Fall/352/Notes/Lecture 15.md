@@ -10,9 +10,13 @@ tags:
 <center><h1>Lecture 15</h1></center>
 
 
-## Increasing throughput
+## Bottlenecks
 - Maximum rate a user can push data is determine by three bottlenecks
 	1. Application process
 	2. TCP Socket receiver buffer
 	3. Link between source router and destination router
-- 
+
+### Drops due to Buffer Fill
+At bottlenecks, data begins to be dropped is full. So, we can avoid drops due to buffer fill by having the TCP sender only transmit as much as the **free buffer space**.
+
+The amount of empty space in the buffer is known as the 
