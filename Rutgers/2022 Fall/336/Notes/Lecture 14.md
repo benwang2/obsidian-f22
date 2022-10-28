@@ -15,5 +15,5 @@ tags:
 - ...
 
 ## Quiz Questions
--  How do you test if something is a superkey? **Calculate t**
+-  How do you test if something is a superkey? **Take the set of all attributes and calculate the closure**
 - 
