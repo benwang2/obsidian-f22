@@ -45,3 +45,5 @@ If the socket buffer is too large, too much memory is consumed per socket.
 	- There is no amount of receiver buffer that can prevent low throughput
 - **Case 2**: The receiving app reads sufficiently fast on average to match the sender's writing speed
 	- Receiver must use buffer of size at least W.
+
+The **correct socket buffer sizing** is essential to maximize TCP throughput.
