@@ -33,3 +33,10 @@ If a receiver app is reading data too slowly,
 - advertised window shrinks
 - sender's window shrinks
 - sender's sending rate reduces
+
+**Flow control** matches the sender's write speed to the receiver's read speed.
+
+If the socket buffer is too small, the sender can't keep too many packets in flight, resulting in **lower throughput**.
+
+If the socket buffer is too large, too much memory is consumed per socket.
+
