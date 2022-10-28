@@ -14,3 +14,6 @@ tags:
 - ...
 - ...
 
+## Quiz Questions
+-  How do you test if something is a superkey? **Calculate t**
+- 
