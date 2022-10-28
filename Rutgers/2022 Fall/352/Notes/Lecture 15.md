@@ -27,3 +27,9 @@ The amount of empty space in the buffer is known as the **advertised window size
 The sender's sliding window can not be larger than the advertised window, to avoid dropped packets.
 
 #sliding_window
+
+If a receiver app is reading data too slowly,
+- receiver socket buffer fills up
+- advertised window shrinks
+- sender's window shrinks
+- sender's sending rate reduces
