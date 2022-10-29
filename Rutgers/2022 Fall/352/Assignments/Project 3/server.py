@@ -81,13 +81,11 @@ while True:
     header_body = req.decode("utf-8").split('\r\n\r\n')
     headers = header_body[0]
     body = '' if len(header_body) == 1 else header_body[1]
-    print_value('headers', headers)
-    print_value('entity body', body)
+    # print_value('headers', headers)
+    # print_value('entity body', body)
 
     # TODO: Put your application logic here!
     # Parse headers and body and perform various actions
-
-    if headers == "": continue
 
     header_lines = headers.split("\n")
     (method, route, _t) = header_lines[0].split(" ")
@@ -107,53 +105,42 @@ while True:
     html_content_to_send = login_page
     headers_to_send = ''
 
-
-    # You need to set the variables:
-    # (1) `html_content_to_send` => add the HTML content you'd
-    # like to send to the client.
-    # Right now, we just send the default login page.
-    # But other possibilities exist, including
-    # html_content_to_send = success_page + <secret>
-    # html_content_to_send = bad_creds_page
-    # html_content_to_send = logout_page
-    
-    # (2) `headers_to_send` => add any additional headers
-    # you'd like to send the client?
-    # Right now, we don't send any extra headers.
-    if method == "POST":
+    if method == "GET":
+        if "Cookie" in header_data:
+            cookie = header_data["Cookie"].split("=")[1]
+            if cookie in sessions.keys():
+                html_content_to_send = success_page+secrets[sessions[cookie]]
+            else:
+                html_content_to_send = bad_creds_page
+                headers_to_send = 'Set-Cookie: token=; expires=Thu, 01 Jan 1970 00:00:00 GMT\r\n'
+    elif method == "POST":
         if route == "/":
-            if "username" in args and "password" in args:
-                user, pw = args["username"], args["password"]
-                if user in logins and logins[user] == pw:
-                    html_content_to_send = success_page+secrets[user]
-                    rand_val = random.getrandbits(64)
-                    headers_to_send = 'Set-Cookie: token=' + str(rand_val) + '\r\n'
-                    sessions[rand_val] = user
+            if "username" in args or "password" in args:
+                if "username" in args and "password" in args:
+                    user, pw = args["username"], args["password"]
+                    if user in logins and logins[user] == pw:
+                        html_content_to_send = success_page+secrets[user]
+                        rand_val = str(random.getrandbits(64))
+                        headers_to_send = 'Set-Cookie: token=' + str(rand_val) + '\r\n'
+                        sessions[rand_val] = user
+                    else:
+                        html_content_to_send = bad_creds_page
                 else:
                     html_content_to_send = bad_creds_page
             elif "action" in args:
                 action = args["action"]
                 if action == "logout":
                     if "Cookie" in header_data:
-                        sessions[header_data["Cookie"]] = None
-    elif method == "GET":
-        if "Cookie" in header_data:
-            cookie = sessions[header_data["Cookie"]]
-            if sessions[cookie]:
-                html_content_to_send = success_page+secrets[sessions[cookie]]
-            else:
-                html_content_to_send = bad_creds_page
-        else:
-            pass
-
-
+                        cookie = header_data["Cookie"].split("=")[1]
+                        sessions[cookie] = None
+                        headers_to_send = 'Set-Cookie: token=; expires=Thu, 01 Jan 1970 00:00:00 GMT\r\n'
 
     # Construct and send the final response
     response  = 'HTTP/1.1 200 OK\r\n'
     response += headers_to_send
     response += 'Content-Type: text/html\r\n\r\n'
     response += html_content_to_send
-    print_value('response', response)    
+    # print_value('response', response)    
     client.send(response.encode("utf-8"))
     client.close()
     
