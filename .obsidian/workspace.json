@@ -20,7 +20,7 @@
             }
           },
           {
-            "id": "6d83ab22be023cf6",
+            "id": "6801cc447cda494b",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -30,21 +30,9 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "6801cc447cda494b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Untitled.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -111,9 +99,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Untitled.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -147,7 +133,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Untitled.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -164,7 +149,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Untitled.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -180,6 +164,7 @@
   },
   "active": "6801cc447cda494b",
   "lastOpenFiles": [
+    "Untitled.md",
     "Rutgers/2022 Fall/352/Notes/Lecture 16.md",
     "Rutgers/2022 Fall/Planner.md",
     "Rutgers/2022 Fall/336/Notes/Lecture 14.md",
@@ -188,7 +173,6 @@
     "Rutgers/2022 Fall/336/Assignments/Homework 2/336 SQL Queries II.md",
     "Rutgers/2022 Fall/336/Assignments/Homework 1/336 Simple SQL Queries.md",
     "Rutgers/2022 Fall/336/Assignments/Homework 1/336 Simple SQL Queries.pdf",
-    "Rutgers/2022 Fall/352/Notes/Lecture 13.md",
-    "Rutgers/2022 Fall/352/Notes/Lecture 15.md"
+    "Rutgers/2022 Fall/352/Notes/Lecture 13.md"
   ]
 }
