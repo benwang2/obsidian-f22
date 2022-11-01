@@ -47,3 +47,9 @@ If we have a fast link, and a bottleneck link, the the packets will take longer 
 **ACK clocking**: when the sender receives an ACK, it must be safe to send another packet without congesting the bottleneck link.
 
 ### Steady State
+...
+
+Initially, $cwnd = 1$ MSS, MSS being the **maximum segment size**.
+Upon receiving an ACK of each MSS, we increase the cwnd by 1. We increase the cwnd exponentially. The cwnd would effectively be written as $2^n$, where $n$ is the number of the request.
+
+On loss, restart from $cwnd = 1$.
