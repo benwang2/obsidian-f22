@@ -45,3 +45,5 @@ We also want **low delay**, which minimizes overall delay of packets to get to t
 If we have a fast link, and a bottleneck link, the the packets will take longer to send. This will result in the packets having a delay between receiving. This is called **inter-packet delay**.
 
 **ACK clocking**: when the sender receives an ACK, it must be safe to send another packet without congesting the bottleneck link.
+
+### Steady State
