@@ -27,7 +27,13 @@ NoSQL databases can contain a lot of different types:
 Semistructured data is data that is annotated by its fields, as opposed to a schema, tables, and attributes.
 
 Data structure is irregular.
-	
+Examples:
+- biological data
+- web data
+
+We need semistructured data for structural information that is not plain text, but has less constraints on structure than relational data.
+
+
 #### Denormalization
 With NoSQL, every resource is not required to have an attribute or to be *normalized*. We don't have to worry about relations as much because there's no need for artificially created tables.
 
