@@ -31,5 +31,8 @@ We use signals and knobs to adjust the congestion control effectively.
 These are **implicit** feedback signals measured directly at the sender.
 #ACK #RTO #RTT
 
-**Knobs**
-- Something you use to "probe" the available bottleneck capacity
+**Knobs** are something you use to "probe" the available bottleneck capacity
+
+### Sense and React
+With sense and react, we ideally want to be in the **steady state**, which we achieve using congestion control algorithms.
+
