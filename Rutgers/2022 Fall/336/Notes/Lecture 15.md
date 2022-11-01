@@ -58,3 +58,7 @@ NoSQL is recommended when
 - Group-by aggregates
 
 ## Quiz
+What's the difference between XML and HTML?
+- XML designed to describe data, whereas HTML focuses on displaying data
+- XLM is content oriented, but HTML is presentation oriented
+- XML has extensible tags, but HTML has fixed
