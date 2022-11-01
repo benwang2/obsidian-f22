@@ -41,4 +41,5 @@ We want to achieve a **high sending rate**, which we accomplish by using the ful
 We also want **low delay**, which minizes overall delay of packets to get to the receiver
 - Overall delay = propagation + queuing + transmission
 - assume propagation and transmission are fixed
-- 
+
+If we have a fast link, and a bottleneck link, the the packets will take longer to send. This will result in the packets having a delay between receiving. This is called **inter-packet delay**.
