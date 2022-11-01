@@ -1,14 +1,12 @@
 from collections import defaultdict
 import csv
 import re
-import pprint
-from xml.etree.ElementInclude import default_loader
 
 def part1(data):
     for entry in data:
         if "-" in entry["age"]:
             lower, upper = [float(num) for num in entry["age"].split("-")]
-            entry["age"] = str(round((lower+upper)/2,1))
+            entry["age"] = f"{round((lower+upper)/2,0):.0f}"
 
 def part2(data):
     date_patt = re.compile(r"(\d+)\.(\d+)\.(\d+)")

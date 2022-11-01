@@ -16,7 +16,7 @@ class Pokemon:
         self.id,self.name,self.level,self.personality,self.type,self.weakness,self.atk,self.defense,self.hp,self.stage = args
         self.level = float(self.level)
 
-    def repr(self):
+    def __repr__(self):
         # id,name,level,personality,type,weakness,atk,def,hp,stage
         return f"{self.id},{self.name},{self.level},{self.personality},{self.type},{self.weakness},{self.atk},{self.defense},{self.hp},{self.stage}"
 
@@ -65,9 +65,9 @@ def get_avg_stats(list_of_pokemon):
     hp_values = [float(pokemon.hp) for pokemon in list_of_pokemon if pokemon.hp != "NaN"]
 
     return {
-        "atk":  round(sum(atk_values)/len(atk_values),1),
-        "def":  round(sum(def_values)/len(def_values),1),
-        "hp":   round(sum(hp_values)/len(hp_values),1),
+        "atk":  sum(atk_values)/len(atk_values),
+        "def":  sum(def_values)/len(def_values),
+        "hp":   sum(hp_values)/len(hp_values),
     }
 
 def part2(list_of_pokemon):
@@ -93,17 +93,17 @@ def part3(list_of_pokemon):
             updated_stats = g2_avgstats
 
         if pokemon.atk == 'NaN':
-            pokemon.atk = updated_stats['atk']
+            pokemon.atk = round(updated_stats['atk'],1)
         if pokemon.defense == 'NaN':
-            pokemon.defense = updated_stats['def']
+            pokemon.defense = round(updated_stats['def'],1)
         if pokemon.hp == 'NaN':
-            pokemon.hp = updated_stats['hp']
+            pokemon.hp = round(updated_stats['hp'],1)
 
 def part4(list_of_pokemon):
-    type_to_personality = defaultdict(list)
+    type_to_personality = defaultdict(set)
 
     for pokemon in list_of_pokemon:
-        type_to_personality[pokemon.type].append(pokemon.personality)
+        type_to_personality[pokemon.type].add(pokemon.personality)
 
     for p_type, values in type_to_personality.items():
         type_to_personality[p_type] = sorted(values)
@@ -114,10 +114,10 @@ def part4(list_of_pokemon):
 
 def part5(list_of_pokemon):
     hp_for_stage3 = [float(pokemon.hp) for pokemon in list_of_pokemon if pokemon.stage == "3.0"]
-    avg_hp = round(sum(hp_for_stage3)/len(hp_for_stage3),1)
+    avg_hp = round(sum(hp_for_stage3)/len(hp_for_stage3),0)
 
     with open("./pokemon5.txt","w") as f:
-        f.write(f"Average hit point for pokemon of stage 3.0 = {avg_hp}")
+        f.write(f"Average hit point for pokemon of stage 3.0 = {avg_hp:.0f}")
 
 def main():
     list_of_pokemon = []
@@ -133,7 +133,7 @@ def main():
 
     with open("./pokemonResult.csv", "w") as f:
         f.write(columns)
-        f.writelines([ p.repr()+"\n" for p in list_of_pokemon])
+        f.writelines([ repr(p)+"\n" for p in list_of_pokemon])
 
     part4(list_of_pokemon)
     part5(list_of_pokemon)
