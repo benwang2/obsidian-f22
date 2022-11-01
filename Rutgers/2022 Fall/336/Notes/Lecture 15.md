@@ -38,6 +38,11 @@ NoSQL is recommended when
 - we have semi-structured data
 - elastic consistency
 
+### Complexity of Queries
+#### Simple queries
+...
 
+#### Complex Queries
+...
 
 ## Quiz
