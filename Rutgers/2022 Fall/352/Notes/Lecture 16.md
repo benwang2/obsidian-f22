@@ -36,3 +36,9 @@ These are **implicit** feedback signals measured directly at the sender.
 ### Sense and React
 With sense and react, we ideally want to be in the **steady state**, which we achieve using congestion control algorithms.
 
+**Ideal Goal**
+We want to achieve a **high sending rate**, which we accomplish by using the full capacity of the bottleneck link.
+We also want **low delay**, which minizes overall delay of packets to get to the receiver
+- Overall delay = propagation + queuing + transmission
+- assume propagation and transmission are fixed
+- 
