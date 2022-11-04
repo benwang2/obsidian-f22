@@ -1,4 +1,12 @@
 1. Bars which sell at least one beer liked by a resident of Edison
+```sql
+SELECT DISTINCT s.bar
+FROM
+	Sells s,
+    (SELECT beer FROM Drinkers d, Likes l WHERE d.city = 'Edison') as b
+WHERE
+	s.beer = b.beer;
+```
 	Caravan
 	Britannia Arms
 	Cabana
@@ -15,12 +23,24 @@
 	The Backbeat
 	Blue Angel
 
-1. Beers which are liked by Mike and by Devarsh
-2. Drinkers who do not frequent Caravan bar
-3. Beers which sell most beers under $6 (include ties)
-4. Bars which sell all beers
-5. Use left join to find Drinkers who do not frequent Caravan bar
-6. Use Case statement to add new attribute to Sells table with two values:  "Expensive" and "Regular".
+2. Beers which are liked by Mike and by Devarsh
+   ```sql
+SELECT DISTINCT l.beer
+FROM
+	Likes l,
+    Likes l1
+WHERE
+	l.drinker = 'Mike' AND 
+    l1.drinker = 'Devarsh' AND 
+    l.beer = l1.beer
+```
+	Blue Moon
+
+3. Drinkers who do not frequent Caravan bar
+4. Beers which sell most beers under $6 (include ties)
+5. Bars which sell all beers
+6. Use left join to find Drinkers who do not frequent Caravan bar
+7. Use Case statement to add new attribute to Sells table with two values:  "Expensive" and "Regular".
 
 Expensive are beers sold above $8, The remaining beers are "Regular".
 8. Which precinct(s) had the highest totalvotes at the end of voting?
