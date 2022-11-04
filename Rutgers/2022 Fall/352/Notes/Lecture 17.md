@@ -18,4 +18,4 @@ As a TCP sender, the window size is the minimum of the congestion window and the
 ### TCP New Reno
 Follow a "slow start" approach, with an additive increase.
 
-There is exponential growth for sending packets. When  
+There is exponential growth for sending packets. When packet loss occurs at sending rate = $n$, reset the packet sending rate to 0, start growth again. Repeat this until sending rate = $n-1$, then there is an additive increase. This algorithm is repeated.
