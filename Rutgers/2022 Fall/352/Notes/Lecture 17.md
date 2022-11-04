@@ -15,3 +15,7 @@ The sender maintains an estimate of the amount of in-flight data needed to keep 
 The larger the congestion window, the higher the #throughput.
 As a TCP sender, the window size is the minimum of the congestion window and the receiver advertised window in order to respect whichever peer is the slowest.
 
+### TCP New Reno
+Follow a "slow start" approach, with an additive increase.
+
+There is exponential growth for sending packets. When  
