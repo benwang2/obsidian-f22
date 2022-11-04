@@ -45,3 +45,6 @@ BBR periodically increases its sending rate by a gain factor to see if the link 
 ### Bandwidth-Delay Product
 $C*T$ = bandwidth-delay product is the amount of data in flight for a sender transmitting at the ideal rate during the ideal round-trip delay of a packet.
 
+BDP governs window size of a single flow at steady state
+Bottleneck router buffer size governs how much cwnd can exceed before the BDP before packet drops occur
+BDP is the ideal desired window size to use the full bottleneck link, without any queuing
