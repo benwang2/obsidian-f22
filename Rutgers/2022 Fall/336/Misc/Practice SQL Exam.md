@@ -139,6 +139,45 @@ SELECT *, CASE
 END
 FROM Sells;
 ```
+
+| bar                                 | beer                         | price   | case            |
+| ----------------------------------- | ---------------------------- | ------- | ----------- |
+| 'A.P. Stump\'s'                     | 'Hefeweizen'                 | '6.00'  | 'Regular'   |
+| 'Blue Angel'                        | 'Hefeweizen Doppelbock'      | '5.80'  | 'Regular'   |
+| 'Blue Angel'                        | 'Original Premium Lager Dog' | '6.55'  | 'Regular'   |
+| 'Blue Tattoo'                       | 'Killian\'s'                 | '6.00'  | 'Regular'   |
+| 'Britannia Arms'                    | 'Budweiser'                  | '6.80'  | 'Regular'   |
+| 'Cabana'                            | 'Budweiser'                  | '3.84'  | 'Regular'   |
+| 'Caravan'                           | 'Budweiser'                  | '10.80' | 'Expensive' |
+| 'Caravan'                           | 'Original Premium Lager Dog' | '8.80'  | 'Expensive' |
+| 'Club 175'                          | 'Budweiser'                  | '4.50'  | 'Regular'   |
+| 'Coconut Willie\'s Cocktail Lounge' | 'Budweiser'                  | '3.55'  | 'Regular'   |
+| 'Eulipia'                           | 'Hefeweizen Doppelbock'      | '4.50'  | 'Regular'   |
+| 'Gecko Grill'                       | 'Budweiser'                  | '3.00'  | 'Regular'   |
+| 'Giza Hookah Lounge'                | 'Budweiser'                  | '3.25'  | 'Regular'   |
+| 'Giza Hookah Lounge'                | 'Stolichnaya Citrona'        | '6.00'  | 'Regular'   |
+| 'Hedley Club'                       | 'Hefeweizen'                 | '8.00'  | 'Regular'   |
+| 'Hedley Club'                       | 'Hefeweizen Doppelbock'      | '5.50'  | 'Regular'   |
+| 'Seven Bamboo'                      | 'Budweiser'                  | '2.50'  | 'Regular'   |
+| 'The B-Hive'                        | 'Michelob Amber Bock'        | '5.00'  | 'Regular'   |
+| 'The Backbeat'                      | 'Killian\'s'                 | '3.50'  | 'Regular'   |
+| 'The Blank Club'                    | 'Budweiser'                  | '5.50'  | 'Regular'   |
+| 'The Shark and Rose'                | 'Budweiser'                  | '4.50'  | 'Regular'   |
+| 'The Shark and Rose'                | 'Original Premium Lager Dog' | '5.50'  | 'Regular'   |
+| 'Gecko Grill'                       | 'Hefeweizen'                 | '6.00'  | 'Regular'   |
+| 'Caravan'                           | 'Bud'                        | NULL    | 'Regular'   |
+| 'Caravan'                           | 'Bud'                        | NULL    | 'Regular'   |
+| 'Caravan'                           | 'Bud'                        | NULL    | 'Regular'   |
+| 'Caravan'                           | 'Bud'                        | '10.30' | 'Expensive' |
+| 'Caravan'                           | 'Zywiec'                     | '10.30' | 'Expensive' |
+| 'Caravan'                           | 'Zywiec'                     | '10.30' | 'Expensive' |
+| 'Caravan'                           | 'Zywiec'                     | '10.30' | 'Expensive' |
+| 'Caravan'                           | 'Zywiec'                     | '10.30' | 'Expensive' |
+| 'Caravan'                           | 'Zywiec'                     | '10.30' | 'Expensive' |
+| 'Bosman'                            | 'Zywiec'                     | '6.00'  | 'Regular'   |
+| 'Bosman'                            | 'Okocim'                     | '5.00'  | 'Regular'   |
+
+
 8. Which precinct(s) had the highest totalvotes at the end of voting?
 9. Extract domain name from www.cs.rutgers.edu/~rmartin
 10. How many votes did Biden get by the end of the day of November 6, 2020?
