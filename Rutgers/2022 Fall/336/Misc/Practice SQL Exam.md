@@ -37,6 +37,38 @@ WHERE
 	Blue Moon
 
 3. Drinkers who do not frequent Caravan bar
+```sql
+SELECT DISTINCT d.name
+FROM Drinkers d
+WHERE d.name NOT IN (
+		SELECT f.drinker
+        FROM Frequents f
+        WHERE f.bar = 'Caravan'
+);
+```
+	Ahmed
+	Ajla
+	Bob
+	Boshen
+	Devarsh
+	Erik
+	Gunjan
+	Harshal
+	Herb
+	Jeanie
+	Jesse
+	Kayla
+	Laura
+	Mike
+	Rebecca
+	Sahil
+	Tatiana
+	Vedant
+	Vince
+	Vishal
+	Yuchen
+	Yuhan
+
 4. Beers which sell most beers under $6 (include ties)
 5. Bars which sell all beers
 6. Use left join to find Drinkers who do not frequent Caravan bar
