@@ -42,3 +42,6 @@ While the ACK rate matches the sending rate, we know that we are in steady state
 
 BBR periodically increases its sending rate by a gain factor to see if the link rate has increased.
 
+### Bandwidth-Delay Product
+$C*T$ = bandwidth-delay product is the amount of data in flight for a sender transmitting at the ideal rate during the ideal round-trip delay of a packet.
+
