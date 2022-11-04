@@ -38,4 +38,7 @@ Assuming that the link rate of the bottleneck:
 TCP BBR adjust the speeds using a method called **gain cycling**
 BBR periodically increases its sending rate by a gain factor to see if the link rate has increased.
 
-While the ACK rat ematches the sending rate, we know that we are in steady state or can attempt to increase the ACK rate.
+While the ACK rate matches the sending rate, we know that we are in steady state or can attempt to increase the ACK rate.
+
+BBR periodically increases its sending rate by a gain factor to see if the link rate has increased.
+
