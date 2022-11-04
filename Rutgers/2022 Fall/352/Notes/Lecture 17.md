@@ -26,4 +26,13 @@ This method of adjusting is just one of many **congestion avoidance** methods.
 #### TCP BBR
 This methodology aims to determine the bottleneck link rate, utilizing the understanding that **data gets across the bottleneck at the bottleneck link rate.**
 
-We measure the rate of incoming ACKs to determine the receiving rate and con
+We measure the rate of incoming ACKs to determine the receiving rate and consequently, the sending rate.
+
+Assuming that the link rate of the bottleneck:
+- is equal to the rate of data getting across the bottleneck link
+- is equal to the rate of data getting to the receiver
+- is equal to the rate at whichs ACKs are generaed by the receiver
+- is equal to the rate at which AKs reach the sender
+
+TCP BBR adjust the speeds using a method called **gain cycling**
+
