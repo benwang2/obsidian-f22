@@ -70,7 +70,21 @@ WHERE d.name NOT IN (
 	Yuhan
 
 4. Bars which sell most beers under $6 (include ties)
-
+```sql
+SELECT bar
+FROM Sells
+WHERE price < 6
+GROUP BY bar
+HAVING COUNT(*) = (
+	SELECT COUNT(*)
+	FROM Sells
+	WHERE price < 6
+	GROUP BY bar 
+	ORDER BY COUNT(*) DESC
+	LIMIT 1
+);
+```
+	The Shark and Rose
 5. Bars which sell all beers
 6. Use left join to find Drinkers who do not frequent Caravan bar
 7. Use Case statement to add new attribute to Sells table with two values:  "Expensive" and "Regular".
