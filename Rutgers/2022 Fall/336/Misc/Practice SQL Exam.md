@@ -180,4 +180,7 @@ FROM Sells;
 
 8. Which precinct(s) had the highest totalvotes at the end of voting?
 9. Extract domain name from www.cs.rutgers.edu/~rmartin
+```sql
+SELECT SUBSTRING_INDEX(SUBSTRING_INDEX('www.cs.rutgers.edu', 'www.', -1), '/', 1) as res;
+```
 10. How many votes did Biden get by the end of the day of November 6, 2020?
