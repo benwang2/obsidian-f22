@@ -86,6 +86,17 @@ HAVING COUNT(*) = (
 ```
 	The Shark and Rose
 5. Bars which sell all beers
+```sql
+SELECT DISTINCT s.bar
+FROM Sells s
+WHERE NOT EXISTS(
+	SELECT name
+	FROM Beers b
+	WHERE name NOT IN (SELECT beer FROM Sells WHERE bar=s.bar)
+);
+```
+	None
+
 6. Use left join to find Drinkers who do not frequent Caravan bar
 7. Use Case statement to add new attribute to Sells table with two values:  "Expensive" and "Regular".
 
