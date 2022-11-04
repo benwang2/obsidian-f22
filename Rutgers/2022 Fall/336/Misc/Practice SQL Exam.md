@@ -98,9 +98,47 @@ WHERE NOT EXISTS(
 	None
 
 6. Use left join to find Drinkers who do not frequent Caravan bar
-7. Use Case statement to add new attribute to Sells table with two values:  "Expensive" and "Regular".
-
-Expensive are beers sold above $8, The remaining beers are "Regular".
+```sql
+SELECT DISTINCT name
+FROM Drinkers d
+LEFT JOIN Frequents as f
+ON d.name = f.drinker
+WHERE f.bar != 'Caravan' OR f.bar IS NULL;
+```
+	Ahmed
+	Ajla
+	Bob
+	Boshen
+	Devarsh
+	Erik
+	Gunjan
+	Harshal
+	Herb
+	Jeanie
+	Jesse
+	Joe
+	John
+	Justin
+	Kayla
+	Laura
+	Mike
+	Rebecca
+	Sahil
+	Tatiana
+	Tom
+	Vedant
+	Vince
+	Vishal
+	Yuchen
+	Yuhan
+7. Use Case statement to add new attribute to Sells table with two values:  "Expensive" and "Regular". Expensive are beers sold above $8, The remaining beers are "Regular".
+```sql
+SELECT *, CASE
+	WHEN price > 8 THEN 'Expensive'
+    ELSE 'Regular'
+END
+FROM Sells;
+```
 8. Which precinct(s) had the highest totalvotes at the end of voting?
 9. Extract domain name from www.cs.rutgers.edu/~rmartin
 10. How many votes did Biden get by the end of the day of November 6, 2020?
