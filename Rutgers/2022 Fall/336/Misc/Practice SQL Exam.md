@@ -179,6 +179,23 @@ FROM Sells;
 
 
 8. Which precinct(s) had the highest totalvotes at the end of voting?
+```sql
+FROM Penna p
+WHERE
+	p.Timestamp = (
+		SELECT p1.Timestamp
+		FROM Penna p1
+		WHERE p1.precinct = p.precinct
+		ORDER BY p1.Timestamp DESC
+		LIMIT 1
+	)
+    AND p.totalvotes = (
+		SELECT totalvotes
+        FROM Penna
+        ORDER BY totalvotes
+        DESC LIMIT 1
+	);
+```
 9. Extract domain name from www.cs.rutgers.edu/~rmartin
 ```sql
 SELECT SUBSTRING_INDEX(SUBSTRING_INDEX('www.cs.rutgers.edu', 'www.', -1), '/', 1) as res;
