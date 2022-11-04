@@ -24,3 +24,6 @@ There is exponential growth for sending packets. When packet loss occurs at send
 This method of adjusting is just one of many **congestion avoidance** methods.
 
 #### TCP BBR
+This methodology aims to determine the bottleneck link rate, utilizing the understanding that **data gets across the bottleneck at the bottleneck link rate.**
+
+We measure the rate of incoming ACKs to determine the receiving rate and con
