@@ -69,7 +69,8 @@ WHERE d.name NOT IN (
 	Yuchen
 	Yuhan
 
-4. Beers which sell most beers under $6 (include ties)
+4. Bars which sell most beers under $6 (include ties)
+
 5. Bars which sell all beers
 6. Use left join to find Drinkers who do not frequent Caravan bar
 7. Use Case statement to add new attribute to Sells table with two values:  "Expensive" and "Regular".
