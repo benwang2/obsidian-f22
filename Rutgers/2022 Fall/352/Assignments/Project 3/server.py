@@ -112,7 +112,6 @@ while True:
                 html_content_to_send = success_page+secrets[sessions[cookie]]
             else:
                 html_content_to_send = bad_creds_page
-                headers_to_send = 'Set-Cookie: token=; expires=Thu, 01 Jan 1970 00:00:00 GMT\r\n'
     elif method == "POST":
         if route == "/":
             if "username" in args or "password" in args:
