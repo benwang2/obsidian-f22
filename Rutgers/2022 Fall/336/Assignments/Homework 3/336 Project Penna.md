@@ -60,6 +60,34 @@ DELIMITER ;
 ### API3(candidate)
 Given a candidate return top 10 precincts that this candidate won. Order precincts by total votes and list TOP 10 in descending order of totalvotes.
 
+```mysql
+DROP PROCEDURE IF EXISTS API3;
+DELIMITER $$
+CREATE PROCEDURE API3(
+	IN candidate VARCHAR(6)
+)
+BEGIN
+	SELECT t.precinct as result
+    FROM (
+		SELECT p.precinct
+		FROM (
+			SELECT DISTINCT precinct
+			FROM Penna
+			WHERE 1 = CASE
+					WHEN candidate='Biden' THEN Biden>Trump
+					WHEN candidate='Trump' THEN Trump>Biden
+					ELSE -1
+				END
+		) p
+		ORDER BY (
+			SELECT MAX(totalvotes) FROM Penna WHERE precinct=p.precinct
+		) DESC
+		LIMIT 10
+	) t;
+END$$
+DELIMITER ;
+```
+
 ### API4(precinct)
 Given a precinct, show who won this precinct (Trump or Biden) as well as what percentage of total votes went to the winner.
 
