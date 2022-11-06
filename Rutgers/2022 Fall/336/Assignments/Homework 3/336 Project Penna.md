@@ -41,5 +41,16 @@ END;$$
 Given a date, return the candidate who had the most votes at the last timestamp for this date as well as  how many votes he got. For example the last timestamp for 2020-11-06 will be 2020-11-06 23:51:43.
 
 ```mysql
-
+DROP PROCEDURE IF EXISTS API2;
+DELIMITER $$
+CREATE FUNCTION API2(
+	d VARCHAR(10)
+) RETURNS VARCHAR(6) DETERMINISTIC
+BEGIN
+	SELECT IF(Biden>Trump, "Biden", "Trump")
+    FROM Penna
+    WHERE Timestamp LIKE CONCAT(d," %")
+    ORDER BY Timestamp DESC
+    LIMIT 1;
+END;$$
 ```
