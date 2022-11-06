@@ -88,6 +88,28 @@ DELIMITER ;
 ### API4(precinct)
 Given a precinct, show who won this precinct (Trump or Biden) as well as what percentage of total votes went to the winner.
 
+```mysql
+DROP PROCEDURE IF EXISTS API4;
+DELIMITER $$
+CREATE PROCEDURE API4(
+	IN p VARCHAR(64)
+)
+BEGIN
+	SELECT
+	CONCAT(
+		IF(Biden>Trump,'Biden','Trump'),' won this precinct'
+	) as winner,
+	CONCAT(FORMAT(IF(
+		Biden>Trump,
+        Biden/totalVotes,
+        Trump/totalVotes
+	)*100, 2), "%") as percentage
+	FROM (SELECT * FROM Penna WHERE precinct=p) penna
+	WHERE penna.Timestamp = (SELECT MAX(Timestamp) FROM penna);
+END$$
+DELIMITER ;
+```
+
 ## API5(string)
 Given a string $s$ of characters, create a stored procedure which determines who won more votes in all precincts whose names contain this string s and how many votes did they get in total. For example, for s='Township', the procedure will return the name (Trump or Biden) who won more votes in union of precints which have "Township" in their name as well as the sum of votes for the winner.
 
