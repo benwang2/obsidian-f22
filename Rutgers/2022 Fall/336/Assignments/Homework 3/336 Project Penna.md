@@ -67,23 +67,20 @@ CREATE PROCEDURE API3(
 	IN candidate VARCHAR(6)
 )
 BEGIN
-	SELECT t.precinct as result
-    FROM (
-		SELECT p.precinct
-		FROM (
-			SELECT DISTINCT precinct
-			FROM Penna
-			WHERE 1 = CASE
-					WHEN candidate='Biden' THEN Biden>Trump
-					WHEN candidate='Trump' THEN Trump>Biden
-					ELSE -1
-				END
-		) p
-		ORDER BY (
-			SELECT MAX(totalvotes) FROM Penna WHERE precinct=p.precinct
-		) DESC
-		LIMIT 10
-	) t;
+	SELECT p.precinct
+	FROM (
+		SELECT DISTINCT precinct
+		FROM Penna
+		WHERE 1 = CASE
+				WHEN candidate='Biden' THEN Biden>Trump
+				WHEN candidate='Trump' THEN Trump>Biden
+				ELSE -1
+			END
+	) p
+	ORDER BY (
+		SELECT MAX(totalvotes) FROM Penna WHERE precinct=p.precinct
+	) DESC
+	LIMIT 10;
 END$$
 DELIMITER ;
 ```
