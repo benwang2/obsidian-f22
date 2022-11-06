@@ -29,7 +29,7 @@ BEGIN
 		CASE
 			WHEN c='Biden' THEN c
             ELSE Trump
-		END
+		END AS Votes
         FROM Penna
         WHERE precinct=p AND Timestamp <= ts
         ORDER BY Timestamp DESC
@@ -47,10 +47,22 @@ CREATE FUNCTION API2(
 	d VARCHAR(10)
 ) RETURNS VARCHAR(6) DETERMINISTIC
 BEGIN
-	SELECT IF(Biden>Trump, "Biden", "Trump")
+	SELECT IF(Biden>Trump, "Biden", "Trump") AS Candidate
     FROM Penna
     WHERE Timestamp LIKE CONCAT(d," %")
     ORDER BY Timestamp DESC
     LIMIT 1;
 END;$$
 ```
+
+### API3(candidate)
+Given a candidate return top 10 precincts that this candidate won. Order precincts by total votes and list TOP 10 in descending order of totalvotes.
+
+### API4(precinct)
+Given a precinct, show who won this precinct (Trump or Biden) as well as what percentage of total votes went to the winner.
+
+## API5(string)
+Given a string $s$ of characters, create a stored procedure which determines who won more votes in all precincts whose names contain this string s and how many votes did they get in total. For example, for s='Township', the procedure will return the name (Trump or Biden) who won more votes in union of precints which have "Township" in their name as well as the sum of votes for the winner.
+
+## Part 2 (30%)
+### newPenna()
