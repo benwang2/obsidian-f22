@@ -17,7 +17,7 @@ tags:
 ### API1(candidate, timestamp, precinct)
 Given a candidate C, timestamp T and precinct P, return how many votes did the candidate C have at T or largest timestamp T’ smaller than T, in case T does not appear in Penna.
 ```mysql
-DROP PROCEDURE IF EXISTS API1;
+DROP FUNCTION IF EXISTS API1;
 DELIMITER $$
 CREATE FUNCTION API1(
 	c VARCHAR(6),
@@ -41,7 +41,7 @@ END;$$
 Given a date, return the candidate who had the most votes at the last timestamp for this date as well as  how many votes he got. For example the last timestamp for 2020-11-06 will be 2020-11-06 23:51:43.
 
 ```mysql
-DROP PROCEDURE IF EXISTS API2;
+DROP FUNCTION IF EXISTS API2;
 DELIMITER $$
 CREATE FUNCTION API2(
 	d VARCHAR(10)
