@@ -35,7 +35,8 @@ BEGIN
         ORDER BY Timestamp DESC
         LIMIT 1
 	);
-END;$$
+END$$
+DELIMITER ;
 ```
 ### API2(date)
 Given a date, return the candidate who had the most votes at the last timestamp for this date as well as  how many votes he got. For example the last timestamp for 2020-11-06 will be 2020-11-06 23:51:43.
@@ -52,7 +53,8 @@ BEGIN
     WHERE Timestamp LIKE CONCAT(d," %")
     ORDER BY Timestamp DESC
     LIMIT 1;
-END;$$
+END$$
+DELIMITER ;
 ```
 
 ### API3(candidate)
