@@ -96,9 +96,7 @@ CREATE PROCEDURE API4(
 )
 BEGIN
 	SELECT
-	CONCAT(
-		IF(Biden>Trump,'Biden','Trump'),' won this precinct'
-	) as winner,
+		IF(Biden>Trump,'Biden','Trump') as winner,
 	CONCAT(FORMAT(IF(
 		Biden>Trump,
         Biden/totalVotes,
@@ -112,6 +110,25 @@ DELIMITER ;
 
 ## API5(string)
 Given a string $s$ of characters, create a stored procedure which determines who won more votes in all precincts whose names contain this string s and how many votes did they get in total. For example, for s='Township', the procedure will return the name (Trump or Biden) who won more votes in union of precints which have "Township" in their name as well as the sum of votes for the winner.
+```mysql
+DROP PROCEDURE IF EXISTS API5;
+DELIMITER $$
+CREATE PROCEDURE API5(
+	IN s VARCHAR(64)
+)
+BEGIN
+	SELECT
+		IF(Biden>Trump,'Biden','Trump') as winner,
+		IF(Biden>Trump, SUM(Biden), SUM(Trump)) as votes
+	FROM (
+		SELECT Timestamp, Trump, Biden
+        FROM Penna
+        WHERE precinct LIKE CONCAT('%',s,'%')
+	) penna
+	WHERE penna.Timestamp = (SELECT MAX(Timestamp) FROM penna);
+END$$
+DELIMITER ;
+```
 
 ## Part 2 (30%)
 ### newPenna(precinct, Timestamp, totalVotes, Trump, Biden)
