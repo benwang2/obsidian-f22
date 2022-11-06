@@ -11,8 +11,12 @@
             "id": "abe5456ec93f0f20",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Rutgers/2022 Fall/336/Assignments/Homework 3/336 Project Penna.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -82,7 +86,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Rutgers/2022 Fall/336/Assignments/Homework 3/336 Project Penna.md"
+              }
             }
           }
         ]
@@ -116,6 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Rutgers/2022 Fall/336/Assignments/Homework 3/336 Project Penna.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -132,6 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Rutgers/2022 Fall/336/Assignments/Homework 3/336 Project Penna.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -147,12 +155,12 @@
   },
   "active": "abe5456ec93f0f20",
   "lastOpenFiles": [
+    "Rutgers/2022 Fall/336/Assignments/Homework 3/ProjectPenna.pdf",
     "Rutgers/2022 Fall/336/Assignments/Homework 3/336 Project Penna.md",
     "Rutgers/2022 Fall/Planner.md",
     "Rutgers/2022 Fall/336/Assignments/Homework 2/336 SQL Queries II.md",
     "Rutgers/2022 Fall/336/Misc/Practice SQL Exam.md",
     "Rutgers/2022 Fall/336/Assignments/Homework 2/336 SQL Queries II.pdf",
-    "Rutgers/2022 Fall/336/Assignments/Homework 3/ProjectPenna.pdf",
     "Rutgers/2022 Fall/336/Notes/Lecture 6.md",
     "conflict-files-obsidian-git.md",
     "Rutgers/2022 Fall/336/Notes/Lecture 5.md",
