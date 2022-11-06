@@ -65,4 +65,27 @@ Given a precinct, show who won this precinct (Trump or Biden) as well as what pe
 Given a string $s$ of characters, create a stored procedure which determines who won more votes in all precincts whose names contain this string s and how many votes did they get in total. For example, for s='Township', the procedure will return the name (Trump or Biden) who won more votes in union of precints which have "Township" in their name as well as the sum of votes for the winner.
 
 ## Part 2 (30%)
-### newPenna()
+### newPenna(precinct, Timestamp, totalVotes, Trump, Biden)
+This stored procedure will create a table newPenna, showing for each precinct how many votes were added to totalvotes, Trump, Biden between timestamp T and the las timestamp directly preceding  T.  In other words, create a table like Penna but replace totalvotes with newvotes, Trump with new_Trump and Biden with new_Biden.  Stored procedure with cursor is recommended
+
+### Switch(precinct, timestamp, fromCandidate, toCandidate)
+This stored procedure will return list of precincts, which have switched their winner from one candidate in last 24 hours of vote collection (i.e 24 hours before the last Timestamp data was collected) and that candidate was the ultimate winner of this precinct.
+
+## Part 3 (10%)
+Write SQL queries or stored procedures to check if the following patterns are enforced in the database:
+1. The sum of votes for Trump and Biden cannot be larger than totalvotes
+2. There cannot be any tuples with timestamps later than Nov 11 and earlier than Nov3
+3. Totalvotes for any precinct and at any timestamp T > 2020-11-05 00:00:00, will be larger or equal to totalvotes at T’<T where T’>2020-11-05 00:00:00 for that precinct.
+
+You should write SQL queries to verify the constraints and return TRUE or FALSE (in case constraint is not satisfied).Queries that don’t return a boolean value won’t be accepted.  
+
+## Part 4 (30%)
+### Triggers and UPDATE driven Stored Procedures
+Create three tables Updated Tuples, Inserted Tuples and Deleted Tuples. All three tables should have the same schema as Penna and should store any tuples which were updated (store them as they were before the update), any tuples which were inserted,  and any tuples which were deleted in their corresponding tables.  The triggers should populate these tables upon each update/insertion/deletion. There will be one trigger for the update operation, one trigger for the insert operation and one trigger for the delete operation.
+
+### Stored Procedure Simulating Trigger
+**MoveVotes(Precinct, Timestamp, Candidate, Number_of_Moved_Votes)**
+1. Precinct – one of the existing precinct
+2. Timestamp must be existing timestamp. If Timestamp does not appear in Penna than MoveVotes should display a message “Unknown Timestamp”.
+3. The Number_of_Moved_Votes  parameter  (always positive integer) shows the number of votes to be moved from the Candidate to another candidate and it cannot be larger  than number of votes that the Candidate has at the Timestamp.  If this is the case MoveVotes () should display a message “Not enough votes”.
+4. Of course if CoreCandidate is neither Trump nor Biden, MoveVotes() should say “Wrong Candidate”
