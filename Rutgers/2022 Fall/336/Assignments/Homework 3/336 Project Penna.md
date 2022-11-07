@@ -52,19 +52,24 @@ DELIMITER ;
 Given a date, return the candidate who had the most votes at the last timestamp for this date as well as  how many votes he got. For example the last timestamp for 2020-11-06 will be 2020-11-06 23:51:43.
 
 ```mysql
-	DROP PROCEDURE IF EXISTS API2;
-	DELIMITER $$
-	CREATE PROCEDURE API2(
-		IN d VARCHAR(10)
-	)
-	BEGIN
-		SELECT IF(Biden>Trump, "Biden", "Trump") AS winningCandidate
-	    FROM Penna
-	    WHERE Timestamp LIKE CONCAT(d," %")
-	    ORDER BY Timestamp DESC
-	    LIMIT 1;
-	END$$
-	DELIMITER ;
+DROP PROCEDURE IF EXISTS API2;
+DELIMITER $$
+CREATE PROCEDURE API2(
+	IN d DATE
+)
+BEGIN
+	IF (d NOT REGEXP '[0-9]{4}-[0-9]{2}-[0-9]{2}') THEN
+		SIGNAL SQLSTATE '45000' 
+			SET MESSAGE_TEXT = 'Invalid date format: Must be YYYY-MM-DD';
+	END IF;
+
+	SELECT IF(Biden>Trump, "Biden", "Trump") AS winningCandidate
+    FROM Penna
+    WHERE Timestamp LIKE CONCAT(d," %")
+    ORDER BY Timestamp DESC
+    LIMIT 1;
+END$$
+DELIMITER ;
 ```
 
 ### API3(candidate)
