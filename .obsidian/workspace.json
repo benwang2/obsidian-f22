@@ -28,20 +28,9 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "460522172b11c86e",
-            "type": "leaf",
-            "state": {
-              "type": "diff-view",
-              "state": {
-                "file": ".obsidian/workspace.json",
-                "staged": false
-              }
-            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -172,7 +161,7 @@
     "width": 282.5,
     "collapsed": true
   },
-  "active": "460522172b11c86e",
+  "active": "0bd939b149fb3639",
   "lastOpenFiles": [
     "conflict-files-obsidian-git.md",
     "Rutgers/2022 Fall/336/Assignments/Homework 3/ProjectPenna.pdf",
