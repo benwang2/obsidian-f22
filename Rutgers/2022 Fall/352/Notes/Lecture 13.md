@@ -30,7 +30,6 @@ The main benefit of Go back N is that it can recover from erroneous or missing p
 If any errors occur, the sender spends time and network retransmitting data that the receiver has already seen.
 
 ![[Pasted image 20221107202526.png]]
-
 #go-back-n
 ### Selective repeat with cumulative ACK
 The concept: the sender should only retransmit dropped/corrupted data
@@ -41,4 +40,10 @@ When the receiver notices a skipped sequence number, it keeps acknowledging the 
 
 When sender times out waiting for an ACK, it just retransmits first packet without ACK, not successors. This uses less bandwidth when compared to Go Back N.
 
+Recovering each drop requires one RTO after the corresponding packet was transmitted.
+
+![[Pasted image 20221107203117.png]]
 #cumulative_ACK
+
+### Selective repeat with selective ACK
+As packets are received, the receiver ACKs the seq #. Additionally, 
