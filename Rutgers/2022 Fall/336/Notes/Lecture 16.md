@@ -26,4 +26,4 @@ A **relation schema** is a relation name and attribute list.
 A **database schema** is the set of all relation schemas in the database.
 
 ## Quiz
-- What is first normal form? Flat atomic values with no sets
+- **What is first normal form?** Flat atomic values with no dimensions, sets, or lists
