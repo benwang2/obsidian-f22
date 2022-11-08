@@ -193,7 +193,7 @@ BEGIN
     );
     
     SELECT COUNT(*) INTO iterEnd FROM (
-		SELECT DISTINCT precinct FROM Penna
+		SELECT Timestamp FROM Penna
     ) p;
     
     
