@@ -46,4 +46,12 @@ Recovering each drop requires one RTO after the corresponding packet was transmi
 #cumulative_ACK
 
 ### Selective repeat with selective ACK
-As packets are received, the receiver ACKs the seq #. Additionally, 
+As packets are received, the receiver ACKs the seq #.
+
+The unique trait of selective ACK is that it sends a SACK, which acts as an ACK for all of the packets it has already received.
+
+If the receiver receives 0, 1, drops 2, then receives 3, it will **SACK 0-1, 3**.
+
+Upon receiving 4, it will **SACK 0-1, 3-4**.
+
+![[Pasted image 20221107204040.png]]
