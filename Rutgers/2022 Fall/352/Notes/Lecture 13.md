@@ -9,5 +9,14 @@ tags:
 
 <center><h1>Lecture 13</h1></center>
 
-## Handling Dropped Packets
+## Handling dropped packets
 
+### Identifying dropped packets
+```mermaid
+flowchart TD 
+	ROOT(ACK packets after drop?) -- YES --> YES
+	ROOT(ACK packets after drop?) -- NO --> NO
+	NO(Go-back-N)
+	YES(Selective Repeat)
+	
+```
