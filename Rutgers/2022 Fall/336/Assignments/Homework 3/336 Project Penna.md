@@ -159,9 +159,9 @@ DELIMITER ;
 ### newPenna(precinct, Timestamp, totalVotes, Trump, Biden)
 This stored procedure will create a table newPenna, showing for each precinct how many votes were added to totalvotes, Trump, Biden between timestamp T and the las timestamp directly preceding  T.  In other words, create a table like Penna but replace totalvotes with newvotes, Trump with new_Trump and Biden with new_Biden.  Stored procedure with cursor is recommended
 ```mysql
-DROP PROCEDURE IF EXISTS PennaDelta;
+DROP PROCEDURE IF EXISTS newPenna;
 DELIMITER $$
-CREATE PROCEDURE PennaDelta()
+CREATE PROCEDURE newPenna()
 BEGIN
 	DECLARE iter INT DEFAULT 0;
     DECLARE iterEnd INT DEFAULT 0;
