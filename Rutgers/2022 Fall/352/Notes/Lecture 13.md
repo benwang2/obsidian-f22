@@ -63,7 +63,11 @@ SACK significantly reduces the number of duplicate transmissions compared to cum
 ### Comparing Cumulative and Selective ACKs
 With both of these methods, the sender retransmits the sequence numbers it thinks aren't received successfully yet.
 
+The cumulative ACK scheme has lower throughput because each dropped packet requires one RTO to be retransmitted.
 
-The cumulative ACK scheme has lower throughput due to multiple packets causing the socket to 
+With selective ACK (SACK), multiple dropped packets can be retransmitted with just one RTO.
 
 Modern Linux machines use SACK by default.
+
+## TCP reliability metadata
+TCP uses metadata in the form of sequences #
