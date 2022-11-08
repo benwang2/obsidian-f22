@@ -29,3 +29,6 @@ This algorithm also $ssthresh$ to $inflight / 2$
 
 (2) The seq# from dup ACKs is **immediately retransmitted**. So, we **don't wait for an RTO** if there's strong evidence that a packet was lost.
 
+Sender keeps the reduced $inflight$ until a new ACK arrives, and conserves the packets in flight.
+
+We will keep increment cwnd for each duplicate ACK.
