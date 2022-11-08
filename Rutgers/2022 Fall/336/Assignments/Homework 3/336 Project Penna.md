@@ -159,26 +159,32 @@ DELIMITER ;
 ### newPenna(precinct, Timestamp, totalVotes, Trump, Biden)
 This stored procedure will create a table newPenna, showing for each precinct how many votes were added to totalvotes, Trump, Biden between timestamp T and the las timestamp directly preceding  T.  In other words, create a table like Penna but replace totalvotes with newvotes, Trump with new_Trump and Biden with new_Biden.  Stored procedure with cursor is recommended
 ```mysql
-DROP PROCEDURE IF EXISTS newPenna;
+DROP PROCEDURE IF EXISTS PennaDelta;
 DELIMITER $$
-CREATE PROCEDURE newPenna(
-	IN p VARCHAR(64),
-    IN ts Timestamp,
-    IN tv INT,
-    IN Trump INT,
-    IN Biden INT
-)
+CREATE PROCEDURE PennaDelta()
 BEGIN
+	DECLARE iter INT DEFAULT 0;
+    DECLARE iterEnd INT DEFAULT 0;
+    
+    DECLARE varTimestamp TIMESTAMP;
+    DECLARE varPrecinct VARCHAR(100) DEFAULT "";
+    DECLARE varTotalVotes INT DEFAULT 0;
+    DECLARE varBiden INT DEFAULT 0;
+    DECLARE varTrump INT DEFAULT 0;
+    
+    DECLARE varTimestamp2 TIMESTAMP;
+    DECLARE varPrecinct2 VARCHAR(100) DEFAULT "";
+    DECLARE varTotalVotes2 INT DEFAULT 0;
+    DECLARE varBiden2 INT DEFAULT 0;
+    DECLARE varTrump2 INT DEFAULT 0;
+
 	DECLARE cur CURSOR FOR (
-		SELECT *
+		SELECT Timestamp, precinct, totalVotes, Biden, Trump
         FROM Penna
-        WHERE precinct = p AND Timestamp <= ts
-        ORDER BY timestamp
-        LIMIT 2
 	);
     
-	DROP TABLE IF EXISTS tempPenna;
-	CREATE TEMPORARY TABLE tempPenna (
+	DROP TABLE IF EXISTS newPenna;
+	CREATE TABLE newPenna (
 		precinct VARCHAR(64),
         Timestamp Timestamp,
         newVotes INT,
@@ -186,7 +192,32 @@ BEGIN
         newBiden INT
     );
     
-	
+    SELECT COUNT(*) INTO iterEnd FROM (
+		SELECT DISTINCT precinct FROM Penna
+    ) p;
+    
+    
+
+    OPEN cur;
+    WHILE iter < iterEnd DO
+		SET iter = iter +1;
+		FETCH cur
+        INTO varTimestamp, varPrecinct, varTotalVotes, varBiden, varTrump;
+		
+        SELECT Timestamp, precinct, totalVotes, Biden, Trump
+        INTO varTimestamp2, varPrecinct2, varTotalVotes2, varBiden2, varTrump2
+        FROM Penna p
+        WHERE precinct=varPrecinct and Timestamp<varTimestamp
+        ORDER BY Timestamp DESC
+        LIMIT 1;
+        
+        IF varTimestamp2 IS NOT NULL THEN
+			INSERT INTO newPenna
+			VALUES (varPrecinct, varTimestamp, varTotalVotes-varTotalVotes2, varTrump-varTrump2, varBiden-varBiden2);
+        END IF;
+    END WHILE;
+    
+    CLOSE cur;
 END$$
 DELIMITER ;
 ```
