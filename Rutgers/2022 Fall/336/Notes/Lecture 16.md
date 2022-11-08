@@ -19,6 +19,10 @@ As the professor begins to explain the topic, use this space to write an overvie
 - Programmer productivity (SQL)
 - Declarative and not procedural
 
+A **relation schema** is a relation name and attribute list.
+- It may include types of attributes
+- For example, Beers(name, manf), or Beers(name: string, manf: string)
 
+A **database schema** is the set of all relation schemas in the database.
 
 ## Quiz
