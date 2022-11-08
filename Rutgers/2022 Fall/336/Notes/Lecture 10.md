@@ -30,7 +30,7 @@ A constraint that requires a beer to in Sells be a beer in Beers is called a **f
 
 A foreign key is to be shared by a relation R and a relation S.
 
-Any attributes referenced by forein keys must be declared as PRIMRY KEY or UNIQUE
+Any attributes referenced by foreign keys must be declared as PRIMARY KEY or UNIQUE
 
 ### Foreign-Key Constraints
 Two violations are possible

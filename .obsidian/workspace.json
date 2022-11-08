@@ -28,9 +28,20 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "460522172b11c86e",
+            "type": "leaf",
+            "state": {
+              "type": "diff-view",
+              "state": {
+                "file": ".obsidian/workspace.json",
+                "staged": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -98,17 +109,14 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Rutgers/2022 Fall/336/Assignments/Homework 3/336 Project Penna.md"
-              }
+              "state": {}
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "8c82c0911c63f35b",
@@ -135,7 +143,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Rutgers/2022 Fall/336/Assignments/Homework 3/336 Project Penna.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -152,7 +159,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Rutgers/2022 Fall/336/Assignments/Homework 3/336 Project Penna.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -166,8 +172,9 @@
     "width": 282.5,
     "collapsed": true
   },
-  "active": "0bd939b149fb3639",
+  "active": "460522172b11c86e",
   "lastOpenFiles": [
+    "conflict-files-obsidian-git.md",
     "Rutgers/2022 Fall/336/Assignments/Homework 3/ProjectPenna.pdf",
     "Rutgers/2022 Fall/336/Assignments/Homework 3/336 Project Penna.md",
     "Rutgers/2022 Fall/336/Misc/Practice SQL Exam.md",
@@ -176,7 +183,6 @@
     "Rutgers/2022 Fall/352/Notes/Lecture 15.md",
     "Rutgers/2022 Fall/352/Notes/Lecture 14.md",
     "Rutgers/2022 Fall/336/Assignments/Homework 1/336 Simple SQL Queries.pdf",
-    "Rutgers/2022 Fall/Planner.md",
-    "Rutgers/2022 Fall/336/Assignments/Homework 2/336 SQL Queries II.md"
+    "Rutgers/2022 Fall/Planner.md"
   ]
 }
