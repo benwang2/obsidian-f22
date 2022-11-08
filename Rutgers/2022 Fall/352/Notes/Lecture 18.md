@@ -19,10 +19,13 @@ Distinction: In-flight versus window
 
 #### TCP fast retransmit
 
-Reduce cwnd and in-flight gently, (don't drop cwnd to 1 MSS)
+(1) Reduce cwnd and in-flight gently, (don't drop cwnd to 1 MSS)
 
 So, we reduce the amount of in-flight data **multiplicatively** by setting $inflight \rightarrow inflight/2$. Set $cwnd = (inflight / 2) + 3MSS$.
 
 This operation is called the **multiplicative decrease**.
 
 This algorithm also $ssthresh$ to $inflight / 2$
+
+(2) The seq# from dup ACKs is **immediately retransmitted**. So, we **don't wait for an RTO** if there's strong evidence that a packet was lost.
+
