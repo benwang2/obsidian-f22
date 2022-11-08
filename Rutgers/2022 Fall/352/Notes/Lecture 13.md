@@ -70,4 +70,5 @@ With selective ACK (SACK), multiple dropped packets can be retransmitted with ju
 Modern Linux machines use SACK by default.
 
 ## TCP reliability metadata
-TCP uses metadata in the form of sequences #
+TCP uses metadata in the form of sequences \#s and ACK \#s, which are stored in the packet header.
+
