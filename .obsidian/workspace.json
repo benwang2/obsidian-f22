@@ -85,7 +85,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 3
       },
       {
         "id": "c07e8180475e7854",
@@ -106,8 +107,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "8c82c0911c63f35b",
@@ -165,7 +165,7 @@
     "width": 282.5,
     "collapsed": true
   },
-  "active": "821b7cdfb458a78a",
+  "active": "0bd939b149fb3639",
   "lastOpenFiles": [
     "Rutgers/2022 Fall/336/Assignments/Homework 3/ProjectPenna.pdf",
     "Rutgers/2022 Fall/336/Assignments/Homework 3/336 Project Penna.md",

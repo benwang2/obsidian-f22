@@ -158,6 +158,43 @@ DELIMITER ;
 ## Part 2 (30%)
 ### newPenna(precinct, Timestamp, totalVotes, Trump, Biden)
 This stored procedure will create a table newPenna, showing for each precinct how many votes were added to totalvotes, Trump, Biden between timestamp T and the las timestamp directly preceding  T.  In other words, create a table like Penna but replace totalvotes with newvotes, Trump with new_Trump and Biden with new_Biden.  Stored procedure with cursor is recommended
+```mysql
+DROP PROCEDURE IF EXISTS newPenna;
+DELIMITER $$
+CREATE PROCEDURE newPenna(
+	IN p VARCHAR(64),
+    IN ts Timestamp,
+    IN tv INT,
+    IN Trump INT,
+    IN Biden INT
+)
+BEGIN
+	DECLARE cur CURSOR FOR (
+		SELECT *
+        FROM Penna
+        WHERE precinct = p AND Timestamp <= ts
+        ORDER BY timestamp
+        LIMIT 2
+	);
+    
+	DROP TABLE IF EXISTS tempPenna;
+	CREATE TEMPORARY TABLE tempPenna (
+		precinct VARCHAR(64),
+        Timestamp Timestamp,
+        newVotes INT,
+        newTrump INT,
+        newBiden INT
+    );
+    
+	-- INSERT INTO tempPenna( 
+	-- 		precinct, Timestamp, newVotes, newTrump, newBiden
+	-- 	)
+	--     VALUES (
+	-- 		p, ts, 
+	--     )
+END$$
+DELIMITER ;
+```
 
 ### Switch(precinct, timestamp, fromCandidate, toCandidate)
 This stored procedure will return list of precincts, which have switched their winner from one candidate in last 24 hours of vote collection (i.e 24 hours before the last Timestamp data was collected) and that candidate was the ultimate winner of this precinct.
