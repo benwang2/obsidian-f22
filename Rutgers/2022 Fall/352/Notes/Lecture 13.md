@@ -54,4 +54,16 @@ If the receiver receives 0, 1, drops 2, then receives 3, it will **SACK 0-1, 3**
 
 Upon receiving 4, it will **SACK 0-1, 3-4**.
 
+SACK significantly reduces the number of duplicate transmissions compared to cumulative-only ACKs.
+
 ![[Pasted image 20221107204040.png]]
+#selective_ack #SACK
+
+
+### Comparing Cumulative and Selective ACKs
+With both of these methods, the sender retransmits the sequence numbers it thinks aren't received successfully yet.
+
+
+The cumulative ACK scheme has lower throughput due to multiple packets causing the socket to 
+
+Modern Linux machines use SACK by default.
