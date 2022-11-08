@@ -186,12 +186,7 @@ BEGIN
         newBiden INT
     );
     
-	-- INSERT INTO tempPenna( 
-	-- 		precinct, Timestamp, newVotes, newTrump, newBiden
-	-- 	)
-	--     VALUES (
-	-- 		p, ts, 
-	--     )
+	
 END$$
 DELIMITER ;
 ```
