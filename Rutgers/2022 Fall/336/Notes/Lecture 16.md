@@ -19,7 +19,6 @@ As the professor begins to explain the topic, use this space to write an overvie
 - Programmer productivity (SQL)
 - Declarative and not procedural
 
-### Subtopic 1
-Use this space to expand upon the topic.
+
 
 ## Quiz
