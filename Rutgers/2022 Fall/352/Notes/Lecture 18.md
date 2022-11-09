@@ -25,6 +25,8 @@ Once we are certain that packets are dropped (determine by observing duplicate A
 
 (1) Reduce cwnd and in-flight gently, (don't drop cwnd to 1 MSS)
 
+$MSS$ = Maximum segment size
+
 So, we reduce the amount of in-flight data **multiplicatively** by setting $inflight \rightarrow inflight/2$. Set $cwnd = (inflight / 2) + 3MSS$.
 
 This operation is called the **multiplicative decrease**.
@@ -48,3 +50,12 @@ For each duplicate ACK, we increment $cwnd$ by 1 MSS.
 We keep the $inflight$ value until a new ACK arrives, then we have recovered from a network loss.
 
 Only then are we able to consider increasing the amount $inflight$.
+
+When we finally receive a new ACK, we can then acknowledge the retransmitted data and all data inbetween.
+
+Following this, we will deflate $cwnd$ to half of $cwnd$ before fast retransmit.
+
+### Additive Increase & Multiplicative Decrease
+We may assume that the network has dropped packets if there is a **triple duplicate ACK**. 
+
+When this occurs, we perform a **fast re-transmit**. This drops the amount $inflight = inflight/$
