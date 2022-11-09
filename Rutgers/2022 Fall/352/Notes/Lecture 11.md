@@ -39,8 +39,9 @@ The checksum is an **effective and lightweight method** that works in most cases
 UDP and TCP share the same checksum function, but TCP also uses the lightweight error detection capability.
 
 #### Checksum shortcomings
-Checksums are not able to detect all bit errors.
-Consider
+Checksums are not able to detect all bit errors, consider (x,y) vs. (x-1, y+1) as adjacent 16-bit values in packet. In this case, notice that we would have the same checksum.
+
+The content of a message can be rearranged in such a way that the checksum would not change.
 
 [RFC 768](https://www.rfc-editor.org/rfc/rfc768)
 
