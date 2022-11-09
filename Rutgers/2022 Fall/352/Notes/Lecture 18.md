@@ -21,6 +21,7 @@ Data that is **in-flight** is data that is currently in transmission, whereas th
 Simply, the window defines the range of data that is to be received. Data in-flight is data that has  yet to be received.
 
 #### TCP fast retransmit
+Once we are certain that packets are dropped (determine by observing duplicate ACKs), we will...
 
 (1) Reduce cwnd and in-flight gently, (don't drop cwnd to 1 MSS)
 
