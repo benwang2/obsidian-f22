@@ -55,3 +55,8 @@ Upon receiving an ACK of each MSS, we increase the cwnd by 1. We increase the cw
 On loss, restart from $cwnd = 1$.
 
 #### Efficiency of a single TCP conversation
+The ideal goal of steady state is to
+- have a **high sending rate**, using the full capacity of the bottleneck
+- have **low delay**, minimizing the overall delay of packets to receiver
+
+Having "low delay" reduces to **low queuing delay**. We do not want to put so much data into the network so that packets are waiting in queues.
