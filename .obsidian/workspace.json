@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Notes/Lecture 13.md",
+                "file": "Rutgers/2022 Fall/352/Notes/Lecture 12.md",
                 "mode": "source",
                 "source": false
               }
@@ -74,8 +74,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "c07e8180475e7854",
@@ -88,7 +87,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Notes/Lecture 13.md"
+                "file": "Rutgers/2022 Fall/352/Notes/Lecture 12.md"
               }
             }
           }
@@ -124,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Notes/Lecture 13.md",
+                "file": "Rutgers/2022 Fall/352/Notes/Lecture 12.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -141,7 +140,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Notes/Lecture 13.md",
+                "file": "Rutgers/2022 Fall/352/Notes/Lecture 12.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -157,12 +156,12 @@
   },
   "active": "f6856d4b1e41bcf0",
   "lastOpenFiles": [
+    "Rutgers/2022 Fall/352/Notes/Lecture 13.md",
     "Rutgers/2022 Fall/336/Assignments/Homework 3/336 Project Penna.md",
     "Rutgers/2022 Fall/352/Notes/Lecture 12.md",
     "Rutgers/2022 Fall/352/Notes/Lecture 11.md",
     "Rutgers/2022 Fall/352/Notes/Lecture 10.md",
     "Rutgers/2022 Fall/336/Assignments/Homework 1/336 Simple SQL Queries.md",
-    "Rutgers/2022 Fall/352/Notes/Lecture 13.md",
     "Rutgers/2022 Fall/352/Notes/Lecture 14.md",
     "Rutgers/2022 Fall/352/Notes/Lecture 1.md",
     "conflict-files-obsidian-git.md",
