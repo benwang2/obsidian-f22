@@ -48,9 +48,9 @@ The content of a message can be rearranged in such a way that the checksum would
 ## UDP
 UDP is a **simple transport protocol**, it simply sends or receives a single packet from/to the correct application process.
 
-It's a thin shim around network layer's beset-effort delivery. There's no connection building and sa a result, there's also no latency.
+It's a thin shim around network layer's best-effort delivery. There's no connection building and as a result, there's also no latency.
 
-UDP works best fowith:
+UDP works best with:
 - one-off request/response messages
 	- loss-tolerant but delay-sensitive applications
 
