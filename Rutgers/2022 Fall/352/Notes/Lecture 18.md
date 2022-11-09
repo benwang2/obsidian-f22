@@ -35,7 +35,7 @@ This algorithm also sets $ssthresh$ to $inflight / 2$
 
 Sender keeps the reduced $inflight$ until a new ACK arrives, and conserves the packets in flight.
 
-We will keep increment cwnd for each duplicate ACK.
+We will keep increment cwnd for each duplicate ACK, because we know a packet has been received and we can transmit another.
 
 Each ACK is transmitted alongside a cumulative ACK, which specifies what packets we want to receive. As we receive more duplicate ACKs in the cumulative ACK, we know that we've most likely dropped this packet.
 
@@ -44,3 +44,7 @@ Each ACK is transmitted alongside a cumulative ACK, which specifies what packets
 The sender keeps the reduced *inflight* until a **new ACK** arrives and conserves the packets in flight. Conserving packets in flight allows for some data to be transmitted over lossy periods.
 
 For each duplicate ACK, we increment $cwnd$ by 1 MSS.
+
+We keep the $inflight$ value until a new ACK arrives, then we have recovered from a network loss.
+
+Only then are we able to consider increasing the amount $inflight$.
