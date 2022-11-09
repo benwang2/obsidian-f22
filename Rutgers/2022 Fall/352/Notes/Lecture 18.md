@@ -33,7 +33,8 @@ Sender keeps the reduced $inflight$ until a new ACK arrives, and conserves the p
 
 We will keep increment cwnd for each duplicate ACK.
 
-Eacj
+Each ACK is transmitted alongside a cumulative ACK, which specifies what packets we want to receive. As we receive more duplicate ACKs in the cumulative ACK, we know that we've most likely dropped this packet.
+
 
 ### TCP fast recovery
 The sender keeps the reduced *inflight* until a **new ACK** arrives and conserves the packets in flight. Conserving packets in flight allows for some data to be transmitted over lossy periods.
