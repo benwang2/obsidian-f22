@@ -20,7 +20,7 @@ We can use a computing function to verify that the packet has be transmitted cor
 #checksum
 
 ### Checksum
-A checksum is the 16-bit one's complement of the one's complement sum of a pseudo hedaer of information from the IP header, the UDP header, and the data, padded with zero octets at the end to make a multiple of two octets.
+A checksum is the 16-bit one's complement of the one's complement sum of a pseudo header of information from the IP header, the UDP header, and the data, padded with zero octets at the end to make a multiple of two octets.
 
 The pseudo header conceptually prefixed to the UDP header contains the source address, the destination address, the protocol, and the UDP length.
 
@@ -37,6 +37,10 @@ Checksums are not the end-all-be-all; they don't detect all bit errors.
 The checksum is an **effective and lightweight method** that works in most cases. However, if it **insufficient for checking reliable data delivery**.
 
 UDP and TCP share the same checksum function, but TCP also uses the lightweight error detection capability.
+
+#### Checksum shortcomings
+Checksums are not able to detect all bit errors.
+Consider
 
 [RFC 768](https://www.rfc-editor.org/rfc/rfc768)
 
