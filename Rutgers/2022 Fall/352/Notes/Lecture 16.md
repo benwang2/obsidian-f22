@@ -19,6 +19,12 @@ To make the congestion control *efficient*, Maximize the amount of bottleneck ca
 
 To make the congestion control *fair*, we share the bottleneck capacity equitably.
 
+![[Pasted image 20221109131309.png]]
+
+As a fast link reaches a bottleneck link, the a packet that may have taken 4ms to transmit will increase and spend 8ms in the bottleneck link. 
+
+When the bottleneck link transmits the packets to the destination, there will now be an **inter-packet delay.**
+
 ### Signals and Knobs
 We use signals and knobs to adjust the congestion control effectively.
 
@@ -53,3 +59,10 @@ Initially, $cwnd = 1$ MSS, MSS being the **maximum segment size**.
 Upon receiving an ACK of each MSS, we increase the cwnd by 1. We increase the cwnd exponentially. The cwnd would effectively be written as $2^n$, where $n$ is the number of the request.
 
 On loss, restart from $cwnd = 1$.
+
+#### Efficiency of a single TCP conversation
+The ideal goal of steady state is to
+- have a **high sending rate**, using the full capacity of the bottleneck
+- have **low delay**, minimizing the overall delay of packets to receiver
+
+Having "low delay" reduces to **low queuing delay**. We do not want to put so much data into the network so that packets are waiting in queues.
