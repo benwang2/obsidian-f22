@@ -32,3 +32,8 @@ This algorithm also $ssthresh$ to $inflight / 2$
 Sender keeps the reduced $inflight$ until a new ACK arrives, and conserves the packets in flight.
 
 We will keep increment cwnd for each duplicate ACK.
+
+### TCP fast recovery
+The sender keeps the reduced *inflight* until a **new ACK** arrives and conserves the packets in flight. Conserving packetse in flight allows for some data to be transmitted over lossy periods.
+
+For each duplicate ACK, we increment $cwnd$ by 1 MSS.
