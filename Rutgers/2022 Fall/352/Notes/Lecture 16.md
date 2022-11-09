@@ -19,6 +19,10 @@ To make the congestion control *efficient*, Maximize the amount of bottleneck ca
 
 To make the congestion control *fair*, we share the bottleneck capacity equitably.
 
+As a fast link reaches a bottleneck link, the a packet that may have taken 4ms to transmit will increase and spend 8ms in the bottleneck link. 
+
+When the bottleneck link transmits the packets to the destination, there will now be an **inter-packet edla**
+
 ### Signals and Knobs
 We use signals and knobs to adjust the congestion control effectively.
 
