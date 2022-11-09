@@ -58,4 +58,6 @@ Following this, we will deflate $cwnd$ to half of $cwnd$ before fast retransmit.
 ### Additive Increase & Multiplicative Decrease
 We may assume that the network has dropped packets if there is a **triple duplicate ACK**. 
 
-When this occurs, we perform a **fast re-transmit**. This drops the amount $inflight = inflight/$
+When this occurs, we perform a **fast re-transmit**. This drops the amount $inflight = inflight/2$, with the goal of keeping the amount of data inflight stable. 
+
+Upon receiving a **new ACK**, we can begin the process of additive increase again. If we encounter an RTO, drop the window to 1 MSS.
