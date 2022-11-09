@@ -16,6 +16,9 @@ tags:
 
 ### Retransmitting data
 Distinction: In-flight versus window
+Data that is **in-flight** is data that is currently in transmission, whereas the window is what the sender seeks to fulfill.
+
+Simply, the window defines the range of data that is to be received. Data in-flight is data that has  yet to be received.
 
 #### TCP fast retransmit
 
@@ -25,7 +28,7 @@ So, we reduce the amount of in-flight data **multiplicatively** by setting $infl
 
 This operation is called the **multiplicative decrease**.
 
-This algorithm also $ssthresh$ to $inflight / 2$
+This algorithm also sets $ssthresh$ to $inflight / 2$
 
 (2) The seq# from dup ACKs is **immediately retransmitted**. So, we **don't wait for an RTO** if there's strong evidence that a packet was lost.
 
