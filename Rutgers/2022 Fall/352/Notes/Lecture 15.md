@@ -72,3 +72,19 @@ For N endpoints, each should get 1/N'th of link capacity.
 | ------------------------------------- | ---------------------------------- |
 | avoid overwhelming receiver           | avoid overwhelming bottleneck link |
 | sender manages receiver socket buffer | sender manages bottleneck link capacity and bottleneck router buffers
+
+### Signals and Knobs in Congestion control
+The internet uses a distributed algorithm to converge to an efficient and fair outcome, which we achieve using by **sensing and reacting**. It makes use of a **feedback loop** with signals and knobs
+
+#### Signals
+A signal is an event that occurs that we measure and determine whether to adjust the network.
+For example,
+- packets being ACK'ed
+- packets being dropped
+- packets being delayed (RTT)
+- rate of incoming ACKs
+- 
+
+
+#### Knobs
+...
