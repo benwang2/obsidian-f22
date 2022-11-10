@@ -65,3 +65,10 @@ When multiple endpoints share a network, it becomes difficult to
 Endpoints may join and leave at any time and network paths may change over time, leading to different links bottlenecking over time.
 
 The solution to this is to use a **distributed algorithm** that converges to a **fair and efficient outcome**. With this approach, no single entity can control or view all endpoints and bottlenecks, and each endpoint must try to reach a globally good outcome. As a result, a lot of trust is **given to endpoints**.
+
+For N endpoints, each should get 1/N'th of link capacity.
+
+| Flow Control                          | Congestion Control                 |
+| ------------------------------------- | ---------------------------------- |
+| avoid overwhelming receiver           | avoid overwhelming bottleneck link |
+| sender manages receiver socket buffer | sender manages bottleneck link capacity and bottleneck router buffers
