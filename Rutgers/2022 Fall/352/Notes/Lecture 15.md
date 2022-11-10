@@ -56,3 +56,12 @@ The **link load** is the fraction of link used.
 When there are too many retransmissions due to packet drops, the amount of useful data plummets. This is called a **congestion collapse**.
 
 As the link load increases, so does the queuing delay.
+
+### Bottlenecks
+When multiple endpoints share a network, it becomes difficult to
+- identify the bottleneck link
+- know how many other endpoints are using the link
+
+Endpoints may join and leave at any time and network paths may change over time, leading to different links bottlenecking over time.
+
+The solution to this is to use a **distributed algorithm** that converges to a **fair and efficient outcome**.
