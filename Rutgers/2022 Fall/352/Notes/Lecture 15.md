@@ -64,4 +64,4 @@ When multiple endpoints share a network, it becomes difficult to
 
 Endpoints may join and leave at any time and network paths may change over time, leading to different links bottlenecking over time.
 
-The solution to this is to use a **distributed algorithm** that converges to a **fair and efficient outcome**.
+The solution to this is to use a **distributed algorithm** that converges to a **fair and efficient outcome**. With this approach, no single entity can control or view all endpoints and bottlenecks, and each endpoint must try to reach a globally good outcome. As a result, a lot of trust is **given to endpoints**.
