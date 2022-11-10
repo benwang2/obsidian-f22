@@ -153,7 +153,7 @@ BEGIN
 	FROM (
 		SELECT Timestamp, Trump, Biden
         FROM Penna
-        WHERE precinct LIKE CONCAT('%',s,'%')
+        WHERE LOCATE(s, precinct)
 	) penna
 	WHERE penna.Timestamp = (SELECT MAX(Timestamp) FROM penna);
 END$$
