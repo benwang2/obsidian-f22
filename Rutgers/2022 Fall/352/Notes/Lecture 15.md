@@ -49,5 +49,10 @@ If the socket buffer is too large, too much memory is consumed per socket.
 The **correct socket buffer sizing** is essential to maximize TCP throughput.
 
 ## Congestion Control
+Routers use **buffers** to accomodate queued packets. Any packets beyond the max buffer will be dropped.
 
-When there are too many retransmissions due to packet drops
+The **link load** is the fraction of link used.
+
+When there are too many retransmissions due to packet drops, the amount of useful data plummets. This is called a **congestion collapse**.
+
+As the link load increases, so does the queuing delay.
