@@ -50,4 +50,4 @@ The **correct socket buffer sizing** is essential to maximize TCP throughput.
 
 ## Congestion Control
 
-When there are too many retransmissions due
+When there are too many retransmissions due to packet drops
