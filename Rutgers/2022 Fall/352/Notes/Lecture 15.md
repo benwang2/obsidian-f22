@@ -83,8 +83,11 @@ For example,
 - packets being dropped
 - packets being delayed (RTT)
 - rate of incoming ACKs
-- 
-
 
 #### Knobs
-...
+A knob is something you can change to "probe" the available bottleneck capacity.
+For example,
+- increase window/sending rate
+- decrease window/sending rate
+
+We make use of signals and knobs to get to the **steady state**.
