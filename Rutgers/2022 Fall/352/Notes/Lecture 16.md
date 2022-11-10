@@ -54,11 +54,16 @@ If we have a fast link, and a bottleneck link, the the packets will take longer 
 
 ### Steady State
 ...
-
+#### Slow start
 Initially, $cwnd = 1$ MSS, MSS being the **maximum segment size**.
 Upon receiving an ACK of each MSS, we increase the cwnd by 1. We increase the cwnd exponentially. The cwnd would effectively be written as $2^n$, where $n$ is the number of the request.
 
 On loss, restart from $cwnd = 1$.
+
+##### Issues with slow start
+If $cwnd$ increases too rapidly, we could drop a large amount of packets at once.
+
+If it decreases too rapidly, then there might be a loss when the $cwnd$ is close to ideal. Dropping back to 1 reduces throughput unnecessarily.
 
 #### Efficiency of a single TCP conversation
 The ideal goal of steady state is to
@@ -66,3 +71,6 @@ The ideal goal of steady state is to
 - have **low delay**, minimizing the overall delay of packets to receiver
 
 Having "low delay" reduces to **low queuing delay**. We do not want to put so much data into the network so that packets are waiting in queues.
+
+
+Start the $cwnd$ from 1, then exponentially grow. Once we reach RTO, drop cwnd back to 1.
