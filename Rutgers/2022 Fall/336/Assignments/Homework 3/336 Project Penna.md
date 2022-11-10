@@ -25,6 +25,8 @@ CREATE PROCEDURE API1(
     IN p VARCHAR(50)
 )
 BEGIN
+	DECLARE votesForCandidate INT DEFAULT 0;
+
 	IF (c NOT IN ('Biden','Trump')) THEN
 		SIGNAL SQLSTATE '45000' 
 			SET MESSAGE_TEXT = 'Invalid candidate';
@@ -34,17 +36,22 @@ BEGIN
 		SIGNAL SQLSTATE '45000' 
 			SET MESSAGE_TEXT = 'Invalid precinct';
 	END IF;
-
-	SELECT
-		CASE
-			WHEN c='Biden' THEN Biden
-            WHEN c='Trump' THEN Trump
-            ELSE -1
-		END AS Votes
-        FROM Penna
-        WHERE precinct=p AND Timestamp <= ts
-        ORDER BY Timestamp DESC
-        LIMIT 1;
+    
+    if (ts >= (SELECT MIN(Timestamp) FROM Penna)) THEN
+		SELECT
+			CASE
+				WHEN c='Biden' THEN Biden
+				WHEN c='Trump' THEN Trump
+				ELSE -1
+			END
+		INTO votesForCandidate
+		FROM Penna
+		WHERE precinct=p AND Timestamp <= ts
+		ORDER BY Timestamp DESC
+		LIMIT 1;
+	END IF;
+    
+    SELECT votesForCandidate;
 END$$
 DELIMITER ;
 ```
