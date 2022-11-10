@@ -47,3 +47,7 @@ If the socket buffer is too large, too much memory is consumed per socket.
 	- Receiver must use buffer of size at least W.
 
 The **correct socket buffer sizing** is essential to maximize TCP throughput.
+
+## Congestion Control
+
+When there are too many retransmissions due
