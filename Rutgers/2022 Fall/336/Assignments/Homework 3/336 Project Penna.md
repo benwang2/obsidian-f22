@@ -58,16 +58,14 @@ CREATE PROCEDURE API2(
 	IN d DATE
 )
 BEGIN
-	IF (d NOT REGEXP '[0-9]{4}-[0-9]{2}-[0-9]{2}') THEN
-		SIGNAL SQLSTATE '45000' 
-			SET MESSAGE_TEXT = 'Invalid date format: Must be YYYY-MM-DD';
-	END IF;
-
-	SELECT IF(Biden>Trump, "Biden", "Trump") AS winningCandidate
-    FROM Penna
-    WHERE Timestamp LIKE CONCAT(d," %")
-    ORDER BY Timestamp DESC
-    LIMIT 1;
+	DECLARE lastTimestamp Timestamp;
+    SELECT MAX(Timestamp) INTO lastTimestamp FROM Penna WHERE Timestamp < d;
+	SELECT
+		IF (SUM(Trump) > SUM(Biden), "Trump", "Biden") as winner,
+		IF (SUM(Trump) > SUM(Biden), SUM(Trump), SUM(Biden)) as votes
+	FROM Penna
+	WHERE
+		Timestamp = lastTimestamp;
 END$$
 DELIMITER ;
 ```
