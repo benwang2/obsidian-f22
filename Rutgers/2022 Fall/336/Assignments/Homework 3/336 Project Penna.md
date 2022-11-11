@@ -65,14 +65,30 @@ CREATE PROCEDURE API2(
 	IN d DATE
 )
 BEGIN
+	DECLARE maxTimestamp Timestamp;
+    DECLARE minTimestamp Timestamp;
 	DECLARE lastTimestamp Timestamp;
-    SELECT MAX(Timestamp)+INTERVAL 1 DAY INTO lastTimestamp FROM Penna WHERE Timestamp < d;
+    
+    SELECT MAX(Timestamp) INTO maxTimestamp FROM Penna;
+    SELECT MIN(Timestamp) INTO minTimestamp FROM Penna;
+    SELECT MAX(Timestamp) INTO lastTimestamp FROM Penna WHERE Timestamp < DATE_ADD(maxTimestamp, INTERVAL 1 DAY);
+    
+    IF (d > maxTimestamp) THEN
+		SIGNAL SQLSTATE '45000'
+			SET MESSAGE_TEXT = 'Date is after election ended.';
+    ELSEIF (d < minTimestamp) THEN
+		SIGNAL SQLSTATE '45000'
+			SET MESSAGE_TEXT = 'Date is before election began.';
+    END IF;
+    
 	SELECT
 		IF (SUM(Trump) > SUM(Biden), "Trump", "Biden") as winner,
 		IF (SUM(Trump) > SUM(Biden), SUM(Trump), SUM(Biden)) as votes
 	FROM Penna
 	WHERE
-		Timestamp = lastTimestamp;
+		Timestamp = lastTimestamp
+	ORDER BY Timestamp DESC
+	LIMIT 1;
 END$$
 DELIMITER ;
 ```
