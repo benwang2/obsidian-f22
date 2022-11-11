@@ -342,6 +342,20 @@ DELIMITER ;
 ## Part 3 (10%)
 Write SQL queries or stored procedures to check if the following patterns are enforced in the database:
 1. The sum of votes for Trump and Biden cannot be larger than totalvotes
+```mysql
+DROP PROCEDURE IF EXISTS part3_1;
+DELIMITER $$
+CREATE PROCEDURE part3_1()
+BEGIN
+	SELECT IF (
+		EXISTS ( SELECT Timestamp FROM Penna WHERE totalVotes < Biden + Trump LIMIT 1),
+        FALSE,
+        TRUE
+	) as isValid;
+END$$
+DELIMITER ;
+```
+
 2. There cannot be any tuples with timestamps later than Nov 11 and earlier than Nov3
 3. Totalvotes for any precinct and at any timestamp T > 2020-11-05 00:00:00, will be larger or equal to totalvotes at T’<T where T’>2020-11-05 00:00:00 for that precinct.
 
