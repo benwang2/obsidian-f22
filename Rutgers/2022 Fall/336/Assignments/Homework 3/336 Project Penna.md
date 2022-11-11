@@ -66,7 +66,7 @@ CREATE PROCEDURE API2(
 )
 BEGIN
 	DECLARE lastTimestamp Timestamp;
-    SELECT MAX(Timestamp) INTO lastTimestamp FROM Penna WHERE Timestamp < d;
+    SELECT MAX(Timestamp)+INTERVAL 1 DAY INTO lastTimestamp FROM Penna WHERE Timestamp < d;
 	SELECT
 		IF (SUM(Trump) > SUM(Biden), "Trump", "Biden") as winner,
 		IF (SUM(Trump) > SUM(Biden), SUM(Trump), SUM(Biden)) as votes
