@@ -357,6 +357,20 @@ DELIMITER ;
 ```
 
 2. There cannot be any tuples with timestamps later than Nov 11 and earlier than Nov3
+```mysql
+DROP PROCEDURE IF EXISTS part3_2;
+DELIMITER $$
+CREATE PROCEDURE part3_2()
+BEGIN
+	SELECT IF (
+		EXISTS ( SELECT Timestamp FROM Penna WHERE Timestamp < '2020-11-03' OR Timestamp >= '2020-11-12'),
+        FALSE,
+        TRUE
+	) as isValid;
+END$$
+DELIMITER ;
+```
+
 3. Totalvotes for any precinct and at any timestamp T > 2020-11-05 00:00:00, will be larger or equal to totalvotes at T’<T where T’>2020-11-05 00:00:00 for that precinct.
 
 You should write SQL queries to verify the constraints and return TRUE or FALSE (in case constraint is not satisfied).Queries that don’t return a boolean value won’t be accepted.  
