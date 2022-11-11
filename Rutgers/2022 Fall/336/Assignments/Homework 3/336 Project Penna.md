@@ -246,6 +246,99 @@ DELIMITER ;
 ### Switch(precinct, timestamp, fromCandidate, toCandidate)
 This stored procedure will return list of precincts, which have switched their winner from one candidate in last 24 hours of vote collection (i.e 24 hours before the last Timestamp data was collected) and that candidate was the ultimate winner of this precinct.
 
+```mysql
+DROP PROCEDURE IF EXISTS Switch;
+DELIMITER $$
+CREATE PROCEDURE Switch()
+BEGIN
+	DECLARE maxTimestamp TIMESTAMP DEFAULT (SELECT MAX(Timestamp) FROM Penna);
+    DECLARE minTimestamp TIMESTAMP DEFAULT DATE_ADD(maxTimestamp, INTERVAL -1 DAY);
+    
+    DECLARE iter INT DEFAULT 0;
+    DECLARE iterEnd INT DEFAULT 0;
+    
+    DECLARE iTimestamp TIMESTAMP;
+    DECLARE iPrecinct VARCHAR(64);
+    DECLARE iBiden INT;
+    DECLARE iTrump INT;
+    
+    DECLARE jTimestamp TIMESTAMP;
+    DECLARE jPrecinct VARCHAR(64);
+    DECLARE jBiden INT;
+    DECLARE jTrump INT;
+    
+    DECLARE cur CURSOR FOR (
+		SELECT 
+			Timestamp, precinct, Biden, Trump
+		FROM
+			Penna
+		WHERE
+			Timestamp = (
+				SELECT Timestamp
+				FROM Penna
+				WHERE Timestamp >= minTimestamp
+				ORDER BY Timestamp ASC
+                LIMIT 1
+			)
+		ORDER BY precinct DESC, Timestamp ASC
+	);
+    
+    DECLARE cur2 CURSOR FOR (
+		SELECT 
+			Timestamp, precinct, Biden, Trump
+		FROM
+			Penna
+		WHERE
+			Timestamp = (
+				SELECT Timestamp
+				FROM Penna
+				WHERE Timestamp < maxTimestamp
+				ORDER BY Timestamp DESC	
+			)
+		ORDER BY precinct
+    );
+    
+    SET iterEnd = (SELECT COUNT(*) FROM Penna);
+    
+    DROP TABLE IF EXISTS Switch;
+    CREATE TABLE Switch(
+		precinct VARCHAR(64),
+		timestamp Timestamp,
+        fromCandidate VARCHAR(6),
+        toCandidate VARCHAR(6)
+    );
+	
+    OPEN cur;
+    OPEN cur2;
+    WHILE iter < iterEnd DO
+		SET iter = iter + 1;
+        
+        FETCH cur
+		INTO iTimestamp, iPrecinct, iBiden, iTrump;
+        
+        curLoop: REPEAT
+			FETCH cur2
+			INTO jTimestamp, jPrecinct, jBiden, jTrump;
+            IF (iBiden > iTrump AND jBiden < jTrump) THEN
+				INSERT INTO Switch
+				VALUES (iPrecinct, jTimestamp, "Biden", "Trump");
+                LEAVE curLoop;
+			ELSEIF (iBiden < iTrump AND jBiden > jTrump) THEN
+				INSERT INTO Switch
+				VALUES (iPrecinct, jTimestamp, "Trump", "Biden");
+                LEAVE curLoop;
+			END IF;
+		UNTIL jPrecinct != iPrecinct
+        END REPEAT;
+
+    END WHILE; 
+    
+    CLOSE cur;
+    CLOSE cur2;
+END$$
+DELIMITER ;
+```
+
 ## Part 3 (10%)
 Write SQL queries or stored procedures to check if the following patterns are enforced in the database:
 1. The sum of votes for Trump and Biden cannot be larger than totalvotes
