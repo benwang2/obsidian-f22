@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "39e5208060f1474c",
+        "id": "26ada50e3d33aecb",
         "type": "tabs",
         "children": [
           {
-            "id": "832a4cb4261cc888",
+            "id": "4472087cefb88c66",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Notes/Lecture 16.md",
+                "file": "Rutgers/2022 Fall/Planner.md",
                 "mode": "source",
                 "source": false
               }
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "forward",
+                "query": "cumulative ACK",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -67,15 +67,14 @@
             }
           },
           {
-            "id": "0bd939b149fb3639",
+            "id": "020d1790e47f6f75",
             "type": "leaf",
             "state": {
               "type": "git-view",
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "c07e8180475e7854",
@@ -88,7 +87,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Notes/Lecture 16.md"
+                "file": "Rutgers/2022 Fall/Planner.md"
               }
             }
           }
@@ -123,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Notes/Lecture 16.md",
+                "file": "Rutgers/2022 Fall/Planner.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -140,31 +139,31 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Notes/Lecture 16.md",
+                "file": "Rutgers/2022 Fall/Planner.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
     "width": 282.5,
     "collapsed": true
   },
-  "active": "8f88c6ad00d72727",
+  "active": "4472087cefb88c66",
   "lastOpenFiles": [
-    "Rutgers/2022 Fall/336/Assignments/Homework 3/336 Project Penna.md",
-    "Rutgers/2022 Fall/336/Assignments/Homework 3/ProjectPenna.pdf",
-    "Rutgers/2022 Fall/352/Assignments/Problem Set 2/pset2.pdf",
-    "Rutgers/2022 Fall/352/Assignments/Problem Set 1/352 Problem Set 1.pdf",
-    "Rutgers/2022 Fall/352/Notes/Lecture 16.md",
-    "Rutgers/2022 Fall/352/Notes/Lecture 17.md",
-    "Rutgers/2022 Fall/352/Notes/Lecture 15.md",
-    "Rutgers/2022 Fall/352/syllabus.pdf",
+    "Rutgers/2022 Fall/352/Notes/Lecture 14.md",
     "Rutgers/2022 Fall/352/Notes/Lecture 13.md",
-    "Rutgers/2022 Fall/352/Notes/Lecture 18.md"
+    "Rutgers/2022 Fall/352/Notes/Lecture 12.md",
+    "Rutgers/2022 Fall/336/Assignments/Homework 3/336 Project Penna.md",
+    "Rutgers/2022 Fall/352/Notes/Lecture 11.md",
+    "Rutgers/2022 Fall/352/Notes/Lecture 10.md",
+    "Rutgers/2022 Fall/336/Assignments/Homework 1/336 Simple SQL Queries.md",
+    "Rutgers/2022 Fall/352/Notes/Lecture 1.md",
+    "conflict-files-obsidian-git.md",
+    "Rutgers/2022 Fall/336/Notes/Lecture 10.md"
   ]
 }
