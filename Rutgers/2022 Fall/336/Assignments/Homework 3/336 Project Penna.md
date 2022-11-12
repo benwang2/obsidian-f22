@@ -103,7 +103,7 @@ CREATE PROCEDURE API3(
 	IN candidate VARCHAR(6)
 )
 BEGIN
-	IF (c NOT IN ('Biden','Trump')) THEN
+	IF (candidate NOT IN ('Biden','Trump')) THEN
 		SIGNAL SQLSTATE '45000' 
 			SET MESSAGE_TEXT = 'Invalid candidate';
 	END IF;
