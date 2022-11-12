@@ -372,7 +372,48 @@ DELIMITER ;
 ```
 
 3. Totalvotes for any precinct and at any timestamp T > 2020-11-05 00:00:00, will be larger or equal to totalvotes at T’<T where T’>2020-11-05 00:00:00 for that precinct.
-```sqk
+```sql
+DROP PROCEDURE IF EXISTS part3_3;
+DELIMITER $$
+CREATE PROCEDURE part3_3()
+BEGIN
+	DECLARE iter INT DEFAULT 0;
+    DECLARE iterEnd INT;
+    
+    DECLARE iTimestamp TIMESTAMP;
+    DECLARE iPrecinct VARCHAR(64);
+    DECLARE iTotalVotes INT;
+    
+    DECLARE jTimestamp TIMESTAMP;
+    DECLARE jPrecinct VARCHAR(64);
+    DECLARE jTotalVotes INT;
+    
+    DECLARE isValid BOOLEAN DEFAULT TRUE;
+    
+    DECLARE cur CURSOR FOR (
+		SELECT Timestamp, precinct, totalVotes
+        FROM Penna
+        WHERE Timestamp > '2020-11-05'
+        ORDER BY precinct, Timestamp DESC
+    );
+    
+    SELECT COUNT(*) INTO iterEnd FROM Penna;
+    OPEN cur;
+    FETCH cur INTO iTimestamp, iPrecinct, iTotalVotes;
+    whileLoop: WHILE iter < iterEnd DO
+		SET iter = iter + 1;
+        FETCH cur INTO jTimestamp, jPrecinct, jTotalVotes;
+        IF (jPrecinct = iPrecinct) THEN
+			IF (iTotalVotes < jTotalVotes) THEN
+				SET isValid = FALSE;
+				LEAVE whileLoop;
+			END IF;
+        END IF;
+        SELECT jTimestamp, jPrecinct, jTotalVotes INTO iTimestamp, iPrecinct, iTotalVotes;
+    END WHILE;
+    SELECT isValid;
+END$$
+DELIMITER ;
 ```
 
 
