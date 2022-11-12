@@ -490,7 +490,53 @@ END$$
 3. The Number_of_Moved_Votes  parameter  (always positive integer) shows the number of votes to be moved from the Candidate to another candidate and it cannot be larger  than number of votes that the Candidate has at the Timestamp.  If this is the case MoveVotes () should display a message “Not enough votes”.
 4. Of course if CoreCandidate is neither Trump nor Biden, MoveVotes() should say “Wrong Candidate”
 
+```mysql
+DROP PROCEDURE IF EXISTS MoveVotes;
+DELIMITER $$
+CREATE PROCEDURE MoveVotes(
+	IN p VARCHAR(64),
+    IN ts TIMESTAMP,
+    IN c VARCHAR(6),
+    IN numVotes INT
+)
+BEGIN
+	DECLARE numBiden INT;
+    DECLARE numTrump INT;
 
+	IF (p NOT IN (SELECT DISTINCT precinct FROM Penna)) THEN
+		SIGNAL SQLSTATE '45000'
+			SET message_text = "Invalid precinct name.";
+    END IF;
+    
+    IF (ts NOT IN (SELECT DISTINCT Timestamp FROM Penna WHERE precinct=p)) THEN
+		SIGNAL SQLSTATE '45000'
+			SET message_text = "Invalid timestamp for given precinct.";
+    END IF;
+    
+    IF (c NOT IN ("Trump", "Biden")) THEN
+		SIGNAL SQLSTATE '45000'
+			SET message_text = "Invalid candidate name.";
+    END IF;
+    
+    SELECT Biden, Trump INTO numBiden, numTrump FROM Penna WHERE Timestamp = ts AND precinct = p;
+    
+    IF ( (c = "Trump" and numVotes > numTrump) OR (c = "Biden" and numVotes > numBiden) ) THEN
+		SIGNAL SQLSTATE '45000'
+			SET message_text = "Number of votes to be moved exceeds number of votes for candidate.";
+    END IF;
+    
+    IF (c = "Trump") THEN
+		UPDATE Penna
+        SET Trump = Trump - numVotes AND Biden = Biden + numVotes
+        WHERE precinct = p AND Timestamp >= ts;
+    ELSEIF (c = "Biden") THEN
+		UPDATE Penna
+        SET Biden = Biden - numVotes AND Trump = Trump + numVotes
+        WHERE precinct = p AND Timestamp >= ts;
+    END IF;
+END$$
+DELIMITER ;
+```
 
 After you are done with exceptions, you should move the Number_of_Moved_Votes from CoreCandidate to another candidate (there are only two) and do it not just for this Timestamp (the first parameter) but also for all T>Timestamp, that is all future timestamps in the given precinct. 
 
