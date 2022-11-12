@@ -393,7 +393,7 @@ BEGIN
     DECLARE cur CURSOR FOR (
 		SELECT Timestamp, precinct, totalVotes
         FROM Penna
-        WHERE Timestamp > '2020-11-05'
+        WHERE Timestamp LIKE '2020-11-05 %'
         ORDER BY precinct, Timestamp DESC
     );
     
