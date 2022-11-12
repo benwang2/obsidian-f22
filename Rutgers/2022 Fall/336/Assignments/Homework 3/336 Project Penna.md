@@ -423,6 +423,29 @@ You should write SQL queries to verify the constraints and return TRUE or FALSE 
 ### Triggers and UPDATE driven Stored Procedures
 Create three tables Updated Tuples, Inserted Tuples and Deleted Tuples. All three tables should have the same schema as Penna and should store any tuples which were updated (store them as they were before the update), any tuples which were inserted,  and any tuples which were deleted in their corresponding tables.  The triggers should populate these tables upon each update/insertion/deletion. There will be one trigger for the update operation, one trigger for the insert operation and one trigger for the delete operation.
 
+```mysql
+DROP TRIGGER IF EXISTS onUpdate;
+DELIMITER $$
+CREATE TRIGGER onUpdate AFTER UPDATE
+ON pennaTriggers FOR EACH ROW
+BEGIN
+	INSERT INTO updatedPenna
+    SELECT * FROM OLD;
+END$$
+DELIMITER ;
+```
+
+```mysql
+DELIMITER $$
+CREATE TRIGGER onInsert AFTER INSERT
+ON pennaTriggers FOR EACH ROW
+BEGIN
+	INSERT INTO insertedPenna
+	SELECT * FROM NEW;
+END$$
+DELIMITER ;
+```
+
 ### Stored Procedure Simulating Trigger
 **MoveVotes(Precinct, Timestamp, Candidate, Number_of_Moved_Votes)**
 1. Precinct – one of the existing precinct
