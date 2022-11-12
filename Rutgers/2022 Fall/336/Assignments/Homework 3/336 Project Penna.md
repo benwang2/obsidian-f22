@@ -423,6 +423,7 @@ You should write SQL queries to verify the constraints and return TRUE or FALSE 
 ### Triggers and UPDATE driven Stored Procedures
 Create three tables Updated Tuples, Inserted Tuples and Deleted Tuples. All three tables should have the same schema as Penna and should store any tuples which were updated (store them as they were before the update), any tuples which were inserted,  and any tuples which were deleted in their corresponding tables.  The triggers should populate these tables upon each update/insertion/deletion. There will be one trigger for the update operation, one trigger for the insert operation and one trigger for the delete operation.
 
+#### Triggers
 ```mysql
 DROP TRIGGER IF EXISTS onUpdate;
 DELIMITER $$
@@ -457,6 +458,29 @@ BEGIN
 	VALUES (OLD.ID, OLD.Timestamp, OLD.state, OLD.locality, OLD.precinct, OLD.geo, OLD.totalvotes, OLD.Biden, OLD.Trump, OLD.filestamp);
 END$$
 DELIMITER ;
+```
+
+#### Tester
+```mysql
+DROP PROCEDURE IF EXISTS part4reset;
+DELIMITER $$
+CREATE PROCEDURE part4reset()
+BEGIN
+	CREATE TABLE IF NOT EXISTS pennaTriggers LIKE Penna;
+    CREATE TABLE IF NOT EXISTS insertedPenna LIKE Penna;
+    CREATE TABLE IF NOT EXISTS deletedPenna LIKE Penna;
+    CREATE TABLE IF NOT EXISTS updatedPenna LIKE Penna;
+
+	SET SQL_SAFE_UPDATES = 0;
+    DELETE FROM insertedPenna;
+    DELETE FROM deletedPenna;
+    DELETE FROM updatedPenna;
+    DELETE FROM pennaTriggers;
+    
+    INSERT INTO pennaTriggers SELECT * FROM Penna ORDER BY ID ASC LIMIT 10;
+    UPDATE pennaTriggers SET ID = ID + 1 WHERE ID < 5;
+    DELETE FROM pennaTriggers WHERE ID > 5;
+END$$
 ```
 
 ### Stored Procedure Simulating Trigger
