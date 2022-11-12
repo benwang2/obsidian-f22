@@ -427,21 +427,34 @@ Create three tables Updated Tuples, Inserted Tuples and Deleted Tuples. All thre
 DROP TRIGGER IF EXISTS onUpdate;
 DELIMITER $$
 CREATE TRIGGER onUpdate AFTER UPDATE
-ON pennaTriggers FOR EACH ROW
+ON Penna FOR EACH ROW
 BEGIN
 	INSERT INTO updatedPenna
-    SELECT * FROM OLD;
+    VALUES (OLD.ID, OLD.Timestamp, OLD.state, OLD.locality, OLD.precinct, OLD.geo, OLD.totalvotes, OLD.Biden, OLD.Trump, OLD.filestamp);
 END$$
 DELIMITER ;
 ```
 
 ```mysql
+DROP TRIGGER IF EXISTS onInsert;
 DELIMITER $$
 CREATE TRIGGER onInsert AFTER INSERT
-ON pennaTriggers FOR EACH ROW
+ON Penna FOR EACH ROW
 BEGIN
 	INSERT INTO insertedPenna
-	SELECT * FROM NEW;
+	VALUES (NEW.ID, NEW.Timestamp, NEW.state, NEW.locality, NEW.precinct, NEW.geo, NEW.totalvotes, NEW.Biden, NEW.Trump, NEW.filestamp);
+END$$
+DELIMITER ;
+```
+
+```mysql
+DROP TRIGGER IF EXISTS onDelete;
+DELIMITER $$
+CREATE TRIGGER onDelete BEFORE DELETE
+ON Penna FOR EACH ROW
+BEGIN
+	INSERT INTO deletedPenna
+	VALUES (OLD.ID, OLD.Timestamp, OLD.state, OLD.locality, OLD.precinct, OLD.geo, OLD.totalvotes, OLD.Biden, OLD.Trump, OLD.filestamp);
 END$$
 DELIMITER ;
 ```
