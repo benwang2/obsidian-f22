@@ -62,6 +62,8 @@ The output above lists all the connections on the machine where the ss command i
 
 (a) Suppose a TCP packet enters the machine, destined to TCP port 8003 corresponding to an established connection. Can you identify the pid and socket fd, if any, corresponding to the socket where this packet is demuxed to? (1 point)
 
+(pid=28832, fd=4)
+
 (b) Suppose a TCP packet enters the machine, destined to TCP port 8003, corresponding to a fresh connection just being initiated by a client through a connect() call. Can you identify the pid and socket fd, if any, corresponding to the socket where this packet is demuxed to? (1 point)
 
 (c) Suppose a TCP packet enters the machine, destined to TCP port 47468, corresponding to a fresh connection being made by a client through the connect() call. Will this client’s connect() succeed? Why or why not? (2 points)
