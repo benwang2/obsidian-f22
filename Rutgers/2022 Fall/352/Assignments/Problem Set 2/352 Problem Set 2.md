@@ -29,4 +29,24 @@ Please read and follow these instructions carefully.
 ```
    
 ```
-2. **Computing the checksum (2 + 2 = 4 points)**. In this problem, we will get practice with computing the one’s complement of the one’s complement sum over a sequence of data values. We will use the exact same algorithm used to compute TCP/UDP checksum, but over a sequence of 4-bit chunks rather than 16-bit chunks
+2. **Computing the checksum (2 + 2 = 4 points)**. In this problem, we will get practice with computing the one’s complement of the one’s complement sum over a sequence of data values. We will use the exact same algorithm used to compute TCP/UDP checksum, but over a sequence of 4-bit chunks rather than 16-bit chunks.
+   
+   a.  Consider the following data bits. What is the (4-bit) checksum of this (8-bit) data? (2 points) 
+   `0101 1100`
+   
+   b.  Consider the following data bits. What is the 4-bit checksum of this (12-bit) data (Note: you may be able to reuse calculations from part (a).) (2 points)
+   `0101 1100 1001`
+
+3. **Listing and identifying sockets. (5 points)** As we saw in a demo in class, the ss command may be used to display the listening connections and the established connections on a machine. Suppose you see the sample output shown below.
+| Netid | State  | Local Addr:Port| Peer Addr:Port | Users |
+| ----- | ------ | ------------ | --------- | -------------------- |
+| udp   | UNCONN | 0.0.0.0:8003 | 0.0.0.0:* | (pid=29604,fd=3)     |
+| tcp   | LISTEN | 0.0.0.0:8003 | 0.0.0.0:* | (pid=28832,fd=3)     |
+
+| Netid | State | Local Addr:Port | Peer Addr:Port  | Users            |
+| ----- | ----- | --------------- | --------------- | ---------------- |
+| tcp   | ESTAB | 127.0.0.1:8003  | 127.0.0.1:47468 | (pid=28832,fd=4) |
+| tcp   | ESTAB | 127.0.0.1:47468 | 127.0.0.1:8003  | (pid=29910,fd=3) |
+
+The output above lists all the connections on the machine where the ss command is run. Helpfully, the last column of the output, entitled Users, also shows the process ID (pid) of the application process associated with the socket and the number of the file descriptor (fd) associated with
+the socket
