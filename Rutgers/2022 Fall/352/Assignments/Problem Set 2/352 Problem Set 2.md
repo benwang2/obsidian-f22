@@ -27,12 +27,13 @@ Please read and follow these instructions carefully.
 # Questions
 1. **TCP vs. UDP (2 points)**. When is it beneficial for an application to use TCP as its transport, and when UDP?
 ```
-   
+UDP is suitable for loss-tolerant and speed critical applications, whereas TCP is best used when data must be fully transmitted.
 ```
 2. **Computing the checksum (2 + 2 = 4 points)**. In this problem, we will get practice with computing the one’s complement of the one’s complement sum over a sequence of data values. We will use the exact same algorithm used to compute TCP/UDP checksum, but over a sequence of 4-bit chunks rather than 16-bit chunks.
    
    a.  Consider the following data bits. What is the (4-bit) checksum of this (8-bit) data? (2 points) 
    `0101 1100`
+$0101 1100 
    
    b.  Consider the following data bits. What is the 4-bit checksum of this (12-bit) data (Note: you may be able to reuse calculations from part (a).) (2 points)
    `0101 1100 1001`
@@ -93,7 +94,31 @@ shown in slide 15/16 of lecture 13. Suppose the sequence number field on a TCP p
 
 (b) What is the value of the *acknowledgment number* field on the ACK that the receiver generates for the packet above? (2 points)
 
-(c) Do you have sufficient information in this question to determine the value of the sequence number field of the ACK packet that the receiver generates for the packet above? If so, what is the
-sequence number? If not, why not? (2 points)
+(c) Do you have sufficient information in this question to determine the value of the *sequence number* field of the ACK packet that the receiver generates for the packet above? If so, what is the sequence number? If not, why not? (2 points)
 
+(d) If the size of the TCP header were larger (e.g., 24 bytes, due to additional TCP options), would your answers to parts (a)–(c) change? Why or why not? (2 points)
 
+8. **TCP retransmission strategies (5 points).**
+(a) What is the advantage of selective repeat over a go-back-N retransmission strategy? What is a disadvantage? (2 points)
+
+(b) Among the selective repeat strategies, what is an advantage of selective acknowledgments over cumulative acknowledgments? What is a disadvantage? (3 points)
+
+9. **Which data will be retransmitted? (1 + 2.5 + 2.5 = 6 points)**
+(a) Suppose the sender and receiver use a go-back-N retransmission strategy. Which sequence numbers are retransmitted by the sender after the RTO is triggered?
+
+(b) Instead, suppose the sender and receiver use a cumulative ACK retransmission strategy. Assume that the sender receives (correspondingly-numbered) ACKs from the receiver for each sequence number successfully delivered. Further, assume that after t = 0, there are no drops in the network. At what time does the sender know that it has successfully recovered from all the losses? Explain your answer.
+
+10. **The impact of packet reordering (2 points)**. Why might heavy packet reordering in the network reduce the throughput of TCP connections?
+
+11. **Stream-oriented transfer (2 points)**. Suppose a TCP sender pushed two pieces of data through a socket send() call. Each piece of data is of size 100 bytes. The data is delivered reliably to the TCP receiver. Now the receiving application performs a recv() system call on its socket, and gets some data in return. What are the possible sizes (in bytes) of this returned data?
+
+12. **Flow control and congestion control (4 points).**
+(a) Why is flow control necessary in TCP? (2 points)
+
+(b) What is the difference between flow control and congestion control? (2 points)
+
+13. **Collaboration and References (mandatory).** Who did you collaborate with on this
+problem set? What resources and references did you consult? Please also specify on what questions and aspects of the problem set you got help on. If you did not consult any resources other than the lecture slides and textbook, just say “no collaboration”.
+```
+I worked with my classmate Akash Shah on this problem set. He helped confirm my understanding of checksum addition.
+```
