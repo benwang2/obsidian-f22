@@ -33,10 +33,19 @@ UDP is suitable for loss-tolerant and speed critical applications, whereas TCP i
    
    a.  Consider the following data bits. What is the (4-bit) checksum of this (8-bit) data? (2 points) 
    `0101 1100`
-$0101 1100 
-   
+$0101 + 1100 = 10001$
+Extract $1$ bit on the left end.
+$0001 + 1 = 0010$
+The complement of $0010$ is $1101$, and therefore the checksum is $1101$.
+
    b.  Consider the following data bits. What is the 4-bit checksum of this (12-bit) data (Note: you may be able to reuse calculations from part (a).) (2 points)
    `0101 1100 1001`
+
+Reuse $0101 + 1100 = 10001$.
+$10001 + 1001 = 11010$
+Wrap around leftmost bit to right side and add.
+$1010 + 1 = 1011$
+Find the complement / checksum = $0100$.
 
 3. **Listing and identifying sockets. (5 points)** As we saw in a demo in class, the ss command may be used to display the listening connections and the established connections on a machine. Suppose you see the sample output shown below.
 | Netid | State  | Local Addr:Port | Peer Addr:Port | Users |
