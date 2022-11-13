@@ -80,13 +80,13 @@ $(pid=29604,fd=3)$
 
 4. **When are retransmission timeouts useful? (0.5 * 4 = 2 points)** Say YES or NO to each part of the question below. Do retransmission timeouts (followed by retransmission)  help a sender ensure that a receiver was delivered a piece of data when:
 
-(a) the data was lost?
+(a) the data was lost? **YES**
 
-(b) the data was corrupted?
+(b) the data was corrupted? 
 
-(c) the ACK was lost?
+(c) the ACK was lost? **YES**
 
-(d) the ACK was delayed?
+(d) the ACK was delayed? **NO**
 
 5. Efficiency gains with pipelined reliability protocols (2 points). Why do pipelined
 reliability protocols provide more throughput than stop-and-wait reliability protocols?
