@@ -55,3 +55,45 @@ The output above lists all the connections on the machine where the ss command i
 (b) Suppose a TCP packet enters the machine, destined to TCP port 8003, corresponding to a fresh connection just being initiated by a client through a connect() call. Can you identify the pid and socket fd, if any, corresponding to the socket where this packet is demuxed to? (1 point)
 
 (c) Suppose a TCP packet enters the machine, destined to TCP port 47468, corresponding to a fresh connection being made by a client through the connect() call. Will this client’s connect() succeed? Why or why not? (2 points)
+
+(d) Suppose a UDP packet enters the machine, destined to UDP port 8003. Can you identify the pid and socket fd, if any, corresponding to the socket where this packet is demuxed to? (1 point)
+
+4. **When are retransmission timeouts useful? (0.5 * 4 = 2 points)** Say YES or NO to each part of the question below. Do retransmission timeouts (followed by retransmission)  help a sender ensure that a receiver was delivered a piece of data when:
+
+(a) the data was lost?
+
+(b) the data was corrupted?
+
+(c) the ACK was lost?
+
+(d) the ACK was delayed?
+
+5. Efficiency gains with pipelined reliability protocols (2 points). Why do pipelined
+reliability protocols provide more throughput than stop-and-wait reliability protocols?
+
+6. Sender and receiver view in sliding window protocols (8 points). Suppose a sender
+and receiver agree to use a window size of 4. Further, assume that the set of available sequence numbers goes from 0 to 9, and then rolls back to 0.
+
+(a) What was the latest sequence number for which the sender has received an ACK from the receiver? (1 point)
+
+(b) What is the latest sequence number that the sender has transmitted? (1 point)
+
+(c) What was the latest sequence number whose ACK was sent by the receiver? (1 point)
+
+(d) What is the latest sequence number that will be accepted to be buffered by the receiver? (1 point)
+
+(e) Is it possible that the following view of the window at the receiver can happen simultaneously with the sender’s view shown above? Why or why not? (1 + 1 = 2 points)
+
+(f) Is it possible that the following view of the window at the receiver can happen simultaneously with the sender’s view shown above? Why or why not? (1 + 1 = 2 points)
+
+7. **TCP byte-based sequence numbers (8 points)**. Consider the TCP segment structure
+shown in slide 15/16 of lecture 13. Suppose the sequence number field on a TCP packet is 46005. The packet carries 102 bytes of (application-layer) data. The TCP header size on this packet is 20 bytes.
+
+(a) What is the sequence number of the last application byte contained in the packet above? (2 points)
+
+(b) What is the value of the *acknowledgment number* field on the ACK that the receiver generates for the packet above? (2 points)
+
+(c) Do you have sufficient information in this question to determine the value of the sequence number field of the ACK packet that the receiver generates for the packet above? If so, what is the
+sequence number? If not, why not? (2 points)
+
+
