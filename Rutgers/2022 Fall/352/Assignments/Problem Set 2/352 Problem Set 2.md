@@ -82,7 +82,7 @@ $(pid=29604,fd=3)$
 
 (a) the data was lost? **YES**
 
-(b) the data was corrupted? 
+(b) the data was corrupted? **YES**
 
 (c) the ACK was lost? **YES**
 
@@ -90,6 +90,10 @@ $(pid=29604,fd=3)$
 
 5. Efficiency gains with pipelined reliability protocols (2 points). Why do pipelined
 reliability protocols provide more throughput than stop-and-wait reliability protocols?
+
+```
+Pipelined reliability protocols allow for m
+```
 
 6. Sender and receiver view in sliding window protocols (8 points). Suppose a sender
 and receiver agree to use a window size of 4. Further, assume that the set of available sequence numbers goes from 0 to 9, and then rolls back to 0.
