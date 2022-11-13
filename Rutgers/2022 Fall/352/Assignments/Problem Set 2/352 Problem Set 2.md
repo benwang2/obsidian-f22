@@ -62,13 +62,21 @@ The output above lists all the connections on the machine where the ss command i
 
 (a) Suppose a TCP packet enters the machine, destined to TCP port 8003 corresponding to an established connection. Can you identify the pid and socket fd, if any, corresponding to the socket where this packet is demuxed to? (1 point)
 
-(pid=28832, fd=4)
+$(pid=28832, fd=4)$
 
 (b) Suppose a TCP packet enters the machine, destined to TCP port 8003, corresponding to a fresh connection just being initiated by a client through a connect() call. Can you identify the pid and socket fd, if any, corresponding to the socket where this packet is demuxed to? (1 point)
 
+$(pid=28832, fd=3)$
+
 (c) Suppose a TCP packet enters the machine, destined to TCP port 47468, corresponding to a fresh connection being made by a client through the connect() call. Will this client’s connect() succeed? Why or why not? (2 points)
 
+```
+This connect() call will fail because the port is already in use.
+```
+
 (d) Suppose a UDP packet enters the machine, destined to UDP port 8003. Can you identify the pid and socket fd, if any, corresponding to the socket where this packet is demuxed to? (1 point)
+
+$(pid=29604,fd=3)$
 
 4. **When are retransmission timeouts useful? (0.5 * 4 = 2 points)** Say YES or NO to each part of the question below. Do retransmission timeouts (followed by retransmission)  help a sender ensure that a receiver was delivered a piece of data when:
 
