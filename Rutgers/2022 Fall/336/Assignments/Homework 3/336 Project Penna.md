@@ -255,9 +255,9 @@ BEGIN
     DECLARE minTimestamp TIMESTAMP DEFAULT DATE_ADD(maxTimestamp, INTERVAL -1 DAY);
     
     DECLARE iter INT DEFAULT 0;
-    DECLARE iterEnd INT DEFAULT 0;
+    DECLARE iterEnd INT;
     
-    DECLARE iTimestamp TIMESTAMP;
+	DECLARE iTimestamp TIMESTAMP;
     DECLARE iPrecinct VARCHAR(64);
     DECLARE iBiden INT;
     DECLARE iTrump INT;
@@ -268,75 +268,56 @@ BEGIN
     DECLARE jTrump INT;
     
     DECLARE cur CURSOR FOR (
-		SELECT 
-			Timestamp, precinct, Biden, Trump
-		FROM
-			Penna
-		WHERE
-			Timestamp = (
-				SELECT Timestamp
-				FROM Penna
-				WHERE Timestamp >= minTimestamp
-				ORDER BY Timestamp ASC
-                LIMIT 1
-			)
-		ORDER BY precinct DESC, Timestamp ASC
-	);
-    
-    DECLARE cur2 CURSOR FOR (
-		SELECT 
-			Timestamp, precinct, Biden, Trump
-		FROM
-			Penna
-		WHERE
-			Timestamp = (
-				SELECT Timestamp
-				FROM Penna
-				WHERE Timestamp < maxTimestamp
-				ORDER BY Timestamp DESC	
-			)
-		ORDER BY precinct
+		SELECT Timestamp, precinct, Biden, Trump
+        FROM Penna
+        WHERE Timestamp >= minTimestamp
+        ORDER BY precinct, Timestamp DESC
     );
     
-    SET iterEnd = (SELECT COUNT(*) FROM Penna);
-    
-    DROP TABLE IF EXISTS Switch;
-    CREATE TABLE Switch(
+    DROP TEMPORARY TABLE IF EXISTS switchResults;
+    CREATE TEMPORARY TABLE switchResults(
 		precinct VARCHAR(64),
-		timestamp Timestamp,
+        Timestamp TIMESTAMP,
         fromCandidate VARCHAR(6),
         toCandidate VARCHAR(6)
     );
-	
-    OPEN cur;
-    OPEN cur2;
-    WHILE iter < iterEnd DO
-		SET iter = iter + 1;
-        
-        FETCH cur
-		INTO iTimestamp, iPrecinct, iBiden, iTrump;
-        
-        curLoop: REPEAT
-			FETCH cur2
-			INTO jTimestamp, jPrecinct, jBiden, jTrump;
-            IF (iBiden > iTrump AND jBiden < jTrump) THEN
-				INSERT INTO Switch
-				VALUES (iPrecinct, jTimestamp, "Biden", "Trump");
-                LEAVE curLoop;
-			ELSEIF (iBiden < iTrump AND jBiden > jTrump) THEN
-				INSERT INTO Switch
-				VALUES (iPrecinct, jTimestamp, "Trump", "Biden");
-                LEAVE curLoop;
+    
+    SELECT COUNT(*) INTO iterEnd FROM Penna;
+	OPEN cur;
+    outerWhile: WHILE iter < iterEnd-1 DO
+		FETCH cur INTO iTimestamp, iPrecinct, iBiden, iTrump;
+        SET iter = iter + 1;
+        innerWhile: WHILE 1 DO
+			FETCH cur INTO jTimestamp, jPrecinct, jBiden, jTrump;
+            SET iter = iter + 1;
+            
+            IF (jPrecinct != iPrecinct) THEN
+				LEAVE innerWhile;
 			END IF;
-		UNTIL jPrecinct != iPrecinct
-        END REPEAT;
-
-    END WHILE; 
+            
+            IF ( iBiden > iTrump AND jBiden < jTrump) THEN
+                INSERT INTO switchResults
+                VALUES (iPrecinct, iTimestamp, "Trump", "Biden");
+				LEAVE innerWhile;
+            ELSEIF (iBiden < iTrump AND jBiden > jTrump) THEN
+				INSERT INTO switchResults
+                VALUES (iPrecinct, iTimestamp, "Biden", "Trump");
+				LEAVE innerWhile;
+            END IF;
+            
+            SELECT jTimestamp, jPrecinct, jBiden, jTrump
+            INTO iTimestamp, iPrecinct, iBiden, iTrump;
+            
+            IF (iter >= iterEnd) THEN
+				LEAVE outerWhile;
+            END IF;
+        END WHILE;
+    END WHILE;
     
     CLOSE cur;
-    CLOSE cur2;
+    SELECT precinct, Timestamp, fromCandidate, toCandidate FROM switchResults;
+    DROP TEMPORARY TABLE switchResults;
 END$$
-DELIMITER ;
 ```
 
 ## Part 3 (10%)
