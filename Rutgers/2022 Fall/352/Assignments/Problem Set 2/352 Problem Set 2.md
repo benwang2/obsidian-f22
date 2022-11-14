@@ -92,7 +92,7 @@ $(pid=29604,fd=3)$
 reliability protocols provide more throughput than stop-and-wait reliability protocols?
 
 ```
-Pipelined reliability protocols allow for m
+Pipelined reliability protocols allow for multiple packets to be in-flight at once, without needing to wait for an ACK. Stop-and-wait protocols wait for a response from the receiver before sending the next packet.
 ```
 
 6. Sender and receiver view in sliding window protocols (8 points). Suppose a sender
