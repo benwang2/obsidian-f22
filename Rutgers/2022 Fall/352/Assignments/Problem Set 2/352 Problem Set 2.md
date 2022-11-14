@@ -138,10 +138,11 @@ shown in slide 15/16 of lecture 13. Suppose the sequence number field on a TCP p
 8. **TCP retransmission strategies (5 points).**
 (a) What is the advantage of selective repeat over a go-back-N retransmission strategy? What is a disadvantage? (2 points)
 ```
-With selective repeat, only corrupted data will discarded by the receiver, and then be retransmitted and any other data is stored in the buffer.
+With selective repeat, only corrupted data will discarded by the receiver, and then retransmitted by the sender. Any other data is stored in the buffer. The main advantage is that it reduces of unnecessarily transmitted data. The main disadvantage is that there is a greater overhead that comes from transmtting the sequence numbers that were or were not received.
 ```
 
 (b) Among the selective repeat strategies, what is an advantage of selective acknowledgments over cumulative acknowledgments? What is a disadvantage? (3 points)
+
 
 9. **Which data will be retransmitted? (1 + 2.5 + 2.5 = 6 points)**
 (a) Suppose the sender and receiver use a go-back-N retransmission strategy. Which sequence numbers are retransmitted by the sender after the RTO is triggered?

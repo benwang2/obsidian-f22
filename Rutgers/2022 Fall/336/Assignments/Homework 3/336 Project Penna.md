@@ -222,7 +222,7 @@ BEGIN
 		FETCH cur INTO jTimestamp, jPrecinct, jTotalVotes, jBiden, jTrump;
 		SET iter = iter + 1;
 		
-		IF (jPrecinct = iPrecinct AND jTotalVotes != iTotalVotes) THEN
+		IF (jPrecinct = iPrecinct AND (jTotalVotes != iTotalVotes OR jTrump != iTrump or jBiden != iBiden)) THEN
 			INSERT INTO newPenna
 			VALUES (iPrecinct, jTimestamp, jTotalVotes-iTotalVotes, jTrump-iTrump, jBiden-iBiden);
 		END IF;
@@ -345,7 +345,7 @@ DELIMITER ;
 ```
 
 3. Totalvotes for any precinct and at any timestamp T > 2020-11-05 00:00:00, will be larger or equal to totalvotes at T’<T where T’>2020-11-05 00:00:00 for that precinct.
-```sql
+```mysql
 DROP PROCEDURE IF EXISTS part3_3;
 DELIMITER $$
 CREATE PROCEDURE part3_3()
