@@ -111,7 +111,9 @@ and receiver agree to use a window size of 4. Further, assume that the set of av
 **0**
 
 (e) Is it possible that the following view of the window at the receiver can happen simultaneously with the sender’s view shown above? Why or why not? (1 + 1 = 2 points)
-
+```
+Yes, it is possible. When the sender's window contains 7,8,9,0
+```
 
 (f) Is it possible that the following view of the window at the receiver can happen simultaneously with the sender’s view shown above? Why or why not? (1 + 1 = 2 points)
 
