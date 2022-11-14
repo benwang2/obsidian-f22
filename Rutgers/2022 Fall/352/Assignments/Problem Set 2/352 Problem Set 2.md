@@ -162,14 +162,24 @@ The sender knows that it has recovered from the losses once the receiver ACKs th
 ```
 
 10. **The impact of packet reordering (2 points)**. Why might heavy packet reordering in the network reduce the throughput of TCP connections?
+```
+Reordering packets uses the buffer memory, which has a limited capacity. If too much reordering occurs, the amount of unused buffer memory drops, which lowers the advertised window, the sender's window, and consequently, the throughput.
+```
 
 
 11. **Stream-oriented transfer (2 points)**. Suppose a TCP sender pushed two pieces of data through a socket send() call. Each piece of data is of size 100 bytes. The data is delivered reliably to the TCP receiver. Now the receiving application performs a recv() system call on its socket, and gets some data in return. What are the possible sizes (in bytes) of this returned data?
+$0 < size < 99$
 
 12. **Flow control and congestion control (4 points).**
 (a) Why is flow control necessary in TCP? (2 points)
+```
+Flow control helps prevent packet loss by matching the sending rate to the receiver's read speed.
+```
 
 (b) What is the difference between flow control and congestion control? (2 points)
+```
+Congestion control ensures that no bottleneck link rates are exceeded, while flow control ensures that packets
+```
 
 13. **Collaboration and References (mandatory).** Who did you collaborate with on this
 problem set? What resources and references did you consult? Please also specify on what questions and aspects of the problem set you got help on. If you did not consult any resources other than the lecture slides and textbook, just say “no collaboration”.
