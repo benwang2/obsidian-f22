@@ -193,5 +193,5 @@ Congestion control ensures that no bottleneck link rates are exceeded, while flo
 13. **Collaboration and References (mandatory).** Who did you collaborate with on this
 problem set? What resources and references did you consult? Please also specify on what questions and aspects of the problem set you got help on. If you did not consult any resources other than the lecture slides and textbook, just say “no collaboration”.
 ```
-I worked with my classmate Akash Shah on this problem set. He helped confirm my understanding of checksum addition.
+I collaborated with my classmate Akash Shah on this problem set. He helped confirm my understanding of checksum addition.
 ```
