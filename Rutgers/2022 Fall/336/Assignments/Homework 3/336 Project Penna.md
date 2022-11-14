@@ -183,28 +183,29 @@ This stored procedure will create a table newPenna, showing for each precinct ho
 DROP PROCEDURE IF EXISTS newPenna;
 DELIMITER $$
 CREATE PROCEDURE newPenna()
-BEGIN
-	DECLARE iter INT DEFAULT 0;
-    DECLARE iterEnd INT DEFAULT 0;
+BEGIN 
+    DECLARE iter INT DEFAULT 0;
+    DECLARE iterEnd INT;
     
-    DECLARE varTimestamp TIMESTAMP;
-    DECLARE varPrecinct VARCHAR(100) DEFAULT "";
-    DECLARE varTotalVotes INT DEFAULT 0;
-    DECLARE varBiden INT DEFAULT 0;
-    DECLARE varTrump INT DEFAULT 0;
+	DECLARE iTimestamp TIMESTAMP;
+    DECLARE iPrecinct VARCHAR(64);
+    DECLARE iTotalVotes INT DEFAULT 0;
+    DECLARE iBiden INT;
+    DECLARE iTrump INT;
     
-    DECLARE varTimestamp2 TIMESTAMP;
-    DECLARE varPrecinct2 VARCHAR(100) DEFAULT "";
-    DECLARE varTotalVotes2 INT DEFAULT 0;
-    DECLARE varBiden2 INT DEFAULT 0;
-    DECLARE varTrump2 INT DEFAULT 0;
-
-	DECLARE cur CURSOR FOR (
+    DECLARE jTimestamp TIMESTAMP;
+    DECLARE jPrecinct VARCHAR(64);
+    DECLARE jTotalVotes INT DEFAULT 0;
+    DECLARE jBiden INT;
+    DECLARE jTrump INT;
+    
+    DECLARE cur CURSOR FOR (
 		SELECT Timestamp, precinct, totalVotes, Biden, Trump
         FROM Penna
-	);
+        ORDER BY precinct, Timestamp ASC
+    );
     
-	DROP TABLE IF EXISTS newPenna;
+   DROP TABLE IF EXISTS newPenna;
 	CREATE TABLE newPenna (
 		precinct VARCHAR(64),
         Timestamp Timestamp,
@@ -213,34 +214,25 @@ BEGIN
         newBiden INT
     );
     
-    SELECT COUNT(*) INTO iterEnd FROM (
-		SELECT Timestamp FROM Penna
-    ) p;
-    
-    
-
-    OPEN cur;
+    SELECT COUNT(*) INTO iterEnd FROM Penna;
+	OPEN cur;
+    FETCH cur INTO iTimestamp, iPrecinct, iTotalVotes, iBiden, iTrump;
+	SET iter = iter + 1;
     WHILE iter < iterEnd DO
-		SET iter = iter +1;
-		FETCH cur
-        INTO varTimestamp, varPrecinct, varTotalVotes, varBiden, varTrump;
+		FETCH cur INTO jTimestamp, jPrecinct, jTotalVotes, jBiden, jTrump;
+		SET iter = iter + 1;
 		
-        SELECT Timestamp, precinct, totalVotes, Biden, Trump
-        INTO varTimestamp2, varPrecinct2, varTotalVotes2, varBiden2, varTrump2
-        FROM Penna p
-        WHERE precinct=varPrecinct and Timestamp<varTimestamp
-        ORDER BY Timestamp DESC
-        LIMIT 1;
-        
-        IF varTimestamp2 IS NOT NULL THEN
+		IF (jPrecinct = iPrecinct AND jTotalVotes != iTotalVotes) THEN
 			INSERT INTO newPenna
-			VALUES (varPrecinct, varTimestamp, varTotalVotes-varTotalVotes2, varTrump-varTrump2, varBiden-varBiden2);
-        END IF;
+			VALUES (iPrecinct, jTimestamp, jTotalVotes-iTotalVotes, jTrump-iTrump, jBiden-iBiden);
+		END IF;
+		
+		SELECT jTimestamp, jPrecinct, jTotalVotes, jBiden, jTrump
+		INTO iTimestamp, iPrecinct, iTotalVotes, iBiden, iTrump;
     END WHILE;
     
     CLOSE cur;
 END$$
-DELIMITER ;
 ```
 
 ### Switch(precinct, timestamp, fromCandidate, toCandidate)
