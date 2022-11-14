@@ -178,7 +178,7 @@ Flow control helps prevent packet loss by matching the sending rate to the recei
 
 (b) What is the difference between flow control and congestion control? (2 points)
 ```
-Congestion control ensures that no bottleneck link rates are exceeded, while flow control ensures that packets
+Congestion control ensures that no bottleneck link rates are exceeded, while flow control ensures that packets are ordered and do not exceed the receiver buffer.
 ```
 
 13. **Collaboration and References (mandatory).** Who did you collaborate with on this
