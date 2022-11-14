@@ -142,14 +142,27 @@ With selective repeat, only corrupted data will discarded by the receiver, and t
 ```
 
 (b) Among the selective repeat strategies, what is an advantage of selective acknowledgments over cumulative acknowledgments? What is a disadvantage? (3 points)
-
+```
+The advantage of selective ACKs is that they are more accurate. However, it has more overhead and as a result, uses more memory in the header of the packet.
+```
 
 9. **Which data will be retransmitted? (1 + 2.5 + 2.5 = 6 points)**
 (a) Suppose the sender and receiver use a go-back-N retransmission strategy. Which sequence numbers are retransmitted by the sender after the RTO is triggered?
+**503**
 
 (b) Instead, suppose the sender and receiver use a cumulative ACK retransmission strategy. Assume that the sender receives (correspondingly-numbered) ACKs from the receiver for each sequence number successfully delivered. Further, assume that after t = 0, there are no drops in the network. At what time does the sender know that it has successfully recovered from all the losses? Explain your answer.
+```
+The sender knows that it has recovered from the losses once it receives a non-duplicate ACK.
+```
+
+(c) Instead, suppose the sender and receiver use a selective ACK retransmission strategy. Assume that the sender receives (correspondingly-numbered) ACKs from the receiver for each sequence number successfully delivered. Further, assume that after t = 0, there are no drops in the network. Note that the sender may use the information in all the selective ACKs so far to retransmit more eagerly, after an RTO. At what time does the sender know it has successfully recovered from all the losses? Explain your answer.
+
+```
+The sender knows that it has recovered from the losses once the receiver ACKs the next packet.
+```
 
 10. **The impact of packet reordering (2 points)**. Why might heavy packet reordering in the network reduce the throughput of TCP connections?
+
 
 11. **Stream-oriented transfer (2 points)**. Suppose a TCP sender pushed two pieces of data through a socket send() call. Each piece of data is of size 100 bytes. The data is delivered reliably to the TCP receiver. Now the receiving application performs a recv() system call on its socket, and gets some data in return. What are the possible sizes (in bytes) of this returned data?
 
