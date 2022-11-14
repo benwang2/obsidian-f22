@@ -139,6 +139,11 @@ No, because the ACK value is not included in the packet received.
 
 (d) If the size of the TCP header were larger (e.g., 24 bytes, due to additional TCP options), would your answers to parts (a)–(c) change? Why or why not? (2 points)
 
+```
+Yes. The packet would hold less data.
+Therefore, 7a and 7b would change, but 7c would not.
+```
+
 8. **TCP retransmission strategies (5 points).**
 (a) What is the advantage of selective repeat over a go-back-N retransmission strategy? What is a disadvantage? (2 points)
 ```

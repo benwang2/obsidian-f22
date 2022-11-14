@@ -469,8 +469,8 @@ DELIMITER $$
 CREATE PROCEDURE MoveVotes(
 	IN p VARCHAR(64),
     IN ts TIMESTAMP,
-    IN c VARCHAR(6),
-    IN numVotes INT
+    IN numVotes INT,
+    IN c VARCHAR(6)
 )
 BEGIN
 	DECLARE numBiden INT;
@@ -498,13 +498,14 @@ BEGIN
 			SET message_text = "Number of votes to be moved exceeds number of votes for candidate.";
     END IF;
     
+    
     IF (c = "Trump") THEN
 		UPDATE Penna
-        SET Trump = Trump - numVotes AND Biden = Biden + numVotes
+        SET Trump = Trump - numVotes, Biden = Biden + numVotes
         WHERE precinct = p AND Timestamp >= ts;
     ELSEIF (c = "Biden") THEN
 		UPDATE Penna
-        SET Biden = Biden - numVotes AND Trump = Trump + numVotes
+        SET Biden = Biden - numVotes, Trump = Trump + numVotes
         WHERE precinct = p AND Timestamp >= ts;
     END IF;
 END$$
