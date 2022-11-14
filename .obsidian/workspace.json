@@ -29,8 +29,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -99,7 +98,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Assignments/Problem Set 2/352 Problem Set 2.pdf"
+                "file": "Rutgers/2022 Fall/352/Assignments/Problem Set 2/352 Problem Set 2.md"
               }
             }
           }
@@ -134,7 +133,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Assignments/Problem Set 2/352 Problem Set 2.pdf",
+                "file": "Rutgers/2022 Fall/352/Assignments/Problem Set 2/352 Problem Set 2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +150,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Assignments/Problem Set 2/352 Problem Set 2.pdf",
+                "file": "Rutgers/2022 Fall/352/Assignments/Problem Set 2/352 Problem Set 2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -165,10 +164,10 @@
     "width": 282.5,
     "collapsed": true
   },
-  "active": "9d747cc15e822642",
+  "active": "07341080347a88c9",
   "lastOpenFiles": [
-    "Rutgers/2022 Fall/352/Assignments/Problem Set 2/352 Problem Set 2.md",
     "Rutgers/2022 Fall/352/Assignments/Problem Set 2/352 Problem Set 2.pdf",
+    "Rutgers/2022 Fall/352/Assignments/Problem Set 2/352 Problem Set 2.md",
     "Rutgers/2022 Fall/352/Notes/Lecture 17.md",
     "Rutgers/2022 Fall/336/Assignments/Homework 3/336 Project Penna.md",
     "Rutgers/2022 Fall/352/Assignments/Problem Set 1/352 Problem Set 1.md",
