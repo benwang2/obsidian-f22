@@ -134,7 +134,7 @@ shown in slide 15/16 of lecture 13. Suppose the sequence number field on a TCP p
 (c) Do you have sufficient information in this question to determine the value of the *sequence number* field of the ACK packet that the receiver generates for the packet above? If so, what is the sequence number? If not, why not? (2 points).
 
 ```
-No, because 
+No, because the ACK value is not included in the packet received.
 ```
 
 (d) If the size of the TCP header were larger (e.g., 24 bytes, due to additional TCP options), would your answers to parts (a)–(c) change? Why or why not? (2 points)
