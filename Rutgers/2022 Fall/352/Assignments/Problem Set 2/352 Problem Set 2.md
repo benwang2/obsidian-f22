@@ -112,17 +112,24 @@ and receiver agree to use a window size of 4. Further, assume that the set of av
 
 (e) Is it possible that the following view of the window at the receiver can happen simultaneously with the sender’s view shown above? Why or why not? (1 + 1 = 2 points)
 ```
-Yes, it is possible. When the sender's window contains 7,8,9,0
+Yes, it is possible when the sender's window contains [7,8,9,0] and the receiver has ACKed all, but the ACKs have not yet reached the sender. Therefore, the receiver has moved the window forward, but the sender still believes the data is in flight.
 ```
 
 (f) Is it possible that the following view of the window at the receiver can happen simultaneously with the sender’s view shown above? Why or why not? (1 + 1 = 2 points)
+
+```
+No, it is not possible. The receiver window can not be behind the sender window because it only advances upon receiving data from the sender.
+```
 
 7. **TCP byte-based sequence numbers (8 points)**. Consider the TCP segment structure
 shown in slide 15/16 of lecture 13. Suppose the sequence number field on a TCP packet is 46005. The packet carries 102 bytes of (application-layer) data. The TCP header size on this packet is 20 bytes.
 
 (a) What is the sequence number of the last application byte contained in the packet above? (2 points)
+**46087**
+
 
 (b) What is the value of the *acknowledgment number* field on the ACK that the receiver generates for the packet above? (2 points)
+**46088**
 
 (c) Do you have sufficient information in this question to determine the value of the *sequence number* field of the ACK packet that the receiver generates for the packet above? If so, what is the sequence number? If not, why not? (2 points)
 
@@ -130,6 +137,9 @@ shown in slide 15/16 of lecture 13. Suppose the sequence number field on a TCP p
 
 8. **TCP retransmission strategies (5 points).**
 (a) What is the advantage of selective repeat over a go-back-N retransmission strategy? What is a disadvantage? (2 points)
+```
+With selective repeat, only corrupted data will discarded by the receiver, and then be retransmitted and any other data is stored in the buffer.
+```
 
 (b) Among the selective repeat strategies, what is an advantage of selective acknowledgments over cumulative acknowledgments? What is a disadvantage? (3 points)
 
