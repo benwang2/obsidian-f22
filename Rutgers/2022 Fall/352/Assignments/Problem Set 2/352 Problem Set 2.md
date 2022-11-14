@@ -27,11 +27,12 @@ Please read and follow these instructions carefully.
 # Questions
 1. **TCP vs. UDP (2 points)**. When is it beneficial for an application to use TCP as its transport, and when UDP?
 ```
-UDP is suitable for loss-tolerant and speed critical applications, whereas TCP is best used when data must be fully transmitted.
+UDP is suitable for loss-tolerant and speed critical applications, whereas TCP is best used when data must be transmitted without loss.
 ```
 2. **Computing the checksum (2 + 2 = 4 points)**. In this problem, we will get practice with computing the one’s complement of the one’s complement sum over a sequence of data values. We will use the exact same algorithm used to compute TCP/UDP checksum, but over a sequence of 4-bit chunks rather than 16-bit chunks.
    
    a.  Consider the following data bits. What is the (4-bit) checksum of this (8-bit) data? (2 points) 
+   
    `0101 1100`
 $0101 + 1100 = 10001$
 Extract $1$ bit on the left end.
