@@ -71,7 +71,7 @@ $(pid=28832, fd=3)$
 (c) Suppose a TCP packet enters the machine, destined to TCP port 47468, corresponding to a fresh connection being made by a client through the connect() call. Will this client’s connect() succeed? Why or why not? (2 points)
 
 ```
-This connect() call will fail because the port is already in use.
+This connect() call will fail because the port is already in use by another socket.
 ```
 
 (d) Suppose a UDP packet enters the machine, destined to UDP port 8003. Can you identify the pid and socket fd, if any, corresponding to the socket where this packet is demuxed to? (1 point)
@@ -99,14 +99,19 @@ Pipelined reliability protocols allow for multiple packets to be in-flight at on
 and receiver agree to use a window size of 4. Further, assume that the set of available sequence numbers goes from 0 to 9, and then rolls back to 0.
 
 (a) What was the latest sequence number for which the sender has received an ACK from the receiver? (1 point)
+**6**
 
 (b) What is the latest sequence number that the sender has transmitted? (1 point)
+**0**
 
 (c) What was the latest sequence number whose ACK was sent by the receiver? (1 point)
+**6**
 
 (d) What is the latest sequence number that will be accepted to be buffered by the receiver? (1 point)
+**0**
 
 (e) Is it possible that the following view of the window at the receiver can happen simultaneously with the sender’s view shown above? Why or why not? (1 + 1 = 2 points)
+
 
 (f) Is it possible that the following view of the window at the receiver can happen simultaneously with the sender’s view shown above? Why or why not? (1 + 1 = 2 points)
 
