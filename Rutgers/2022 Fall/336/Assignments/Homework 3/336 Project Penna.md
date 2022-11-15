@@ -449,29 +449,6 @@ END$$
 DELIMITER ;
 ```
 
-#### Tester
-```mysql
-DROP PROCEDURE IF EXISTS part4reset;
-DELIMITER $$
-CREATE PROCEDURE part4reset()
-BEGIN
-	CREATE TABLE IF NOT EXISTS pennaTriggers LIKE Penna;
-    CREATE TABLE IF NOT EXISTS insertedPenna LIKE Penna;
-    CREATE TABLE IF NOT EXISTS deletedPenna LIKE Penna;
-    CREATE TABLE IF NOT EXISTS updatedPenna LIKE Penna;
-
-	SET SQL_SAFE_UPDATES = 0;
-    DELETE FROM insertedPenna;
-    DELETE FROM deletedPenna;
-    DELETE FROM updatedPenna;
-    DELETE FROM pennaTriggers;
-    
-    INSERT INTO pennaTriggers SELECT * FROM Penna ORDER BY ID ASC LIMIT 10;
-    UPDATE pennaTriggers SET ID = ID + 1 WHERE ID < 5;
-    DELETE FROM pennaTriggers WHERE ID > 5;
-END$$
-```
-
 ### Stored Procedure Simulating Trigger
 **MoveVotes(Precinct, Timestamp, Candidate, Number_of_Moved_Votes)**
 1. Precinct – one of the existing precinct
