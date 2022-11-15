@@ -163,15 +163,25 @@ CREATE PROCEDURE API5(
 	IN s VARCHAR(64)
 )
 BEGIN
-	SELECT
-		IF(Biden>Trump,'Biden','Trump') as winner,
-		IF(Biden>Trump, SUM(Biden), SUM(Trump)) as votes
+	DECLARE sumBiden INT;
+    DECLARE sumTrump INT;
+	SELECT SUM(Biden), SUM(Trump)
+	INTO sumBiden, sumTrump
 	FROM (
 		SELECT Timestamp, Trump, Biden
-        FROM Penna
-        WHERE LOCATE(s, precinct)
+		FROM Penna
+		WHERE LOCATE(s, precinct)
 	) penna
 	WHERE penna.Timestamp = (SELECT MAX(Timestamp) FROM penna);
+    
+    IF sumBiden > sumTrump THEN
+		SELECT "Biden" as winner, sumBiden as votes;
+    ELSEIF sumTrump > sumBiden THEN
+		SELECT "Trump" as winner, sumTrump as votes;
+    ELSEIF sumTrump IS NULL OR sumBiden IS NULL THEN
+		SIGNAL SQLSTATE '45000'
+			SET MESSAGE_TEXT = "Did not find any precincts containing this substring.";
+    END IF;
 END$$
 DELIMITER ;
 ```
