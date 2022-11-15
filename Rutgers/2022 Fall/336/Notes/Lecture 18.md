@@ -13,7 +13,15 @@ tags:
 As the professor begins to explain the topic, use this space to write an overview of the topic being discussed.
 
 ### Subtopic 1
-Use this space to expand upon the topic.
+Mongo operators are
+- $eq
+- $gt
+- $lt
+- $gte - greater than or equal
+- $lte - less than or equal
+- $in
+- $ne
+- $nin - not in
 
 ### Quiz
 - What are curly brackets for and what are square brackets for?
