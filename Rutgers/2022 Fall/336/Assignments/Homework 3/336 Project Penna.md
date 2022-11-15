@@ -259,6 +259,8 @@ BEGIN
     DECLARE iter INT DEFAULT 0;
     DECLARE iterEnd INT;
     
+    DECLARE precinctFlag VARCHAR(64) DEFAULT 0;
+    
 	DECLARE iTimestamp TIMESTAMP;
     DECLARE iPrecinct VARCHAR(64);
     DECLARE iBiden INT;
@@ -272,7 +274,7 @@ BEGIN
     DECLARE cur CURSOR FOR (
 		SELECT Timestamp, precinct, Biden, Trump
         FROM Penna
-        WHERE Timestamp >= minTimestamp
+        -- WHERE Timestamp >= minTimestamp
         ORDER BY precinct, Timestamp DESC
     );
     
@@ -297,14 +299,18 @@ BEGIN
 				LEAVE innerWhile;
 			END IF;
             
+            IF precinctFlag = iPrecinct THEN
+				ITERATE innerWhile;
+			END IF;
+            
             IF ( iBiden > iTrump AND jBiden < jTrump) THEN
                 INSERT INTO switchResults
                 VALUES (iPrecinct, iTimestamp, "Trump", "Biden");
-				LEAVE innerWhile;
+                SET precinctFlag = iPrecinct;
             ELSEIF (iBiden < iTrump AND jBiden > jTrump) THEN
 				INSERT INTO switchResults
                 VALUES (iPrecinct, iTimestamp, "Biden", "Trump");
-				LEAVE innerWhile;
+                SET precinctFlag = iPrecinct;
             END IF;
             
             SELECT jTimestamp, jPrecinct, jBiden, jTrump
