@@ -23,9 +23,13 @@ Mongo operators are
 - $ne
 - $nin - not in
 
+NoSQL is schemeless - schemes do not have to be predefined.
+Relations are built from uniform tables.
+
+
+
 ### Quiz
 - What are curly brackets for and what are square brackets for?
 	- Curly brackets are objects
 	- Square brackets are for tuples & arrays
 - "name": "value" where **name** is atomic
-- 
