@@ -8,40 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "4472087cefb88c66",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Rutgers/2022 Fall/336/Notes/Lecture 16.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "083994e3a1da0880",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Rutgers/2022 Fall/336/Notes/Lecture 18.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "4b4e8802c355302d",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Rutgers/2022 Fall/210/Assignments/Homework 3/hw3.pdf"
-              }
-            }
-          },
-          {
             "id": "910ab414abcdbedb",
             "type": "leaf",
             "state": {
@@ -53,8 +19,23 @@
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
+      },
+      {
+        "id": "0f5b8847144dea8e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ed114a8a701651b2",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Rutgers/2022 Fall/210/Assignments/Homework 3/hw3.pdf"
+              }
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -188,17 +169,17 @@
     "width": 282.5,
     "collapsed": true
   },
-  "active": "f976e1bf72752504",
+  "active": "910ab414abcdbedb",
   "lastOpenFiles": [
     "Rutgers/2022 Fall/210/Assignments/Homework 3/hw3.pdf",
-    "Rutgers/2022 Fall/336/Notes/Lecture 19.md",
     "Rutgers/2022 Fall/336/Notes/Lecture 18.md",
     "Rutgers/2022 Fall/336/Notes/Lecture 16.md",
+    "Rutgers/2022 Fall/210/Assignments/Homework 3/Homework 3.md",
+    "Rutgers/2022 Fall/336/Notes/Lecture 19.md",
     "Rutgers/2022 Fall/336/Assignments/Homework 3/336 Project Penna.md",
     "Rutgers/2022 Fall/336/Assignments/Homework 3/ProjectPenna.pdf",
     "Rutgers/2022 Fall/Planner.md",
     "Rutgers/2022 Fall/352/Notes/Lecture 14.md",
-    "Rutgers/2022 Fall/352/Notes/Lecture 13.md",
-    "Rutgers/2022 Fall/352/Notes/Lecture 12.md"
+    "Rutgers/2022 Fall/352/Notes/Lecture 13.md"
   ]
 }
