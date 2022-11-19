@@ -274,7 +274,7 @@ BEGIN
     DECLARE cur CURSOR FOR (
 		SELECT Timestamp, precinct, Biden, Trump
         FROM Penna
-        -- WHERE Timestamp >= minTimestamp
+        WHERE Timestamp >= minTimestamp
         ORDER BY precinct, Timestamp DESC
     );
     
