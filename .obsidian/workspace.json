@@ -11,8 +11,10 @@
             "id": "602c93d62d43a214",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "pdf",
+              "state": {
+                "file": "Rutgers/2022 Fall/352/Assignments/project4/instructions.pdf"
+              }
             }
           }
         ]
@@ -82,7 +84,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Rutgers/2022 Fall/352/Assignments/project4/instructions.pdf"
+              }
             }
           }
         ]
@@ -116,6 +120,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Rutgers/2022 Fall/352/Assignments/project4/instructions.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -132,6 +137,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Rutgers/2022 Fall/352/Assignments/project4/instructions.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +151,7 @@
     "width": 282.5,
     "collapsed": true
   },
-  "active": "f976e1bf72752504",
+  "active": "602c93d62d43a214",
   "lastOpenFiles": [
     "Rutgers/2022 Fall/352/Notes/Lecture 9.md",
     "Rutgers/2022 Fall/336/Assignments/Homework 3/336 Project Penna.md",
