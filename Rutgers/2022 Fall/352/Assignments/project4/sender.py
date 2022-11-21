@@ -182,7 +182,7 @@ def send_reliable(cs, filedata, receiver_binding, win_size):
             ack_message = False
             overflowWindow = False
 
-            while not timed_out and win_left_edge < INIT_SEQNO + content_len:
+            while not timed_out:
                 readable, writable, errs = select(inputs, outputs, inputs)
                 if time.time() - time_sent > RTO:
                     timed_out = True
@@ -200,7 +200,6 @@ def send_reliable(cs, filedata, receiver_binding, win_size):
             if ack_message or overflowWindow:
                 break
             elif timed_out:
-                print("retransmit, because we timed out")
                 index = seq_to_msgindex[prev_left_edge]
                 msg = messages[index]
                 m = Msg(prev_left_edge, __ACK_UNUSED, msg)
