@@ -142,6 +142,7 @@ def send_reliable(cs, filedata, receiver_binding, win_size):
             assert (latest_tx in seq_to_msgindex)
             index = seq_to_msgindex[latest_tx]
             msg = messages[index]
+            print(msg)
             if (latest_tx + len(msg) <=
                 win_right_edge):
                 m = Msg(latest_tx, __ACK_UNUSED, msg)
@@ -175,6 +176,7 @@ def send_reliable(cs, filedata, receiver_binding, win_size):
         outputs = [cs]
         prev_left_edge = win_left_edge
         win_left_edge = transmit_entire_window_from(win_left_edge)
+        win_right_edge = win_left_edge + (win_left_edge - prev_left_edge)
 
        
 
