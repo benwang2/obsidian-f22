@@ -175,16 +175,14 @@ def send_reliable(cs, filedata, receiver_binding, win_size):
         inputs = [cs]
         outputs = [cs]
         prev_left_edge = win_left_edge
-        first_to_tx = transmit_entire_window_from(win_left_edge)
+        last_to_tx = transmit_entire_window_from(win_left_edge)
+        # last_to_tx = win_left_edge
         last_acked = None
         final_ack = INIT_SEQNO + content_len
-        time_sent = time.time()
 
         while True:
             time_sent = time.time()
             timed_out = False
-            ack_message = False
-            overflowWindow = False
 
             while not timed_out:
                 readable, writable, errs = select(inputs, outputs, inputs)
@@ -202,7 +200,8 @@ def send_reliable(cs, filedata, receiver_binding, win_size):
                             overflowWindow = True
                         break
 
-            if ack_message or overflowWindow:
+            if last_acked == final_ack:
+                last_to_tx = final_ack
                 break
             elif timed_out:
                 index = seq_to_msgindex[prev_left_edge]
