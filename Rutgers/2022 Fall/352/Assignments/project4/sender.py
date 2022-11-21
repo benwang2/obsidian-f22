@@ -170,16 +170,17 @@ def send_reliable(cs, filedata, receiver_binding, win_size):
     # TODO: This is where you will make your changes. You
     # will not need to change any other parts of this file.
     while win_left_edge < INIT_SEQNO + content_len:
-        timed_out = False
         inputs = [cs]
         outputs = [cs]
-        ack_message = False
+        win_left_edge = transmit_one()
+
         while True:
-            win_left_edge = transmit_one()
             time_sent = time.time()
+            timed_out = False
+            ack_message = False
             overflowWindow = False
 
-            while True and win_left_edge < INIT_SEQNO + content_len:
+            while not timed_out and win_left_edge < INIT_SEQNO + content_len:
                 readable, writable, errs = select(inputs, outputs, inputs)
                 if time.time() - time_sent > RTO:
                     timed_out = True
@@ -192,13 +193,16 @@ def send_reliable(cs, filedata, receiver_binding, win_size):
                         win_left_edge = ack_message.ack
                         if win_left_edge > INIT_SEQNO + content_len:
                             overflowWindow = True
+                        break
 
-            if ack_message:
+            if ack_message or overflowWindow:
                 break
-            elif overflowWindow:
-                break
-            else:
-                continue
+            elif timed_out:
+                curr_msg = messages[seq_to_msgindex[win_left_edge]]
+                index = seq_to_msgindex[win_left_edge - len(curr_msg)]
+                msg = messages[index]
+                m = Msg(win_left_edge, __ACK_UNUSED, msg)
+                cs.sendto(m.serialize(), receiver_binding)
 
 if __name__ == "__main__":
     args = parse_args()
