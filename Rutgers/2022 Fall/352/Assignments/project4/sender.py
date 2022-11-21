@@ -175,7 +175,7 @@ def send_reliable(cs, filedata, receiver_binding, win_size):
         inputs = [cs]
         outputs = [cs]
         prev_left_edge = win_left_edge
-        last_to_tx = transmit_entire_window_from(win_left_edge)
+        first_to_tx = transmit_entire_window_from(win_left_edge)
         # last_to_tx = win_left_edge
         last_acked = None
         final_ack = INIT_SEQNO + content_len
@@ -195,6 +195,7 @@ def send_reliable(cs, filedata, receiver_binding, win_size):
                         ack_message = Msg.deserialize(data_from_receiver)
                         print("Received {}".format(str(ack_message)))
                         win_left_edge = ack_message.ack
+                        win_right_edge += len(messages[seq_to_msgindex[ack_message.ack]])
                         last_acked = ack_message.ack
                         if win_left_edge > INIT_SEQNO + content_len:
                             overflowWindow = True
