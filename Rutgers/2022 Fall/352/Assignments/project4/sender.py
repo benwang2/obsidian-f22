@@ -2,7 +2,7 @@ import threading
 import time
 import random
 import socket
-import select
+from select import select
 import argparse
 from functools import reduce
 
@@ -170,12 +170,40 @@ def send_reliable(cs, filedata, receiver_binding, win_size):
     # TODO: This is where you will make your changes. You
     # will not need to change any other parts of this file.
     while win_left_edge < INIT_SEQNO + content_len:
-        win_left_edge = transmit_one()
+        timed_out = False
+        inputs = [cs]
+        outputs = [cs]
+        ack_message = False
+        while True:
+            win_left_edge = transmit_one()
+            time_sent = time.time()
+            overflowWindow = False
+
+            while True and win_left_edge < INIT_SEQNO + content_len:
+                readable, writable, errs = select(inputs, outputs, inputs)
+                if time.time() - time_sent > RTO:
+                    timed_out = True
+                    break
+                if readable:
+                    for sock in readable:
+                        data_from_receiver, receiver_address = sock.recvfrom(100)
+                        ack_message = Msg.deserialize(data_from_receiver)
+                        print("Received {}".format(str(ack_message)))
+                        win_left_edge = ack_message.ack
+                        if win_left_edge > INIT_SEQNO + content_len:
+                            overflowWindow = True
+
+            if ack_message:
+                break
+            elif overflowWindow:
+                break
+            else:
+                continue
 
 if __name__ == "__main__":
     args = parse_args()
     filedata = get_filedata(args['infile'])
-    receiver_binding = ('', args['port'])
+    receiver_binding = ('localhost', args['port'])
     cs = init_socket(receiver_binding)
     send_reliable(cs, filedata, receiver_binding,
                   args['winsize'])
