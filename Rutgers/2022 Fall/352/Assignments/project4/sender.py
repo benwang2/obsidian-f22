@@ -174,7 +174,7 @@ def send_reliable(cs, filedata, receiver_binding, win_size):
         inputs = [cs]
         outputs = [cs]
         prev_left_edge = win_left_edge
-        win_left_edge = transmit_one()
+        win_left_edge = transmit_entire_window_from(win_left_edge)
 
        
 

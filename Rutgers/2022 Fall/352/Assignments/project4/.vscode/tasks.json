@@ -6,7 +6,7 @@
         {
             "label": "Run Receiver",
             "type": "shell",
-            "command": "python3 receiver.py --pktloss everyn --pktlossN 3 --port 50051"
+            "command": "python3 receiver.py --port 50051 --ooo_enabled --pktloss noloss"
         }
     ]
 }
