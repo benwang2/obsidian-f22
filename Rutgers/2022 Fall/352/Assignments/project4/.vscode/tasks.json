@@ -4,7 +4,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Run receiver",
+            "label": "Run Receiver",
             "type": "shell",
             "command": "python3 receiver.py --pktloss everyn --pktlossN 3 --port 50051"
         }
