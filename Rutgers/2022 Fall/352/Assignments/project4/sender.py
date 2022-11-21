@@ -173,6 +173,7 @@ def send_reliable(cs, filedata, receiver_binding, win_size):
     while win_left_edge < INIT_SEQNO + content_len:
         inputs = [cs]
         outputs = [cs]
+        prev_left_edge = win_left_edge
         win_left_edge = transmit_one()
 
         while True:
@@ -200,9 +201,10 @@ def send_reliable(cs, filedata, receiver_binding, win_size):
                 break
             elif timed_out:
                 print("retransmit, because we timed out")
-                index = seq_to_msgindex[win_left_edge]
+                index = seq_to_msgindex[prev_left_edge]
                 msg = messages[index]
-                m = Msg(win_left_edge, __ACK_UNUSED, msg)
+                m = Msg(prev_left_edge, __ACK_UNUSED, msg)
+                print ("Transmitted {}".format(str(m)))
                 cs.sendto(m.serialize(), receiver_binding)
 
 if __name__ == "__main__":
