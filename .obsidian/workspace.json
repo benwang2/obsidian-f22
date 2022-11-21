@@ -18,8 +18,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "144811754a1a566a",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Rutgers/2022 Fall/352/Assignments/project4/instructions.pdf"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -74,8 +85,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "c07e8180475e7854",
@@ -88,7 +98,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Notes/Lecture 13.md"
+                "file": "Rutgers/2022 Fall/352/Assignments/project4/instructions.pdf"
               }
             }
           }
@@ -124,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Notes/Lecture 13.md",
+                "file": "Rutgers/2022 Fall/352/Assignments/project4/instructions.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -141,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Notes/Lecture 13.md",
+                "file": "Rutgers/2022 Fall/352/Assignments/project4/instructions.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -155,8 +165,9 @@
     "width": 282.5,
     "collapsed": true
   },
-  "active": "602c93d62d43a214",
+  "active": "144811754a1a566a",
   "lastOpenFiles": [
+    "Rutgers/2022 Fall/352/Notes/Lecture 13.md",
     "Rutgers/2022 Fall/352/Assignments/project4/instructions.pdf",
     "Rutgers/2022 Fall/210/Assignments/Homework 3/hw3.pdf",
     "Rutgers/2022 Fall/352/Notes/Lecture 9.md",
@@ -165,7 +176,6 @@
     "Rutgers/2022 Fall/336/Assignments/Homework 3/ProjectPenna.pdf",
     "Rutgers/2022 Fall/352/Assignments/Problem Set 2/352 Problem Set 2.md",
     "Rutgers/2022 Fall/352/Assignments/Problem Set 2/352 Problem Set 2.pdf",
-    "Rutgers/2022 Fall/352/Notes/Lecture 17.md",
-    "Rutgers/2022 Fall/352/Assignments/Problem Set 1/352 Problem Set 1.md"
+    "Rutgers/2022 Fall/352/Notes/Lecture 17.md"
   ]
 }
