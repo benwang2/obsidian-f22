@@ -175,30 +175,43 @@ def send_reliable(cs, filedata, receiver_binding, win_size):
         inputs = [cs]
         outputs = [cs]
         prev_left_edge = win_left_edge
-        win_left_edge = transmit_entire_window_from(win_left_edge)
-        ACKs = {k:False for k in range(prev_left_edge, win_left_edge)}
-        RTOs = {k:time.time() for k in ACKs.keys()}
-        
+        first_to_tx = transmit_entire_window_from(win_left_edge)
+        last_acked = None
+        final_ack = INIT_SEQNO + content_len
+        time_sent = time.time()
+
         while True:
-            while all([type(v) == float for v in RTOs.values()]):
+            time_sent = time.time()
+            timed_out = False
+            ack_message = False
+            overflowWindow = False
+
+            while not timed_out:
                 readable, writable, errs = select(inputs, outputs, inputs)
-                # for (seqNo, time_sent) in RTOs.items():
-                #     if type(time_sent) == float and time.time() - time_sent and not ACKs[seqNo]:
-                #         RTOs[seqNo] = True
-                #         break
-                # if any(RTOs.values()): break
+                if time.time() - time_sent > RTO:
+                    timed_out = True
+                    break
                 if readable:
                     for sock in readable:
                         data_from_receiver, receiver_address = sock.recvfrom(100)
                         ack_message = Msg.deserialize(data_from_receiver)
                         print("Received {}".format(str(ack_message)))
-                        # win_left_edge = ack_message.ack
-                        ACKs[ack_message.ack] = True
+                        win_left_edge = ack_message.ack
+                        last_acked = ack_message.ack
+                        if win_left_edge > INIT_SEQNO + content_len:
+                            overflowWindow = True
+                        break
 
-            if all(ACKs.values()):
+            if ack_message or overflowWindow:
                 break
+            elif timed_out:
+                index = seq_to_msgindex[prev_left_edge]
+                msg = messages[index]
+                m = Msg(prev_left_edge, __ACK_UNUSED, msg)
+                print ("Transmitted {}".format(str(m)))
+                cs.sendto(m.serialize(), receiver_binding)
 
-        win_right_edge = max(ACKs.keys())
+        
 
 
 
