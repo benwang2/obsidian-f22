@@ -23,9 +23,11 @@
             "id": "144811754a1a566a",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Assignments/project4/instructions.pdf"
+                "file": "Rutgers/2022 Fall/352/Notes/Lecture 6.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -60,7 +62,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Cumulative ACK",
+                "query": "cookie",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,7 +87,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "c07e8180475e7854",
@@ -98,7 +101,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Assignments/project4/instructions.pdf"
+                "file": "Rutgers/2022 Fall/352/Notes/Lecture 6.md"
               }
             }
           }
@@ -106,8 +109,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "8c82c0911c63f35b",
@@ -134,7 +136,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Assignments/project4/instructions.pdf",
+                "file": "Rutgers/2022 Fall/352/Notes/Lecture 6.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +153,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Assignments/project4/instructions.pdf",
+                "file": "Rutgers/2022 Fall/352/Notes/Lecture 6.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -165,10 +167,10 @@
     "width": 282.5,
     "collapsed": true
   },
-  "active": "144811754a1a566a",
+  "active": "8f88c6ad00d72727",
   "lastOpenFiles": [
-    "Rutgers/2022 Fall/352/Notes/Lecture 13.md",
     "Rutgers/2022 Fall/352/Assignments/project4/instructions.pdf",
+    "Rutgers/2022 Fall/352/Notes/Lecture 13.md",
     "Rutgers/2022 Fall/210/Assignments/Homework 3/hw3.pdf",
     "Rutgers/2022 Fall/352/Notes/Lecture 9.md",
     "Rutgers/2022 Fall/336/Assignments/Homework 3/336 Project Penna.md",
