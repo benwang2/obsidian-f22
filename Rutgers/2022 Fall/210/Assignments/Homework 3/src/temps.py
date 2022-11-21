@@ -20,9 +20,5 @@ subset = pd.merge(lon_in_range, lat_in_range, how='inner')
 city_count = subset.value_counts(['country'])
 maximal_cities = city_count[city_count == city_count.max()]
 
-# print(temps[np.isnan(temps['temperature'])])
-print(temps.groupby(['EU','coastline']).mean())
-
 # Part 3
 temps['temperature'] = temps['temperature'].fillna(temps.groupby(['EU','coastline'])['temperature'].transform('mean'))
-print(temps[temps['city'] == 'Hrodna'])
