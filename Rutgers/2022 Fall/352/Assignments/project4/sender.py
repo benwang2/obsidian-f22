@@ -180,22 +180,25 @@ def send_reliable(cs, filedata, receiver_binding, win_size):
         RTOs = {k:time.time() for k in ACKs.keys()}
         
         while True:
-            while not any(RTOs.values()):
+            while all([type(v) == float for v in RTOs.values()]):
                 readable, writable, errs = select(inputs, outputs, inputs)
-                for (seqNo, time_sent) in RTOs.items():
-                    if type(time_sent) == float and time.time() - time_sent and not ACKs[seqNo]:
-                        RTOs[seqNo] = True
-                        break
-                if any(RTOs.values()): break
+                # for (seqNo, time_sent) in RTOs.items():
+                #     if type(time_sent) == float and time.time() - time_sent and not ACKs[seqNo]:
+                #         RTOs[seqNo] = True
+                #         break
+                # if any(RTOs.values()): break
                 if readable:
                     for sock in readable:
                         data_from_receiver, receiver_address = sock.recvfrom(100)
                         ack_message = Msg.deserialize(data_from_receiver)
                         print("Received {}".format(str(ack_message)))
-                        win_left_edge = ack_message.ack
-                        if win_left_edge > INIT_SEQNO + content_len:
-                            overflowWindow = True
-                        break
+                        # win_left_edge = ack_message.ack
+                        ACKs[ack_message.ack] = True
+
+            if all(ACKs.values()):
+                break
+
+        win_right_edge = max(ACKs.keys())
 
 
 

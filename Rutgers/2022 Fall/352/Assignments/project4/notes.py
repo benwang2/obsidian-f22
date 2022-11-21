@@ -11,8 +11,10 @@ while True:
     value = None
     if value and value.ack:
         ACKs[value.ack] = 0
-    for (ackNum, t):
+    for (ackNum, t) in ACKs:
         if time.time() - t > 0.5:
             RTOs[ackNum] = True
             # we know this has timed out
-    if any(RTOs.values())
+    if any(RTOs.values()):
+        break
+# retransmit
