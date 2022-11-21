@@ -128,6 +128,7 @@ def send_reliable(cs, filedata, receiver_binding, win_size):
     global __ACK_UNUSED
     messages, content_len, seq_to_msgindex = chunk_data(filedata)
 
+
     win_left_edge = INIT_SEQNO
     win_right_edge = min(win_left_edge + win_size,
                          INIT_SEQNO + content_len)
@@ -174,35 +175,35 @@ def send_reliable(cs, filedata, receiver_binding, win_size):
         outputs = [cs]
         win_left_edge = transmit_one()
 
-        while True:
-            time_sent = time.time()
-            timed_out = False
-            ack_message = False
-            overflowWindow = False
+        # while True:
+        #     time_sent = time.time()
+        #     timed_out = False
+        #     ack_message = False
+        #     overflowWindow = False
 
-            while not timed_out and win_left_edge < INIT_SEQNO + content_len:
-                readable, writable, errs = select(inputs, outputs, inputs)
-                if time.time() - time_sent > RTO:
-                    timed_out = True
-                    break
-                if readable:
-                    for sock in readable:
-                        data_from_receiver, receiver_address = sock.recvfrom(100)
-                        ack_message = Msg.deserialize(data_from_receiver)
-                        print("Received {}".format(str(ack_message)))
-                        win_left_edge = ack_message.ack
-                        if win_left_edge > INIT_SEQNO + content_len:
-                            overflowWindow = True
-                        break
+        #     while not timed_out and win_left_edge < INIT_SEQNO + content_len:
+        #         readable, writable, errs = select(inputs, outputs, inputs)
+        #         if time.time() - time_sent > RTO:
+        #             timed_out = True
+        #             break
+        #         if readable:
+        #             for sock in readable:
+        #                 data_from_receiver, receiver_address = sock.recvfrom(100)
+        #                 ack_message = Msg.deserialize(data_from_receiver)
+        #                 print("Received {}".format(str(ack_message)))
+        #                 win_left_edge = ack_message.ack
+        #                 if win_left_edge > INIT_SEQNO + content_len:
+        #                     overflowWindow = True
+        #                 break
 
-            if ack_message or overflowWindow:
-                break
-            elif timed_out:
-                curr_msg = messages[seq_to_msgindex[win_left_edge]]
-                index = seq_to_msgindex[win_left_edge - len(curr_msg)]
-                msg = messages[index]
-                m = Msg(win_left_edge, __ACK_UNUSED, msg)
-                cs.sendto(m.serialize(), receiver_binding)
+        #     if ack_message or overflowWindow:
+        #         break
+        #     elif timed_out:
+        #         curr_msg = messages[seq_to_msgindex[win_left_edge]]
+        #         index = seq_to_msgindex[win_left_edge - len(curr_msg)]
+        #         msg = messages[index]
+        #         m = Msg(win_left_edge, __ACK_UNUSED, msg)
+        #         cs.sendto(m.serialize(), receiver_binding)
 
 if __name__ == "__main__":
     args = parse_args()
