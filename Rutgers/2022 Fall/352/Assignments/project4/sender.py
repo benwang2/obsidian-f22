@@ -211,12 +211,6 @@ def send_reliable(cs, filedata, receiver_binding, win_size):
             elif timed_out:
                 transmit_one()
 
-        
-
-
-
-       
-
 if __name__ == "__main__":
     args = parse_args()
     filedata = get_filedata(args['infile'])
