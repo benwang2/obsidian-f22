@@ -28,27 +28,27 @@ temps['temperature'] = temps['temperature'].fillna(temps.groupby(['EU','coastlin
 # Visualization
 ## Part 1
 grouped_types = temps.groupby(['EU','coastline'])
-regiontype_groups = [f"EU={g[0]},CL={g[1]}" for g in grouped_types.groups]
+regiontype_groups = [f"EU={g[0]}\nCoastline={g[1]}" for g in grouped_types.groups]
 regiontype_values = [len(grouped_types.get_group(g)) for g in grouped_types.groups]
 
-plt.bar(regiontype_groups, regiontype_values)
 plt.xlabel("Region type")
 plt.ylabel("Number of cities")
+plt.bar(regiontype_groups, regiontype_values)
 plt.show()
 
 ## Part 2
-plt.scatter(
-    temps['latitude'],
-    temps['longitude'],
-    6,
-    [hash(country) for country in temps['country']]
-)
-plt.xlabel("Latitude")
-plt.ylabel("Longitude")
-plt.show()
+# plt.scatter(
+#     temps['latitude'],
+#     temps['longitude'],
+#     6,
+#     [hash(country) for country in temps['country']]
+# )
+# plt.xlabel("Latitude")
+# plt.ylabel("Longitude")
+# plt.show()
 
 ## Part 3
-plt.hist(temps['population'].unique(), bins=5)
-plt.xlabel("Population of country")
-plt.ylabel("Frequency")
-plt.show()
+# plt.hist(temps['population'].unique(), bins=5)
+# plt.xlabel("Population of country")
+# plt.ylabel("Frequency")
+# plt.show()
