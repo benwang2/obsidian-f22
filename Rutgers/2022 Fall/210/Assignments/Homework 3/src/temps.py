@@ -31,23 +31,24 @@ grouped_types = temps.groupby(['EU','coastline'])
 regiontype_groups = [f"EU={g[0]},CL={g[1]}" for g in grouped_types.groups]
 regiontype_values = [len(grouped_types.get_group(g)) for g in grouped_types.groups]
 
-# plt.bar(regiontype_groups, regiontype_values)
-# plt.show()
+plt.bar(regiontype_groups, regiontype_values)
+plt.xlabel("Region type")
+plt.ylabel("Number of cities")
+plt.show()
 
 ## Part 2
-# plt.scatter(
-#     temps['latitude'],
-#     temps['longitude'],
-#     6,
-#     [hash(country) for country in temps['country']]
-# )
-# plt.show()
+plt.scatter(
+    temps['latitude'],
+    temps['longitude'],
+    6,
+    [hash(country) for country in temps['country']]
+)
+plt.xlabel("Latitude")
+plt.ylabel("Longitude")
+plt.show()
 
 ## Part 3
-population_count = temps['population'].unique()
-country_to_population = [temps['country'][temps['population'] == pop].head(1).values[0] for pop in population_count]
-
-pop_buckets = pd.qcut(population_count,q=5)
-plt.hist(population_count, bins=5)
-plt.bar_label("asdf")
+plt.hist(temps['population'].unique(), bins=5)
+plt.xlabel("Population of country")
+plt.ylabel("Frequency")
 plt.show()
