@@ -24,8 +24,7 @@ maximal_cities = city_count[city_count == city_count.max()]
 # Part 3
 temps['temperature'] = temps['temperature'].fillna(temps.groupby(['EU','coastline'])['temperature'].transform('mean'))
 
-cities = [city[0] for city in city_count.index]
-# print(cities, city_count)
-#plt.plot(years,share_price)
-plt.bar(cities, city_count)
-plt.show()
+regiontype_groups = temps.groupby(['EU','coastline']).groups()
+# regiontype_values = []
+print(regiontype_groups[regiontype_groups.groups[0]])
+# plt.bar(regiontype_groups.groups, regiontype_groups)
