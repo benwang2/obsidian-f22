@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+from matplotlib import pyplot as plt
 
 # Setup
 temps = pd.read_csv("./data/EuCitiesTemperatures.csv")
