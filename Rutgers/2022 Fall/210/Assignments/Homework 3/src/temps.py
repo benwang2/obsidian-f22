@@ -46,4 +46,8 @@ regiontype_values = [len(grouped_types.get_group(g)) for g in grouped_types.grou
 ## Part 3
 population_count = temps['population'].unique()
 country_to_population = [temps['country'][temps['population'] == pop].head(1).values[0] for pop in population_count]
-print(country_to_population)
+
+pop_buckets = pd.qcut(population_count,q=5)
+plt.hist(population_count, bins=5)
+plt.bar_label("asdf")
+plt.show()
