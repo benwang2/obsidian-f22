@@ -36,15 +36,23 @@ regiontype_values = [len(grouped_types.get_group(g)) for g in grouped_types.grou
 
 ## Part 2
 
-cities = [plt.cm.get_cmap('hsv',i) for i, c in enumerate(temps['city'])]
 # lat_city = [temps[['latitude','longitude']][temps.city == c].values[0] for c in temps['city']]
 # lon_city = [temps['longitude'][temps.city == c].values[0] for c in temps['city']]
 
-coordinates = []
-# for values in temps[['latitude','longitude','city']]:
-#     print(values)
-print(temps[['latitude','longitude','city']])
+# def get_cmap(n, name='hsv'):
+#     '''Returns a function that maps each index in 0, 1, ..., n-1 to a distinct 
+#     RGB color; the keyword argument name must be a standard mpl colormap name.'''
+#     return plt.cm.get_cmap(name, n)
 
-# col_city = []
-# plt.scatter(lat_city, lon_city, 1, cities)
-# plt.show()
+countries = [c for c in temps['country']]
+lat_city = []
+lon_city = []
+clr_city = []
+for (lat, lon, country) in temps[['latitude','longitude','country']].iloc(0):
+    # print(lat, lon, country)
+    lat_city.append(lat)
+    lon_city.append(lon)
+    clr_city.append(plt.cm.get_cmap('hsv', hash(country)))
+
+plt.scatter(lat_city, lon_city, 6, clr_city)
+plt.show()
