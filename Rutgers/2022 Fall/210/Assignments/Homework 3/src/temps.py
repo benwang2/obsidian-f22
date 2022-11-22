@@ -35,15 +35,15 @@ regiontype_values = [len(grouped_types.get_group(g)) for g in grouped_types.grou
 # plt.show()
 
 ## Part 2
+# plt.scatter(
+#     temps['latitude'],
+#     temps['longitude'],
+#     6,
+#     [hash(country) for country in temps['country']]
+# )
+# plt.show()
 
-# lat_city = [temps[['latitude','longitude']][temps.city == c].values[0] for c in temps['city']]
-# lon_city = [temps['longitude'][temps.city == c].values[0] for c in temps['city']]
-
-# countries = set([hash(country) for country in temps['country']])
-plt.scatter(
-    temps['latitude'],
-    temps['longitude'],
-    6,
-    [hash(country) for country in temps['country']]
-)
-plt.show()
+## Part 3
+population_count = temps['population'].unique()
+country_to_population = [temps['country'][temps['population'] == pop].head(1).values[0] for pop in population_count]
+print(country_to_population)
