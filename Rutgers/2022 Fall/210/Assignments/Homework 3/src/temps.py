@@ -5,10 +5,11 @@ from matplotlib import pyplot as plt
 # Setup
 temps = pd.read_csv("./data/EuCitiesTemperatures.csv")
 
-# Part 1
+# Preprocessing
+## Part 1
 temps[['latitude','longitude']] = temps[['latitude','longitude']].fillna(temps.groupby('country')[['latitude','longitude']].transform('mean'))
 
-# Part 2
+## Part 2
 lon_gte15 = temps[temps['longitude'] >= 15]
 lon_lte30 = temps[temps['longitude'] <= 30]
 lat_gte40 = temps[temps['latitude'] >= 40]
@@ -21,14 +22,23 @@ subset = pd.merge(lon_in_range, lat_in_range, how='inner')
 city_count = subset.value_counts(['country'])
 maximal_cities = city_count[city_count == city_count.max()]
 
-# Part 3
+## Part 3
 temps['temperature'] = temps['temperature'].fillna(temps.groupby(['EU','coastline'])['temperature'].transform('mean'))
 
+# Visualization
+## Part 1
 grouped_types = temps.groupby(['EU','coastline'])
 regiontype_groups = [f"EU={g[0]},CL={g[1]}" for g in grouped_types.groups]
 regiontype_values = [len(grouped_types.get_group(g)) for g in grouped_types.groups]
-# for group in groups.groups:
-    # print()
 
-plt.bar(regiontype_groups, regiontype_values)
-plt.show()
+# plt.bar(regiontype_groups, regiontype_values)
+# plt.show()
+
+## Part 2
+cities = [c for c in temps['city']]
+lat_city = [temps['latitude'][temps.city == c].value for c in temps['city']]
+print(lat_city)
+lon_city = []
+col_city = []
+# plt.bar(temps['country'], lat_city)
+# plt.show()
