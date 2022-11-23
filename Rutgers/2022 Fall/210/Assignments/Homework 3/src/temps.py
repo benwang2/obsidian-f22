@@ -55,17 +55,29 @@ regiontype_values = [len(grouped_types.get_group(g)) for g in grouped_types.grou
 
 ## Part 4
 
-plt.subplot(2,2,1)
-regiontype_groups = [g for g in grouped_types.groups]
-plt.bar(repr(regiontype_groups[0]), regiontype_values[0])
-plt.yticks([25,50,75,100,125,150])
-plt.subplot(2,2,2)
-plt.bar(repr(regiontype_groups[1]), regiontype_values[1])
-plt.yticks([25,50,75,100,125,150])
-plt.subplot(2,2,3)
-plt.bar(repr(regiontype_groups[2]), regiontype_values[2])
-plt.yticks([25,50,75,100,125,150])
-plt.subplot(2,2,4)
-plt.bar(repr(regiontype_groups[3]), regiontype_values[3])
-plt.yticks([25,50,75,100,125,150])
+temperature_colors = {0:"blue", 6: "orange", 10: "red"}
+for i, index in enumerate(grouped_types.groups):
+    row = grouped_types.get_group(index)
+    plt.subplot(2,2,i+1)
+    plt.scatter(
+        row["latitude"],
+        row["longitude"],
+        4,
+        [row['temperature']]
+    )
+    plt.yticks([25,50,75,100,125,150])
 plt.show()
+
+# plt.title()
+# plt.bar(repr(regiontype_groups[0]), regiontype_values[0])
+# plt.yticks([25,50,75,100,125,150])
+# plt.subplot(2,2,2)
+# plt.bar(repr(regiontype_groups[1]), regiontype_values[1])
+# plt.yticks([25,50,75,100,125,150])
+# plt.subplot(2,2,3)
+# plt.bar(repr(regiontype_groups[2]), regiontype_values[2])
+# plt.yticks([25,50,75,100,125,150])
+# plt.subplot(2,2,4)
+# plt.bar(repr(regiontype_groups[3]), regiontype_values[3])
+# plt.yticks([25,50,75,100,125,150])
+# plt.show()
