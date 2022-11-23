@@ -194,27 +194,28 @@ def send_reliable(cs, filedata, receiver_binding, win_size):
                         ack_message = Msg.deserialize(data_from_receiver)
                         print("Received {}".format(str(ack_message)))
 
+                        # Fresh ACKs are ACKs that are outside of our current window
                         if ack_message.ack > win_right_edge:
-                            win_left_edge = ack_message
-                            win_right_edge = win_left_edge + win_size
+                            print("Got fresh ACK")
+                            win_left_edge = ack_message.ack
+                            win_right_edge = min(win_left_edge + win_size, final_ack)
+
                             move_window = True
                             break
 
                         win_left_edge = ack_message.ack
                         last_acked = ack_message.ack
 
-                        if ack_message.ack not in seq_to_msgindex:
-                            break
+                        # if ack_message.ack not in seq_to_msgindex:
+                        #     break
 
-                        win_right_edge = min(win_right_edge + len(messages[seq_to_msgindex[ack_message.ack]]), final_ack)
+                        # win_right_edge = min(win_right_edge + len(messages[seq_to_msgindex[ack_message.ack]]), final_ack)
                         break
 
             if last_acked == first_to_tx or move_window:
                 break
             elif timed_out:
                 transmit_one()
-        if move_window:
-            break
 
 if __name__ == "__main__":
     args = parse_args()
