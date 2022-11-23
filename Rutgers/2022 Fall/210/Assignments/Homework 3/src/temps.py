@@ -63,24 +63,25 @@ def get_color(t):
     else:
         return "orange"
 
+fig, axs = plt.subplots(2,2, constrained_layout=True)
 for i, index in enumerate(grouped_types.groups):
     row = grouped_types.get_group(index)
-    plt.subplot(2,2,i+1)
-    plt.title(
-        ("EU" if index[0] == "yes" else "Non-EU") + " " +
-        ("Coastline" if index[1] == "yes" else "Other")
-    )
-    plt.scatter(
+    # fig.add_subplot(2,2,i+1)
+    # axs.title(
+    #     ("EU" if index[0] == "yes" else "Non-EU") + " " +
+    #     ("Coastline" if index[1] == "yes" else "Other")
+    # )
+    axs.scatter(
         row["latitude"],
         row["longitude"],
         4,
         [get_color(t) for t in row["temperature"]]
     )
-    plt.yticks([i for i in range(0,50,10)])
+    fig.yticks([i for i in range(0,50,10)])
     
-plt.supxlabel("Latitude")
-plt.supylabel("Longitude")
-plt.show()
+fig.supxlabel("Latitude")
+fig.supylabel("Longitude")
+fig.show()
 
 # plt.title()
 # plt.bar(repr(regiontype_groups[0]), regiontype_values[0])
