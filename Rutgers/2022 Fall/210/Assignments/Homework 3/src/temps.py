@@ -55,17 +55,26 @@ regiontype_values = [len(grouped_types.get_group(g)) for g in grouped_types.grou
 
 ## Part 4
 
-temperature_colors = {0:"blue", 6: "orange", 10: "red"}
+def get_color(t):
+    if t < 6:
+        return "blue"
+    elif t > 10:
+        return "red"
+    else:
+        return "orange"
+
 for i, index in enumerate(grouped_types.groups):
     row = grouped_types.get_group(index)
     plt.subplot(2,2,i+1)
+    plt.xlabel("Latitude")
+    plt.ylabel("Longitude")
     plt.scatter(
         row["latitude"],
         row["longitude"],
         4,
-        [row['temperature']]
+        [get_color(t) for t in row["temperature"]]
     )
-    plt.yticks([25,50,75,100,125,150])
+    plt.yticks([i for i in range(0,50,10)])
 plt.show()
 
 # plt.title()
