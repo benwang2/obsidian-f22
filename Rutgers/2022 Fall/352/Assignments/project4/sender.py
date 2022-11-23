@@ -205,11 +205,7 @@ def send_reliable(cs, filedata, receiver_binding, win_size):
 
                         win_left_edge = ack_message.ack
                         last_acked = ack_message.ack
-
-                        # if ack_message.ack not in seq_to_msgindex:
-                        #     break
-
-                        # win_right_edge = min(win_right_edge + len(messages[seq_to_msgindex[ack_message.ack]]), final_ack)
+                        
                         break
 
             if last_acked == first_to_tx or move_window:

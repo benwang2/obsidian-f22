@@ -29,8 +29,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +97,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Assignments/project4/instructions.pdf"
+                "file": "Rutgers/2022 Fall/352/Notes/Lecture 13.md"
               }
             }
           }
@@ -134,7 +133,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Assignments/project4/instructions.pdf",
+                "file": "Rutgers/2022 Fall/352/Notes/Lecture 13.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +150,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Assignments/project4/instructions.pdf",
+                "file": "Rutgers/2022 Fall/352/Notes/Lecture 13.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -165,8 +164,9 @@
     "width": 282.5,
     "collapsed": true
   },
-  "active": "02cd2dc45e82ae92",
+  "active": "0dbb800b078a8c7f",
   "lastOpenFiles": [
+    "Rutgers/2022 Fall/352/Assignments/project4/instructions.pdf",
     "Rutgers/2022 Fall/352/Notes/Lecture 13.md",
     "Rutgers/2022 Fall/352/Assignments/Project 3/instructions.pdf",
     "Rutgers/2022 Fall/352/Notes/Lecture 12.md",
@@ -175,7 +175,6 @@
     "Rutgers/2022 Fall/352/Notes/Lecture 16.md",
     "Rutgers/2022 Fall/210/Assignments/Homework 3/hw3.pdf",
     "conflict-files-obsidian-git.md",
-    "Rutgers/2022 Fall/210/Assignments/Homework 3/Homework 3.md",
-    "Rutgers/2022 Fall/336/Notes/Lecture 18.md"
+    "Rutgers/2022 Fall/210/Assignments/Homework 3/Homework 3.md"
   ]
 }
