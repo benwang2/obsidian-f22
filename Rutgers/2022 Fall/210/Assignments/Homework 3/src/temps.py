@@ -27,13 +27,13 @@ temps['temperature'] = temps['temperature'].fillna(temps.groupby(['EU','coastlin
 
 # Visualization
 ## Part 1
-# grouped_types = temps.groupby(['EU','coastline'])
-# regiontype_groups = [f"EU={g[0]}\nCoastline={g[1]}" for g in grouped_types.groups]
-# regiontype_values = [len(grouped_types.get_group(g)) for g in grouped_types.groups]
+grouped_types = temps.groupby(['EU','coastline'])
+regiontype_names = [f"EU={g[0]}\nCoastline={g[1]}" for g in grouped_types.groups]
+regiontype_values = [len(grouped_types.get_group(g)) for g in grouped_types.groups]
 
 # plt.xlabel("Region type")
 # plt.ylabel("Number of cities")
-# plt.bar(regiontype_groups, regiontype_values)
+# plt.bar(regiontype_names, regiontype_values)
 # plt.show()
 
 ## Part 2
@@ -52,3 +52,20 @@ temps['temperature'] = temps['temperature'].fillna(temps.groupby(['EU','coastlin
 # plt.xlabel("Population of country")
 # plt.ylabel("Frequency")
 # plt.show()
+
+## Part 4
+
+plt.subplot(2,2,1)
+regiontype_groups = [g for g in grouped_types.groups]
+plt.bar(repr(regiontype_groups[0]), regiontype_values[0])
+plt.yticks([25,50,75,100,125,150])
+plt.subplot(2,2,2)
+plt.bar(repr(regiontype_groups[1]), regiontype_values[1])
+plt.yticks([25,50,75,100,125,150])
+plt.subplot(2,2,3)
+plt.bar(repr(regiontype_groups[2]), regiontype_values[2])
+plt.yticks([25,50,75,100,125,150])
+plt.subplot(2,2,4)
+plt.bar(repr(regiontype_groups[3]), regiontype_values[3])
+plt.yticks([25,50,75,100,125,150])
+plt.show()
