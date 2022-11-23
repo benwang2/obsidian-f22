@@ -174,12 +174,13 @@ def send_reliable(cs, filedata, receiver_binding, win_size):
     while win_left_edge < INIT_SEQNO + content_len:
         inputs = [cs]
         outputs = [cs]
+        print("ABCD",win_left_edge, INIT_SEQNO + content_len)
         first_to_tx = transmit_entire_window_from(win_left_edge)
         # last_to_tx = win_left_edge
         last_acked = None
         final_ack = INIT_SEQNO + content_len
 
-        while True:
+        while last_acked != final_ack:
             time_sent = time.time()
             timed_out = False
 
@@ -199,12 +200,10 @@ def send_reliable(cs, filedata, receiver_binding, win_size):
                         if ack_message.ack not in seq_to_msgindex:
                             break
 
-                        win_right_edge += len(messages[seq_to_msgindex[ack_message.ack]])
-                        
+                        win_right_edge = min(win_right_edge + len(messages[seq_to_msgindex[ack_message.ack]]), final_ack)
                         break
 
-            if last_acked == final_ack:
-                last_to_tx = final_ack
+            if last_acked == first_to_tx or last_acked == final_ack:
                 break
             elif timed_out:
                 print(last_acked, final_ack)
