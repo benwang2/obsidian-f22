@@ -66,8 +66,10 @@ def get_color(t):
 for i, index in enumerate(grouped_types.groups):
     row = grouped_types.get_group(index)
     plt.subplot(2,2,i+1)
-    plt.xlabel("Latitude")
-    plt.ylabel("Longitude")
+    plt.title(
+        ("EU" if index[0] == "yes" else "Non-EU") + " " +
+        ("Coastline" if index[1] == "yes" else "Other")
+    )
     plt.scatter(
         row["latitude"],
         row["longitude"],
@@ -75,6 +77,9 @@ for i, index in enumerate(grouped_types.groups):
         [get_color(t) for t in row["temperature"]]
     )
     plt.yticks([i for i in range(0,50,10)])
+    
+plt.supxlabel("Latitude")
+plt.supylabel("Longitude")
 plt.show()
 
 # plt.title()
