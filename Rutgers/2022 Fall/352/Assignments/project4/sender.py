@@ -181,6 +181,7 @@ def send_reliable(cs, filedata, receiver_binding, win_size):
         while True:
             time_sent = time.time()
             timed_out = False
+            move_window = False
 
             while not timed_out:
                 readable, writable, errs = select(inputs, outputs, inputs)
@@ -192,6 +193,13 @@ def send_reliable(cs, filedata, receiver_binding, win_size):
                         data_from_receiver, receiver_address = sock.recvfrom(100)
                         ack_message = Msg.deserialize(data_from_receiver)
                         print("Received {}".format(str(ack_message)))
+
+                        if ack_message.ack > win_right_edge:
+                            win_left_edge = ack_message
+                            win_right_edge = win_left_edge + win_size
+                            move_window = True
+                            break
+
                         win_left_edge = ack_message.ack
                         last_acked = ack_message.ack
 
@@ -201,10 +209,12 @@ def send_reliable(cs, filedata, receiver_binding, win_size):
                         win_right_edge = min(win_right_edge + len(messages[seq_to_msgindex[ack_message.ack]]), final_ack)
                         break
 
-            if last_acked == first_to_tx:
+            if last_acked == first_to_tx or move_window:
                 break
             elif timed_out:
                 transmit_one()
+        if move_window:
+            break
 
 if __name__ == "__main__":
     args = parse_args()
