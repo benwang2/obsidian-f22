@@ -27,14 +27,14 @@ temps['temperature'] = temps['temperature'].fillna(temps.groupby(['EU','coastlin
 
 # Visualization
 ## Part 1
-grouped_types = temps.groupby(['EU','coastline'])
-regiontype_groups = [f"EU={g[0]}\nCoastline={g[1]}" for g in grouped_types.groups]
-regiontype_values = [len(grouped_types.get_group(g)) for g in grouped_types.groups]
+# grouped_types = temps.groupby(['EU','coastline'])
+# regiontype_groups = [f"EU={g[0]}\nCoastline={g[1]}" for g in grouped_types.groups]
+# regiontype_values = [len(grouped_types.get_group(g)) for g in grouped_types.groups]
 
-plt.xlabel("Region type")
-plt.ylabel("Number of cities")
-plt.bar(regiontype_groups, regiontype_values)
-plt.show()
+# plt.xlabel("Region type")
+# plt.ylabel("Number of cities")
+# plt.bar(regiontype_groups, regiontype_values)
+# plt.show()
 
 ## Part 2
 # plt.scatter(
