@@ -85,3 +85,5 @@ Using CIDR, an ISP can obtain a block of addresses and partition it further to i
 If an ISP has 65,000 addresses, and a customer only needs 64 addresses starting from $200.8.4.128$, that block is specified as $200.8.4.128/26$.
 
 This IP $200.8.4.128/26$ is contained within the block $200.8.0.0/16$.
+
+### Subnet mask
