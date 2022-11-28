@@ -48,3 +48,4 @@ The internet addresses only determine how to move a packet.
 Network layer addresses are **designed** to help routers perform the forwarding and routing functions **efficiently**.
 
 ### IPv4
+An IPv4 address is 32 bits long and it identifies a network interface. 
