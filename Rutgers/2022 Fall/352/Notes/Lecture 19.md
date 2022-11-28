@@ -45,4 +45,6 @@ Internet addresses allow endpoints to *locate each other* but they do not identi
 
 The internet addresses only determine how to move a packet.
 
-Network layer addresses are designed to help routers perform the forwarding and routing functions efficiently.
+Network layer addresses are **designed** to help routers perform the forwarding and routing functions **efficiently**.
+
+### IPv4
