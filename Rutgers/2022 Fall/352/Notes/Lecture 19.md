@@ -49,3 +49,13 @@ Network layer addresses are **designed** to help routers perform the forwarding 
 
 ### IPv4
 An IPv4 address is 32 bits long and it identifies a network interface. 
+
+The IPv4 address corresponds to a point of attachment of an endpoint to a network, but it is NOT an identifier for the endpoint. If the endpoint relocates, the IP changes.
+
+IPv4 addresses are written in **dotted quad notation**, where each byte is written in decimal in order, seperated by dots.
+
+Example:
+| 10000000 | 11000011 | 00000001 | 01010000 |
+| -------- | -------- | -------- | -------- |
+| 128      | 195      | 1        | 80         |
+ 
