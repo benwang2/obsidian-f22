@@ -86,4 +86,7 @@ If an ISP has 65,000 addresses, and a customer only needs 64 addresses starting 
 
 This IP $200.8.4.128/26$ is contained within the block $200.8.0.0/16$.
 
-### Subnet mask
+### Netmask (Subnet mask)
+A netmask is an alternative to denote the IP prefix length of an organization.
+
+A 
