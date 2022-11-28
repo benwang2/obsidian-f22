@@ -39,3 +39,10 @@ The control plane performs **routing** and follows network-wide logic. It determ
 There are two common control-plane approaches:
 - **distributed routing** - algorithms running on each router
 - **centralized routing** - algorithm running on a logically centralized server
+
+## Addressing
+
+
+```python
+# finish at slide 23
+```
