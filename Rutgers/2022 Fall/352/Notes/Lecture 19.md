@@ -19,8 +19,23 @@ The network layer is difficult to evolve because it **runs in every router**. Th
 ### Key functions
 **Forwarding** - move packets from router's input to appropriate router output.
 
-An analogy for forwarding is taking a road trip, specifically getting through a single interchange.
+An analogy for **forwarding** is taking a road trip, specifically getting through a single interchange.
 
 **Routing** - determine route taken by packets from source to destination. Utilizes routing algorithms.
 
-An analogy 
+The process of planning a trip from source to destination is called **routing.**
+
+### Planes
+There are two planes:
+- data plane
+- control plane
+
+#### Data plane
+The data plane performs **forwarding**. Its' function is locally implemented. It determines how datagrams arriving on the router input port is forwarded to the router output port.
+
+#### Control plane
+The control plane performs **routing** and follows network-wide logic. It determines how datagrams are routed along end-to-end path from source to destination endpoint.
+
+There are two common control-plane approaches:
+- **distributed routing** - algorithms running on each router
+- **centralized routing** - algorithm running on a logically centralized server
