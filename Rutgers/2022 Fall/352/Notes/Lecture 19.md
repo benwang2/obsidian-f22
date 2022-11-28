@@ -9,6 +9,6 @@ tags:
 
 <center><h1>Lecture 19</h1></center>
 
-## Network Layer: Addressing
+## Network Layer
 
 
