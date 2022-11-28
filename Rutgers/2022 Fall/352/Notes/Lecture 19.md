@@ -74,3 +74,9 @@ IP addresses use hierarchy to scale routing. For example, endpoints within Busch
 Prefixes reduce the amount of information needed to forward packets over the internet.
 
 IP prefixes are like **zip codes** and they allow for IP addresses to be delegated from one network to another.
+
+In the past, the IP address itself is formatted to denote the IP prefix.
+
+However, now we use classless addressing (known as classless inter-domain routing, or **CIDR**).
+
+## Classless IPv4 addressing
