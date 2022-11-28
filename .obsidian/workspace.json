@@ -4,28 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "20960613e1e772a2",
+        "id": "18697c71d94a35bb",
         "type": "tabs",
         "children": [
           {
-            "id": "0dbb800b078a8c7f",
+            "id": "602c93d62d43a214",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Notes/Lecture 13.md",
+                "file": "Rutgers/2022 Fall/352/Notes/Lecture 19.md",
                 "mode": "source",
                 "source": false
-              }
-            }
-          },
-          {
-            "id": "02cd2dc45e82ae92",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Rutgers/2022 Fall/352/Assignments/project4/instructions.pdf"
               }
             }
           }
@@ -59,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "cumulative ACK",
+                "query": "cookie",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -77,7 +67,7 @@
             }
           },
           {
-            "id": "020d1790e47f6f75",
+            "id": "0bd939b149fb3639",
             "type": "leaf",
             "state": {
               "type": "git-view",
@@ -97,7 +87,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Notes/Lecture 13.md"
+                "file": "Rutgers/2022 Fall/352/Notes/Lecture 19.md"
               }
             }
           }
@@ -105,8 +95,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "8c82c0911c63f35b",
@@ -133,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Notes/Lecture 13.md",
+                "file": "Rutgers/2022 Fall/352/Notes/Lecture 19.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -150,31 +139,31 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Notes/Lecture 13.md",
+                "file": "Rutgers/2022 Fall/352/Notes/Lecture 19.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
     "width": 282.5,
     "collapsed": true
   },
-  "active": "0dbb800b078a8c7f",
+  "active": "602c93d62d43a214",
   "lastOpenFiles": [
-    "Rutgers/2022 Fall/352/Assignments/project4/instructions.pdf",
+    "Rutgers/2022 Fall/352/Notes/Lecture 18.md",
+    "Rutgers/2022 Fall/352/Notes/Lecture 19.md",
     "Rutgers/2022 Fall/352/Notes/Lecture 13.md",
-    "Rutgers/2022 Fall/352/Assignments/Project 3/instructions.pdf",
-    "Rutgers/2022 Fall/352/Notes/Lecture 12.md",
-    "Rutgers/2022 Fall/352/Notes/Lecture 14.md",
-    "Rutgers/2022 Fall/352/Notes/Lecture 15.md",
-    "Rutgers/2022 Fall/352/Notes/Lecture 16.md",
     "Rutgers/2022 Fall/210/Assignments/Homework 3/hw3.pdf",
-    "conflict-files-obsidian-git.md",
-    "Rutgers/2022 Fall/210/Assignments/Homework 3/Homework 3.md"
+    "Rutgers/2022 Fall/352/Notes/Lecture 6.md",
+    "Rutgers/2022 Fall/352/Assignments/Project 4/instructions.pdf",
+    "Rutgers/2022 Fall/352/Notes/Lecture 9.md",
+    "Rutgers/2022 Fall/336/Assignments/Homework 3/336 Project Penna.md",
+    "Rutgers/2022 Fall/336/Assignments/Homework 3/ProjectPenna.pdf",
+    "Rutgers/2022 Fall/352/Assignments/Problem Set 2/352 Problem Set 2.md"
   ]
 }
