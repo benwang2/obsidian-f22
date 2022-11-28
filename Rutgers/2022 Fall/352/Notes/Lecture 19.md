@@ -12,6 +12,8 @@ tags:
 ## Network Layer
 The network layer's main function is to move data from the sending endpoint to the receiving endpoint.
 
-On the sending endpoint, data is encapsulated into **datagrams**
+On the sending endpoint, data is encapsulated into **datagrams**, which the receiving endpoint delivers to the transport layer.
+
+The network layer is difficult to evolve because it **runs in every router**
 
 
