@@ -10,6 +10,8 @@ tags:
 <center><h1>Lecture 19</h1></center>
 
 ## Network Layer
-The network layer's main function is to move data from the sending endpoint to 
+The network layer's main function is to move data from the sending endpoint to the receiving endpoint.
+
+On the sending endpoint, data is encapsulated into **datagrams**
 
 
