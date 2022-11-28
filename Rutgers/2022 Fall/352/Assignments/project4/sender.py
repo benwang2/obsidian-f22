@@ -174,15 +174,14 @@ def send_reliable(cs, filedata, receiver_binding, win_size):
     while win_left_edge < INIT_SEQNO + content_len:
         inputs = [cs]
         outputs = [cs]
-        prev_left_edge = win_left_edge
         first_to_tx = transmit_entire_window_from(win_left_edge)
-        # last_to_tx = win_left_edge
         last_acked = None
         final_ack = INIT_SEQNO + content_len
 
         while True:
             time_sent = time.time()
             timed_out = False
+            move_window = False
 
             while not timed_out:
                 readable, writable, errs = select(inputs, outputs, inputs)
@@ -194,19 +193,22 @@ def send_reliable(cs, filedata, receiver_binding, win_size):
                         data_from_receiver, receiver_address = sock.recvfrom(100)
                         ack_message = Msg.deserialize(data_from_receiver)
                         print("Received {}".format(str(ack_message)))
-                        win_left_edge = max(ack_message.ack, win_left_edge)
-                        last_acked = ack_message.ack
 
-                        if ack_message.ack not in seq_to_msgindex:
+                        # Fresh ACKs are ACKs that are outside of our current window
+                        if ack_message.ack > win_right_edge:
+                            print("Got fresh ACK")
+                            win_left_edge = ack_message.ack
+                            win_right_edge = min(win_left_edge + win_size, final_ack)
+
+                            move_window = True
                             break
 
-                        win_right_edge += len(messages[seq_to_msgindex[ack_message.ack]])
-                        if win_left_edge > INIT_SEQNO + content_len:
-                            overflowWindow = True
+                        win_left_edge = ack_message.ack
+                        last_acked = ack_message.ack
+                        
                         break
 
-            if last_acked == final_ack:
-                last_to_tx = final_ack
+            if last_acked == first_to_tx or move_window:
                 break
             elif timed_out:
                 transmit_one()
