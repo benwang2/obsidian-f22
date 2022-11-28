@@ -58,4 +58,19 @@ Example:
 | 10000000 | 11000011 | 00000001 | 01010000 |
 | -------- | -------- | -------- | -------- |
 | 128      | 195      | 1        | 80         |
- 
+
+IP addresses can be grouped based on a **shared prefix on a specified length**.
+
+So the two addresses below:
+- 128.95.1.80
+- 128.95.1.4
+Share the prefix of length 24: $128.95.1$ but have different suffixes of bit length.
+
+For each address, the prefix corresponds to the network component and the suffix to an **endpoint (host) component** of the address.
+
+### Scaling
+IP addresses use hierarchy to scale routing. For example, endpoints within Busch campus share a prefix of some length, but each endpoint has a different suffix.
+
+Prefixes reduce the amount of information needed to forward packets over the internet.
+
+IP prefixes are like **zip codes** and they allow for IP addresses to be delegated from one network to another.
