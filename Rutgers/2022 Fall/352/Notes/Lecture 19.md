@@ -41,8 +41,8 @@ There are two common control-plane approaches:
 - **centralized routing** - algorithm running on a logically centralized server
 
 ## Addressing
+Internet addresses allow endpoints to *locate each other* but they do not identify endpoints.
 
+The internet addresses only determine how to move a packet.
 
-```python
-# finish at slide 23
-```
+Network layer addresses are designed to help routers perform the forwarding and routing functions efficiently.
