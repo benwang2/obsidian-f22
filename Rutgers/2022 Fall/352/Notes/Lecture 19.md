@@ -110,3 +110,22 @@ def IPsOnNetwork(ip1, ip2, sn):
 	
 print(IPsOnNetwork(*IPs,subnet))
 ```
+
+## Router Architecture
+A router contains a 
+- router processor
+- switching fabric
+- input ports
+- output ports
+
+On the control plane, we have the:
+- route processor
+
+and on the data plane, we have the:
+- router input ports
+- router output ports
+- high-speed switching fabric
+
+There are many different designs (access routers, chassis/core routers, top-of-rack switches) and these designs have evolved over time.
+
+The router we will study is called the **MGR (multi-gigabit router)**
