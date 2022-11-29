@@ -89,4 +89,7 @@ This IP $200.8.4.128/26$ is contained within the block $200.8.0.0/16$.
 ### Netmask (Subnet mask)
 A netmask is an alternative to denote the IP prefix length of an organization.
 
-A 
+The subnet mask is 32 bits long, and a 1-bit denotes a prefix bit position. a 0 denotes host bit.
+
+### Detecting addresses from same network
+Two addresses $A$ and $B$ are on the same network if $A \& M == B \& M$, where 
