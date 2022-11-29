@@ -17,3 +17,7 @@ If packets are arriving too fast for the switching fabric to send them to the ou
 
 #### Route lookup
 Packet forwarding is based on the destination IP address on the packet. When a router receives and parses a packet, it extracts the destination IP address from the packet and does the lookup.
+
+**Number of entries** in the forwarding table is significant - it must fit into the router memory and be efficient.
+
+Number of table entries in 
