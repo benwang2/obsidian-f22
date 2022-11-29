@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "9f61e4549f55ffb7",
+        "id": "cca649b5c0871d42",
         "type": "tabs",
         "children": [
           {
-            "id": "3f598d81d7278035",
+            "id": "f27b94c6b19cf09a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Notes/Lecture 20.md",
+                "file": "Rutgers/2022 Fall/352/Notes/Lecture 21.md",
                 "mode": "source",
                 "source": false
               }
@@ -87,7 +87,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Notes/Lecture 20.md"
+                "file": "Rutgers/2022 Fall/352/Notes/Lecture 21.md"
               }
             }
           }
@@ -123,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Notes/Lecture 20.md",
+                "file": "Rutgers/2022 Fall/352/Notes/Lecture 21.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -140,7 +140,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Notes/Lecture 20.md",
+                "file": "Rutgers/2022 Fall/352/Notes/Lecture 21.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -154,10 +154,10 @@
     "width": 282.5,
     "collapsed": true
   },
-  "active": "3f598d81d7278035",
+  "active": "f27b94c6b19cf09a",
   "lastOpenFiles": [
-    "Rutgers/2022 Fall/352/Notes/Lecture 19.md",
     "Rutgers/2022 Fall/352/Notes/Lecture 20.md",
+    "Rutgers/2022 Fall/352/Notes/Lecture 19.md",
     "Rutgers/2022 Fall/352/Notes/Lecture 1.md",
     "Rutgers/2022 Fall/352/Notes/Lecture 13.md",
     "Rutgers/2022 Fall/352/Assignments/project4/instructions.pdf",
