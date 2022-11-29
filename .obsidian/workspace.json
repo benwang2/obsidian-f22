@@ -11,11 +11,9 @@
             "id": "f27b94c6b19cf09a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Notes/Lecture 21.md",
-                "mode": "source",
-                "source": false
+                "file": "Rutgers/2022 Fall/210/Assignments/Homework 3/hw3.pdf"
               }
             }
           }
@@ -87,7 +85,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Notes/Lecture 21.md"
+                "file": "Rutgers/2022 Fall/210/Assignments/Homework 3/hw3.pdf"
               }
             }
           }
@@ -123,7 +121,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Notes/Lecture 21.md",
+                "file": "Rutgers/2022 Fall/210/Assignments/Homework 3/hw3.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -140,7 +138,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Notes/Lecture 21.md",
+                "file": "Rutgers/2022 Fall/210/Assignments/Homework 3/hw3.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -156,6 +154,7 @@
   },
   "active": "f27b94c6b19cf09a",
   "lastOpenFiles": [
+    "Rutgers/2022 Fall/352/Notes/Lecture 21.md",
     "Rutgers/2022 Fall/352/Notes/Lecture 20.md",
     "Rutgers/2022 Fall/352/Notes/Lecture 19.md",
     "Rutgers/2022 Fall/352/Notes/Lecture 1.md",
@@ -164,7 +163,6 @@
     "Rutgers/2022 Fall/352/Assignments/Project 3/instructions.pdf",
     "Rutgers/2022 Fall/352/Notes/Lecture 12.md",
     "Rutgers/2022 Fall/352/Notes/Lecture 14.md",
-    "Rutgers/2022 Fall/352/Notes/Lecture 15.md",
-    "Rutgers/2022 Fall/352/Notes/Lecture 16.md"
+    "Rutgers/2022 Fall/352/Notes/Lecture 15.md"
   ]
 }
