@@ -67,19 +67,18 @@ fig, axs = plt.subplots(2, 2, constrained_layout=True)
 for i, index in enumerate(grouped_types.groups):
     ax = axs.flat[i]
     row = grouped_types.get_group(index)
-    # fig.add_subplot(2,2,i+1)
-    # axs[i].title(
-    #     ("EU" if index[0] == "yes" else "Non-EU") + " " +
-    #     ("Coastline" if index[1] == "yes" else "Other")
-    # ) 
+    ax.set_title(
+        ("EU" if index[0] == "yes" else "Non-EU") + " " +
+        ("Coastline" if index[1] == "yes" else "Other")
+    ) 
     ax.scatter(
         row["city"],
         row["latitude"],
-        4,
+        12,
         [get_color(t) for t in row["temperature"]]
     )
-    ax.set_xticks([i for i in range(len(row) - 1)])
+    ax.set_xticks(range(len(row) - 1))
     
-fig.supxlabel("Latitude")
-fig.supylabel("Longitude")
+fig.supxlabel("City")
+fig.supylabel("Latitude")
 plt.show()
