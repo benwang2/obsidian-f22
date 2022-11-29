@@ -26,3 +26,10 @@ However, with destination-IP-based forwarding, there are consequences:
 - forwarding behavior is independent of source (bad actors can exploit system)
 - forwarding behavior is independent of application (web traffic vs file download vs video)
 - IP-based packet processing baked into router hardware so evolving IP protocol is just as challenging as evolving routers
+ 
+### Output port functions
+The output port receives from the switching fabric into the queues, which is transmitted to the link layer, then to line termination. Finally, it is transmitted from the output link.
+
+Most routers have the bulk of their **packet buffers** in their input ports, stored in reverse order.
+
+**Buffer management**: which among the packets arriving from the fabric gets space in the packet buffer.
