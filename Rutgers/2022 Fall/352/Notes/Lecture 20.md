@@ -54,4 +54,9 @@ High-speed switching fabrics are designed to be nonblocking:
 - if an output port is "available", an input port can always transmit to it without being blocked by the switching fabric itself
 - nontrivial to achieve
 
-Crossbars are nonblocking by design and shared memory can be designed to be nonblocking if the memory access is fast enough
+Crossbars are nonblocking by design and shared memory can be designed to be nonblocking if the memory access is fast enough.
+
+With a nonblocking fabric, queues aren't formed due to the switching fabric and there are no queues due to inefficiencies at the input port or switching fabric.
+
+Queues form as a result of contention for the output port. They are unavoidable given the route.
+
