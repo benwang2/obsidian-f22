@@ -60,3 +60,6 @@ With a nonblocking fabric, queues aren't formed due to the switching fabric and 
 
 Queues form as a result of contention for the output port. They are unavoidable given the route.
 
+Queues typically form on the output side but can "backpressure" to the input side of there is enough contention for the output port. 
+
+Backpressure is when the output buffer is full, so data is buffered at the input port.
