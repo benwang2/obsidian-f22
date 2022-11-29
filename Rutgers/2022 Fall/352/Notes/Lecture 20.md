@@ -16,4 +16,4 @@ tags:
 If packets are arriving too fast for the switching fabric to send them to the output port, packets may wait in **per-output-port queues**.
 
 #### Route lookup
-Packet forwarding is based on the destination IP address on the packet. When a router receives and 
+Packet forwarding is based on the destination IP address on the packet. When a router receives and parses a packet, it extracts the destination IP address from the packet and does the lookup.
