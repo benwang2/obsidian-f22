@@ -92,4 +92,21 @@ A netmask is an alternative to denote the IP prefix length of an organization.
 The subnet mask is 32 bits long, and a 1-bit denotes a prefix bit position. a 0 denotes host bit.
 
 ### Detecting addresses from same network
-Two addresses $A$ and $B$ are on the same network if $A \& M == B \& M$, where 
+Two addresses $A$ and $B$ are on the same network if $A \& M == B \& M$, where $M$ is the netmask.
+
+```python
+IPs = ["192.168.127.0", "192.168.64.1"]
+subnet = "255.255.192.0"
+def IPsOnNetwork(ip1, ip2, sn):
+	octets1 = [int(digit)
+	for digit in ip1.split(".")]
+		octets2 = [int(digit) for digit in ip2.split(".")]
+		subnet_octets = [int(digit) for digit in sn.split(".")]
+		for i in range(len(octets1)):
+			if octets1[i] & subnet_octets[i] != octets2[i] & subnet_octets[i]:
+				return False 
+
+	return True
+	
+print(IPsOnNetwork(*IPs,subnet))
+```
