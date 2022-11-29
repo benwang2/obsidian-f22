@@ -38,6 +38,20 @@ Most routers have the bulk of their **packet buffers** in their input ports, sto
 ### Switching Fabrics
 The goal of fabric is to ferry as many packets as possible from input to output ports as quickly as possible.
 
-- **memory** - input port writes packets into shared memory and output port reads the packet when output link ready to transmit
-- **bus** - single shared channel to move data from input to output port. easy to build buses; technology is quite mature
-- **crossbar** - each input port has a physical data path to every output port. *Switch* over at the cross-over points turns on to connect pairs of ports
+#### Memory
+Input port writes packets into shared memory and output port reads the packet when output link ready to transmit
+
+#### Bus
+single shared channel to move data from input to output port. easy to build buses; technology is quite mature
+
+#### Crossbar
+each input port has a physical data path to every output port. *Switch* over at the cross-over points turns on to connect pairs of ports
+
+crossbars can get expensive as the number of ports grow (N^2 connections for N ports). MGR uses a crossbar and schedules (in, out) port pairs.
+
+### Nonblocking fabrics
+High-speed switching fabrics are designed to be nonblocking:
+- if an output port is "available", an input port can always transmit to it without being blocked by the switching fabric itself
+- nontrivial to achieve
+
+Crossbars are nonblocking by design and shared memory can be designed to be nonblocking if the memory access is fast enough
