@@ -129,3 +129,11 @@ and on the data plane, we have the:
 There are many different designs (access routers, chassis/core routers, top-of-rack switches) and these designs have evolved over time.
 
 The router we will study is called the **MGR (multi-gigabit router)**
+
+### Input port functions
+The input port receives physical signals and turns them into digital signals, called **line termination**.
+
+The rate of link connecting to a single port termed **line speed** or **line rate**. Modern routers can handle over 100+ Gbit/s.
+
+The **link layer** performs medium access controls functions, like **ethernet**.
+
