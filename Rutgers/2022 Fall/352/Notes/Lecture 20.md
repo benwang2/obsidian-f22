@@ -32,4 +32,12 @@ The output port receives from the switching fabric into the queues, which is tra
 
 Most routers have the bulk of their **packet buffers** in their input ports, stored in reverse order.
 
+**Scheduling:** which among the waiting packets gets to be transmitted out the link?
 **Buffer management**: which among the packets arriving from the fabric gets space in the packet buffer.
+
+### Switching Fabrics
+The goal of fabric is to ferry as many packets as possible from input to output ports as quickly as possible.
+
+- **memory** - input port writes packets into shared memory and output port reads the packet when output link ready to transmit
+- **bus** - single shared channel to move data from input to output port. easy to build buses; technology is quite mature
+- **crossbar** - each input port has a physical data path to every output port. *Switch* over at the cross-over points turns on to connect pairs of ports
