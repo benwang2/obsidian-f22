@@ -64,7 +64,6 @@ def get_color(t):
         return "orange"
 
 fig, axs = plt.subplots(2, 2, constrained_layout=True)
-num_cities = temps['city']
 for i, index in enumerate(grouped_types.groups):
     ax = axs.flat[i]
     row = grouped_types.get_group(index)
@@ -74,12 +73,12 @@ for i, index in enumerate(grouped_types.groups):
     #     ("Coastline" if index[1] == "yes" else "Other")
     # ) 
     ax.scatter(
+        row["city"],
         row["latitude"],
-        row["longitude"],
         4,
         [get_color(t) for t in row["temperature"]]
     )
-    ax.set_yticks(len(num_cities) - 1)
+    ax.set_xticks([i for i in range(len(row) - 1)])
     
 fig.supxlabel("Latitude")
 fig.supylabel("Longitude")
