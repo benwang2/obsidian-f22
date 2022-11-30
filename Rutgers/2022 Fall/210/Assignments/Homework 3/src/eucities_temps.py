@@ -69,27 +69,13 @@ for i, index in enumerate(grouped_types.groups):
     row = grouped_types.get_group(index)
 
     ax.scatter(
+        row["city"],
         row["latitude"],
-        row["longitude"],
-        4,
+        12,
         [get_color(t) for t in row["temperature"]]
     )
-    # ax.yticks([i for i in range(0,50,10)])
+    ax.set_xticks(range(len(row) - 1))
     
-fig.supxlabel("Latitude")
-fig.supylabel("Longitude")
+fig.supxlabel("City")
+fig.supylabel("Latitude")
 plt.show()
-
-# plt.title()
-# plt.bar(repr(regiontype_groups[0]), regiontype_values[0])
-# plt.yticks([25,50,75,100,125,150])
-# plt.subplot(2,2,2)
-# plt.bar(repr(regiontype_groups[1]), regiontype_values[1])
-# plt.yticks([25,50,75,100,125,150])
-# plt.subplot(2,2,3)
-# plt.bar(repr(regiontype_groups[2]), regiontype_values[2])
-# plt.yticks([25,50,75,100,125,150])
-# plt.subplot(2,2,4)
-# plt.bar(repr(regiontype_groups[3]), regiontype_values[3])
-# plt.yticks([25,50,75,100,125,150])
-# plt.show()

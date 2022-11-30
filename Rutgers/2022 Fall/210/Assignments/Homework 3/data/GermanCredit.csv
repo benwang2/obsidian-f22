@@ -8,7 +8,7 @@
 'no checking',24,'existing paid',furniture/equipment,2835,'500<=X<1000','>=7',3,'male single',none,4,'life insurance',53,none,own,1,skilled,1,none,yes,good
 '0<=X<200',36,'existing paid','used car',6948,'<100','1<=X<4',2,'male single',none,2,car,35,none,rent,1,'high qualif/self emp/mgmt',1,yes,yes,good
 'no checking',12,'existing paid',radio/tv,3059,'>=1000','4<=X<7',2,'male div/sep',none,4,'real estate',61,none,own,1,'unskilled resident',1,none,yes,good
-'0<=X<200',30,'critical/other existing credit','new car',5234,'<100',unemployed,4,'male mar/wid',none,2,car,28,none,own,2,'high qualif/self emp/mgmt',1,none,yes,bad
+'no checking',30,'critical/other existing credit','new car',5234,'<100',unemployed,4,'male mar/wid',none,2,car,28,none,own,2,'high qualif/self emp/mgmt',1,none,yes,bad
 '0<=X<200',12,'existing paid','new car',1295,'<100','<1',3,'female div/dep/mar',none,1,car,25,none,rent,1,skilled,1,none,yes,bad
 '<0',48,'existing paid',business,4308,'<100','<1',3,'female div/dep/mar',none,4,'life insurance',24,none,rent,1,skilled,1,none,yes,bad
 '0<=X<200',12,'existing paid',radio/tv,1567,'<100','1<=X<4',1,'female div/dep/mar',none,1,car,22,none,own,1,skilled,1,yes,yes,good
