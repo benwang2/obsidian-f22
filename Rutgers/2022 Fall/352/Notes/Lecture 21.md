@@ -54,5 +54,28 @@ LPM is used by ISPs to allocate sub-prefixes of a larger prefix to organizations
 *e.g. Verizon allocates a sub-prefix / subnet to Rutgers*. 
 The ISP also announces the aggregated prefix to the Internet to save on number of forwarding table memory and number of announcements.
 
-As a result, the organization can be reached over multiple paths - for example, another ISP like AT&T.
+As a result, the organization can be reached over multiple paths - for example, another ISP like AT&T. However, the organization has a preference to use one path over another and expresses this by announcing the longer (more specific) prefix.
 
+Routers in the internet should route based on the longer prefix.
+
+Longest prefix matching ensures packets are routed across the preferred routes.
+
+## IPv4 Datagram Format
+The IPv4 datagram format has an overhead of about 40 bytes, 20 bytes of IP and 20 bytes of TCP.
+
+The components are:
+- version
+- header length
+- type of service (traffic differentiation)
+- datagram length
+- 16-bit identifier
+- flags
+- fragment offset
+- time to live
+- upper protocol (upper layer protocol to deliver payload: TCP, UDP)
+- source IP
+- dest IP
+- options (timestamp. record route, specify list of routers)
+- misc. data
+
+The 16-bit identifier, flags, and fragment offset are used for fragmentation and reassembly.
