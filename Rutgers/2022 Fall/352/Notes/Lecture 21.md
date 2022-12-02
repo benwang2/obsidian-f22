@@ -21,3 +21,4 @@ The control processor is a general-purpose processor that "programs" the data pl
 - manages scheduling and buffer management policy
 
 It implements the **routing algorithm** by processing **routing protocol messages**.
+
