@@ -4,21 +4,42 @@
     "type": "split",
     "children": [
       {
-        "id": "096da08aedb81d63",
+        "id": "975903d8e68ee36a",
         "type": "tabs",
         "children": [
           {
-            "id": "1180d6255f4dbf7a",
+            "id": "334a58bc25cb767a",
             "type": "leaf",
             "state": {
               "type": "diff-view",
               "state": {
-                "file": ".obsidian/workspace.json",
+                "file": "Rutgers/2022 Fall/336/Assignments/Mongo Project/hw4.md",
                 "staged": false
               }
             }
+          },
+          {
+            "id": "521f48cf206db9cb",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "4da57f230a7058d2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "conflict-files-obsidian-git.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -86,7 +107,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "conflict-files-obsidian-git.md"
+              }
             }
           }
         ]
@@ -120,6 +143,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "conflict-files-obsidian-git.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -136,6 +160,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "conflict-files-obsidian-git.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,8 +174,9 @@
     "width": 282.5,
     "collapsed": true
   },
-  "active": "020d1790e47f6f75",
+  "active": "4da57f230a7058d2",
   "lastOpenFiles": [
+    "conflict-files-obsidian-git.md",
     "Rutgers/2022 Fall/336/Assignments/Mongo Project/hw4.md",
     "Rutgers/2022 Fall/336/Assignments/Mongo Project/MongoHW3.pdf",
     "Rutgers/2022 Fall/352/Notes/Lecture 20.md",
@@ -159,7 +185,6 @@
     "Rutgers/2022 Fall/210/Assignments/Homework 3/hw3.pdf",
     "Rutgers/2022 Fall/352/Notes/Lecture 1.md",
     "Rutgers/2022 Fall/352/Notes/Lecture 13.md",
-    "Rutgers/2022 Fall/352/Assignments/project4/instructions.pdf",
-    "Rutgers/2022 Fall/352/Assignments/Project 3/instructions.pdf"
+    "Rutgers/2022 Fall/352/Assignments/project4/instructions.pdf"
   ]
 }

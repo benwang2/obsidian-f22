@@ -99,4 +99,10 @@ It is used for:
 
 ### Ping
 - Uses the ICMP echo request (type=8, code=0) and reply (type=0,code=0)
-- Source sends ICMP echo request message to dst
+- Source sends ICMP echo request message to dst address
+- Destination network stack replies with an ICMP **echo reply** message
+- Source can calculate round trip time (RTT) of packets
+- If no echo reply comes back, then the destination is unreachable
+- Don't need to have server program running on other side
+
+
