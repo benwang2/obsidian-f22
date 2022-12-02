@@ -4,17 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "8eb2d9b8de1e6da4",
+        "id": "f3be3f98c41400a2",
         "type": "tabs",
         "children": [
           {
-            "id": "69853680da46ff0c",
+            "id": "dc645a7cbec0e777",
             "type": "leaf",
             "state": {
-              "type": "diff-view",
+              "type": "markdown",
               "state": {
-                "file": ".obsidian/workspace.json",
-                "staged": false
+                "file": "Rutgers/2022 Fall/336/Assignments/Mongo Project/hw4.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -73,8 +74,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 3
+        ]
       },
       {
         "id": "c07e8180475e7854",
@@ -86,7 +86,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Rutgers/2022 Fall/336/Assignments/Mongo Project/hw4.md"
+              }
             }
           }
         ]
@@ -120,6 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Rutgers/2022 Fall/336/Assignments/Mongo Project/hw4.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -136,6 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Rutgers/2022 Fall/336/Assignments/Mongo Project/hw4.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +153,7 @@
     "width": 282.5,
     "collapsed": true
   },
-  "active": "69853680da46ff0c",
+  "active": "dc645a7cbec0e777",
   "lastOpenFiles": [
     "conflict-files-obsidian-git.md",
     "Rutgers/2022 Fall/352/Notes/Lecture 20.md",
