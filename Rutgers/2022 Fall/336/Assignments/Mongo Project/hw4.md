@@ -34,18 +34,21 @@ db.Bars.aggregate([
 3. Return how many bars sell more than 5 kinds of beers.
 ```javascript
 use db;
-print(db.Bars.aggregate(
-  [
+db.Bars.aggregate([
     {
       "$project": {
         "name": 1,"num_sold": {"$size": "$beers"}
       },
     },
     {"$match" : {"num_sold": {"$gt": 5}}}
-  ])
-)
+])
+
 ```
 4. Find the drinkers that have visited any bars either on Saturday or Sunday (or both) \[hint: go check out "$elemMatch" function\]
+```javascript
+use db;
+
+```
 5. Find the drinker who has ordered "Blue Tattoo" beer more than once
 6. Insert Lucy to Drinker collection. Lucy is from Edison, lives at "433 River Road" with phone number 732-571-9871, she is 23 years old and her list of favorite bar foods consists of: French fries, onion rings, nachos, and wings.
 7. **Value count**: Given a relation R, represent R as JSON object J with the *smallest value count*
