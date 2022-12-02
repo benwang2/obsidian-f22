@@ -25,7 +25,7 @@ It implements the **routing algorithm** by processing **routing protocol message
 ### IP block reallocation
 Organizations can reallocate a subset of their IP address to other organizations.
 
-For example, ISP A owns the IP block 200.23.1
+For example, ISP A owns the IP block 200.23.16.0/20 
 
 ## Longest Prefix Matching
 
