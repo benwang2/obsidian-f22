@@ -35,10 +35,12 @@ graph LR;
 	org4(ORG 1: 200.23.30.0/23) --> isp
 	isp --> Internet
 ```
-**Route aggregation** is used to save forwarding table memory by reducing number of routing protocl messages.
+**Route aggregation** is used to save forwarding table memory by reducing number of routing protocol messages.
 
-There is an **announcement mechanism** (Border Gateway Protocol) by which ISP A can inform the rest of the internet about the prefixes it owns. It is enough to announce a coarse grained prefix 200.23.16.0/20 rather than 8 seperate sub-prefixes.
+There is an **announcement mechanism** (Border Gateway Protocol) by which ISP A can inform the rest of the internet about the prefixes it owns. It is enough to announce a coarse grained prefix $200.23.16.0/20$ rather than 8 seperate sub-prefixes.
 
+$200.23.18.0/23$ is inside $200.23.16.0/23$.
+
+A packet with destination IP address 200.23.18.XX is in both prefixes. 
 
 ## Longest Prefix Matching
-
