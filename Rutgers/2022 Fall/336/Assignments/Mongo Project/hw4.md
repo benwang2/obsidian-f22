@@ -15,7 +15,19 @@ db.Bar.find({$or:[{"addr":""},{"phone": ""}]})
 ```
 2. Find the city that has more than 4 bars. Return the city name and the number of bars it has.
 ```mongo
-
+db.Bars.aggregate([
+  {
+    $group: {
+      _id: "$city",
+      count: {
+        $sum: 1
+      }
+    },
+  },
+  {
+    $match: { count: { "$gt": 4 } }
+  }
+]);
 ```
 3. Return how many bars sell more than 5 kinds of beers.
 4. Find the drinkers that have visited any bars either on Saturday or Sunday (or both) \[hint: go check out "$elemMatch" function\]
