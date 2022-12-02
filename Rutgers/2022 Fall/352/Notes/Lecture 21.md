@@ -79,3 +79,24 @@ The components are:
 - misc. data
 
 The 16-bit identifier, flags, and fragment offset are used for fragmentation and reassembly.
+
+## Internet Control Message Protocol (ICMP)
+
+ICMP is a protocol for **troubleshooting** and diagnostics and it works over IP.
+
+This protocol diagnoses the **unreliable delivery** of packets. It's functions are:
+- determining the reachability and network errors
+- specify that packets have been in network for too long
+
+The ICMP follows the format of:
+- ICMP header: message type, code, checksum, and ICMP data
+- IP header
+
+It is used for:
+- echo request replies - check remotely if an endpoint is alive and connected without running app on remote server
+- probing unreachable destinations - invalid address / port
+- knowing of packet's TTL have expired - check routing loops
+
+### Ping
+- Uses the ICMP echo request (type=8, code=0) and reply (type=0,code=0)
+- Source sends ICMP echo request message to dst
