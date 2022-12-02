@@ -11,8 +11,11 @@
             "id": "69853680da46ff0c",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "diff-view",
+              "state": {
+                "file": ".obsidian/workspace.json",
+                "staged": false
+              }
             }
           }
         ]
@@ -70,7 +73,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 3
       },
       {
         "id": "c07e8180475e7854",
@@ -145,8 +149,9 @@
     "width": 282.5,
     "collapsed": true
   },
-  "active": "f976e1bf72752504",
+  "active": "69853680da46ff0c",
   "lastOpenFiles": [
+    "conflict-files-obsidian-git.md",
     "Rutgers/2022 Fall/352/Notes/Lecture 20.md",
     "Rutgers/2022 Fall/352/Notes/Lecture 21.md",
     "Rutgers/2022 Fall/210/Assignments/Homework 3/hw3.pdf",
@@ -155,7 +160,6 @@
     "Rutgers/2022 Fall/352/Notes/Lecture 13.md",
     "Rutgers/2022 Fall/352/Assignments/project4/instructions.pdf",
     "Rutgers/2022 Fall/352/Assignments/Project 3/instructions.pdf",
-    "Rutgers/2022 Fall/352/Notes/Lecture 12.md",
-    "Rutgers/2022 Fall/352/Notes/Lecture 14.md"
+    "Rutgers/2022 Fall/352/Notes/Lecture 12.md"
   ]
 }
