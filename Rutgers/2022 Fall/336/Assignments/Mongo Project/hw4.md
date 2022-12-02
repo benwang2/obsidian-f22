@@ -47,7 +47,15 @@ db.Bars.aggregate([
 4. Find the drinkers that have visited any bars either on Saturday or Sunday (or both) \[hint: go check out "$elemMatch" function\]
 ```javascript
 use db;
-
+db.Drinkers.find(
+  {
+    "history": {
+      "$elemMatch": {
+        "day": { "$in": ["Saturday", "Sunday"] }
+      }
+    }
+  }
+);
 ```
 5. Find the drinker who has ordered "Blue Tattoo" beer more than once
 6. Insert Lucy to Drinker collection. Lucy is from Edison, lives at "433 River Road" with phone number 732-571-9871, she is 23 years old and her list of favorite bar foods consists of: French fries, onion rings, nachos, and wings.
