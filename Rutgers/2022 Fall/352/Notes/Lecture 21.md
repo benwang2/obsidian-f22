@@ -48,4 +48,11 @@ With LPM, use the **longest** matching prefix, i.e., the most specific route, am
 
 Policy is borne out of the Internet's IP allocation model. Prefixes and sub-prefixes are handed out by the Internet IP allocation.
 
-Internet routers use the 
+Internet routers use longest prefix matching to forward packets appropriately.
+
+LPM is used by ISPs to allocate sub-prefixes of a larger prefix to organizations.
+*e.g. Verizon allocates a sub-prefix / subnet to Rutgers*. 
+The ISP also announces the aggregated prefix to the Internet to save on number of forwarding table memory and number of announcements.
+
+As a result, the organization can be reached over multiple paths - for example, another ISP like AT&T.
+
