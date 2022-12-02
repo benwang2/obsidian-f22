@@ -61,7 +61,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "cumulative ACK",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -86,7 +86,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "c07e8180475e7854",

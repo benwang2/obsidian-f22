@@ -22,3 +22,10 @@ The control processor is a general-purpose processor that "programs" the data pl
 
 It implements the **routing algorithm** by processing **routing protocol messages**.
 
+### IP block reallocation
+Organizations can reallocate a subset of their IP address to other organizations.
+
+For example, ISP A owns the IP block 200.23.1
+
+## Longest Prefix Matching
+
