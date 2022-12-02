@@ -25,7 +25,17 @@ It implements the **routing algorithm** by processing **routing protocol message
 ### IP block reallocation
 Organizations can reallocate a subset of their IP address to other organizations.
 
-For example, ISP A owns the IP block 200.23.16.0/20 
+For example, ISP A owns the IP block 200.23.16.0/20 and allocates it for other organizations..
+
+```mermaid
+graph LR;
+	org1(ORG 1: 200.23.16.0/23) --> isp(ISP A)
+	org2(ORG 2: 200.23.18.0/23) --> isp
+	org3(ORG 3: 200.23.20.0/23) --> isp
+	org4(ORG 1: 200.23.30.0/23) --> isp
+	isp -- BGP Send p --> Internet
+```
+
 
 ## Longest Prefix Matching
 
