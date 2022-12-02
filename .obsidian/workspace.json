@@ -6,9 +6,29 @@
       {
         "id": "77a4a42e25455c70",
         "type": "tabs",
+        "dimension": 50.6338553318419,
         "children": [
           {
-            "id": "12501a8809417a94",
+            "id": "e1ffffed7665b18c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Rutgers/2022 Fall/336/Assignments/Mongo Project/hw4.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "4fc7d08f209bb5a9",
+        "type": "tabs",
+        "dimension": 49.36614466815809,
+        "children": [
+          {
+            "id": "aeb2d05abbbfb3e9",
             "type": "leaf",
             "state": {
               "type": "pdf",
@@ -85,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Rutgers/2022 Fall/336/Assignments/Mongo Project/MongoHW3.pdf"
+                "file": "Rutgers/2022 Fall/336/Assignments/Mongo Project/hw4.md"
               }
             }
           }
@@ -120,7 +140,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Rutgers/2022 Fall/336/Assignments/Mongo Project/MongoHW3.pdf",
+                "file": "Rutgers/2022 Fall/336/Assignments/Mongo Project/hw4.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -137,7 +157,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Rutgers/2022 Fall/336/Assignments/Mongo Project/MongoHW3.pdf",
+                "file": "Rutgers/2022 Fall/336/Assignments/Mongo Project/hw4.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -151,8 +171,10 @@
     "width": 282.5,
     "collapsed": true
   },
-  "active": "12501a8809417a94",
+  "active": "e1ffffed7665b18c",
   "lastOpenFiles": [
+    "Rutgers/2022 Fall/336/Assignments/Mongo Project/MongoHW3.pdf",
+    "Rutgers/2022 Fall/336/Assignments/Mongo Project/hw4.md",
     "Rutgers/2022 Fall/352/Notes/Lecture 20.md",
     "Rutgers/2022 Fall/352/Notes/Lecture 19.md",
     "Rutgers/2022 Fall/352/Notes/Lecture 21.md",
@@ -160,8 +182,6 @@
     "Rutgers/2022 Fall/352/Notes/Lecture 1.md",
     "Rutgers/2022 Fall/352/Notes/Lecture 13.md",
     "Rutgers/2022 Fall/352/Assignments/project4/instructions.pdf",
-    "Rutgers/2022 Fall/352/Assignments/Project 3/instructions.pdf",
-    "Rutgers/2022 Fall/352/Notes/Lecture 12.md",
-    "Rutgers/2022 Fall/352/Notes/Lecture 14.md"
+    "Rutgers/2022 Fall/352/Assignments/Project 3/instructions.pdf"
   ]
 }
