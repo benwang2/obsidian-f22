@@ -51,5 +51,9 @@ db.Drinkers.find({"history":{"$elemMatch":{"day":{"$in":["Saturday","Sunday"]}}}
 ```
 5. Find the drinker who has ordered "Blue Tattoo" beer more than once
 6. Insert Lucy to Drinker collection. Lucy is from Edison, lives at "433 River Road" with phone number 732-571-9871, she is 23 years old and her list of favorite bar foods consists of: French fries, onion rings, nachos, and wings.
+```javascript
+use db;
+db.Drinkers.insert_one({"name":"Lucy","city":"Edison","addr":"433 River Road","phone":"732-571-9871","age":23,"favorite_bar_foods":["French fries","Onion rings","Nachos","Wings"]}) 
+```
 7. **Value count**: Given a relation R, represent R as JSON object J with the *smallest value count*
 8. For each timestamp T, define TotIncrement as sum of totalvote increments over all precincts (totalvote increment, as defined in 2.1 of Election project newPenna). Finds timestamp(s) with largest value of TotIncremenet along with this largest value. Submit CODE and result.
