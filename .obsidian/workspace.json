@@ -8,7 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "6e11f3b6785c1896",
+            "id": "2c30a0758cadd3c9",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Rutgers/2022 Fall/210/Assignments/Homework 3/hw3.pdf"
+              }
+            }
+          },
+          {
+            "id": "54e805ee8d45323e",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -16,7 +26,7 @@
             }
           },
           {
-            "id": "2c30a0758cadd3c9",
+            "id": "511ebc53357d8d88",
             "type": "leaf",
             "state": {
               "type": "pdf",
@@ -26,7 +36,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -81,6 +91,7 @@
               "state": {}
             }
           }
+        ]
         ]
       },
       {
@@ -160,15 +171,15 @@
     "width": 282.5,
     "collapsed": true
   },
-  "active": "2c30a0758cadd3c9",
+  "active": "511ebc53357d8d88",
   "lastOpenFiles": [
     "conflict-files-obsidian-git.md",
+    "Rutgers/2022 Fall/210/Assignments/Homework 3/hw3.pdf",
     "Rutgers/2022 Fall/336/Assignments/Mongo Project/hw4.md",
     "Rutgers/2022 Fall/336/Assignments/Mongo Project/MongoHW3.pdf",
     "Rutgers/2022 Fall/352/Notes/Lecture 20.md",
     "Rutgers/2022 Fall/352/Notes/Lecture 19.md",
     "Rutgers/2022 Fall/352/Notes/Lecture 21.md",
-    "Rutgers/2022 Fall/210/Assignments/Homework 3/hw3.pdf",
     "Rutgers/2022 Fall/352/Notes/Lecture 1.md",
     "Rutgers/2022 Fall/352/Notes/Lecture 13.md",
     "Rutgers/2022 Fall/352/Assignments/project4/instructions.pdf"
