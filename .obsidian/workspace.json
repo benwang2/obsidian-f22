@@ -19,11 +19,9 @@
             "id": "2c30a0758cadd3c9",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "conflict-files-obsidian-git.md",
-                "mode": "source",
-                "source": false
+                "file": "Rutgers/2022 Fall/210/Assignments/Homework 3/hw3.pdf"
               }
             }
           }
@@ -83,8 +81,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 3
+        ]
       },
       {
         "id": "c07e8180475e7854",
@@ -97,7 +94,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "conflict-files-obsidian-git.md"
+                "file": "Rutgers/2022 Fall/210/Assignments/Homework 3/hw3.pdf"
               }
             }
           }
@@ -132,7 +129,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "conflict-files-obsidian-git.md",
+                "file": "Rutgers/2022 Fall/210/Assignments/Homework 3/hw3.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -149,7 +146,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "conflict-files-obsidian-git.md",
+                "file": "Rutgers/2022 Fall/210/Assignments/Homework 3/hw3.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
