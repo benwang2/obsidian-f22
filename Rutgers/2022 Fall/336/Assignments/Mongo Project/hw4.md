@@ -94,3 +94,12 @@ We can represent R as the JSON Object J as
 {“BD”: 11, “AC”: [01]},{“BD”: 10, “AC”:[00, 01, 10, 11]}]$
 ```
 8. For each timestamp T, define TotIncrement as sum of totalvote increments over all precincts (totalvote increment, as defined in 2.1 of Election project newPenna). Finds timestamp(s) with largest value of TotIncremenet along with this largest value. Submit CODE and result.
+```python
+from collections import defaultdict
+
+timestamps = [] # get list of distinct timestamps
+totalvotes = defaultdict(int)
+for t in timestamp:
+	total_increment = None
+	
+```
