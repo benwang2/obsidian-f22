@@ -60,17 +60,20 @@ db.Drinkers.find(
 5. Find the drinker who has ordered "Blue Tattoo" beer more than once
 ```javascript
 use db;
-db.Drinkers.find(
-	{
-		{$project : {
-		  "history.set_of_beers": "Blue Tattoo", "name":1,"numberOfBeers":{count:1}
-		},
-		{“$match” : {
-			“numberOfBeers”: {
-				$gt”: 1
-			}
-		}
+db.Drinkers.aggregate(
+	{$unwind: "$history"},
+	{$match: {
+		"history.set_of_beers": {
+			$all: ["Blue Tattoo"]
+	}}},
+	{$group: {
+		_id: "$name",
+		timesOrdered: {$count: {}}
 	}
+	}, {
+			$match: {timesOrdered: {$gt : 1}}
+		},
+		{$project: {_id: 0, name: "$_id"}}
 )
 
 ```
