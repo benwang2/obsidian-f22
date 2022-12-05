@@ -4,21 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "3e5c2f3860de4d21",
+        "id": "a683976aeecad240",
         "type": "tabs",
         "children": [
           {
-            "id": "1b106adabe6629fa",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Rutgers/2022 Fall/336/Assignments/Mongo Project/MongoHW3.pdf"
-              }
-            }
-          },
-          {
-            "id": "f7e4f3f554b41402",
+            "id": "5e3d660c49fcfb45",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -28,9 +18,18 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "65210bba8d70bc10",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Rutgers/2022 Fall/336/Assignments/Homework 3/ProjectPenna.pdf"
+              }
+            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -76,6 +75,14 @@
               "type": "starred",
               "state": {}
             }
+          },
+          {
+            "id": "020d1790e47f6f75",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {}
+            }
           }
         ]
       },
@@ -115,16 +122,8 @@
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true
+                "useHierarchy": false
               }
-            }
-          },
-          {
-            "id": "0bd939b149fb3639",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {}
             }
           },
           {
@@ -157,23 +156,24 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 284.5
+    "width": 282.5,
+    "collapsed": true
   },
-  "active": "f7e4f3f554b41402",
+  "active": "5e3d660c49fcfb45",
   "lastOpenFiles": [
     "Rutgers/2022 Fall/336/Assignments/Mongo Project/MongoHW3.pdf",
-    "Rutgers/2022 Fall/336/Notes/Lecture 18.md",
-    "Rutgers/2022 Fall/336/Notes/Lecture 16.md",
-    "Rutgers/2022 Fall/336/Notes/Lecture 15.md",
-    "Rutgers/2022 Fall/336/Notes/Lecture 19.md",
+    "Rutgers/2022 Fall/336/Assignments/Homework 3/ProjectPenna.pdf",
     "Rutgers/2022 Fall/336/Assignments/Mongo Project/hw4.md",
-    "Rutgers/2022 Fall/352/Notes/Lecture 5.md",
-    "Rutgers/2022 Fall/352/Notes/Lecture 4.md",
-    "Rutgers/2022 Fall/352/Notes/Lecture 3.md",
-    "Rutgers/2022 Fall/352/Notes/Lecture 6.md"
+    "conflict-files-obsidian-git.md",
+    "Rutgers/2022 Fall/352/Notes/Lecture 20.md",
+    "Rutgers/2022 Fall/352/Notes/Lecture 19.md",
+    "Rutgers/2022 Fall/352/Notes/Lecture 21.md",
+    "Rutgers/2022 Fall/210/Assignments/Homework 3/hw3.pdf",
+    "Rutgers/2022 Fall/352/Notes/Lecture 1.md",
+    "Rutgers/2022 Fall/352/Notes/Lecture 13.md"
   ]
 }
