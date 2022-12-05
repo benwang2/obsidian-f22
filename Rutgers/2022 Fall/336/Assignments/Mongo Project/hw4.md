@@ -62,18 +62,23 @@ db.Drinkers.find(
 use db;
 db.Drinkers.aggregate(
 	{$unwind: "$history"},
-	{$match: {
-		"history.set_of_beers": {
-			$all: ["Blue Tattoo"]
-	}}},
-	{$group: {
-		_id: "$name",
-		timesOrdered: {$count: {}}
-	}
-	}, {
-			$match: {timesOrdered: {$gt : 1}}
-		},
-		{$project: {_id: 0, name: "$_id"}}
+	{
+		$match: {
+			"history.set_of_beers": {
+				$all: ["Blue Tattoo"]
+			}
+		}
+	},
+	{
+		$group: {
+			_id: "$name",
+			timesOrdered: {$count: {}}
+		}
+	},
+	{
+		$match: {timesOrdered: {$gt : 1}}
+	},
+	{$project: {_id: 0, name: "$_id"}}
 )
 
 ```
