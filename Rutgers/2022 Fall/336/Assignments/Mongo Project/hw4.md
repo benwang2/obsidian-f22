@@ -61,26 +61,25 @@ db.Drinkers.find(
 ```javascript
 use db;
 db.Drinkers.aggregate(
-	{$unwind: "$history"},
+	{"$unwind": "$history"},
 	{
-		$match: {
+		"$match": {
 			"history.set_of_beers": {
-				$all: ["Blue Tattoo"]
+				"$in": ["Blue Tattoo"]
 			}
 		}
 	},
 	{
-		$group: {
-			_id: "$name",
-			timesOrdered: {$count: {}}
+		"$group": {
+			"_id": "$name",
+			"timesOrdered": {"$count": {}}
 		}
 	},
 	{
-		$match: {timesOrdered: {$gt : 1}}
+		"$match": {"timesOrdered": {"$gt" : 1}}
 	},
-	{$project: {_id: 0, name: "$_id"}}
+	{"$project": {"_id": 0, "name": "$_id"}}
 )
-
 ```
 7. Insert Lucy to Drinker collection. Lucy is from Edison, lives at "433 River Road" with phone number 732-571-9871, she is 23 years old and her list of favorite bar foods consists of: French fries, onion rings, nachos, and wings.
 ```javascript
