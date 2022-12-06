@@ -36,7 +36,7 @@ use db;
 db.Bars.aggregate([
     {
       "$project": {
-        "bars_selling_more_than_5": 1,
+        "_id": 1,
         "num_sold": {
 	        "$size": "$beers"
 	    },
@@ -83,7 +83,7 @@ db.Drinkers.aggregate(
 	{"$project": {"_id": 1}}
 )
 ```
-7. Insert Lucy to Drinker collection. Lucy is from Edison, lives at "433 River Road" with phone number 732-571-9871, she is 23 years old and her list of favorite bar foods consists of: French fries, onion rings, nachos, and wings.
+6. Insert Lucy to Drinker collection. Lucy is from Edison, lives at "433 River Road" with phone number 732-571-9871, she is 23 years old and her list of favorite bar foods consists of: French fries, onion rings, nachos, and wings.
 ```javascript
 use db;
 db.Drinkers.insertOne(
