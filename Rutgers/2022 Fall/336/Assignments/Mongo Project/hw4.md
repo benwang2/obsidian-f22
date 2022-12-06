@@ -2,7 +2,7 @@
 title: Project Mongo
 course: CS_336
 released: YYYY-MM-DD
-due: YYYY-MM-DD
+due: 2022-12-05
 tags:
 - Assignments
 - CS_336
