@@ -21,3 +21,5 @@ Each router is a **node** in a graph and each link is an **edge** in the graph. 
 The cost of an edge is defined as **c(x, y)** and the cost of a path is the **sum of the edge costs.**
 
 Each node should determine the least cost path to every other node.
+
+## Link State Protocols
