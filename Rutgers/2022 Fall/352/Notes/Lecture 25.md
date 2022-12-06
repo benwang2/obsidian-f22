@@ -34,7 +34,17 @@ Rank documents by how well each document "matches" the query
 ## TF-IDF
 TF-IDF "term frequency-inverse document frequency"
 
-We create an *incidence matrix*.
+We create an *incidence matrix* and use a weighting algorithm called: 'log-frequency weighting'.
+
+The formula we use is: $\sum_{t\in q\cup d}(1+log tf_{t,d})$
+
+### Document frequency
+Rare terms like "arachnocentric" should be given a higher weight, while stop words will have lower weight.
+
+Pronouns (e.g. brutus) should have more weight.
+
+
+
 
 
 ## Quiz for next week
