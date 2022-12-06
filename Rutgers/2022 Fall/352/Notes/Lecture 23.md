@@ -9,3 +9,5 @@ tags:
 
 <center><h1>Lecture 23</h1></center>
 
+## Control plane
+	The control plane is **distributed** throughout router
