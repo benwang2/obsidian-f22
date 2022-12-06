@@ -103,16 +103,11 @@ We can represent R as the JSON Object J as
 8. For each timestamp T, define TotIncrement as sum of totalvote increments over all precincts (totalvote increment, as defined in 2.1 of Election project newPenna). Finds timestamp(s) with largest value of TotIncremenet along with this largest value. Submit CODE and result.
 ```python
 from pymongo import MongoClient
-import json
 client = MongoClient('localhost', 27017)
 
 db = client.db
-
-results = set()
-
-docs = db.Penna.find().sort("Timestamp")
+docs = db.Penna.find().sort("Timestamp",-1)
 timestamps = docs.distinct("Timestamp")
-# print(timestamps)
 
 mapped_timestamps = {}
 mapped_increments = {}
@@ -121,6 +116,7 @@ max_tot_increment = 0
 last_t = None
 for t in timestamps:
     records = db.Penna.find({"Timestamp":t})
+    print(f"Processing timestamp: {t}")
     mapped_timestamps[t] = {}
     mapped_increments[t] = 0
     tot_increment = 0
@@ -131,9 +127,6 @@ for t in timestamps:
     last_t = t
     if mapped_increments[t] > max_tot_increment:
         max_tot_increment = mapped_increments[t]
-
-# with open("incremented.json","w") as f:
-#     json.dump(mapped_increments,f)
 
 print("The max increment is",max_tot_increment)
 print("Timestamps with this increment are:",[t[0] for t in mapped_increments.items() if t[1] == max_tot_increment])
