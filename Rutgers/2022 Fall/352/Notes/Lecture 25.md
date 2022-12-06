@@ -31,7 +31,10 @@ As the professor begins to explain the topic, use this space to write an overvie
 With a ranked list, number of records does not matter.
 Rank documents by how well each document "matches" the query
 
-TF-IDF "term frequency inverse document freq"
+## TF-IDF
+TF-IDF "term frequency-inverse document frequency"
+
+We create an *incidence matrix*.
 
 
 ## Quiz for next week
