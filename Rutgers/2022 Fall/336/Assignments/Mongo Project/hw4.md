@@ -36,7 +36,7 @@ use db;
 db.Bars.aggregate([
     {
       "$project": {
-        "bars_selling_more_than_5": 1,
+        "_id": 1,
         "num_sold": {
 	        "$size": "$beers"
 	    },
