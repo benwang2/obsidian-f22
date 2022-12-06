@@ -26,9 +26,7 @@ db.Bars.aggregate([
       }
     },
   },
-  {
-    "$match": { "count": { "$gt": 4 } }
-  }
+  {"$match": { "count": { "$gt": 4 } } }
 ]);
 ```
 3. Return how many bars sell more than 5 kinds of beers.
@@ -37,7 +35,10 @@ use db;
 db.Bars.aggregate([
     {
       "$project": {
-        "name": 1,"num_sold": {"$size": "$beers"}
+        "name": 1,
+        "num_sold": {
+	        "$size": "$beers"
+	    }
       },
     },
     {"$match" : {"num_sold": {"$gt": 5}}}
@@ -100,6 +101,7 @@ We can represent R as the JSON Object J as
 ```json
 {“BD”: 11, “AC”: [01]},{“BD”: 10, “AC”:[00, 01, 10, 11]}]$
 ```
+with 14 values.
 8. For each timestamp T, define TotIncrement as sum of totalvote increments over all precincts (totalvote increment, as defined in 2.1 of Election project newPenna). Finds timestamp(s) with largest value of TotIncremenet along with this largest value. Submit CODE and result.
 ```python
 from pymongo import MongoClient
