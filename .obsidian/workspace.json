@@ -11,11 +11,9 @@
             "id": "d2b87849a01139ca",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Rutgers/2022 Fall/336/Assignments/Mongo Project/hw4.md",
-                "mode": "source",
-                "source": false
+                "file": "Rutgers/2022 Fall/352/Assignments/Project 4/instructions.pdf"
               }
             }
           }
@@ -79,7 +77,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Rutgers/2022 Fall/336/Assignments/Mongo Project/hw4.md"
+                "file": "Rutgers/2022 Fall/352/Assignments/Project 4/instructions.pdf"
               }
             }
           }
@@ -122,7 +120,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Rutgers/2022 Fall/336/Assignments/Mongo Project/hw4.md",
+                "file": "Rutgers/2022 Fall/352/Assignments/Project 4/instructions.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +137,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Rutgers/2022 Fall/336/Assignments/Mongo Project/hw4.md",
+                "file": "Rutgers/2022 Fall/352/Assignments/Project 4/instructions.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -154,9 +152,9 @@
   },
   "active": "d2b87849a01139ca",
   "lastOpenFiles": [
-    "Rutgers/2022 Fall/336/Assignments/Mongo Project/completed.pdf",
-    "Rutgers/2022 Fall/336/Assignments/Mongo Project/hw4.md",
-    "Rutgers/2022 Fall/336/Assignments/Mongo Project/MongoHW3.pdf",
+    "Rutgers/2022 Fall/336/Assignments/Homework 4/hw4.md",
+    "Rutgers/2022 Fall/336/Assignments/Homework 4/completed.pdf",
+    "Rutgers/2022 Fall/336/Assignments/Homework 4/MongoHW3.pdf",
     "Rutgers/2022 Fall/336/Notes/Lecture 18.md",
     "Rutgers/2022 Fall/336/Notes/Lecture 16.md",
     "Rutgers/2022 Fall/336/Notes/Lecture 15.md",
