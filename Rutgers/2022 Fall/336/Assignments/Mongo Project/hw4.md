@@ -9,6 +9,7 @@ tags:
 ---
 <center><h1>Project Mongo</h1></center>
 <center><h3>CS336</h3></center>
+
 1. Return the bar if either its phone or address is an empty string.
 ```javascript
 use db;
@@ -18,15 +19,15 @@ db.Bar.find({"$or":[{"addr":""},{"phone": ""}]})
 ```javascript
 use db;
 db.Bars.aggregate([
-  {
-    "$group": {
-      "_id": "$city",
-      "count": {
-        "$sum": 1
-      }
-    },
-  },
-  {"$match": { "count": { "$gt": 4 } } }
+	{
+		"$group": {
+			"_id": "$city",
+			"num_bars": {
+				"$sum": 1
+			}
+		},
+	},
+	{ "$match": { "num_bars": { "$gt": 4 } } }
 ]);
 ```
 3. Return how many bars sell more than 5 kinds of beers.
@@ -35,15 +36,15 @@ use db;
 db.Bars.aggregate([
     {
       "$project": {
-        "name": 1,
+        "bars_selling_more_than_5": 1,
         "num_sold": {
 	        "$size": "$beers"
-	    }
+	    },
       },
     },
-    {"$match" : {"num_sold": {"$gt": 5}}}
-])
-
+    {"$match" : {"num_sold": {"$gt": 5}}},
+	{"$count":"bars_selling_more_than_5"}
+]);
 ```
 4. Find the drinkers that have visited any bars either on Saturday or Sunday (or both) \[hint: go check out "$elemMatch" function\]
 ```javascript
