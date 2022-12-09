@@ -61,7 +61,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "mismatch",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -78,7 +78,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "c07e8180475e7854",
@@ -165,7 +166,7 @@
     "width": 284.5,
     "collapsed": true
   },
-  "active": "5d2bd174ce3c7955",
+  "active": "8f88c6ad00d72727",
   "lastOpenFiles": [
     "Rutgers/2022 Fall/336/Notes/Lecture 25.md",
     "Rutgers/2022 Fall/336/Assignments/Homework 3/336 Project Penna.md",
