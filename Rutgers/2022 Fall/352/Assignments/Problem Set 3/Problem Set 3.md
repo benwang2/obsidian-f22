@@ -44,7 +44,7 @@ The data plane performs forwarding and is locally implemented, while the control
 Suppose hosts A and B have the same netmask M. Host A has IP address 102.45.56.7. Host B has IP address 102.46.47.8. The netmask   is 255.252.0.0. Are A and B in the same IP network? Why or why not?
 
 ```
-No, they are not.
+No, they are not. 
 ```
 
 ### (3) Forwarding lookup (2 points).
