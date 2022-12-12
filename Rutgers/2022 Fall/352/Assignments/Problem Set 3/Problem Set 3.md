@@ -68,7 +68,9 @@ Route aggregation helps save forwarding table memory  by reducing number of rout
 
 ### (5) Fabrics (3 points)
 (a) What is the benefit of using nonblocking fabrics in routers? (1.5 points)
-``
+```
+Nonblocking fabric prevent queues from forming and as a result. If there is data to be transmitted, it will always be transmitted, as long as there is an available output port.
+```
 
 (b) Is a crossbar fabric nonblocking? Say YES or NO. (0.5 points)
 ```
@@ -76,6 +78,9 @@ YES
 ```
 
 (c) Is a shared memory fabric nonblocking? Justify. (1 point)
+```
+Shared memory fabric can be nonblocking if the software and hardware are capable of accessing the memory quickly enough.
+```
 
 ### (6) Forwarding table matching (10 points).
 
