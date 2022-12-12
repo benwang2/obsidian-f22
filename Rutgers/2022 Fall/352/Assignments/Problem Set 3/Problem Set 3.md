@@ -83,7 +83,37 @@ Consider the network whose graph abstraction is shown in this picture. The IP pr
 
 router ID: $B$
 
-IP prefix owned by the router (1 point): ``
-IDs of neighboring routers (2 points):
-Link metrics to neighbors (2 points):
+IP prefix owned by the router (1 point): `...`
+IDs of neighboring routers (2 points): `...`
+Link metrics to neighbors (2 points): `...`
+
 (For the last question, please write the metrics in the same order as the neighbor IDs before.)
+
+(b) This question builds on part (a). Suppose d(V) represents the current best estimate of the shortest path distance from router A to a fixed router V, and p(V) represents the predecessor on that shortest path. Suppose router A has received the link state advertisements from all other routers in the network. What are the initial values of the following? (6 points)
+
+$d(B), p(B)$: `...`
+$d(C), p(C)$: `...`
+$d(D), p(D)$: `...`
+
+(c) This question builds on part (b). After 2 iterations of Dijkstra’s algorithm, what are the values of the following? (6 points)
+
+$d(C), p(C)$: `...`
+$d(D), p(D)$: `...`
+$d(E), p(E)$: `...`
+
+(d) After all routers have computed their shortest paths, suppose a packet with destination IP address 128.64.203.67 arrives at router B. Towards which router is this packet directed? (2 points)
+
+(e) Let’s start afresh from the figure for this question. Suppose the network uses a distance vector protocol. For this part and the ones that follow, please assume that all routers know the existence of all other routers in the network. However, initially, each router is unaware of the shortest distances to any other router. To begin with, each router only knows the costs of its direct edges to its immediate neighbors. We use dX(Y) to denote the component of the distance vector of X corresponding to destination Y at any point in time. What are the initial values of the following components (4 points)?
+
+$d_A(A):$
+$d_A(B):$
+$d_B(D):$
+$d_C(E):$
+
+(f) This question builds on part (e). Suppose router B just shared its current distance vector with A. This distance vector is:
+$d_B(A) = 3$, $d_B(B) = 0$, $d_B(C) = 1$, $d_B(D) = 4$, $d_B(E) = 6$
+
+Show the working of the Bellman-Ford equation at router A for destination D. What is the value of dA(D) after this exchange? (4 points)
+
+### (8) Collaboration and References (mandatory).
+Who did you collaborate with on this problem set? What resources and references did you consult? Please also specify on what questions and aspects of the problem set you got help on. If you did not consult any resources other than the lecture slides and textbook, just say “no collaboration”.
