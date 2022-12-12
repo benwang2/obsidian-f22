@@ -56,13 +56,24 @@ Therefore, after checking the second octet of both IPs, we can conclude that the
 ### (3) Forwarding lookup (2 points).
 Which field on the packet is used to lookup the router’s forwarding table? What are the consequences of using this packet field (and ignoring others)?
 
+```
+The destination IP address is used to lookup the router's forwarding table. The consequences of using this packet field are: 
+```
+
 ### (4) Benefits of IP aggregation (2 points). 
-Describe any one benefit for aggregating IP addresses into IP prefixes, or aggregating smaller IP prefixes into larger ones
+Describe any one benefit for aggregating IP addresses into IP prefixes, or aggregating smaller IP prefixes into larger ones.
+```
+Route aggregation helps save forwarding table memory  by reducing number of routing protocol messages.
+```
 
 ### (5) Fabrics (3 points)
 (a) What is the benefit of using nonblocking fabrics in routers? (1.5 points)
+``
 
 (b) Is a crossbar fabric nonblocking? Say YES or NO. (0.5 points)
+```
+YES
+```
 
 (c) Is a shared memory fabric nonblocking? Justify. (1 point)
 
