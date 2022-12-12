@@ -69,3 +69,21 @@ For the questions below, partial credit will be provided if you explain the reas
 (a) Suppose a packet enters the router with a source IP address of 93.5.6.145 and a destination IP address of 245.128.45.168. What output port is it forwarded to? (2 points)
 
 (b) Suppose another packet arrives with a destination IP address of 100.31.105.54. What output port is it forwarded to? (3 points)
+
+(c) Suppose another packet arrives with a destination IP address of 189.23.80.4. What output port is it forwarded to? (3 points)
+
+(d) Suppose another packet arrives with a destination IP address of 8.8.8.8. What output port is it forwarded to? (2 points)
+
+### (7) Intra-domain routing protocols (27 points)
+Consider the network whose graph abstraction is shown in this picture. The IP prefixes “owned” by the router, i.e., the set of endpoints reachable directly through the router, are provided alongside the routers, labeled and identified as A, B, C, etc. The link metrics are shown next to the edges in the graph.
+
+![[Pasted image 20221212155353.png]]
+
+(a) Suppose the network uses a link state routing protocol. Populate the following information in the link state advertisement originating from router B. (5 points)
+
+router ID: $B$
+
+IP prefix owned by the router (1 point): ``
+IDs of neighboring routers (2 points):
+Link metrics to neighbors (2 points):
+(For the last question, please write the metrics in the same order as the neighbor IDs before.)
