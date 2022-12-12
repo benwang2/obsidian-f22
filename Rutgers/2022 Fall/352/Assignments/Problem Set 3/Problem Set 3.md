@@ -106,7 +106,15 @@ For the questions below, partial credit will be provided if you explain the reas
 
 (b) Suppose another packet arrives with a destination IP address of 100.31.105.54. What output port is it forwarded to? (3 points)
 
+```
+100.16.0.0/12
+```
+
 (c) Suppose another packet arrives with a destination IP address of 189.23.80.4. What output port is it forwarded to? (3 points)
+
+```
+189.23.64.0/19
+```
 
 (d) Suppose another packet arrives with a destination IP address of 8.8.8.8. What output port is it forwarded to? (2 points)
 
