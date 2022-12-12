@@ -36,7 +36,9 @@ The transport layer is a communication abstraction between processes and deliver
 ```
 
 (b) What is the key difference between the control and data planes of a router?
-
+```
+The data plane performs forwarding and is locally implemented, while the control plane performs  performs **routing** and follows network-wide logic.
+```
 
 ### (2) Netmask (2 points).
 Suppose hosts A and B have the same netmask M. Host A has IP address 102.45.56.7. Host B has IP address 102.46.47.8. The netmask   is 255.252.0.0. Are A and B in the same IP network? Why or why not?
