@@ -46,11 +46,11 @@ Suppose hosts A and B have the same netmask M. Host A has IP address 102.45.56.7
 ```
 No, they are not. 
 
-102 % 255 = 102
-45 % 252 = 45
-46 % 252 = 46
+102 & 255 = 102
+45 & 252 = 45
+46 & 252 = 46
 
-Therefore, after 
+Therefore, after checking the second octet of both IPs, we can conclude that they are not on the same network, because A & N != B & N, where N is the subnet mask.
 ```
 
 ### (3) Forwarding lookup (2 points).
