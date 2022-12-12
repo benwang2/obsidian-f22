@@ -155,9 +155,9 @@ This packet is directed towards router C.
 (e) Let’s start afresh from the figure for this question. Suppose the network uses a distance vector protocol. For this part and the ones that follow, please assume that all routers know the existence of all other routers in the network. However, initially, each router is unaware of the shortest distances to any other router. To begin with, each router only knows the costs of its direct edges to its immediate neighbors. We use dX(Y) to denote the component of the distance vector of X corresponding to destination Y at any point in time. What are the initial values of the following components (4 points)?
 
 $d_A(A): 0$
-$d_A(B):$
-$d_B(D):$
-$d_C(E):$
+$d_A(B): 3$
+$d_B(D): 4$
+$d_C(E): \infty$
 
 (f) This question builds on part (e). Suppose router B just shared its current distance vector with A. This distance vector is:
 $d_B(A) = 3$, $d_B(B) = 0$, $d_B(C) = 1$, $d_B(D) = 4$, $d_B(E) = 6$
