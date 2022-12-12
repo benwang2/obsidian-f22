@@ -101,19 +101,19 @@ For the questions below, partial credit will be provided if you explain the reas
 (a) Suppose a packet enters the router with a source IP address of 93.5.6.145 and a destination IP address of 245.128.45.168. What output port is it forwarded to? (2 points)
 
 ```
-245.128.45.0/24
+Port 3, 245.128.45.0/24
 ```
 
 (b) Suppose another packet arrives with a destination IP address of 100.31.105.54. What output port is it forwarded to? (3 points)
 
 ```
-100.16.0.0/12
+Port 5, 100.16.0.0/12
 ```
 
 (c) Suppose another packet arrives with a destination IP address of 189.23.80.4. What output port is it forwarded to? (3 points)
 
 ```
-189.23.64.0/19
+Port 9, 189.23.64.0/19
 ```
 
 (d) Suppose another packet arrives with a destination IP address of 8.8.8.8. What output port is it forwarded to? (2 points)
@@ -127,9 +127,9 @@ Consider the network whose graph abstraction is shown in this picture. The IP pr
 
 router ID: $B$
 
-IP prefix owned by the router (1 point): `...`
-IDs of neighboring routers (2 points): `...`
-Link metrics to neighbors (2 points): `...`
+IP prefix owned by the router (1 point): `128.64.45.0/24`
+IDs of neighboring routers (2 points): `A, C, D, E`
+Link metrics to neighbors (2 points): `3, 1, 4, 6`
 
 (For the last question, please write the metrics in the same order as the neighbor IDs before.)
 
