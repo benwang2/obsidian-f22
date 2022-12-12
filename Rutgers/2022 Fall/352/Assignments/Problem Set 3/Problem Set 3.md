@@ -100,6 +100,10 @@ For the questions below, partial credit will be provided if you explain the reas
 
 (a) Suppose a packet enters the router with a source IP address of 93.5.6.145 and a destination IP address of 245.128.45.168. What output port is it forwarded to? (2 points)
 
+```
+245.128.45.0/24
+```
+
 (b) Suppose another packet arrives with a destination IP address of 100.31.105.54. What output port is it forwarded to? (3 points)
 
 (c) Suppose another packet arrives with a destination IP address of 189.23.80.4. What output port is it forwarded to? (3 points)
