@@ -135,9 +135,9 @@ Link metrics to neighbors (2 points): `3, 1, 4, 6`
 
 (b) This question builds on part (a). Suppose d(V) represents the current best estimate of the shortest path distance from router A to a fixed router V, and p(V) represents the predecessor on that shortest path. Suppose router A has received the link state advertisements from all other routers in the network. What are the initial values of the following? (6 points)
 
-$d(B), p(B)$: `...`
-$d(C), p(C)$: `...`
-$d(D), p(D)$: `...`
+$d(B), p(B)$: `3, A`
+$d(C), p(C)$: `8, A`
+$d(D), p(D)$: $\lemniscate, none$
 
 (c) This question builds on part (b). After 2 iterations of Dijkstra’s algorithm, what are the values of the following? (6 points)
 
