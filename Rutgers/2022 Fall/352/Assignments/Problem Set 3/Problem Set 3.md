@@ -135,21 +135,26 @@ Link metrics to neighbors (2 points): `3, 1, 4, 6`
 
 (b) This question builds on part (a). Suppose d(V) represents the current best estimate of the shortest path distance from router A to a fixed router V, and p(V) represents the predecessor on that shortest path. Suppose router A has received the link state advertisements from all other routers in the network. What are the initial values of the following? (6 points)
 
-$d(B), p(B)$: `3, A`
-$d(C), p(C)$: `8, A`
-$d(D), p(D)$: $\lemniscate, none$
+$d(B), p(B)$: $3, A$
+$d(C), p(C)$: $8, A$
+$d(D), p(D)$: $\infty, null$
+
 
 (c) This question builds on part (b). After 2 iterations of Dijkstra’s algorithm, what are the values of the following? (6 points)
 
-$d(C), p(C)$: `...`
-$d(D), p(D)$: `...`
-$d(E), p(E)$: `...`
+$d(C), p(C)$: $4, B$
+$d(D), p(D)$: $7, B$
+$d(E), p(E)$: $8, B$
 
 (d) After all routers have computed their shortest paths, suppose a packet with destination IP address 128.64.203.67 arrives at router B. Towards which router is this packet directed? (2 points)
 
+```
+This packet is directed towards router C.
+```
+
 (e) Let’s start afresh from the figure for this question. Suppose the network uses a distance vector protocol. For this part and the ones that follow, please assume that all routers know the existence of all other routers in the network. However, initially, each router is unaware of the shortest distances to any other router. To begin with, each router only knows the costs of its direct edges to its immediate neighbors. We use dX(Y) to denote the component of the distance vector of X corresponding to destination Y at any point in time. What are the initial values of the following components (4 points)?
 
-$d_A(A):$
+$d_A(A): 0$
 $d_A(B):$
 $d_B(D):$
 $d_C(E):$
