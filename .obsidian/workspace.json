@@ -23,14 +23,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Assignments/Problem Set 3/Untitled.md",
+                "file": "Rutgers/2022 Fall/352/Assignments/Problem Set 3/Problem Set 3.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -90,7 +89,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Assignments/Problem Set 3/Untitled.md"
+                "file": "Rutgers/2022 Fall/352/Assignments/Problem Set 3/pset3.pdf"
               }
             }
           }
@@ -133,7 +132,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Assignments/Problem Set 3/Untitled.md",
+                "file": "Rutgers/2022 Fall/352/Assignments/Problem Set 3/pset3.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -150,7 +149,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Assignments/Problem Set 3/Untitled.md",
+                "file": "Rutgers/2022 Fall/352/Assignments/Problem Set 3/pset3.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -163,8 +162,9 @@
     "direction": "horizontal",
     "width": 284.5
   },
-  "active": "55d0675e8a7ecfb6",
+  "active": "1b106adabe6629fa",
   "lastOpenFiles": [
+    "Rutgers/2022 Fall/352/Assignments/Problem Set 3/Problem Set 3.md",
     "Rutgers/2022 Fall/352/Assignments/Problem Set 3/pset3.pdf",
     "Rutgers/2022 Fall/336/Assignments/Mongo Project/hw4.md",
     "Rutgers/2022 Fall/336/Assignments/Mongo Project/completed.pdf",
@@ -173,7 +173,6 @@
     "Rutgers/2022 Fall/336/Notes/Lecture 16.md",
     "Rutgers/2022 Fall/336/Notes/Lecture 15.md",
     "Rutgers/2022 Fall/336/Notes/Lecture 19.md",
-    "Rutgers/2022 Fall/352/Notes/Lecture 5.md",
-    "Rutgers/2022 Fall/352/Notes/Lecture 4.md"
+    "Rutgers/2022 Fall/352/Notes/Lecture 5.md"
   ]
 }
