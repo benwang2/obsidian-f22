@@ -31,8 +31,12 @@ There are 8 questions in this problem set totalling to 50 points.
 
 ### (1) Functional differences. (4 points)
 (a) What is the key difference between the functions of the transport and network layer?
+```
+The transport layer is a communication abstraction between processes and delivers packets to the process. However, the network layer is an abstraction to communicate between endpoints. The key difference is that the network layer moves data between endpoints, while the transport layer receives from the network layer and then moves data from to processes.
+```
 
 (b) What is the key difference between the control and data planes of a router?
+
 
 ### (2) Netmask (2 points).
 Suppose hosts A and B have the same netmask M. Host A has IP address 102.45.56.7. Host B has IP address 102.46.47.8. The netmask   is 255.252.0.0. Are A and B in the same IP network? Why or why not?
