@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Notes/Lecture 20.md",
+                "file": "Rutgers/2022 Fall/352/Assignments/Problem Set 3/Problem Set 3.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,14 +25,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Assignments/Problem Set 3/Problem Set 3.md",
+                "file": "Rutgers/2022 Fall/352/Notes/Lecture 20.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -101,7 +100,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "8c82c0911c63f35b",
@@ -166,7 +166,7 @@
     "direction": "horizontal",
     "width": 284.5
   },
-  "active": "12b112dd56cc2889",
+  "active": "1ab58ba0c1dc77d1",
   "lastOpenFiles": [
     "Rutgers/2022 Fall/352/Notes/Lecture 20.md",
     "Rutgers/2022 Fall/352/Assignments/Problem Set 3/Problem Set 3.md",
