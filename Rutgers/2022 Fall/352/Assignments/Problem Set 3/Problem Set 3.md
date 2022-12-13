@@ -166,7 +166,7 @@ Show the working of the Bellman-Ford equation at router A for destination D. Wha
 
 $$
 \begin{align}
-d_A(D) &= min(c(a,e) + d_E(d), c(a,d) + d_D(d), c(a,c) + d_C(d)) \\
+d_A(D) &= min(c(a,e) + d_E(d), c(a,b) + d_B(B), c(a,d) + d_D(d), c(a,c) + d_C(d)) \\
 c(a, e) &= \infty \\
 d_E(D)  &= \infty \\
 c(a,b) &= 3 \\
@@ -182,3 +182,7 @@ $d_A(D) = min(\infty+\infty, 3+4, \infty+0, \infty+\infty)$
 
 ### (8) Collaboration and References (mandatory).
 Who did you collaborate with on this problem set? What resources and references did you consult? Please also specify on what questions and aspects of the problem set you got help on. If you did not consult any resources other than the lecture slides and textbook, just say “no collaboration”.
+
+```
+No collaboration.
+```
