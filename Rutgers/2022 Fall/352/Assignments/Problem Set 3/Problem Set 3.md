@@ -57,7 +57,7 @@ Therefore, after checking the second octet of both IPs, we can conclude that the
 Which field on the packet is used to lookup the router’s forwarding table? What are the consequences of using this packet field (and ignoring others)?
 
 ```
-The destination IP address is used to lookup the router's forwarding table. The consequences of using this packet field are: 
+The destination IP address is used to lookup the router's forwarding table. The consequences of using this packet field are that the forwarding behavior independent of source and application, meaning that forwarding is vulnerable to bad actors and traffic is not optimized for type of traffic.
 ```
 
 ### (4) Benefits of IP aggregation (2 points). 
