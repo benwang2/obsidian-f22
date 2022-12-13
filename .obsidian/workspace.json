@@ -4,11 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "3e5c2f3860de4d21",
+        "id": "0e68d2dc76e58332",
         "type": "tabs",
         "children": [
           {
-            "id": "1ab58ba0c1dc77d1",
+            "id": "aa3290f221fbfac9",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Rutgers/2022 Fall/352/Assignments/Problem Set 3/pset3.pdf"
+              }
+            }
+          },
+          {
+            "id": "1ea3b35d9f00ba8f",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -18,20 +28,9 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "12b112dd56cc2889",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Rutgers/2022 Fall/352/Notes/Lecture 20.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -61,7 +60,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "nonblocking",
+                "query": "mismatch",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -78,8 +77,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "c07e8180475e7854",
@@ -100,8 +98,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "8c82c0911c63f35b",
@@ -164,19 +161,20 @@
       }
     ],
     "direction": "horizontal",
-    "width": 284.5
+    "width": 284.5,
+    "collapsed": true
   },
-  "active": "1ab58ba0c1dc77d1",
+  "active": "1ea3b35d9f00ba8f",
   "lastOpenFiles": [
-    "Rutgers/2022 Fall/352/Notes/Lecture 20.md",
-    "Rutgers/2022 Fall/352/Assignments/Problem Set 3/Problem Set 3.md",
-    "Rutgers/2022 Fall/352/Notes/Lecture 19.md",
     "Rutgers/2022 Fall/352/Assignments/Problem Set 3/pset3.pdf",
-    "Rutgers/2022 Fall/352/Notes/Lecture 9.md",
-    "Rutgers/2022 Fall/352/Assignments/Problem Set 2/352 Problem Set 2.md",
-    "Rutgers/2022 Fall/352/Assignments/Problem Set 2/352 Problem Set 2.pdf",
-    "Rutgers/2022 Fall/352/Assignments/Problem Set 2/completed.pdf",
-    "Rutgers/2022 Fall/336/Assignments/Mongo Project/hw4.md",
-    "Rutgers/2022 Fall/336/Assignments/Mongo Project/completed.pdf"
+    "Rutgers/2022 Fall/352/Assignments/Problem Set 3/Problem Set 3.md",
+    "Rutgers/2022 Fall/336/Notes/Lecture 25.md",
+    "Rutgers/2022 Fall/336/Assignments/Homework 3/ProjectPenna.pdf",
+    "Rutgers/2022 Fall/336/Assignments/Homework 3/336 Project Penna.md",
+    "Rutgers/2022 Fall/336/syllabus.pdf",
+    "Rutgers/2022 Fall/352/Notes/Lecture 25.md",
+    "Rutgers/2022 Fall/352/Notes/Lecture 23.md",
+    "Rutgers/2022 Fall/336/Notes/Lecture 19.md",
+    "Rutgers/2022 Fall/336/Notes/Lecture 18.md"
   ]
 }
