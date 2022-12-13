@@ -162,7 +162,7 @@ $d_C(E): \infty$
 (f) This question builds on part (e). Suppose router B just shared its current distance vector with A. This distance vector is:
 $d_B(A) = 3$, $d_B(B) = 0$, $d_B(C) = 1$, $d_B(D) = 4$, $d_B(E) = 6$
 
-Show the working of the Bellman-Ford equation at router A for destination D. What is the value of dA(D) after this exchange? (4 points)
+Show the working of the Bellman-Ford equation at router A for destination D. What is the value of $d_A(D)$ after this exchange? (4 points)
 
 ### (8) Collaboration and References (mandatory).
 Who did you collaborate with on this problem set? What resources and references did you consult? Please also specify on what questions and aspects of the problem set you got help on. If you did not consult any resources other than the lecture slides and textbook, just say “no collaboration”.
