@@ -56,7 +56,11 @@ flowchart LR;
 The NAT gateway router accomplishes this by using a different transport port for each distinct (transport-level) conversation between the local network and the Internet.
 
 Example interaction:
-1. Host 10.0.0.1 sends datagram to an **external host**, 128.119.40.186,
+1. Host 10.0.0.1 sends datagram to an **external host**, 128.119.40.186, at port 80
+2. The NAT router changes the datagrams source address and port from 10.0.0.1:3345 to 138.76.29.7:5001 and updates the translation table
+3. Reply arrives to destination port 138.76.29.7:5001
+4. NAT gateway changes datagram destination address, port from 138.76.29.7:5001 to 10.0.0.1:3345
 
-The NAT router changes the datagrams source address and port from 10.0.0.1:3345 to 138.76.29.7:5001 and updates the translation table.
+
+
 
