@@ -57,7 +57,7 @@ The NAT gateway router accomplishes this by using a different transport port for
 
 The gateway router maintains a translation table that records an "internet side" and "local side". The "internet side" is the public IP address for the local machine and the "local side" is the real IP.
 
-The router manages the connections and datagrams transmitted, acting as a middleman for 
+The router manages the connections and datagrams transmitted, acting as a middleman for data coming in and out of the network. Outbound data has its source IP changed to its corresponding "internet side IP" and inbound data has its destination IP changed to its corresponding "local side" IP.
 
 Example interaction:
 1. Host 10.0.0.1 sends datagram to an **external host**, 128.119.40.186, at port 80
