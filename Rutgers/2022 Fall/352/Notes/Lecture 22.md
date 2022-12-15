@@ -89,4 +89,10 @@ Each VM has it's own IP address, but it is attached to a physical machine which 
 Instead, the address shortage can be solved with the usage of IPv6. Even with 32-bit IP addresses, we will eventually exhaust all available IP addresses.
 
 ## Routing protocols
-Th
+
+### Goals of Routing Protocols
+- Discover and determine **good paths** from source to destination
+- A "good" path is the path with the least cost
+	- Least propagation delay
+	- Least cost per unit bandwidth delay ($ per Gbit/s)
+	- Least congested
