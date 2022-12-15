@@ -22,3 +22,8 @@ The traceroute algorithm works as follows:
 - Packet is received by router, then TTL is decremented by 1
 - If TTL is now 0, then respond to source with TTL exceeded
 - Otherwise, forward to next router
+- When source receives TTL exceeded, n = n+1 and jump back to first step
+- If source receives ICMP reply, we know the destination is reachable and learned all routers in  the path
+
+## Network Address Translation
+``
