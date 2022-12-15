@@ -83,3 +83,9 @@ Each VM has it's own IP address, but it is attached to a physical machine which 
 ### Limitations of IP-masquerading NATs
 - Connection limit due to 16-bit port-number field
 	- ~64k total simultaneous connections with a single public address
+- Can be controversial because router manipulates headers of packets to a significant level (up to the network layer, as opposed to just the transport layer)
+- Application developers must take NAT into account (skype, p2p, etc)
+
+Instead, the address shortage can be solved with the usage of IPv6. Even with 32-bit IP addresses, we will eventually exhaust all available IP addresses.
+
+## Routing Proco
