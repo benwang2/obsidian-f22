@@ -44,6 +44,9 @@ Routers modify IP packets in an IP packet to:
 ### Typical NAT setup
 ```mermaid
 graph LR;
-	A(Internet) --- B(Gateway router)
-	B
+	A(Internet) ---|138.76.29.7| B(Gateway router)
+	B ---|10.0.0.1| C(Host A)
+	B ---|10.0.0.2| D(Host B)
+	B ---|10.0.0.3| E(Host C)
 ```
+
