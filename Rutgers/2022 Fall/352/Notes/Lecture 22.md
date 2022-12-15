@@ -69,6 +69,12 @@ Example interaction:
 - Uses much fewer public IP addresses
 - Change of addresses of devices inside the local network freely because the gateway maintains the map
 - Change public IP address of local endpoints freely because gateway maintains the map
-- 
+- Devices inside the local network are not publicly visible, routable, or accessible
+- Most IP masquerading NATs block incoming connections originating from the internet
+	- The only way to communicate is if the internal host initiates the conversation
 
+### Where is NAT used?
+#### Home
+Most access routers (home WiFi routers) implement NAT, which you can check by comparing local address to your externally-visible address.
 
+####
