@@ -41,14 +41,22 @@ Routers modify IP packets in an IP packet to:
 - allow a network to change its connectivity to the internet en masse by modifying the source IP to a publicly-visible gateway IP address
 - masquerade as an entire network using (say) one publicly visible IP address
 
-### Typical NAT setup
+### Typical NAT setup (NAPT)
+
 ```mermaid
 flowchart LR;
-	A{{Internet}} ---|138.76.29.7| B(Gateway router)
-	subgraph Local Network 10.0.0.4
+	A{{Internet}} ---|138.76.29.7| B(Gateway router, 10.0.0.4)
+	subgraph Local Network 
 	B ---|10.0.0.1| C(Host A)
 	B ---|10.0.0.2| D(Host B)
 	B ---|10.0.0.3| E(Host C)
 	end
 ```
+
+The NAT gateway router accomplishes this by using a different transport port for each distinct (transport-level) conversation between the local network and the Internet.
+
+Example interaction:
+1. Host 10.0.0.1 sends datagram to an **external host**, 128.119.40.186,
+
+The NAT router changes the datagrams source address and port from 10.0.0.1:3345 to 138.76.29.7:5001 and updates the translation table.
 
