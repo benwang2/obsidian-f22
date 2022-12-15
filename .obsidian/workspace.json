@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "aa3290f221fbfac9",
+            "id": "7fc6aa97bf8ceb50",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -20,7 +20,7 @@
             }
           },
           {
-            "id": "1e983f0eae70f83e",
+            "id": "ee527805c458829b",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -100,7 +100,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "8c82c0911c63f35b",
@@ -166,9 +167,10 @@
     "width": 284.5,
     "collapsed": true
   },
-  "active": "1e983f0eae70f83e",
+  "active": "ee527805c458829b",
   "lastOpenFiles": [
     "Rutgers/2022 Fall/352/Notes/Lecture 21.md",
+    "Rutgers/2022 Fall/352/Notes/Lecture 22.md",
     "Rutgers/2022 Fall/352/Assignments/Problem Set 3/pset3.pdf",
     "Rutgers/2022 Fall/352/syllabus.pdf",
     "Rutgers/2022 Fall/352/Notes/Lecture 2.md",
@@ -176,7 +178,6 @@
     "Rutgers/2022 Fall/352/Assignments/Problem Set 3/Problem Set 3.md",
     "Rutgers/2022 Fall/336/Notes/Lecture 25.md",
     "Rutgers/2022 Fall/336/Assignments/Homework 3/ProjectPenna.pdf",
-    "Rutgers/2022 Fall/336/Assignments/Homework 3/336 Project Penna.md",
-    "Rutgers/2022 Fall/336/syllabus.pdf"
+    "Rutgers/2022 Fall/336/Assignments/Homework 3/336 Project Penna.md"
   ]
 }
