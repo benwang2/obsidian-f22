@@ -17,4 +17,8 @@ Traceroute is a tool records the router-level path taken by packets. It cleverly
 
 When a router receives an IP packet, it decrements the TTL field by 1. When the TTL is decreased by one, the IP packet is discarded. This is a failsafe mechanism to ensure packets don't take up too much memory in the network. 
 
-Traceroute will send a packet with $TTL=1$ to the network. 
+The traceroute algorithm works as follows:
+- Send a packet with TTL = n to IP
+- Packet is received by router, then TTL is decremented by 1
+- If TTL is now 0, then respond to source with TTL exceeded
+- Otherwise, forward to next router
