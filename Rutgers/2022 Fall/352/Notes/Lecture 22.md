@@ -38,4 +38,4 @@ NAT addresses the internet's growing pains by modifying fields in an IP packet.
 Routers modify IP packets in an IP packet to:
 - enable communication across networks with different addressing formats and address ranges
 - allow a network to change its connectivity to the internet en masse by modifying the source IP to a publicly-visible gateway IP address
-- 
+- masquerade as an entire network using (say) one publicly visible IP address
