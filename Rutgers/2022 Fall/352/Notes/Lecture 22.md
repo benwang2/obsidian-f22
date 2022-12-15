@@ -26,4 +26,12 @@ The traceroute algorithm works as follows:
 - If source receives ICMP reply, we know the destination is reachable and learned all routers in  the path
 
 ## Network Address Translation
-``
+
+### Background
+Older networks had incompatible addressing with the internet's network layer protocol (IPv4 vs. X25). Additionally, the routable address ranges vary across different networks. It's extremely challenging to unify all networks onto a single standard.
+
+Furthermore, entire networks were changing their Internet Service Providers, which do not want to route directly to internal endpoints.
+
+As the internet constantly expands, IPv4 addresses are rapidly exhausted.
+
+NAT addresses the internet's growing pains by 
