@@ -11,19 +11,23 @@
             "id": "aa3290f221fbfac9",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Assignments/Problem Set 3/pset3.pdf"
+                "file": "Rutgers/2022 Fall/352/Notes/Lecture 21.md",
+                "mode": "source",
+                "source": false
               }
             }
           },
           {
-            "id": "29a6d7f3e919a2be",
+            "id": "1e983f0eae70f83e",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Rutgers/2022 Fall/352/syllabus.pdf"
+                "file": "Rutgers/2022 Fall/352/Notes/Lecture 22.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -88,7 +92,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Rutgers/2022 Fall/352/syllabus.pdf"
+                "file": "Rutgers/2022 Fall/352/Notes/Lecture 22.md"
               }
             }
           }
@@ -131,7 +135,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Rutgers/2022 Fall/352/syllabus.pdf",
+                "file": "Rutgers/2022 Fall/352/Notes/Lecture 22.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -148,7 +152,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Rutgers/2022 Fall/352/syllabus.pdf",
+                "file": "Rutgers/2022 Fall/352/Notes/Lecture 22.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,17 +166,17 @@
     "width": 284.5,
     "collapsed": true
   },
-  "active": "f976e1bf72752504",
+  "active": "1e983f0eae70f83e",
   "lastOpenFiles": [
-    "Rutgers/2022 Fall/352/Notes/Lecture 2.md",
+    "Rutgers/2022 Fall/352/Notes/Lecture 21.md",
     "Rutgers/2022 Fall/352/Assignments/Problem Set 3/pset3.pdf",
+    "Rutgers/2022 Fall/352/syllabus.pdf",
+    "Rutgers/2022 Fall/352/Notes/Lecture 2.md",
     "Rutgers/2022 Fall/352/Notes/Lecture 1.md",
     "Rutgers/2022 Fall/352/Assignments/Problem Set 3/Problem Set 3.md",
     "Rutgers/2022 Fall/336/Notes/Lecture 25.md",
     "Rutgers/2022 Fall/336/Assignments/Homework 3/ProjectPenna.pdf",
     "Rutgers/2022 Fall/336/Assignments/Homework 3/336 Project Penna.md",
-    "Rutgers/2022 Fall/336/syllabus.pdf",
-    "Rutgers/2022 Fall/352/Notes/Lecture 25.md",
-    "Rutgers/2022 Fall/352/Notes/Lecture 23.md"
+    "Rutgers/2022 Fall/336/syllabus.pdf"
   ]
 }
