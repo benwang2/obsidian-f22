@@ -65,6 +65,10 @@ Example interaction:
 3. Reply arrives to destination port 138.76.29.7:5001
 4. NAT gateway changes datagram destination address, port from 138.76.29.7:5001 to 10.0.0.1:3345
 
-
+### Benefits of IP-masquerading NAT
+- Uses much fewer public IP addresses
+- Change of addresses of devices inside the local network freely because the gateway maintains the map
+- Change public IP address of local endpoints freely because gateway maintains the map
+- 
 
 
