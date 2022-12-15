@@ -34,8 +34,16 @@ Furthermore, entire networks were changing their Internet Service Providers, whi
 
 As the internet constantly expands, IPv4 addresses are rapidly exhausted. There are not sufficiently large IP blocks, even for networks. For example, Rutgers has more than 130,000 publicly routable IP addresses and IIT Madras has 512.
 
+### How it works
 NAT addresses the internet's growing pains by modifying fields in an IP packet.
 Routers modify IP packets in an IP packet to:
 - enable communication across networks with different addressing formats and address ranges
 - allow a network to change its connectivity to the internet en masse by modifying the source IP to a publicly-visible gateway IP address
 - masquerade as an entire network using (say) one publicly visible IP address
+
+### Typical NAT setup
+```mermaid
+graph LR;
+	A(Internet) --- B(Gateway router)
+	B
+```
