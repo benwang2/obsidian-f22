@@ -77,4 +77,9 @@ Example interaction:
 #### Home
 Most access routers (home WiFi routers) implement NAT, which you can check by comparing local address to your externally-visible address.
 
-####
+#### Public cloud
+Each VM has it's own IP address, but it is attached to a physical machine which has the local IP address.
+
+### Limitations of IP-masquerading NATs
+- Connection limit due to 16-bit port-number field
+	- ~64k total simultaneous connections with a single public address
