@@ -15,11 +15,6 @@ tags:
 ### Traceroute
 Traceroute is a tool records the router-level path taken by packets. It cleverly uses the IP time-to-live field to identify all the routers in the path.
 
-When a router receives an IP packet, it decrements the TTL field by 1 - a failsafe mechanism to ensure packets don't take up too much memory in the network
+When a router receives an IP packet, it decrements the TTL field by 1. When the TTL is decreased by one, the IP packet is discarded. This is a failsafe mechanism to ensure packets don't take up too much memory in the network. 
 
-
-
-
-### Subtopic 1
-Use this space to expand upon the topic.
-
+Traceroute will send a packet with $TTL=1$ to the network. 
