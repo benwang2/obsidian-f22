@@ -36,4 +36,6 @@ As the internet constantly expands, IPv4 addresses are rapidly exhausted. There 
 
 NAT addresses the internet's growing pains by modifying fields in an IP packet.
 Routers modify IP packets in an IP packet to:
-- enable communication across 
+- enable communication across networks with different addressing formats and address ranges
+- allow a network to change its connectivity to the internet en masse by modifying the source IP to a publicly-visible gateway IP address
+- 
