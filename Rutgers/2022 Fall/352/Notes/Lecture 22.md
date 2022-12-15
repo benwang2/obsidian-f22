@@ -32,6 +32,8 @@ Older networks had incompatible addressing with the internet's network layer pro
 
 Furthermore, entire networks were changing their Internet Service Providers, which do not want to route directly to internal endpoints.
 
-As the internet constantly expands, IPv4 addresses are rapidly exhausted.
+As the internet constantly expands, IPv4 addresses are rapidly exhausted. There are not sufficiently large IP blocks, even for networks. For example, Rutgers has more than 130,000 publicly routable IP addresses and IIT Madras has 512.
 
-NAT addresses the internet's growing pains by 
+NAT addresses the internet's growing pains by modifying fields in an IP packet.
+Routers modify IP packets in an IP packet to:
+- enable communication across 
