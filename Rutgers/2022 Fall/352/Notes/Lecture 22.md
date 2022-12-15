@@ -55,6 +55,8 @@ flowchart LR;
 
 The NAT gateway router accomplishes this by using a different transport port for each distinct (transport-level) conversation between the local network and the Internet.
 
+The gateway router maintains a translation table that records an "internet side" and "local side". The "internet side" is the public IP address for the local machine and the "local side" is the IP address that maps
+
 Example interaction:
 1. Host 10.0.0.1 sends datagram to an **external host**, 128.119.40.186, at port 80
 2. The NAT router changes the datagrams source address and port from 10.0.0.1:3345 to 138.76.29.7:5001 and updates the translation table
