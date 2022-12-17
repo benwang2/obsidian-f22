@@ -79,3 +79,7 @@ until all nodes in N'
 
 ### Constructing the forwarding table
 To find the router port to use for a given destination, find the **predecessor** of the node **iteratively** until reaching an **immediate neighbor of the source** $u$. The port connecting $u$ to this neighbor is the output port for this destination.
+
+#### Summary
+- Each router announces link state to the entire network using flooding
+- Each node independently computes least cost paths ti 
