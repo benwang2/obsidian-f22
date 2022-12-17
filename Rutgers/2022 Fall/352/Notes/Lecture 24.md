@@ -110,3 +110,12 @@ Business relationships depend on where connectivity occurs
 - Internet eXchange Points (IXPs) are large PoPs where ISPs come together to connect with eachother (often for free)
 
 ##### Export Policy
+Suppose an ISP only wants to route traffic to/from its customer networks (does not want to carry **transit traffic** between other ISPs)
+- A, B, C are **provider networks**
+- X, W, Y are customers (of provider networks)
+- X is **dual-homed**: attached to two networks
+- policy to enforce: X does not want to route from B to C via X
+	- So, X **will not announce** to B a route to C
+
+Suppose an ISP only wants to route traffic to/from its customer networks
+
