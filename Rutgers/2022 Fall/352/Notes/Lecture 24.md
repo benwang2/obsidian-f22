@@ -107,4 +107,6 @@ Policies arise from various business relationships. For example,
 
 Business relationships depend on where connectivity occurs
 - "where" is called "point of present" (PoP)
-- 
+- Internet eXchange Points (IXPs) are large PoPs where ISPs come together to connect with eachother (often for free)
+
+##### Export Policy
