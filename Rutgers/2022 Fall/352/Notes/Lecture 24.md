@@ -87,5 +87,5 @@ In an announcement arriving from a different AS (**eBGP**), the next hop is the 
 
 ![[Pasted image 20221217180551.png]]
 
-Suppose router 
+Suppose router 1c **imports** the path and then propagates the announcement **inside the AS** using **iBGP**. The next hop of this iBGP announcement is set to 1c, an internal address.
 
