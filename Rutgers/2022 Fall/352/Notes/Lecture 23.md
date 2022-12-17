@@ -22,4 +22,8 @@ The cost of an edge is defined as **c(x, y)** and the cost of a path is the **su
 
 Each node should determine the least cost path to every other node.
 
-## Link State Protocols
+## Routing protocols
+>Routing protocols include link state protocols and distance vector protocols.
+
+### Link State Protocols
+With link state protocl, each router knows the **state** of all the links and routers in the network/ Every router performs an **independent** computation on **globally shared** knowledge of network's **complete** graph representation.
