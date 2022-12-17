@@ -46,7 +46,7 @@ LSAs still occur periodically **whenever the graph changes**, like if a link fai
 
 The routing algorithm running at each router can **use the entire network's graph** to compute least cost paths.
 
-#### Algorithm
+#### Dijkstra's Algorithm
 The link state protocol uses **Dijkstra's** algorithm.
 - Given a network graph, the algorithm computes the least cost paths from one node (source) to all other nodes
 - This can be used to compute the forwarding table at that node
@@ -58,4 +58,12 @@ Notation used in the algorithm is written as following:
 - $p(v)$: (predecessor node) the last node before $v$ on the path from source to $v$
 - $N'$: set of nodes whose least cost path is definitively known
 
-##### 
+##### Explanation
+```
+N' = {u}
+for v' in v:
+	if v' adjacent to u:
+		D(v) = c(u,v)
+	else:
+		D(v) = ∞
+```
