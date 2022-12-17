@@ -126,4 +126,9 @@ Suppose an ISP only wants to route traffic to/from its customer networks
 - C will route CAw (not using B) to get to W
 
 ##### Import Policy
-When a router 
+Suppose an ISP wants to **minimize costs** by avoiding routing through its providers when possible.
+- Suppose C announces a path Cy to x
+- Further, y announces a direct path ("y") to x
+- Then x may **choose not to import** the path Cy to y since it has a peer path ("y") towards y
+
+##### Route Selection
