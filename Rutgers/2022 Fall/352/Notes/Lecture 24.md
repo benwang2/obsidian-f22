@@ -124,3 +124,6 @@ Suppose an ISP only wants to route traffic to/from its customer networks
 - B **will not announce** BAw to C
 	- B gets no "revenue" for roting CBAw, since none of C, A, w are B's customers
 - C will route CAw (not using B) to get to W
+
+##### Import Policy
+When a router 
