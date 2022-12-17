@@ -86,3 +86,6 @@ The meaning of the 'next hop' attribute is context-dependent.
 In an announcement arriving from a different AS (**eBGP**), the next hop is the router **in the AS** which sent the announcement.
 
 ![[Pasted image 20221217180551.png]]
+
+Suppose router 
+
