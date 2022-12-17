@@ -53,4 +53,9 @@ The link state protocol uses **Dijkstra's** algorithm.
 - The algorithm maintains **estimates** of least costs to reach every other node. After $k$ iterations, each node definitively knows teh least cost path to $k$ destinations.
 
 Notation used in the algorithm is written as following:
-- **c(x,y):** 
+- $c(x,y)$: the link cost from node $x$ to $y$; it is $\infty$ if not direct neighbors
+- $D(v)$: current estimate of path from source to destination $v$
+- $p(v)$: (predecessor node) the last node before $v$ on the path from source to $v$
+- $N'$: set of nodes whose least cost path is definitively known
+
+##### 
