@@ -92,4 +92,10 @@ Suppose router 1c **imports** the path and then propagates the announcement **in
 ##### Algorithm
 A BGP router doesn't consider every routing advertisement by default. Rather, it follows an **import policy** to determine whether a route is even considered a candidate.
 
-Once imported, th
+Once imported, the router performs **route selection.**
+
+Similarly, a BGP router does not propagate its chosen path to a destination to all other AS'es by default. Rather, the router uses an **export policy** to determine whether a chosen path can be advertised to other AS'es and routers.
+
+Both **import policies** and **export policies** are programmed by a network operator.
+
+**Policy considerations** make BGP very different from intra-domain (LS / DV) protocols.
