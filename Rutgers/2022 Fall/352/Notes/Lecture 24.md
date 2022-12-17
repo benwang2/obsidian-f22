@@ -100,4 +100,4 @@ Both **import policies** and **export policies** are programmed by a network ope
 
 **Policy considerations** make BGP very different from intra-domain (LS / DV) protocols.
 
-####
+#### BGP Policies
