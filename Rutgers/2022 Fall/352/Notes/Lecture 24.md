@@ -101,3 +101,10 @@ Both **import policies** and **export policies** are programmed by a network ope
 **Policy considerations** make BGP very different from intra-domain (LS / DV) protocols.
 
 #### BGP Policies
+Policies arise from various business relationships. For example,
+- customer-provider relationships (Rutgers customer of AT&T)
+- peer-peer relationships (Verizon and AT&T)
+
+Business relationships depend on where connectivity occurs
+- "where" is called "point of present" (PoP)
+- 
