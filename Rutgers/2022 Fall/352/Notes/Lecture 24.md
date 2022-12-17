@@ -89,3 +89,7 @@ In an announcement arriving from a different AS (**eBGP**), the next hop is the 
 
 Suppose router 1c **imports** the path and then propagates the announcement **inside the AS** using **iBGP**. The next hop of this iBGP announcement is set to 1c, an internal address.
 
+##### Algorithm
+A BGP router doesn't consider every routing advertisement by default. Rather, it follows an **import policy** to determine whether a route is even considered a candidate.
+
+Once imported, th
