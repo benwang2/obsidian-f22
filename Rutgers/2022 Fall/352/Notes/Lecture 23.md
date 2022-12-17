@@ -86,7 +86,13 @@ To find the router port to use for a given destination, find the **predecessor**
 - Dijkstra's algoritm can efficiently compute these best paths
 	- Easy to populate the forwarding table from predecessor information computed during the algorithm
 
-### Distance Vector Protocol
+### Distance Vector Protocols
 - Each router only exchanges a distance vector with its neighbors
 	- distance: how far the destination is
 	- vector: a value for each destination
+- Distance vectors are only exchanged between neigbors; not flooded
+- Use an **incomplete** view of graph **derived from neighbors'** distance vectors to copmute the shortest paths
+
+#### Distance vectors
+$D_x(y)$ is the **estimate** of least cost from x to y.
+A distance vector is denoted as $D_x = [D_x(y): y \in N]$
