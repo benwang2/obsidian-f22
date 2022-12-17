@@ -27,3 +27,7 @@ Each node should determine the least cost path to every other node.
 
 ### Link State Protocols
 With link state protocol, each router knows the **state** of all the links and routers in the network. Every router performs an **independent** computation on **globally shared** knowledge of network's **complete** graph representation.
+
+**Link state flooding** is the process by which neighborhood information of **each network router** is transmitted to **all other routers**.
+
+Each router sends a **link state advertisement** (LSA) to each of its neighbour
