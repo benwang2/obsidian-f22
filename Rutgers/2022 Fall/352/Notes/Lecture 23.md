@@ -28,6 +28,8 @@ Each node should determine the least cost path to every other node.
 ### Link State Protocols
 With link state protocol, each router knows the **state** of all the links and routers in the network. Every router performs an **independent** computation on **globally shared** knowledge of network's **complete** graph representation.
 
+#### Information exchange
+
 **Link state flooding** is the process by which neighborhood information of **each network router** is transmitted to **all other routers**.
 
 Each router sends a **link state advertisement** (LSA) to each of its neighbos, containing:
@@ -38,3 +40,17 @@ Each router sends a **link state advertisement** (LSA) to each of its neighbos, 
 
 Upon receiving an LSA, a router forwards it to each of its neighbors: **flooding**
 
+Eventually, the entire network receives LSAs from each router, which are put into a **link state database**.
+
+LSAs still occur periodically **whenever the graph changes**, like if a link fails or a new link or router is added.
+
+The routing algorithm running at each router can **use the entire network's graph** to compute least cost paths.
+
+#### Algorithm
+The link state protocol uses **Dijkstra's** algorithm.
+- Given a network graph, the algorithm computes the least cost paths from one node (source) to all other nodes
+- This can be used to compute the forwarding table at that node
+- The algorithm maintains **estimates** of least costs to reach every other node. After $k$ iterations, each node definitively knows teh least cost path to $k$ destinations.
+
+Notation used in the algorithm is written as following:
+- **c(x,y):** 
