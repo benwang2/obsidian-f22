@@ -136,4 +136,11 @@ When a router imports more than one route to a destination IP prefix, it selects
 1. **local preference value** attribute (import policy decision -- set by network admin)
 2. shortest AS-PATH
 3. closest NEXT-HOP router
-4. Several additional criteria: You can read up on the full 
+4. Several additional criteria: You can read up on the full, complex, list of criteria
+
+- Suppose AS A and B are connected to each other both in North America (NA) and in Europe (EU)
+- A source in NA wants to reach a destination in EU
+- There are two paths available
+	- Assume same local preference
+	- Same AS path length
+- **Closest next hop-router**: choose path via B1 rather than B2
