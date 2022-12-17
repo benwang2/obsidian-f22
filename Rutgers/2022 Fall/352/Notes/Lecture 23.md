@@ -30,4 +30,11 @@ With link state protocol, each router knows the **state** of all the links and r
 
 **Link state flooding** is the process by which neighborhood information of **each network router** is transmitted to **all other routers**.
 
-Each router sends a **link state advertisement** (LSA) to each of its neighbour
+Each router sends a **link state advertisement** (LSA) to each of its neighbos, containing:
+- router ID
+- IP prefix owned by router
+- router's neighbors
+- link cost to those neighbors
+
+Upon receiving an LSA, a router forwards it to each of its neighbors: **flooding**
+
