@@ -26,4 +26,4 @@ Each node should determine the least cost path to every other node.
 >Routing protocols include link state protocols and distance vector protocols.
 
 ### Link State Protocols
-With link state protocl, each router knows the **state** of all the links and routers in the network/ Every router performs an **independent** computation on **globally shared** knowledge of network's **complete** graph representation.
+With link state protocol, each router knows the **state** of all the links and routers in the network. Every router performs an **independent** computation on **globally shared** knowledge of network's **complete** graph representation.
