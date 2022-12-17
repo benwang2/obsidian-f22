@@ -105,7 +105,7 @@ To find the router port to use for a given destination, find the **predecessor**
 - Each node initializes its own distance vector (DV) to edge costs
 - Each node sends its DVs to its neighbors
 - When a node $x$ receives new DV from a neighbor $v$, it updates its own DV using the **Bellman-Ford equation**:
-	- Given $d_x(y) :=$ estimated cost of the least-cost path from $x$ to $y$, update $d_x(y) = min_v{c(x,v) + d_v(y)}$
+	- Given $d_x(y) :=$ estimated cost of the least-cost path from $x$ to $y$, update $d_x(y) = min_v\{c(x,v) + d_v(y)\}$
 	- let $min$ be the minimum taken over all neighbors $v$ of $x$
 	- let $c(x,v)$ be the cost to reach neighbor $v$ directly from $x$
 	- let $d_v(y)$ be cost of path from neighbor $v$ to destination $y$

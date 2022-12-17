@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "6d52e10091d48cdb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Rutgers/2022 Fall/352/Notes/Lecture 24.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -79,7 +92,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Notes/Lecture 23.md"
+                "file": "Rutgers/2022 Fall/352/Notes/Lecture 24.md"
               }
             }
           }
@@ -122,7 +135,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Notes/Lecture 23.md",
+                "file": "Rutgers/2022 Fall/352/Notes/Lecture 24.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +152,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Notes/Lecture 23.md",
+                "file": "Rutgers/2022 Fall/352/Notes/Lecture 24.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -153,7 +166,7 @@
     "width": 284.5,
     "collapsed": true
   },
-  "active": "ee527805c458829b",
+  "active": "6d52e10091d48cdb",
   "lastOpenFiles": [
     "Rutgers/2022 Fall/352/Notes/Lecture 23.md",
     "Rutgers/2022 Fall/352/Notes/Lecture 22.md",
