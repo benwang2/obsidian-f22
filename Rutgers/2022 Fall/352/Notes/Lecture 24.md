@@ -132,3 +132,8 @@ Suppose an ISP wants to **minimize costs** by avoiding routing through its provi
 - Then x may **choose not to import** the path Cy to y since it has a peer path ("y") towards y
 
 ##### Route Selection
+When a router imports more than one route to a destination IP prefix, it selects route based on:
+1. **local preference value** attribute (import policy decision -- set by network admin)
+2. shortest AS-PATH
+3. closest NEXT-HOP router
+4. Several additional criteria: You can read up on the full 
