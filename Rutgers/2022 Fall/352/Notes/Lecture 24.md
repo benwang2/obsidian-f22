@@ -11,4 +11,4 @@ tags:
 
 ## Distance Vector Propagation Speed
 ### Good news travels fast
-When link cost reduces or a new better path becomes available, the message progpag
+When link cost reduces or a new better path becomes available, the message propagates quickly within the network.
