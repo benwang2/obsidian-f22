@@ -68,7 +68,7 @@ for v' in v:
 		D(v) = ∞
 
 repeat
-	find w not in N' such taht D(w) is a minimum
+	find w not in N' such that D(w) is a minimum
 		add w to N'
 		update D(v) for all v adjacent to w and not in N':
 			D(v) = min( D(v), D(w) + c(w,v) )
