@@ -74,3 +74,6 @@ repeat
 			D(v) = min( D(v), D(w) + c(w,v) )
 until all nodes in N'
 ```
+
+**Relaxation**: for each $v$ in $V/N'$, is the cost of the path via $w$ smaller than knownleast cost path to $v$? If so, update $D(v)$. Predecessor of $v$ is $w$.
+
