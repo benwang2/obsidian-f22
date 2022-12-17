@@ -94,5 +94,16 @@ To find the router port to use for a given destination, find the **predecessor**
 - Use an **incomplete** view of graph **derived from neighbors'** distance vectors to copmute the shortest paths
 
 #### Distance vectors
-$D_x(y)$ is the **estimate** of least cost from x to y.
-A distance vector is denoted as $D_x = [D_x(y): y \in N]$
+- $D_x(y)$ is the **estimate** of least cost from x to y.
+- A distance vector is denoted as $D_x = [D_x(y): y \in N]$
+- Node $x$ knows cost of edge to each neighbor $v: c(x,v)$
+- Node $x$ also maintains $D_x$ and its neighbors' distance vectors
+	- For each neighbor $v$, $x$ maintains $D_v=[D_v(y):y\in N]$
+- Nodes exchange distance vectors periodically and **whenever the local distance vector changes**
+
+#### Bellman-Ford algorithm
+- Each node initializes its own distance vector (DV) to edge costs
+- Each node sends its DVs to its neighbors
+- When a node $x$ receives new DV from a neighbor $v$, it updates its own DV using the **Bellman-Ford equation**:
+	- Given $d_x(y) :=$ estimated cost of the least-cost path from $x$ to $y$, update $d_x(y) = min_v{c(x,v) + d_v(y)}$
+	- 
