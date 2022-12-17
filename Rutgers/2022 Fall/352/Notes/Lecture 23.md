@@ -77,9 +77,16 @@ until all nodes in N'
 
 **Relaxation**: for each $v$ in $V/N'$, is the cost of the path via $w$ smaller than knownleast cost path to $v$? If so, update $D(v)$. Predecessor of $v$ is $w$.
 
-### Constructing the forwarding table
+#### Constructing the forwarding table
 To find the router port to use for a given destination, find the **predecessor** of the node **iteratively** until reaching an **immediate neighbor of the source** $u$. The port connecting $u$ to this neighbor is the output port for this destination.
 
-#### Summary
+##### Summary
 - Each router announces link state to the entire network using flooding
-- Each node independently computes least cost paths ti 
+- Each node independently computes least cost paths to every other node using the full network graph
+- Dijkstra's algoritm can efficiently compute these best paths
+	- Easy to populate the forwarding table from predecessor information computed during the algorithm
+
+### Distance Vector Protocol
+- Each router only exchanges a distance vector with its neighbors
+	- distance: how far the destination is
+	- vector: a value for each destination
