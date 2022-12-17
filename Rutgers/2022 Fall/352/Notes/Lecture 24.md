@@ -110,6 +110,8 @@ Business relationships depend on where connectivity occurs
 - Internet eXchange Points (IXPs) are large PoPs where ISPs come together to connect with eachother (often for free)
 
 ##### Export Policy
+![[Pasted image 20221217183804.png]]
+
 Suppose an ISP only wants to route traffic to/from its customer networks (does not want to carry **transit traffic** between other ISPs)
 - A, B, C are **provider networks**
 - X, W, Y are customers (of provider networks)
@@ -118,4 +120,7 @@ Suppose an ISP only wants to route traffic to/from its customer networks (does n
 	- So, X **will not announce** to B a route to C
 
 Suppose an ISP only wants to route traffic to/from its customer networks
-
+- A announces path Aw to B and to C
+- B **will not announce** BAw to C
+	- B gets no "revenue" for roting CBAw, since none of C, A, w are B's customers
+- C will route CAw (not using B) to get to W
