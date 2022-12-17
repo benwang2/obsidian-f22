@@ -77,3 +77,5 @@ until all nodes in N'
 
 **Relaxation**: for each $v$ in $V/N'$, is the cost of the path via $w$ smaller than knownleast cost path to $v$? If so, update $D(v)$. Predecessor of $v$ is $w$.
 
+### Constructing the forwarding table
+To find the router port to use for a given destination, find the **predecessor** of the node **iteratively** until reaching an **immediate neighbor of the source** $u$. The port connecting $u$ to this neighbor is the output port for this destination.
