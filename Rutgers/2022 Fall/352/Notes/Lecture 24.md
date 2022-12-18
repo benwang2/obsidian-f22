@@ -144,3 +144,9 @@ When a router imports more than one route to a destination IP prefix, it selects
 	- Assume same local preference
 	- Same AS path length
 - **Closest next hop-router**: choose path via B1 rather than B2
+
+- Choosing closest next-hop results in **early exit routing**
+	- Try to exit the local AS as early as possible
+	- Called **hot potato routing**
+- Reduce resource use within local AS
+	- potentially at the expense of another AS
