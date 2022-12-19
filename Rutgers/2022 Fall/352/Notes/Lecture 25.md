@@ -88,3 +88,7 @@ Traffic is partitioned into  classes and offer service guarantees **per class** 
 In weighted fair sharing, an operator might want to partition the link's rate **C** into separate allocations for each class. Partitions may have **weights w**.
 
 Class $i$ gets the illusion of traversing logical link rate $w_i * C / \sum_j w_j$
+
+- Customary to think of different classes as belonging to different **queues**
+- For this reason, weighted fair sharing is also called **weighted fair queuing (WFQ)**
+- Each queue is first-in-first-out (FIFO)
