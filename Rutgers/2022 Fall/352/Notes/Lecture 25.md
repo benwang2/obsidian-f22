@@ -23,3 +23,6 @@ A router may learn about **multiple** paths to a destination:
 - AS1 gateway router 1c learns path AS2, AS3, X from 2a (next hop 2a)
 - AS1 gateway router 1c learns path AS3, X from 3a (next hop 3a)
 - Through BGP route selection process, AS1 gateway router 1c chooses path AS3,X, and announces path within AS1 via iBGP
+
+## Setting forwarding table entries
+ 
