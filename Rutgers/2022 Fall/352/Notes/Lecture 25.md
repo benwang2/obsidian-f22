@@ -95,4 +95,8 @@ Class $i$ gets the illusion of traversing logical link rate $w_i * C / \sum_j w_
 - Link multiplexes among these queues
 - Intuitively, packets of one queue should not influence behavior of other queues
 - Fair queuing is also a form of isolation across traffic classes
-- Other classes 
+- Other classes can use unused capacity from other classes
+- WFQ is **work-conserving**: a router implementing WFQ allows other classes to use unused capacity
+- Work conservation makes WFQ different from rate limits applied sepearately to each class
+- Class $i$'s usage can exceed $w_i * C / \sum_j w_j$
+- 
