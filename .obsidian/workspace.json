@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "aggregation",
+                "query": "arp",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -154,7 +154,7 @@
     "width": 284.5,
     "collapsed": true
   },
-  "active": "18a9bbaebd5f8f23",
+  "active": "8f88c6ad00d72727",
   "lastOpenFiles": [
     "Rutgers/2022 Fall/352/Notes/Lecture 25.md",
     "Rutgers/2022 Fall/336/Notes/Lecture 25.md",
