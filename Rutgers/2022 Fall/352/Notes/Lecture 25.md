@@ -98,5 +98,6 @@ Class $i$ gets the illusion of traversing logical link rate $w_i * C / \sum_j w_
 - Other classes can use unused capacity from other classes
 - WFQ is **work-conserving**: a router implementing WFQ allows other classes to use unused capacity
 - Work conservation makes WFQ different from rate limits applied sepearately to each class
-- Class $i$'s usage can exceed $w_i * C / \sum_j w_j$
-- 
+- Class $i$'s usage can exceed $w_i * C / \sum_j w_j$ only if spare capacity available
+
+Guarantees are enforced in the router. Allocation occurs in the packet scheduler in the bottleneck router. A router is said to implement packet **scheduling policies**.
