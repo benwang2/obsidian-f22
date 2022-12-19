@@ -24,5 +24,23 @@ A router may learn about **multiple** paths to a destination:
 - AS1 gateway router 1c learns path AS3, X from 3a (next hop 3a)
 - Through BGP route selection process, AS1 gateway router 1c chooses path AS3,X, and announces path within AS1 via iBGP
 
-## Setting forwarding table entries
- 
+### Setting forwarding table entries
+...
+
+### Inter-domain routing
+- **Federation** and **scale** introduce new requirements for routing on the Internet
+- **BGP** is the protocol that handles Internet routing
+- **Path vector**: exchange paths to a destination with attributes
+- **Policy-based** import of routes, route selection, and export
+
+## Quality of service
+A **best effort** Internet architecture does not offerany guarantees on delay, bandwidth, and loss
+- network may drop, reorder, corrupt packets
+- network may treat traffic randomly regardless of their "importance"
+
+Meanwhile, certain applications may require special treatment and guarantees
+- voice over IP require strict delay guarantees
+- HD video requires reasonable minimum bandwidth
+- remote surgery with 3D-vision requires strict sync and latenccy
+
+How can we provide qualide of ser
