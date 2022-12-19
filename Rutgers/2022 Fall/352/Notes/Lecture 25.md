@@ -43,4 +43,30 @@ Meanwhile, certain applications may require special treatment and guarantees
 - HD video requires reasonable minimum bandwidth
 - remote surgery with 3D-vision requires strict sync and latenccy
 
-How can we provide qualide of ser
+How can we provide quality of service for applications?
+
+
+
+### Shortcomings of best effort
+
+With best effort, **contention** is still an issue.
+Because resource contention occurs in the **core** of the network, congestion control will react, but may be too little and too  late.
+- Congestion control can not prevent packet drops "now" (only after the fact)
+- Congestion  control won't prevent high-sending-rate flows from inflicting large delays or recurring drops
+
+### Approaches to resolving quality of service
+#### Provision more capacity
+- ISPs may deploy enough capacity such that contention no longer occurs (low complexity solution)
+- This approach has high costs (e.g. bandwidth, hardware)
+- Furthermore, how do we estimate the required bandwidth?
+	- Need to estimate demand over time?
+	- Network operators can do this quite well
+	- Must handle exceptional circumstances: pandemics, superbowl
+
+#### Classes of service
+With classes of service, the network treats different traffic differently, also known as **traffic differentiation**. An excellent analogy used is: liens at an airport (first class vs economy).
+
+Traffic is partitioned into  classes and offer service guarantees **per class** and **across classes**.
+- classes may be indic
+
+**Packet classification**: assigning classes
