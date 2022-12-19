@@ -92,3 +92,7 @@ Class $i$ gets the illusion of traversing logical link rate $w_i * C / \sum_j w_
 - Customary to think of different classes as belonging to different **queues**
 - For this reason, weighted fair sharing is also called **weighted fair queuing (WFQ)**
 - Each queue is first-in-first-out (FIFO)
+- Link multiplexes among these queues
+- Intuitively, packets of one queue should not influence behavior of other queues
+- Fair queuing is also a form of isolation across traffic classes
+- Other classes 
