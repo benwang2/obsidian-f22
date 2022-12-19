@@ -19,4 +19,7 @@ tags:
 - Based on AS2 import policy, AS2 router 2c imports and selects path AS3,X, propagates (via iBGP) to all AS2 routers
 - Based on AS2 export policy, AS2 router 2a announces (via eBGP) path AS2, AS3,X to AS1 router 1c
 
-A router may learn about **multiple** paths to a d
+A router may learn about **multiple** paths to a destination:
+- AS1 gateway router 1c learns path AS2, AS3, X from 2a (next hop 2a)
+- AS1 gateway router 1c learns path AS3, X from 3a (next hop 3a)
+- Through BGP route selection process, AS1 gateway router 1c chooses path AS3,X, and announces path within AS1 via iBGP
