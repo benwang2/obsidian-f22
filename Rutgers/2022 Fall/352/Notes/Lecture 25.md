@@ -87,4 +87,4 @@ Traffic is partitioned into  classes and offer service guarantees **per class** 
 ### Weighted fair sharing
 In weighted fair sharing, an operator might want to partition the link's rate **C** into separate allocations for each class. Partitions may have **weights w**.
 
-Class $i$ gets the illusion of traversing logical link ra
+Class $i$ gets the illusion of traversing logical link rate $w_i * C / \sum_j w_j$
