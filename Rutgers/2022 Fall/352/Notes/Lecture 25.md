@@ -66,7 +66,25 @@ Because resource contention occurs in the **core** of the network, congestion co
 #### Classes of service
 With classes of service, the network treats different traffic differently, also known as **traffic differentiation**. An excellent analogy used is: liens at an airport (first class vs economy).
 
-Traffic is partitioned into  classes and offer service guarantees **per class** and **across classes**.
-- classes may be indic
+Traffic is partitioned into  classes and offer service guarantees **per class** and **across classes**
+- classes may be indicated using IP type of service header bits
+- classes may be inferred from IP & transport headers (e.g. src/dst/ports)
 
-**Packet classification**: assigning classes
+**Packet classification**: assigning packets to classes
+
+## Kinds of Service Guarantees
+
+### Strict prioritization
+- Suppose a 1Mbps interactive flow and an HTTP connection share a 1.5 Mbps link
+- A network operator might choose to prioritize interactive app strictly over the HTTP flow
+
+### Rate limiting
+- What if a flow doesn't respect its allocation?
+	- If a conference call goes beyond 1Mbit/s, what do we do?
+- An operator may limit a flow to a certain max rate
+- **Isolation**: HTTP should not be impacted by the conference call
+
+### Weighted fair sharing
+In weighted fair sharing, an operator might want to partition the link's rate **C** into separate allocations for each class. Partitions may have **weights w**.
+
+Class $i$ gets the illusion of traversing logical link ra
