@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Notes/Lecture 20.md",
+                "file": "Rutgers/2022 Fall/352/Notes/Lecture 21.md",
                 "mode": "source",
                 "source": false
               }
@@ -79,7 +79,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Notes/Lecture 20.md"
+                "file": "Rutgers/2022 Fall/352/Notes/Lecture 21.md"
               }
             }
           }
@@ -123,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Notes/Lecture 20.md",
+                "file": "Rutgers/2022 Fall/352/Notes/Lecture 21.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -140,7 +140,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Rutgers/2022 Fall/352/Notes/Lecture 20.md",
+                "file": "Rutgers/2022 Fall/352/Notes/Lecture 21.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -156,6 +156,7 @@
   },
   "active": "6d52e10091d48cdb",
   "lastOpenFiles": [
+    "Rutgers/2022 Fall/352/Notes/Lecture 20.md",
     "Rutgers/2022 Fall/352/Notes/Lecture 19.md",
     "Rutgers/2022 Fall/352/Notes/Lecture 24.md",
     "Rutgers/2022 Fall/352/Notes/Lecture 23.md",
@@ -164,7 +165,6 @@
     "Rutgers/2022 Fall/352/Assignments/Problem Set 3/pset3.pdf",
     "Rutgers/2022 Fall/352/syllabus.pdf",
     "Rutgers/2022 Fall/352/Notes/Lecture 2.md",
-    "Rutgers/2022 Fall/352/Notes/Lecture 1.md",
-    "Rutgers/2022 Fall/352/Assignments/Problem Set 3/Problem Set 3.md"
+    "Rutgers/2022 Fall/352/Notes/Lecture 1.md"
   ]
 }
