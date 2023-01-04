@@ -3,7 +3,11 @@ Given $x = 77$, we know that $f(x) = 242$.
 
 $$
 \begin{align}
-242 &= (0.001x^2\cdot15)+2x \\
-242 - 2x &= 0.001x^2\cdot15
+242 &= 0.015x^2+2x \\
+0 &= 0.015x^2+2x+242
+
 \end{align}
 $$
+
+So, we may use the quadratic formula to compute the roots.
+$x = \frac{-b\pm}
