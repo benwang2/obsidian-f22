@@ -10,4 +10,6 @@ $$
 $$
 
 So, we may use the quadratic formula to compute the roots.
-$x = \frac{-b\pm}
+Let $a=0.015$, $b = 2$, $c=242$.
+$x = \frac{-b\pm\sqrt{b^2-4ac}}{2a}$
+$x_a=\frac{2+\sqrt{2^2-4\cdot0.015^2\cdot242}}{}$
